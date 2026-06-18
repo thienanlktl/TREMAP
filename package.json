@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "node ./node_modules/vite/bin/vite.js",
+    "prebuild": "node ./scripts/verify-deploy.js",
     "build": "node ./scripts/build-data.js && node ./node_modules/vite/bin/vite.js build && node ./scripts/prepare-deploy.js",
     "build-data": "node ./scripts/build-data.js",
     "prepare-deploy": "node ./scripts/prepare-deploy.js",
