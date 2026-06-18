@@ -99,30 +99,35 @@ function copyWasmAssets(viewerRoot, distRoot) {
   const wasmDir = path.join(distRoot, "wasm");
   fs.mkdirSync(wasmDir, { recursive: true });
 
-  const wasmFiles = ["web-ifc.wasm", "web-ifc-mt.wasm", "web-ifc-mt.worker.js"];
-  const packageDirs = [
-    path.join(viewerRoot, "node_modules", "web-ifc-viewer", "node_modules", "web-ifc"),
-    path.join(viewerRoot, "node_modules", "web-ifc-three", "node_modules", "web-ifc"),
+  const wasmFiles = ["web-ifc.wasm"];
+  const sourceDirs = [
+    path.join(viewerRoot, "public", "wasm"),
     path.join(viewerRoot, "node_modules", "web-ifc"),
   ];
 
   let copied = 0;
-  for (const pkgDir of packageDirs) {
-    for (const file of wasmFiles) {
-      const src = path.join(pkgDir, file);
-      const dest = path.join(wasmDir, file);
-      if (fs.existsSync(src) && !fs.existsSync(dest)) {
+  for (const file of wasmFiles) {
+    const dest = path.join(wasmDir, file);
+    if (fs.existsSync(dest)) {
+      copied += 1;
+      continue;
+    }
+    for (const srcDir of sourceDirs) {
+      const src = path.join(srcDir, file);
+      if (fs.existsSync(src)) {
         fs.copyFileSync(src, dest);
         copied += 1;
+        break;
       }
     }
   }
 
-  if (copied) {
-    console.log(`  wasm/ (${copied} files)`);
-  } else {
-    console.log("  wasm/ (using bundled wasm — no separate files found)");
+  if (!fs.existsSync(path.join(wasmDir, "web-ifc.wasm"))) {
+    console.error("  ERROR: web-ifc.wasm missing — 3D viewer will not load");
+    process.exit(1);
   }
+
+  console.log(`  wasm/ (${copied} file(s))`);
 }
 
 main();

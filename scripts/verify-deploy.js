@@ -9,6 +9,7 @@ const required = [
   "scripts/build-data.js",
   "scripts/prepare-deploy.js",
   "scripts/serve-production.js",
+  "public/wasm/web-ifc.wasm",
   "project-data/2214703-08T.ifc",
   "main.js",
   "index.html",

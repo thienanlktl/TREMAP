@@ -38,8 +38,6 @@ function sendFile(res, filePath) {
   const ext = path.extname(filePath).toLowerCase();
   res.setHeader("Content-Type", MIME[ext] ?? "application/octet-stream");
   res.setHeader("Cache-Control", ext === ".html" ? "no-cache" : "public, max-age=3600");
-  res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
-  res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
   fs.createReadStream(filePath).pipe(res);
 }
 
