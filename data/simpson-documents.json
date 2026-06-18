@@ -1,0 +1,44 @@
+{
+  "generatedAt": "2026-06-18T11:44:56.024Z",
+  "hasDocuments": true,
+  "jobTitle": "2214224-08T-Degonia Hms-Magnolia-2 - Layout",
+  "designInfo": {},
+  "layoutSchedule": [],
+  "documents": [
+    {
+      "id": "layout",
+      "label": "Layout Plan",
+      "description": "Truss placement diagram with marks and quantities",
+      "sourceFile": "2214703-08T-layout.pdf",
+      "url": "/data/documents/layout.pdf",
+      "sizeKb": 134
+    },
+    {
+      "id": "overlay",
+      "label": "Overlay",
+      "description": "Architectural overlay on truss layout for coordination",
+      "sourceFile": "Degonia Hms-Magnolia-2 story - Overlay.pdf",
+      "url": "/data/documents/overlay.pdf",
+      "sizeKb": 221
+    },
+    {
+      "id": "markup",
+      "label": "Markup",
+      "description": "Layout with design review markup and redlines",
+      "sourceFile": "Degonia Hms-Magnolia-2 story - Markup.pdf",
+      "url": "/data/documents/markup.pdf",
+      "sizeKb": 972
+    },
+    {
+      "id": "tdd",
+      "label": "TDD — Truss Design Drawings",
+      "description": "Per-truss engineering sheets (loads, CSI, lumber, reactions)",
+      "sourceFile": "Degonia Hms-Magnolia-2 story - TDD.pdf",
+      "url": "/data/documents/tdd.pdf",
+      "sizeKb": 305,
+      "tddIndex": []
+    }
+  ],
+  "tddIndex": [],
+  "tddByMark": {}
+}

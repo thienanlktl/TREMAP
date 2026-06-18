@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiTek Inspector — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>MiTek TRE Inspector</strong>
+        <span>Job 2214703-08T — Stark Truss manufacturing package</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <a class="btn secondary" href="/models/mitek.ifc" download="2214703-08T.ifc">Download IFC</a>
+      </div>
+    </header>
+
+    <main class="page-main ddp-layout">
+      <section class="panel job-panel" id="job-panel"></section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Truss Designs (.tre)</h2>
+          <input id="truss-search" class="search-input" type="search" placeholder="Search truss mark…" />
+        </div>
+        <div class="truss-grid" id="truss-grid"></div>
+      </section>
+
+      <aside class="panel detail-panel hidden" id="detail-panel">
+        <button id="detail-close" class="info-close" type="button" aria-label="Close">×</button>
+        <div id="detail-actions" class="detail-actions"></div>
+        <h2 id="detail-title">Truss Detail</h2>
+        <dl id="detail-content"></dl>
+
+        <h3 class="detail-subheading">Members</h3>
+        <div class="table-wrap">
+          <table class="data-table compact" id="member-table">
+            <thead>
+              <tr>
+                <th>Label</th>
+                <th>Size</th>
+                <th>Grade</th>
+                <th>Length</th>
+              </tr>
+            </thead>
+            <tbody id="member-body"></tbody>
+          </table>
+        </div>
+
+        <h3 class="detail-subheading">Plates</h3>
+        <div id="plate-summary" class="plate-summary"></div>
+
+        <h3 class="detail-subheading">TRE Preview</h3>
+        <pre id="detail-preview" class="script-preview"></pre>
+      </aside>
+    </main>
+
+    <script type="module" src="/mitek.js"></script>
+  </body>
+</html>

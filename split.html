@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Split Compare — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="split-page">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Side-by-Side IFC Compare</strong>
+        <span>MiTek 2214703-08T vs Simpson McBride Plan 193</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <select id="mark-select" class="select-input" aria-label="Filter by truss mark">
+          <option value="">All trusses</option>
+        </select>
+        <select id="instance-select" class="select-input hidden" aria-label="Truss instance">
+          <option value="0">Instance 1</option>
+        </select>
+        <button id="btn-show-all" class="btn secondary" type="button">Show All</button>
+        <button id="btn-fit-both" class="btn" type="button">Fit Both</button>
+        <button id="btn-sync-cam" class="btn active" type="button">Sync Camera</button>
+      </div>
+    </header>
+
+    <div id="filter-banner" class="filter-banner split-filter hidden"></div>
+
+    <div class="split-layout">
+      <section class="split-pane">
+        <div id="left-label" class="split-label mitek">MiTek — 2214703-08T (IFC2x3)</div>
+        <div id="viewer-left" class="split-viewer"></div>
+      </section>
+      <section class="split-pane">
+        <div id="right-label" class="split-label simpson">Simpson — McBride Plan 193 (IFC4)</div>
+        <div id="viewer-right" class="split-viewer"></div>
+      </section>
+    </div>
+
+    <footer class="status-bar">
+      <span id="status-text">Loading both models…</span>
+      <span>Pick a mark to compare one truss type side-by-side</span>
+    </footer>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <p id="loading-text">Loading MiTek and Simpson IFC models…</p>
+    </div>
+
+    <script type="module" src="/split.js"></script>
+  </body>
+</html>

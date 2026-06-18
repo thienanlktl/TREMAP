@@ -1,0 +1,2529 @@
+{
+  "generatedAt": "2026-06-18T13:07:47.751Z",
+  "job": {
+    "jobNumber": "2214703-08T",
+    "projectFile": "2214703-08T.mmdl",
+    "exportDate": "2023-01-10",
+    "software": "8.5.3.233.Update18.10",
+    "customer": "Stark Truss",
+    "project": "Lot 17 Fox Creek Estates — Plan 193"
+  },
+  "summary": {
+    "trussDesigns": 29,
+    "totalTrusses": 91,
+    "totalWeight": 7156,
+    "totalBoardFeet": 16045.37,
+    "designCode": "IRC2015/TPI2014"
+  },
+  "trusses": [
+    {
+      "mark": "J02",
+      "file": "j02.tre",
+      "source": "mitek-tre",
+      "quantity": 9,
+      "ply": 1,
+      "spanInches": 29.2501,
+      "spanDisplay": "2'-5.25\"",
+      "pitch": "4.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.07",
+        "maxBcCsi": "0.05",
+        "ssi": "0.09",
+        "deflectionTL": "-0.0000",
+        "deflectionLL": "-0.0000",
+        "reaction1": "64",
+        "reaction2": "115",
+        "maxUplift1": "-21",
+        "weight": 10,
+        "boardFeet": 48
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-8-7"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "2-2-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-10-8"
+        }
+      ],
+      "plates": {
+        "count": 3,
+        "areas": "MT20 432.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J03",
+      "file": "j03.tre",
+      "source": "mitek-tre",
+      "quantity": 6,
+      "ply": 1,
+      "spanInches": 41.9999,
+      "spanDisplay": "3'-6.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.3,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.3 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.20",
+        "maxBcCsi": "0.10",
+        "ssi": "0.15",
+        "deflectionTL": "-0.0100",
+        "deflectionLL": "-0.0000",
+        "reaction1": "140",
+        "reaction2": "88",
+        "maxUplift1": "-33",
+        "weight": 17,
+        "boardFeet": 56
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-6-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-3-2"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-3-1"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-1-6"
+        }
+      ],
+      "plates": {
+        "count": 5,
+        "areas": "MT20 408.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J03A",
+      "file": "j03a.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 41.9999,
+      "spanDisplay": "3'-6.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.3,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.3 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.16",
+        "maxBcCsi": "0.08",
+        "ssi": "0.15",
+        "deflectionTL": "-0.0000",
+        "deflectionLL": "-0.0000",
+        "reaction1": "142",
+        "reaction2": "104",
+        "maxUplift1": "-41",
+        "weight": 15,
+        "boardFeet": 8.67
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-6-0"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "1-0-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "4-0-11"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-7-6"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-1-6"
+        }
+      ],
+      "plates": {
+        "count": 6,
+        "areas": "MT20 92.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J03B",
+      "file": "j03b.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 41.9999,
+      "spanDisplay": "3'-6.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.3,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.3 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.25",
+        "maxBcCsi": "0.22",
+        "ssi": "0.15",
+        "deflectionTL": "-0.0100",
+        "deflectionLL": "-0.0000",
+        "reaction1": "211",
+        "reaction2": "164",
+        "maxUplift1": "-66",
+        "weight": 17,
+        "boardFeet": 9.33
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-6-0"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "2-0-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "2-10-4"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-11-6"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-1-6"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-11-7"
+        }
+      ],
+      "plates": {
+        "count": 6,
+        "areas": "MT20 108.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J04",
+      "file": "j04.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 47.9999,
+      "spanDisplay": "3'-12.00\"",
+      "pitch": "3.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.19",
+        "maxBcCsi": "0.17",
+        "ssi": "0.13",
+        "deflectionTL": "-0.0200",
+        "deflectionLL": "-0.0100",
+        "reaction1": "123",
+        "reaction2": "173",
+        "maxUplift1": "-34",
+        "weight": 15,
+        "boardFeet": 8
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-1-11"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-7-8"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-0-3"
+        }
+      ],
+      "plates": {
+        "count": 3,
+        "areas": "MT20 48.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J06",
+      "file": "j06.tre",
+      "source": "mitek-tre",
+      "quantity": 17,
+      "ply": 1,
+      "spanInches": 72.9375,
+      "spanDisplay": "6'-0.94\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.56",
+        "maxBcCsi": "0.40",
+        "ssi": "0.34",
+        "deflectionTL": "-0.1300",
+        "deflectionLL": "0.0800",
+        "reaction1": "171",
+        "reaction2": "210",
+        "maxUplift1": "-78",
+        "weight": 27,
+        "boardFeet": 238
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "8-4-4"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-0-15"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-9-15"
+        }
+      ],
+      "plates": {
+        "count": 3,
+        "areas": "MT20 952.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J06A",
+      "file": "j06a.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 72.9375,
+      "spanDisplay": "6'-0.94\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.45",
+        "maxBcCsi": "0.36",
+        "ssi": "0.22",
+        "deflectionTL": "-0.1100",
+        "deflectionLL": "-0.0500",
+        "reaction1": "214",
+        "reaction2": "198",
+        "maxUplift1": "-51",
+        "weight": 30,
+        "boardFeet": 46
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "1-6-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-6-10"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-0-15"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-10-2"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-0-6"
+        }
+      ],
+      "plates": {
+        "count": 4,
+        "areas": "MT20 288.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J06B",
+      "file": "j06b.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 72.9634,
+      "spanDisplay": "6'-0.96\"",
+      "pitch": "6.19/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.24",
+        "maxBcCsi": "0.32",
+        "ssi": "0.19",
+        "deflectionTL": "-0.0900",
+        "deflectionLL": "-0.0400",
+        "reaction1": "226",
+        "reaction2": "220",
+        "maxUplift1": "-51",
+        "weight": 28,
+        "boardFeet": 44
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-0-1"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "4-8-15"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-0-15"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-10-2"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-3-6"
+        }
+      ],
+      "plates": {
+        "count": 4,
+        "areas": "MT20 288.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "J06C",
+      "file": "j06c.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 72.9375,
+      "spanDisplay": "6'-0.94\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Jack-Closed Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP",
+      "bottomChordLumber": "2x4 No.1 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.65",
+        "maxBcCsi": "0.93",
+        "ssi": "0.55",
+        "deflectionTL": "-0.2900",
+        "deflectionLL": "0.1700",
+        "reaction1": "290",
+        "reaction2": "321",
+        "maxUplift1": "-92",
+        "weight": 23,
+        "boardFeet": 36
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "6-0-15"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "4-6-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "2-11-6"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-10-2"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-9-15"
+        }
+      ],
+      "plates": {
+        "count": 5,
+        "areas": "MT20 312.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T01",
+      "file": "t01.tre",
+      "source": "mitek-tre",
+      "quantity": 10,
+      "ply": 1,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "4.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.65",
+        "maxBcCsi": "0.88",
+        "ssi": "0.31",
+        "deflectionTL": "-0.4100",
+        "deflectionLL": "-0.2500",
+        "reaction1": "895",
+        "reaction2": "895",
+        "maxUplift1": "-176",
+        "weight": 125,
+        "boardFeet": 586.67
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-7-6"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-9-2"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-6-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-0-2"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "7-11-0"
+        }
+      ],
+      "plates": {
+        "count": 10,
+        "areas": "MT20 2480.00, MT18HS 480.00",
+        "types": [
+          "MT20",
+          "MT18HS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T02",
+      "file": "t02.tre",
+      "source": "mitek-tre",
+      "quantity": 5,
+      "ply": 1,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "4.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.66",
+        "maxBcCsi": "0.89",
+        "ssi": "0.31",
+        "deflectionTL": "-0.4100",
+        "deflectionLL": "-0.2500",
+        "reaction1": "857",
+        "reaction2": "896",
+        "maxUplift1": "-155",
+        "weight": 124,
+        "boardFeet": 290
+      },
+      "members": [
+        {
+          "label": "T3",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-7-6"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-9-2"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "15-4-12"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-6-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-0-2"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "7-11-0"
+        }
+      ],
+      "plates": {
+        "count": 9,
+        "areas": "MT20 1060.00, MT18HS 240.00",
+        "types": [
+          "MT20",
+          "MT18HS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T03",
+      "file": "t03.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "4.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Hip",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.51",
+        "maxBcCsi": "0.69",
+        "ssi": "0.33",
+        "deflectionTL": "-0.1900",
+        "deflectionLL": "-0.0900",
+        "reaction1": "944",
+        "reaction2": "944",
+        "maxUplift1": "-156",
+        "weight": 140,
+        "boardFeet": 66.67
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-4-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-4-11"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-6-4"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-2-8"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-7-11"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "7-5-1"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-6-10"
+        }
+      ],
+      "plates": {
+        "count": 11,
+        "areas": "MT20 344.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T04",
+      "file": "t04.tre",
+      "source": "mitek-tre",
+      "quantity": 2,
+      "ply": 2,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "4.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Hip Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x6 No.1 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.86",
+        "maxBcCsi": "0.82",
+        "ssi": "0.46",
+        "deflectionTL": "-0.2700",
+        "deflectionLL": "-0.1500",
+        "reaction1": "2399",
+        "reaction2": "2399",
+        "maxUplift1": "-674",
+        "weight": 294,
+        "boardFeet": 138.67
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-7-13"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-5-1"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "No.1 SP",
+          "length": "13-4-4"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-8-0"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-8-9"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-4-3"
+        }
+      ],
+      "plates": {
+        "count": 8,
+        "areas": "MT20 784.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T05",
+      "file": "t05.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "70.79/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Roof Special",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.1 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.97",
+        "maxBcCsi": "0.72",
+        "ssi": "0.57",
+        "deflectionTL": "-0.2500",
+        "deflectionLL": "-0.1000",
+        "reaction1": "1065",
+        "reaction2": "981",
+        "maxUplift1": "-217",
+        "weight": 149,
+        "boardFeet": 70.67
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "9-7-4"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-9-4"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-10-0"
+        },
+        {
+          "label": "T3",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-4-11"
+        },
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-6-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-2-0"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-5-9"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-2-0"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-2-8"
+        },
+        {
+          "label": "W6",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-7-11"
+        },
+        {
+          "label": "W5",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-6-10"
+        }
+      ],
+      "plates": {
+        "count": 11,
+        "areas": "MT20 316.00, M18AHS 80.00",
+        "types": [
+          "MT20",
+          "M18AHS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T06",
+      "file": "t06.tre",
+      "source": "mitek-tre",
+      "quantity": 2,
+      "ply": 2,
+      "spanInches": 330.5,
+      "spanDisplay": "27'-6.50\"",
+      "pitch": "54.79/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Roof Special Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.3,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.3 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x6 No.1 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.88",
+        "maxBcCsi": "0.80",
+        "ssi": "0.46",
+        "deflectionTL": "-0.2600",
+        "deflectionLL": "-0.1400",
+        "reaction1": "2218",
+        "reaction2": "2351",
+        "maxUplift1": "-810",
+        "weight": 324,
+        "boardFeet": 152
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-0-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-1-4"
+        },
+        {
+          "label": "T3",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-4-15"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "No.1 SP",
+          "length": "13-9-4"
+        },
+        {
+          "label": "B2",
+          "size": "2x6",
+          "grade": "No.1 SP",
+          "length": "13-4-4"
+        },
+        {
+          "label": "W1",
+          "size": "W1",
+          "grade": "2x4 No.3",
+          "length": "SP"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-8-8"
+        },
+        {
+          "label": "W2",
+          "size": "W2",
+          "grade": "2x4 No.3",
+          "length": "SP"
+        }
+      ],
+      "plates": {
+        "count": 11,
+        "areas": "MT20 784.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T07GE",
+      "file": "t07ge.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 240,
+      "spanDisplay": "20'-0.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common Supported Gable",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.3,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.3 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.10",
+        "maxBcCsi": "0.07",
+        "ssi": "0.16",
+        "deflectionTL": "-0.0000",
+        "deflectionLL": "0.0000",
+        "reaction1": "102",
+        "reaction2": "102",
+        "maxUplift1": "-62",
+        "weight": 120,
+        "boardFeet": 59.33
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-0-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-0-13"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-1-6"
+        },
+        {
+          "label": "ST4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-4-4"
+        },
+        {
+          "label": "ST3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-0-4"
+        },
+        {
+          "label": "ST2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-8-4"
+        },
+        {
+          "label": "ST1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-4-4"
+        },
+        {
+          "label": "ST5",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-8-4"
+        }
+      ],
+      "plates": {
+        "count": 24,
+        "areas": "MT20 420.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T08",
+      "file": "t08.tre",
+      "source": "mitek-tre",
+      "quantity": 4,
+      "ply": 1,
+      "spanInches": 240,
+      "spanDisplay": "20'-0.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x6 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.44",
+        "maxBcCsi": "0.80",
+        "ssi": "0.69",
+        "deflectionTL": "-0.2600",
+        "deflectionLL": "-0.1300",
+        "reaction1": "617",
+        "reaction2": "572",
+        "maxUplift1": "-125",
+        "weight": 96,
+        "boardFeet": 186.67
+      },
+      "members": [
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-0-0"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-0-13"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-0-4"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-9-6"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-8-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-2-1"
+        }
+      ],
+      "plates": {
+        "count": 10,
+        "areas": "MT20 1056.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T09",
+      "file": "t09.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 239.5,
+      "spanDisplay": "19'-11.50\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x6 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.42",
+        "maxBcCsi": "0.80",
+        "ssi": "0.69",
+        "deflectionTL": "-0.2700",
+        "deflectionLL": "-0.1300",
+        "reaction1": "572",
+        "reaction2": "572",
+        "maxUplift1": "-99",
+        "weight": 94,
+        "boardFeet": 140
+      },
+      "members": [
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-0-0"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-11-8"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-0-4"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "11-11-10"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-9-7"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-8-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-2-6"
+        },
+        {
+          "label": "W4",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-2-1"
+        }
+      ],
+      "plates": {
+        "count": 10,
+        "areas": "MT20 792.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T09A",
+      "file": "t09a.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 236,
+      "spanDisplay": "19'-8.00\"",
+      "pitch": "7.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x6 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.57",
+        "maxBcCsi": "0.77",
+        "ssi": "0.67",
+        "deflectionTL": "-0.2900",
+        "deflectionLL": "-0.1400",
+        "reaction1": "563",
+        "reaction2": "563",
+        "maxUplift1": "-96",
+        "weight": 94,
+        "boardFeet": 136
+      },
+      "members": [
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "10-0-0"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-8-0"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-0-4"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "11-7-7"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-9-6"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-8-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-4-12"
+        },
+        {
+          "label": "W4",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-2-1"
+        }
+      ],
+      "plates": {
+        "count": 9,
+        "areas": "MT20 780.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T10",
+      "file": "t10.tre",
+      "source": "mitek-tre",
+      "quantity": 2,
+      "ply": 2,
+      "spanInches": 239.5,
+      "spanDisplay": "19'-11.50\"",
+      "pitch": "3.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Monopitch Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP, 2x4 No.1 SP",
+      "bottomChordLumber": "2x6 No.1 SP, 2x6 2400F 2.0E SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.94",
+        "maxBcCsi": "0.87",
+        "ssi": "0.73",
+        "deflectionTL": "-0.4000",
+        "deflectionLL": "-0.2000",
+        "reaction1": "3158",
+        "reaction2": "3099",
+        "maxUplift1": "-695",
+        "weight": 241,
+        "boardFeet": 112
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "11-2-1"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-10-7"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "2400F 2.0E SP",
+          "length": "9-4-8"
+        },
+        {
+          "label": "B2",
+          "size": "2x6",
+          "grade": "No.1 SP",
+          "length": "9-11-8"
+        },
+        {
+          "label": "W6",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-2-0"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-2-6"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-4-12"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-4-12"
+        },
+        {
+          "label": "W5",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-4-11"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-10-15"
+        }
+      ],
+      "plates": {
+        "count": 9,
+        "areas": "MT20 1352.00, M18AHS 160.00",
+        "types": [
+          "MT20",
+          "M18AHS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T11",
+      "file": "t11.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 239.5,
+      "spanDisplay": "19'-11.50\"",
+      "pitch": "3.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Monopitch",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.3 SP, 2x4 No.1 SP",
+      "bottomChordLumber": "2x4 No.2 SP, 2x4 No.1 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.77",
+        "maxBcCsi": "0.74",
+        "ssi": "0.46",
+        "deflectionTL": "-0.3400",
+        "deflectionLL": "-0.1700",
+        "reaction1": "707",
+        "reaction2": "705",
+        "maxUplift1": "-179",
+        "weight": 101,
+        "boardFeet": 48
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "11-0-1"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "9-7-8"
+        },
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-11-8"
+        },
+        {
+          "label": "T3",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-11-8"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "6-9-7"
+        },
+        {
+          "label": "W5",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-11-6"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-0-3"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-6-6"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-1-14"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "7-7-5"
+        }
+      ],
+      "plates": {
+        "count": 9,
+        "areas": "MT20 268.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T12",
+      "file": "t12.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 239.5,
+      "spanDisplay": "19'-11.50\"",
+      "pitch": "3.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Monopitch",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP, 2x4 No.1 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.98",
+        "maxBcCsi": "0.86",
+        "ssi": "0.46",
+        "deflectionTL": "-0.2100",
+        "deflectionLL": "-0.1000",
+        "reaction1": "747",
+        "reaction2": "722",
+        "maxUplift1": "-173",
+        "weight": 96,
+        "boardFeet": 45.33
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "7-11-8"
+        },
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-11-8"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "13-6-14"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-7-8"
+        },
+        {
+          "label": "W5",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "3-7-6"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "8-5-11"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-8-3"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-10-6"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-6-0"
+        }
+      ],
+      "plates": {
+        "count": 8,
+        "areas": "MT20 268.00, M18AHS 80.00",
+        "types": [
+          "MT20",
+          "M18AHS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T13",
+      "file": "t13.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 239.5,
+      "spanDisplay": "19'-11.50\"",
+      "pitch": "3.94/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Half Hip Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.1,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.1 SP, 2x4 No.2 SP",
+      "bottomChordLumber": "2x6 No.2 SP, 2x6 No.1 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.89",
+        "maxBcCsi": "0.89",
+        "ssi": "0.50",
+        "deflectionTL": "-0.2900",
+        "deflectionLL": "-0.1600",
+        "reaction1": "1116",
+        "reaction2": "1109",
+        "maxUplift1": "-415",
+        "weight": 106,
+        "boardFeet": 50
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.1 SP",
+          "length": "9-4-4"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "11-11-8"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "No.1 SP",
+          "length": "9-4-8"
+        },
+        {
+          "label": "B2",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "9-11-8"
+        },
+        {
+          "label": "W4",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "2-1-6"
+        },
+        {
+          "label": "W3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-1-6"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-2-3"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-0-13"
+        }
+      ],
+      "plates": {
+        "count": 8,
+        "areas": "MT20 352.00, M18AHS 80.00",
+        "types": [
+          "MT20",
+          "M18AHS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T14",
+      "file": "t14.tre",
+      "source": "mitek-tre",
+      "quantity": 3,
+      "ply": 1,
+      "spanInches": 224.5,
+      "spanDisplay": "18'-8.50\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.29",
+        "maxBcCsi": "0.73",
+        "ssi": "0.31",
+        "deflectionTL": "-0.2700",
+        "deflectionLL": "-0.1300",
+        "reaction1": "570",
+        "reaction2": "594",
+        "maxUplift1": "-116",
+        "weight": 91,
+        "boardFeet": 137
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-3-9"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "9-4-4"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "5-4-10"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-1-5"
+        },
+        {
+          "label": "HW2",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-4-2"
+        }
+      ],
+      "plates": {
+        "count": 7,
+        "areas": "MT20 804.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T14GE",
+      "file": "t14ge.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 224.5,
+      "spanDisplay": "18'-8.50\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Common Structural Gable",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.35",
+        "maxBcCsi": "0.50",
+        "ssi": "0.26",
+        "deflectionTL": "-0.1400",
+        "deflectionLL": "0.1100",
+        "reaction1": "238",
+        "reaction2": "-308",
+        "maxUplift1": "-124",
+        "weight": 108,
+        "boardFeet": 54.33
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-3-9"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "11-2-14"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "14-6-8"
+        },
+        {
+          "label": "B2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "4-2-0"
+        },
+        {
+          "label": "HW2",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-4-2"
+        },
+        {
+          "label": "ST4",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "4-9-5"
+        },
+        {
+          "label": "ST3",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-5-5"
+        },
+        {
+          "label": "ST2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-1-5"
+        },
+        {
+          "label": "ST1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-9-5"
+        },
+        {
+          "label": "ST5",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-1-5"
+        }
+      ],
+      "plates": {
+        "count": 22,
+        "areas": "MT20 448.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T15",
+      "file": "t15.tre",
+      "source": "mitek-tre",
+      "quantity": 2,
+      "ply": 2,
+      "spanInches": 224.5,
+      "spanDisplay": "18'-8.50\"",
+      "pitch": "6.16/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-0.00\"",
+      "trussType": "Common Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x6 2400F 2.0E SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.54",
+        "maxBcCsi": "0.56",
+        "ssi": "0.92",
+        "deflectionTL": "-0.2800",
+        "deflectionLL": "-0.1400",
+        "reaction1": "3917",
+        "reaction2": "4386",
+        "maxUplift1": "-979",
+        "weight": 219,
+        "boardFeet": 105.33
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "12-3-9"
+        },
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "11-2-14"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "2400F 2.0E SP",
+          "length": "9-10-13"
+        },
+        {
+          "label": "B2",
+          "size": "2x6",
+          "grade": "2400F 2.0E SP",
+          "length": "8-7-6"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "3-2-15"
+        },
+        {
+          "label": "W2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "6-8-11"
+        },
+        {
+          "label": "HW2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-2-10"
+        }
+      ],
+      "plates": {
+        "count": 10,
+        "areas": "MT20 936.00, M18AHS 200.00",
+        "types": [
+          "MT20",
+          "M18AHS"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T16",
+      "file": "t16.tre",
+      "source": "mitek-tre",
+      "quantity": 2,
+      "ply": 1,
+      "spanInches": 95,
+      "spanDisplay": "7'-11.00\"",
+      "pitch": "6.19/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.13",
+        "maxBcCsi": "0.12",
+        "ssi": "0.13",
+        "deflectionTL": "-0.0100",
+        "deflectionLL": "0.0100",
+        "reaction1": "264",
+        "reaction2": "267",
+        "maxUplift1": "-63",
+        "weight": 36,
+        "boardFeet": 37.33
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-9-11"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "7-11-0"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-6-2"
+        },
+        {
+          "label": "HW1",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "0-4-2"
+        }
+      ],
+      "plates": {
+        "count": 6,
+        "areas": "MT20 352.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T16GE",
+      "file": "t16ge.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 95,
+      "spanDisplay": "7'-11.00\"",
+      "pitch": "6.19/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-10.50\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common Supported Gable",
+      "girder": false,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x4 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.07",
+        "maxBcCsi": "0.07",
+        "ssi": "0.09",
+        "deflectionTL": "-0.0000",
+        "deflectionLL": "0.0000",
+        "reaction1": "116",
+        "reaction2": "73",
+        "maxUplift1": "-19",
+        "weight": 38,
+        "boardFeet": 20.67
+      },
+      "members": [
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-9-11"
+        },
+        {
+          "label": "B1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "7-11-0"
+        },
+        {
+          "label": "HW1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-2-10"
+        },
+        {
+          "label": "ST1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "1-2-2"
+        },
+        {
+          "label": "ST2",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-6-2"
+        }
+      ],
+      "plates": {
+        "count": 10,
+        "areas": "MT20 216.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    },
+    {
+      "mark": "T17",
+      "file": "t17.tre",
+      "source": "mitek-tre",
+      "quantity": 1,
+      "ply": 1,
+      "spanInches": 91,
+      "spanDisplay": "7'-7.00\"",
+      "pitch": "8.85/12",
+      "spacing": "2'-0.00\"",
+      "overhangLeft": "0'-0.00\"",
+      "overhangRight": "0'-10.50\"",
+      "trussType": "Common Girder",
+      "girder": true,
+      "designCode": "IRC2015/TPI2014",
+      "lumber": "2x4,No.2,SP",
+      "species": "SP (Southern Pine)",
+      "topChordLumber": "2x4 No.2 SP",
+      "bottomChordLumber": "2x6 No.2 SP",
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0"
+      },
+      "engineering": {
+        "maxTcCsi": "0.25",
+        "maxBcCsi": "0.64",
+        "ssi": "0.69",
+        "deflectionTL": "-0.0300",
+        "deflectionLL": "-0.0000",
+        "reaction1": "563",
+        "reaction2": "1075",
+        "maxUplift1": null,
+        "weight": 38,
+        "boardFeet": 19.33
+      },
+      "members": [
+        {
+          "label": "T2",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "5-9-11"
+        },
+        {
+          "label": "T1",
+          "size": "2x4",
+          "grade": "No.2 SP",
+          "length": "4-4-4"
+        },
+        {
+          "label": "B1",
+          "size": "2x6",
+          "grade": "No.2 SP",
+          "length": "7-5-14"
+        },
+        {
+          "label": "W1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "2-4-2"
+        },
+        {
+          "label": "HW1",
+          "size": "2x4",
+          "grade": "No.3 SP",
+          "length": "0-2-10"
+        }
+      ],
+      "plates": {
+        "count": 7,
+        "areas": "MT20 248.00",
+        "types": [
+          "MT20"
+        ]
+      },
+      "designDate": "1/10/2023"
+    }
+  ]
+}

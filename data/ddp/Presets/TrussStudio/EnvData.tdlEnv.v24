@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tdlObject Type="Env" FileVersion="24" Title="EnvData" Version="2021.7.7.4"
+ ID="11fb9838-e24e-467c-834a-c0b00480ecac" ParentID="00000000-0000-0000-0000-000000000000" >
+<tdlEnv>
+<Localization>
+<Country Value="USA" />
+<InputUnits Value="Imperial" />
+<OutputUnits Value="Imperial" />
+<InputLanguage Value="English" />
+<OutputLanguage Value="English" />
+</Localization>
+<Dialogs>
+<AddBoard>
+<FixedCutting Value="false" />
+</AddBoard>
+<Attic>
+<RoomAlign Value="Center" />
+<Width Value="10-00-00" />
+<Height Value="8-01-14" />
+<WallSize Value="03-08" />
+<RFMsize Value="0" />
+<AddFiller Value="false" />
+<ApplyAtticLoad Value="true" />
+<ApplyMechLoad Value="false" />
+<TB_Present Value="true" />
+<TB_Add_K_Webs Value="false" />
+<TB_MaxGap Value="01-00" />
+<TB_Size Value="03-08" />
+<TB_WebProfile Value="Auto" />
+<RoomFloorOption Value="None" />
+<FT_DefaultSizeBC Value="03-08" />
+<FT_TCSize Value="03-08" />
+<FT_Depth Value="1-06-00" />
+<FT_WebProfile Value="Auto" />
+<FloorAdj Value="0" />
+<WallAdj Value="0" />
+<CeilAdj Value="0" />
+<Defl_LL_AtticRoom Value="360" />
+<Defl_TL_AtticRoom Value="240" />
+</Attic>
+<BeamPocket>
+<Width Value="03-08" />
+<Center Value="3-00-00" />
+<GapBC Value="03-08" />
+<SliderWidth Value="03-08" />
+<SliderExtension Value="1-00-00" />
+<SideVert_L Value="true" />
+<SideVert_R Value="true" />
+<AddBrg_BP Value="true" />
+</BeamPocket>
+<CalHip>
+<HipRafterSize Value="03-08" />
+<FrontJackTCSize Value="03-08" />
+<FrontJackPitch Value="   0.00000" />
+<DropDistance Value="04-00" />
+<DropSelection Value="FJ" />
+<DistToExtend Value="0" />
+<Ext_HowToMeasure Value="XRSB" />
+<ExtendChordsToMeet Value="false" />
+<AddFillerChord Value="false" />
+<FillerChordSize Value="03-08" />
+<JointType_Str Value="DCVS" />
+<JointType_Non Value="DCVS" />
+<BevelCut Value="DOUBLE" />
+<MaxUnSuppExt Value="4-00-00" />
+<StudSize Value="03-08" />
+<StudSpacing Value="4-00-00" />
+<StudMinLength Value="1-00-00" />
+<HoldbackDim Value="01-08" />
+<BraceSpacing Value="2-00-00" />
+</CalHip>
+<HipGirderLoading>
+<HipGirderLoadType Value="Hip Girder (no secondary)" />
+<PrevGirderSpacing Value="6-00-00" />
+<NextGirderSpacing Value="6-00-00" />
+<CornerType Value="Truss BC" />
+<EndJacks Value="JackOpen" />
+<SideWallSetback Value="0" />
+<EndWallSetback Value="0" />
+<CantileverLeft Value="0" />
+<CantileverEnd Value="0" />
+<CantileverRight Value="0" />
+</HipGirderLoading>
+<CornerGirderLoading>
+<CornerJacks Value="JackOpen" />
+<SideWallSetback Value="0" />
+<EndWallSetback Value="0" />
+<CantileverSide Value="0" />
+<CantileverEnd Value="0" />
+</CornerGirderLoading>
+<CosmeticFiller>
+<X_Begin Value="03-08" />
+<X_End Value="4-00-00" />
+<Y_Offset Value="0" />
+<OffsetRef Value="Org" />
+<ChordSize Value="03-08" />
+<Filler_Profile Value="0.0" />
+<TrimOptionLeft Value="nt" />
+<TrimOptionRight Value="nt" />
+<StudSize Value="03-08" />
+<StudSpacing Value="6-00-00" />
+<StudMinLength Value="06-00" />
+<StudDir Value="L to R" />
+<Placement Value="Auto" />
+<HPlacement Value="Center" />
+<VertOverBrg Value="false" />
+<StudSetbackL Value="0" />
+<StudSetbackR Value="0" />
+<CreateNewJoints Value="true" />
+</CosmeticFiller>
+<Gable>
+<Structural_Gbl Value="false" />
+<LetinSize Value="03-08" />
+<LetinStartX Value="-01-00" />
+<LetinStopX Value="-01-00" />
+<DropTCSize Value="03-08" />
+<DropTCStartX Value="-01-00" />
+<DropTCStopX Value="-01-00" />
+<StudSize Value="03-08" />
+<Wx2StudSize Value="01-08" />
+<StudSpacing Value="2-00-00" />
+<StudMinLength Value="06-00" />
+<StudDir Value="Peak Out" />
+<StudPlacement Value="Centered" />
+<LouverType Value="None" />
+<LouverDoubleRect Value="false" />
+<LouverHorzDim Value="2-00-00" />
+<LouverVertDim Value="2-00-00" />
+<LouverClearance Value="00-04" />
+<LouverHorzOffset Value="-83-03-00" />
+<LouverVertOffset Value="-83-03-00" />
+<SheathingType Value="OSB" />
+<SheathingThk Value="00-07" />
+<SheathingFace Value="Front" />
+<AddBrg_Gbl Value="true" />
+<ShowHatching Value="false" />
+<HatchingLineDistance Value="06-00" />
+<HatchingLineThickness Value="00-08" />
+</Gable>
+<TrussValleySet>
+<ValleySpan Value="0" />
+<ValleyPitch Value="   4.00000" />
+<ValleyHeel Value="004" />
+<ValleyWall Value="0" />
+<TCButt Value="   0.25000" />
+<TCSize1 Value="2x4" />
+<TCSpan1 Value="0" />
+<TCSize2 Value="2x4" />
+<TCSpan2 Value="0" />
+<TCSize3 Value="2x4" />
+<OCSpacing Value="2-00-00" />
+<Direction Value="Up Roof" />
+<Offset Value="0" />
+<ExcludeFullSpan Value="false" />
+<PopOutDepth Value="0" />
+<HipPitch Value="   0.00000" />
+<HipBevel Value="Double" />
+<RoofBevel Value="Single" />
+<RoofPitch Value="   4.00000" />
+<RoofHeel Value="0" />
+<RoofWall Value="0" />
+<SheathingThickness Value="00-08" />
+<SleeperSize Value="2x4" />
+<SleeperLength Value="0" />
+<SleeperCount Value="0" />
+<RidgeBoardSize Value="2x4" />
+<RidgeBoardCount Value="1" />
+<RidgeBoardLength Value="0" />
+<IncludeRidgeBoards Value="true" />
+<Build3D Value="false" />
+</TrussValleySet>
+<DragLoad>
+<DragLoadLbs Value="2000.00000" />
+<DragLoadLbsSP Value="   0.00000" />
+<DragLoadPlf Value="   0.00000" />
+<DragLoadPlfSP Value=" 300.00000" />
+<SnowFactor Value="   0.00000" />
+<LiveFactor Value="   0.50000" />
+<ContBrg Value="false" />
+<ShearPanel Value="false" />
+<ConcurrentAnchorLoads Value="false" />
+<ShearWallMinLength Value="1-00-00" />
+</DragLoad>
+<MovingDistLoad>
+<LoadDomain Value="TandB_Load" />
+<LiveLoad Value=" 250.00000" />
+<DeadLoad Value="   0.00000" />
+<bConcurrent Value="false" />
+<BoxWidth Value="2-00-00" />
+<BoxLength Value="2-00-00" />
+<MoveIncrement Value="2-00-00" />
+</MovingDistLoad>
+<MovingPointLoad>
+<LoadDomain Value="TandB_Load" />
+<WhereApplied Value="PPandMP" />
+<LiveLoad Value="250" />
+<DeadLoad Value="0" />
+<bConcurrent Value="false" />
+<Defl_TL_MPL Value="120" />
+</MovingPointLoad>
+<MechLoad>
+<WhereApplied Value="Centered" />
+<MechUnitLoad Value="25" />
+<PointLoad Value="true" />
+<UseTwoPtLoads Value="true" />
+<Width Value="4-00-00" />
+<SpecificLocate Value="0" />
+<MechDomain Value="Bottom" />
+<MechYLoc Value="0" />
+</MechLoad>
+<PolyFill>
+<PolyFillSize Value="03-08" />
+<PolyFillSpacing Value="2-00-00" />
+<PolyFillDirection Value="Peak Out" />
+<PolyFillStudMinLength Value="06-00" />
+</PolyFill>
+</Dialogs>
+<LayoutSettings>
+<MfgControls>
+<MaxTrussHeight Value="12-00-00" />
+<ButtCut Value="00-04" />
+<TNdim Value="00-04" />
+<LayinAdj Value="00-04" />
+<SaveConnectorsToDB Value="true" />
+</MfgControls>
+<WallsAndPlanes>
+<WallOrientation Value="Clockwise" />
+<WallAlignment Value="Outside Edge" />
+<ExteriorWall Value="true" />
+<LoadBearing Value="true" />
+<WallWidth Value="03-08" />
+<WallElevTop Value="8-01-02" />
+<WallElevBot Value="0" />
+<strHeelHeight Value="Nom 2x4" />
+<CustomHeelHeight Value="0" />
+<HeelHeightAtFascia Value="false" />
+<CantDim Value="0" />
+<Length Value="10-08" />
+<HowMeasured Value="OutPnt" />
+<EndCuts Value="Plumb" />
+<Angle1 Value="  90.00000" />
+<Angle2 Value="   0.00000" />
+<DblCutDim Value="02-08" />
+<FasciaAdj Value="0" />
+<AttachRoofPlaneWL Value="false" />
+<AttachCeilPlaneWL Value="false" />
+<AttachRoofPlaneWK Value="false" />
+<AttachCeilPlaneWK Value="false" />
+<RoofPitchWL Value="   6.00000" />
+<CeilPitchWL Value="   0.00000" />
+<RoofPitchWK Value="   4.00000" />
+<CeilPitchWK Value="   0.00000" />
+<PlaneHipDropDim Value="0" />
+<IncludeWallVeneer Value="false" />
+<VeneerWidth Value="04-00" />
+<VeneerToWallGap Value="00-08" />
+<VeneerLoadBearing Value="false" />
+<MatchWallElevation Value="false" />
+<VeneerTopElevation Value="8-01-02" />
+<VeneerBotElevation Value="0" />
+<VeneerDefinesEdge Value="false" />
+<PlaneIndicators>
+<PlaneTagSize Value="1-08-00" />
+<DisplayPlanePitch Value="true" />
+</PlaneIndicators>
+<Cir_MinWallLength Value="  12.00000" />
+<WallColorsByElevation>
+<WallColorData Value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;WallColors /&gt;&#10;" />
+<UseWallColorsByElevation Value="false" />
+<DisplayVeneersOnSchedule Value="true" />
+<DisplayBeamsOnSchedule Value="true" />
+<WallElevationSchedule Value="false" />
+<BoldBearingWallEdge Value="false" />
+</WallColorsByElevation>
+<TrussColorByType>
+<Girder Value="-819320833" />
+<Gable Value="65535" />
+<HipGirder Value="-819320833" />
+<SecondaryHipGirder Value="-1080927800" />
+<Jack Value="729343231" />
+<CornerGirderTruss Value="-819320833" />
+<CornerRafter Value="-819320833" />
+<StackedCornerRafter Value="-819320833" />
+<Rafter Value="-1727987713" />
+<StackedRafter Value="-1727987713" />
+<ValleyTruss Value="10358783" />
+<LayinGable Value="-16711681" />
+<ShearPanel Value="-65281" />
+<ColorTrussesByType Value="false" />
+</TrussColorByType>
+</WallsAndPlanes>
+<Beams>
+<BeamSpecies Value="Douglas Fir-Larch" />
+<BeamDrop Value="Drop" />
+<BeamWidth Value="03-08" />
+<BeamHeight Value="05-08" />
+<BeamPlies Value="1" />
+<BeamAlignment Value="Outside Edge" />
+<DisplayBeamLabels Value="false" />
+<GroupBeamsByLength Value="false" />
+<DisplayBeamSchedule Value="false" />
+<BeamLabelFormat Value="BM#" />
+</Beams>
+<Dimensions>
+<AutoDimWalls Value="true" />
+<MinWallDim Value="2-00-00" />
+<AutoDimCants Value="false" />
+<AutoDimOHs Value="false" />
+<Auto>
+<UseArchitecturalDim Value="true" />
+<LineType Value="Solid" />
+<LineWeight Value="Light" />
+<TextPosAlong Value="Center" />
+<TextPosPerp Value="Inline" />
+<LeftEndMarker Value="ArrowOut" />
+<RightEndMarker Value="ArrowOut" />
+<LeaderPercent Value="   0.00000" />
+<LeftEndMarkerSize Value="04-00" />
+<RightEndMarkerSize Value="04-00" />
+<ParallelToLine Value="true" />
+</Auto>
+<Manual>
+<UseArchitecturalDim Value="true" />
+<LineType Value="Solid" />
+<LineWeight Value="Light" />
+<TextPosAlong Value="Center" />
+<TextPosPerp Value="Inline" />
+<LeftEndMarker Value="ArrowOut" />
+<RightEndMarker Value="ArrowOut" />
+<LeaderPercent Value="   0.00000" />
+<LeftEndMarkerSize Value="04-00" />
+<RightEndMarkerSize Value="04-00" />
+<ParallelToLine Value="true" />
+</Manual>
+<Spacing>
+<UseArchitecturalDim Value="true" />
+<LineType Value="Solid" />
+<LineWeight Value="Light" />
+<TextPosAlong Value="Center" />
+<TextPosPerp Value="Inline" />
+<LeftEndMarker Value="ArrowOut" />
+<RightEndMarker Value="ArrowOut" />
+<LeftEndMarkerSize Value="04-00" />
+<RightEndMarkerSize Value="04-00" />
+<ParallelToLine Value="true" />
+</Spacing>
+</Dimensions>
+<Labels>
+<DefaultLabels Value="Preset Labels" />
+<UseProjectTrussConsolidation Value="true" />
+<TrussLabelLocation Value="Center" />
+<DisplaySetNames Value="true" />
+<MinLabelConsolidationQuantity Value="3" />
+<DisplayConsolidationQuantity Value="true" />
+<MaxLabelConsolidationDistance Value="4-00-00" />
+<HangerKeyLabelSizeFactor Value="   1.00000" />
+<SetLabelSuffix Value="Jacks" />
+<UseSetNameAsPrefixForTruss Value="false" />
+<DisplayBandingNotes Value="false" />
+<PresetLabeling>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<LabelFormats>
+<LabelFormat_1 Value="T##" />
+<LabelFormat_2 Value="G##" />
+<LabelFormat_3 Value="GE##" />
+<LabelFormat_4 Value="F##" />
+<LabelFormat_5 Value="FG##" />
+<LabelFormat_6 Value="FE##" />
+<LabelFormat_7 Value="V##" />
+<LabelFormat_8 Value="XX@" />
+<LabelFormat_9 Value="XXX@" />
+<LabelFormat_10 Value="T##" />
+<LabelFormat_11 Value="H##" />
+<LabelFormat_12 Value="GE##" />
+<LabelFormat_13 Value="PF##" />
+<LabelFormat_14 Value="CAP##" />
+<LabelFormat_15 Value="F##" />
+<LabelFormat_16 Value="FGR##" />
+<LabelFormat_17 Value="GRD##" />
+<LabelFormat_18 Value="V##" />
+<LabelFormat_19 Value="M##" />
+<LabelFormat_20 Value="J##" />
+<LabelFormat_21 Value="CJ##" />
+<LabelFormat_22 Value="SJ##" />
+<LabelFormat_23 Value="RAF#" />
+<LabelFormat_24 Value="BLK#" />
+</LabelFormats>
+<DefaultTrussLabels>
+<UseEndJackLabelForAllJacks Value="true" />
+<NextTrussLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<FirstTrussFormat Value="T##" />
+<FirstTrussNextValue Value="T01" />
+<FirstTrussIncrementBy Value="1" />
+<LastTrussFormat Value="T##" />
+<LastTrussNextValue Value="T01" />
+<LastTrussIncrementBy Value="1" />
+<OtherTrussesFormat Value="T##" />
+<OtherTrussesNextValue Value="T01" />
+<OtherTrussesIncrementBy Value="1" />
+<CommonTrussesFormat Value="T##" />
+<CommonTrussesNextValue Value="T01" />
+<CommonTrussesIncrementBy Value="1" />
+<GirderTrussesFormat Value="G##" />
+<GirderTrussesNextValue Value="G01" />
+<GirderTrussesIncrementBy Value="1" />
+<Wx2TrussesFormat Value="F##" />
+<Wx2TrussesNextValue Value="F01" />
+<Wx2TrussesIncrementBy Value="1" />
+<Wx2GirderTrussesFormat Value="FG##" />
+<Wx2GirderTrussesNextValue Value="FG01" />
+<Wx2GirderTrussesIncrementBy Value="1" />
+</NextTrussLabels>
+<HipSetLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<HipGirderFormat Value="H##" />
+<HipGirderNextValue Value="H01" />
+<HipGirderIncrementBy Value="1" />
+<SecondaryHipTrussFormat Value="H##" />
+<SecondaryHipTrussNextValue Value="H01" />
+<SecondaryHipTrussIncrementBy Value="1" />
+<EndJackFormat Value="J##" />
+<EndJackNextValue Value="J01" />
+<EndJackIncrementBy Value="1" />
+<SideJackFormat Value="J##" />
+<SideJackNextValue Value="J01" />
+<SideJackIncrementBy Value="1" />
+<CornerGirderFormat Value="RAF#" />
+<CornerGirderNextValue Value="RAF1" />
+<CornerGirderIncrementBy Value="1" />
+<CornerRafterFormat Value="RAF#" />
+<CornerRafterNextValue Value="RAF1" />
+<CornerRafterIncrementBy Value="1" />
+<StackedCornerRafterFormat Value="CJ#" />
+<StackedCornerRafterNextValue Value="RAF1" />
+<StackedCornerRafterIncrementBy Value="1" />
+<FlyerRafterFormat Value="RAF#" />
+<FlyerRafterNextValue Value="RAF1" />
+<FlyerRafterIncrementBy Value="1" />
+</HipSetLabels>
+<RafterLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<RafterFormat Value="RAF#" />
+<RafterNextValue Value="RAF1" />
+<RafterIncrementBy Value="1" />
+<StackedRafterFormat Value="RAF#" />
+<StackedRafterNextValue Value="RAF1" />
+<StackedRafterIncrementBy Value="1" />
+</RafterLabels>
+<ValleySetLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<ValleyTrussFormat Value="V##" />
+<ValleyTrussNextValue Value="V01" />
+<ValleyTrussIncrementBy Value="1" />
+<ValleyRafterFormat Value="M##" />
+<ValleyRafterNextValue Value="M01" />
+<ValleyRafterIncrementBy Value="1" />
+</ValleySetLabels>
+<LayInGableLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<LayInGableFormat Value="PF##" />
+<LayInGableNextValue Value="PF01" />
+<LayInGableIncrementBy Value="1" />
+</LayInGableLabels>
+<PiggyBackLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<PiggyBackFormat Value="CAP##" />
+<PiggyBackNextValue Value="CAP01" />
+<PiggyBackIncrementBy Value="1" />
+</PiggyBackLabels>
+<ShearPanelLabels>
+<IdenticalTrussLabeling Value="Same label for each identical truss" />
+<ShearPanelFormat Value="BLK#" />
+<ShearPanelNextValue Value="BLK1" />
+<ShearPanelIncrementBy Value="1" />
+<BlockFormat Value="BLK#" />
+<BlockNextValue Value="BLK1" />
+<BlockIncrementBy Value="1" />
+</ShearPanelLabels>
+</DefaultTrussLabels>
+</PresetLabeling>
+</Labels>
+<LumberSizeData>
+<Common_TC_FirstLast Value="03-08" />
+<Common_TC_MidSegments Value="03-08" />
+<Common_BC Value="03-08" />
+<Common_Web Value="03-08" />
+<Girder_TC_FirstLast Value="03-08" />
+<Girder_TC_MidSegments Value="03-08" />
+<Girder_BC Value="05-08" />
+<Girder_Web Value="03-08" />
+<HipGirder_TC_FirstLast Value="03-08" />
+<HipGirder_TC_MidSegments Value="03-08" />
+<HipGirder_BC Value="05-08" />
+<HipGirder_Web Value="03-08" />
+<HipGirderSecondary_TC_FirstLast Value="03-08" />
+<HipGirderSecondary_TC_MidSegments Value="03-08" />
+<HipGirderSecondary_BC Value="03-08" />
+<HipGirderSecondary_Web Value="03-08" />
+<KingJack_TC Value="03-08" />
+<KingJack_BC Value="03-08" />
+<KingJack_Web Value="03-08" />
+<Jack_TC Value="03-08" />
+<Jack_BC Value="03-08" />
+<Jack_Web Value="03-08" />
+<Valley_TC Value="03-08" />
+<Valley_BC Value="03-08" />
+<Valley_Web Value="03-08" />
+<Gable_TC_FirstLast Value="03-08" />
+<Gable_TC_MidSegments Value="03-08" />
+<Gable_BC Value="03-08" />
+<Gable_Web Value="03-08" />
+<LayinGable_TC Value="03-08" />
+<LayinGable_BC Value="03-08" />
+<LayinGable_Web Value="03-08" />
+<Rafter Value="03-08" />
+<StackedRafterTop Value="03-08" />
+<StackedRafterBottom Value="03-08" />
+<CornerRafter Value="03-08" />
+<StackedCornerRafterTop Value="03-08" />
+<StackedCornerRafterBottom Value="03-08" />
+<ShearPanel_TC Value="03-08" />
+<ShearPanel_BC Value="03-08" />
+<ShearPanel_Web Value="03-08" />
+</LumberSizeData>
+<TrussDetails>
+<OnCenterSpacing Value="2-00-00" />
+<OnePlyThickness Value="01-08" />
+<DisconnectTrusses Value="false" />
+</TrussDetails>
+<LoadTransfer>
+<IsTransferLoads Value="true" />
+<UpdateTransferLoads Value="Only When Analyzing" />
+<VerifyTransferOnOpen Value="false" />
+<ShowLoadTransferMessage Value="true" />
+<LoadTransferTolerance Value="01-00" />
+<MinRequiredAutoConnectorLoad Value=" 250.00000" />
+<ToleranceForVerificationInLbs Value="2" />
+<ToleranceForVerificationInPercent Value="   1.00000" />
+</LoadTransfer>
+<NextTruss>
+<FillSide Value="Dir Of" />
+<NumPlysFirstTruss Value="1" />
+<NumPlysLastTruss Value="1" />
+<NumPlysOther Value="1" />
+<FlatTrussDepth Value="0" />
+<FlatTrussElev Value="0" />
+<FlatTrussName Value="Truss" />
+<IsGirderFirst Value="false" />
+<IsGirderLast Value="false" />
+<IsGirderOther Value="false" />
+</NextTruss>
+<Hipset>
+<StyleHM Value="Step Down" />
+<StepUp Value="Every Truss" />
+<StyleCG Value="Truss" />
+<NumPlysHM Value="2" />
+<NumPlysCG Value="1" />
+<SetbackHM Value="6-00-00" />
+<SameJackLayout Value="true" />
+<FirstEndJack Value="2-00-00" />
+<FirstSideJack Value="2-00-00" />
+<HipDropDim Value="01-08" />
+<HipDropPitch Value="-01-00" />
+<FlatTCDropPitch Value="-02-00" />
+<GirderDrop Value="Partial" />
+<PlacementHM Value="true" />
+<PlacementCOM Value="true" />
+<FlyerRafters Value="false" />
+<DimToCenterEJ Value="false" />
+<DimToCenterSJ Value="false" />
+<PlacementEJ Value="From Center" />
+<PlacementSJ Value="From Corners" />
+<PlacementSH Value="Peak Down" />
+<JackSpan1 Value="6-00-00" />
+<EJ_HoldBackDim Value="0" />
+<JackTCBearingType Value="Toenail" />
+<JackBCBearingType Value="Toenail" />
+<BevelCorner Value="NONE" />
+<BevelCornerOH Value="NONE" />
+<TrimCornerLong Value="false" />
+<BevelEndJack Value="NONE" />
+<BevelSideJack Value="NONE" />
+<BevelHipTrussExt Value="DOUBLE" />
+<HipTrim Value="Auto" />
+<HipPlanes Value="Auto" />
+<UseHipGirderAsSetName Value="false" />
+</Hipset>
+<ValleySet>
+<ValleyType Value="Trusses" />
+<FillSide Value="Dir Of" />
+<OnCenterSpacing Value="2-00-00" />
+<PlaceTrussAtRefLine Value="true" />
+<StudSpacing Value="4-00-00" />
+<StudDir Value="Peak Out" />
+<NubDim Value="00-04" />
+<RoofPitch Value="   4.00000" />
+<SheathingThickness Value="00-08" />
+<BevelVS Value="NONE" />
+<TCSize1 Value="2x4" />
+<TCSpan1 Value="0" />
+<TCSize2 Value="2x4" />
+<TCSpan2 Value="0" />
+<TCSize3 Value="2x4" />
+<AdjustForSleeper Value="0" />
+<HipBevel Value="Double" />
+<RidgeBoardSize Value="2x4" />
+<RidgeBoardCount Value="1" />
+<IncludeRidgeBoards Value="true" />
+</ValleySet>
+<PiggyBack>
+<DimType Value="hbc" />
+<Dim Value="11-00-00" />
+<GapSizeBrace Value="01-09" />
+<GapSizeEnd Value="0" />
+<StudSpacing Value="4-00-00" />
+<StudDirection Value="Peak Out" />
+<SizeTC Value="03-08" />
+<SizeBC Value="03-08" />
+<SizeWeb Value="03-08" />
+<PiggyBackOHButt Value="00-04" />
+<PiggyBackBCButt Value="00-04" />
+<WebCode Value="g" />
+<OffsetCap Value="false" />
+</PiggyBack>
+<ShearPanels>
+<SpanAdjustment Value="00-02" />
+<MinimumSpan Value="10-00" />
+<MinimumSpanBlock Value="10-00" />
+<UseFullHeight Value="false" />
+<AddTopBlock Value="false" />
+<NumBays Value="0" />
+<CommonSpan Value="false" />
+<PanelOrBlock Value="panel" />
+<PanelLock Value="panel" />
+<PanelDim Value="2-00-00" />
+<BlockDim Value="03-08" />
+<BlockLock Value="auto" />
+<TopBlockDim Value="03-08" />
+<BottomBlockDim Value="03-08" />
+</ShearPanels>
+<SplitTruss>
+<SplitKeyEndDesc Value="true" />
+<BottomKeySize Value="03-00" />
+<BottomKeyTCGap Value="03-00" />
+<BottomKeyBCGap Value="-01-00" />
+<TopKeyBrgGapDim Value="00-08" />
+<TopKeyBCCutbackDim Value="0" />
+<TopKeyEndGapDim Value="0" />
+<TopKeySlider Value="true" />
+<TopKeySliderSize Value="01-08" />
+<TopKeySliderLength Value="1-04-00" />
+<TopKeyBrgBlock Value="false" />
+<TopKeyBBSize Value="03-00" />
+<TopKeyBCGapMeasure Value="0" />
+</SplitTruss>
+<CadMarkup>
+<Hatch>
+<FillStyle Value="None" />
+<LineDistance Value="06-00" />
+<LineThickness Value="   0.50000" />
+</Hatch>
+</CadMarkup>
+<Fonts>
+<DimensionFontName Value="Calibri" />
+<DimensionFontSize Value="  12.00000" />
+<DimensionColor Value="255" />
+<DimensionSpacingFontName Value="Calibri" />
+<DimensionSpacingFontSize Value="  12.00000" />
+<DimensionSpacingColor Value="255" />
+<LabelFontName Value="Calibri" />
+<LabelFontSize Value="  12.00000" />
+<LabelColor Value="255" />
+<NotesFontName Value="Calibri" />
+<NotesFontSize Value="  14.00000" />
+<NotesColor Value="255" />
+<WallFontName Value="Calibri" />
+<WallFontSize Value="  14.00000" />
+<WallColor Value="0" />
+</Fonts>
+<Layers>
+<LayerSchemes Value="&lt;?xml version=&quot;1.0&quot;?&gt;&#10;&lt;Schemes version=&quot;39&quot;&gt;&#10; &lt;Scheme ActLay=&quot;0&quot; SelVis=&quot;1&quot; NonSelVis=&quot;1&quot; LayerIdCounter=&quot;10&quot; SchemeName=&quot;2 Story&quot;&gt;&#10;  &lt;LayerNames Names=&quot;1st Floor|Floor Depth|2nd Floor&quot; /&gt;&#10;  &lt;LayerIds Ids=&quot;0 1 2&quot; /&gt;&#10;  &lt;LayerInUse Layers=&quot;0&quot; /&gt;&#10;  &lt;LayerVisible Layers=&quot;7&quot; /&gt;&#10;  &lt;ObjectVisible Objects=&quot;1073741438&quot; /&gt;&#10;  &lt;LayerObjectVisible Object_Layer_0=&quot;1073741823&quot; Object_Layer_1=&quot;1073741823&quot; Object_Layer_2=&quot;1073741823&quot; /&gt;&#10;  &lt;ObjectSelectable Objects=&quot;1072168959&quot; /&gt;&#10;  &lt;BottomElevation count=&quot;3&quot; i1=&quot;0&quot; i2=&quot;109.125&quot; i3=&quot;119.125&quot; /&gt;&#10;  &lt;TopElevation count=&quot;3&quot; i1=&quot;109.125&quot; i2=&quot;119.125&quot; i3=&quot;216.25&quot; /&gt;&#10; &lt;/Scheme&gt;&#10; &lt;Scheme ActLay=&quot;0&quot; SelVis=&quot;1&quot; NonSelVis=&quot;1&quot; LayerIdCounter=&quot;10&quot; SchemeName=&quot;1 Story&quot;&gt;&#10;  &lt;LayerNames Names=&quot;1st Floor&quot; /&gt;&#10;  &lt;LayerIds Ids=&quot;0&quot; /&gt;&#10;  &lt;LayerInUse Layers=&quot;0&quot; /&gt;&#10;  &lt;LayerVisible Layers=&quot;1&quot; /&gt;&#10;  &lt;ObjectVisible Objects=&quot;1073741438&quot; /&gt;&#10;  &lt;LayerObjectVisible Object_Layer_0=&quot;1073741823&quot; /&gt;&#10;  &lt;ObjectSelectable Objects=&quot;1072168959&quot; /&gt;&#10;  &lt;BottomElevation count=&quot;1&quot; i1=&quot;0&quot; /&gt;&#10;  &lt;TopElevation count=&quot;1&quot; i1=&quot;109.125&quot; /&gt;&#10; &lt;/Scheme&gt;&#10;&lt;/Schemes&gt;&#10;" />
+<DefaultSchemeName Value="" />
+</Layers>
+</LayoutSettings>
+<Geometry>
+<Geom_2xW>
+<EndConditions_2xW>
+<BearingGapDim Value="00-08" />
+<WedgeMinSize Value="03-08" />
+<WedgeMaxSize Value="07-04" />
+<WedgeMaxShortSide Value="0" />
+<WedgeOrSlopedBrg Value="false" />
+<SL_MinWidth Value="03-08" />
+<SL_MaxWidth Value="07-04" />
+<SL_NumInStack Value="1" />
+<SL_Length Value="2-06-00" />
+<SL_MinLengthFW Value="1-00-00" />
+<SL_Attachment Value="TC" />
+<HS_MinWidth Value="03-08" />
+<HS_MaxWidth Value="07-04" />
+<HS_SliderTestWidth Value="03-08" />
+<HS_OptimizeHSscarf Value="true" />
+<BB_Size Value="03-08" />
+<BB_NumInStack Value="1" />
+<BB_Detail Value="None" />
+<TC_GapMeasure Value="75-00-00" />
+<BC_GapMeasure Value="0" />
+<FireCutType Value="Fire Cut" />
+<FireCutDimType Value="X Dist" />
+<FireCutDim Value="04-00" />
+<FireCutEndWebSize Value="03-08" />
+<FireCutVertSize Value="03-08" />
+<EJ_RemoveEV Value="true" />
+<EJ_BrgConfig Value="Both" />
+<TC_Brg_Plate_Along_Diag Value="false" />
+<LedgerWidth Value="01-08" />
+</EndConditions_2xW>
+<PanelLengths_2xW>
+<PL_2x3TC Value="4-00-00" />
+<PL_2x4TC Value="8-00-00" />
+<PL_2x5TC Value="6-00-00" />
+<PL_2x6TC Value="8-00-00" />
+<PL_2x8TC Value="8-00-00" />
+<PL_2x10TC Value="6-00-00" />
+<PL_2x12TC Value="6-00-00" />
+<PL_EJ_2x4TC Value="8-00-00" />
+<PL_EJ_2x6TC Value="8-00-00" />
+<PL_2x3BC Value="6-00-00" />
+<PL_2x4BC Value="10-00-00" />
+<PL_2x5BC Value="8-00-00" />
+<PL_2x6BC Value="10-00-00" />
+<PL_2x8BC Value="10-00-00" />
+<PL_2x10BC Value="10-00-00" />
+<PL_2x12BC Value="10-00-00" />
+<Sliders_MaxDistBetweenPlates Value="2-00-00" />
+<SC_MaxDistBetweenPlates Value="2-00-00" />
+<DG_LG_MaxDistBetweenPlates Value="2-00-00" />
+<MaxDistToMergeCompLinkWithSplice Value="04-08" />
+</PanelLengths_2xW>
+</Geom_2xW>
+<Geom_Wx2>
+<EndConditions_Wx2>
+<BearingGapDim Value="00-08" />
+<WedgeMinSize Value="03-08" />
+<WedgeMaxSize Value="07-04" />
+<SL_MinWidth Value="01-08" />
+<SL_MaxWidth Value="01-08" />
+<SL_NumInStack Value="1" />
+<SL_Length Value="1-04-00" />
+<SL_MinLengthFW Value="1-00-00" />
+<SL_Attachment Value="TC" />
+<EV_UseSingleForNRN Value="false" />
+<BB_Size Value="01-08" />
+<BB_NumInStack Value="3" />
+<Ribbon_Size Value="01-08" />
+<BB_Detail Value="Ribbon Post" />
+<TC_GapMeasure Value="03-08" />
+<BC_GapMeasure Value="75-00-00" />
+<FireCutType Value="Fire Cut" />
+<FireCutDimType Value="X Dist" />
+<FireCutDim Value="04-00" />
+<FireCutEndWebSize Value="03-00" />
+<FireCutVertSize Value="01-08" />
+<UseTrimEnds Value="false" />
+<TC_Brg_Plate_Along_Diag Value="false" />
+</EndConditions_Wx2>
+<PanelLengths_Wx2>
+<War>
+<War1>
+<UpToDepth Value="1-04-00" />
+<StdPnlLen Value="2-00-00" />
+<MaxPnlLen Value="2-06-00" />
+</War1>
+<War2>
+<UpToDepth Value="2-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</War2>
+<War3>
+<UpToDepth Value="3-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</War3>
+<War4>
+<UpToDepth Value="4-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</War4>
+</War>
+<Fan>
+<Fan1>
+<UpToDepth Value="1-04-00" />
+<StdPnlLen Value="2-00-00" />
+<MaxPnlLen Value="2-06-00" />
+</Fan1>
+<Fan2>
+<UpToDepth Value="2-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</Fan2>
+<Fan3>
+<UpToDepth Value="3-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</Fan3>
+<Fan4>
+<UpToDepth Value="4-00-00" />
+<StdPnlLen Value="2-06-00" />
+<MaxPnlLen Value="3-00-00" />
+</Fan4>
+</Fan>
+<StackedChords>
+<OverlapAdjacentPanelsTC Value="06-00" />
+<OverlapAdjacentPanelsBC Value="06-00" />
+</StackedChords>
+<Sliders_MaxDistBetweenPlates Value="1-00-00" />
+</PanelLengths_Wx2>
+<Web_Wx2>
+<DefaultWebStyle Value="k" />
+<NotIntBrg_WebFromTC Value="false" />
+<IntBrg_WebFromTC Value="false" />
+<WebFromChase Value="false" />
+<NoChaseSpan Value="7-00-00" />
+<ChaseMinWidth Value="04-00" />
+<ChaseStdWidth Value="2-00-00" />
+<ChaseMaxWidth Value="2-06-00" />
+<NoChaseWebDir Value="Left to Right" />
+<SizeSB Value="05-08" />
+<SpacingSB Value="10-00-00" />
+<WideBrg Value="06-00" />
+<AddFireCutVertical Value="false" />
+<VerticalWebsAtPointLoads>
+<ForceVerticalAtLoad Value="350" />
+<NumberOfVerticalsAtLoad Value="2" />
+</VerticalWebsAtPointLoads>
+<MaxNumStackedWebMembers>
+<MaxNumStackedVerticalWeb Value="5" />
+<MaxNumStackedDiagonalWeb Value="2" />
+</MaxNumStackedWebMembers>
+</Web_Wx2>
+</Geom_Wx2>
+<GeometryControls>
+<Y_GapTest Value="01-00" />
+<Y_DepthTest Value="03-00" />
+<MaxDistMakeVert Value="06-00" />
+<MaxDistMerge Value="1-00-00" />
+<MinLenShortChd Value="06-04" />
+<BrgElevR Value="84-00-00" />
+<BoxJointWhen Value="  21.00000" />
+<MaxScarf Value="1-00-00" />
+<ChordGap Value="00-04" />
+<WebCutsPerpToChd Value="false" />
+<SingleCutAllWebs Value="false" />
+<SCWebsToWebsRoof Value="false" />
+<SCWebsToWebsFloor Value="false" />
+<SingleCutShearWebs Value="false" />
+<SQCWebsRoof Value="false" />
+<SQCWebsFloor Value="false" />
+<MaxAreaMemberOverlap Value="   0.10000" />
+<HoweWebbing Value="false" />
+<VertUnderSlopeAtHipJoint Value="true" />
+<VertAtPitchBreaks Value="None" />
+<VertAtEndMatchBrgSize Value="false" />
+<VertAtInteriorBrg Value="false" />
+<VertWebSizeAtIntBrg Value="03-08" />
+<DCFlatChdAtCHJ Value="true" />
+<FTCMatch2x4EndCut Value="false" />
+<DropShoulderJointWithHipDrop Value="false" />
+<ScissorsWebSeat Value="false" />
+<EqualDiagFlatSec Value="true" />
+<HoldBackDiagOpenJack Value="true" />
+<SkipSplices Value="true" />
+<EnvVertHoldback Value="01-08" />
+<MaxClearEndDepth Value="04-00" />
+<MinScarfWithBrg Value="03-00" />
+<MinScarfNoBrg Value="01-08" />
+<MinScarfWithBrgWx2 Value="01-08" />
+<ScabAutoExtendDistance Value="2-00-00" />
+<ShearPanelLength Value="4-00-00" />
+<AtticRoomWidthSpanFactor Value="   1.00000" />
+<AtticTest_MoveJoint Value="  12.10000" />
+<AtticTest_Offset Value="   1.80000" />
+<AtticTest_WebbingOverTB Value="   6.00000" />
+<AtticTest_JointsTooClose Value="  12.10000" />
+<AtticTest_ClearSpace Value="   0.00000" />
+<GambrelAtticTieBeamCut Value="SCToWall" />
+<LetinMemberAutoTrimDist Value="02-08" />
+<SpliceOffsetAtCamber Value="02-08" />
+<ForceSingleCutAtAngle Value="  -1.00000" />
+<ForceSingleCutAtBcEnd Value="false" />
+<ShowAlongChordDimensions Value="false" />
+<SetIsGableStudAtBreaks Value="true" />
+</GeometryControls>
+<Geom_CantileverBearings>
+<MaxClearCantDepth Value="06-00" />
+<VertAtCantileverBrg Value="false" />
+<VertWebSizeAtCantBrg Value="03-08" />
+<AlignSingleWebOutsideEdgeCantBrg Value="true" />
+</Geom_CantileverBearings>
+<LumberSize>
+<TopChords>
+<Nominal_2 Value="   1.50000" />
+<Nominal_3 Value="   2.50000" />
+<Nominal_4 Value="   3.50000" />
+<Nominal_5 Value="   4.50000" />
+<Nominal_6 Value="   5.50000" />
+<Nominal_8 Value="   7.25000" />
+<Nominal_10 Value="   9.25000" />
+<Nominal_12 Value="  11.25000" />
+<Nominal_14 Value="  13.25000" />
+<Nominal_16 Value="  15.25000" />
+</TopChords>
+<BottomChords>
+<Nominal_2 Value="   1.50000" />
+<Nominal_3 Value="   2.50000" />
+<Nominal_4 Value="   3.50000" />
+<Nominal_5 Value="   4.50000" />
+<Nominal_6 Value="   5.50000" />
+<Nominal_8 Value="   7.25000" />
+<Nominal_10 Value="   9.25000" />
+<Nominal_12 Value="  11.25000" />
+<Nominal_14 Value="  13.25000" />
+<Nominal_16 Value="  15.25000" />
+</BottomChords>
+<Webs>
+<Nominal_2 Value="   1.50000" />
+<Nominal_3 Value="   2.50000" />
+<Nominal_4 Value="   3.50000" />
+<Nominal_5 Value="   4.50000" />
+<Nominal_6 Value="   5.50000" />
+<Nominal_8 Value="   7.25000" />
+<Nominal_10 Value="   9.25000" />
+<Nominal_12 Value="  11.25000" />
+<Nominal_14 Value="  13.25000" />
+<Nominal_16 Value="  15.25000" />
+</Webs>
+</LumberSize>
+<AutoSplice>
+<TC_W_MaxLength4x2 Value="16-00-00" />
+<BC_W_MaxLength4x2 Value="16-00-00" />
+<TC_W_MaxLength2x3 Value="8-00-00" />
+<BC_W_MaxLength2x3 Value="8-00-00" />
+<PreferedLengths2x3 Value="" />
+<TC_W_MaxLength2x4 Value="16-00-00" />
+<BC_W_MaxLength2x4 Value="16-00-00" />
+<PreferedLengths2x4 Value="" />
+<TC_W_MaxLength2x5 Value="16-00-00" />
+<BC_W_MaxLength2x5 Value="16-00-00" />
+<PreferedLengths2x5 Value="" />
+<TC_W_MaxLength2x6 Value="16-00-00" />
+<BC_W_MaxLength2x6 Value="16-00-00" />
+<PreferedLengths2x6 Value="" />
+<TC_W_MaxLength2x8 Value="16-00-00" />
+<BC_W_MaxLength2x8 Value="16-00-00" />
+<PreferedLengths2x8 Value="" />
+<TC_W_MaxLength2x10 Value="16-00-00" />
+<BC_W_MaxLength2x10 Value="16-00-00" />
+<PreferedLengths2x10 Value="" />
+<TC_W_MaxLength2x12 Value="16-00-00" />
+<BC_W_MaxLength2x12 Value="16-00-00" />
+<PreferedLengths2x12 Value="" />
+<W_MinSpliceBoardLength Value="4-00-00" />
+<MinDistJntIPS Value="08-00" />
+<TC_NextPreferredLength Value="true" />
+<BC_NextPreferredLength Value="true" />
+<AllowJntSpl Value="true" />
+<AllowBCJntSpl Value="true" />
+<AllowPnlSpl Value="true" />
+<AllowBCPnlSpl Value="true" />
+<UsePlumbSpl Value="false" />
+<AutoSpliceDir Value="HeelsIn" />
+<AllowEndPanel Value="true" />
+<AllowBCEndPanel Value="true" />
+</AutoSplice>
+<Stub>
+<MaxVerticalMove Value="06-00" />
+<KeepCutting Value="true" />
+<NonStubBrgWidth Value="true" />
+<BearingWidth Value="03-08" />
+<NonStubSeatCut Value="true" />
+<SeatCut Value="03-08" />
+</Stub>
+</Geometry>
+<Model>
+<Limits>
+<MinLengthOH Value="01-08" />
+<MaxBearingSize Value="1-06-00" />
+<MaxDim_for_MBP Value="1-01-00" />
+<NetworkSize Value="03-08" />
+<UseShearDeformation Value="true" />
+<SetbackFromCrotch Value="00-12" />
+<DistBetweenVirtualBrgs Value="2-06-00" />
+<XDistTolerance Value="03-00" />
+<MaxVertReactionNotReported Value=" 400.00000" />
+<MaxLiftReactionNotReported Value=" 150.00000" />
+<MaxLumberShearCsiForReinforcement Value="   2.00000" />
+<MaxPSFLoadRemovalExtensions Value="  50.00000" />
+</Limits>
+<Nodes>
+<HeelModel Value="6" />
+<HeelUserFactor Value="   1.00000" />
+<PchBrkModel Value="3" />
+<ChdSzChngModel Value="3" />
+<ipSpliceModel Value="1" />
+<ppSpliceModel Value="1" />
+</Nodes>
+<ConnectionControl>
+<PchBrkJntRigid Value="true" />
+<SpliceJntRigid Value="true" />
+<IPSpliceJntRigid Value="true" />
+<TieBeamRigid Value="false" />
+</ConnectionControl>
+<FictMember>
+<FM1>
+<FictThk Value="   1.50000" />
+<FictWidth Value="   1.50000" />
+<FictMOE Value="1200000.00000" />
+</FM1>
+<FM2>
+<FictThk Value="   0.75000" />
+<FictWidth Value="   1.00000" />
+<FictMOE Value="6000000.00000" />
+</FM2>
+<FM3>
+<FictThk Value="   0.07100" />
+<FictWidth Value="   2.00000" />
+<FictMOE Value="6000000.00000" />
+</FM3>
+<FM4>
+<FictThk Value="   1.50000" />
+<FictWidth Value="   3.50000" />
+<FictMOE Value="1200000.00000" />
+</FM4>
+<FM5>
+<FictThk Value="   0.07100" />
+<FictWidth Value="   2.00000" />
+<FictMOE Value="6000000.00000" />
+</FM5>
+<FM6>
+<FictThk Value="   0.07100" />
+<FictWidth Value="   2.00000" />
+<FictMOE Value="6000000.00000" />
+</FM6>
+<FM7>
+<FictThk Value="   0.07100" />
+<FictWidth Value="   2.00000" />
+<FictMOE Value="6000000.00000" />
+</FM7>
+</FictMember>
+</Model>
+<Analysis>
+<OverallControls>
+<SameChordGrade Value="false" />
+<SymmChdLumGrade Value="true" />
+<SymmWebLumGrade Value="true" />
+<SetSldrGradeToChord Value="false" />
+<Allow_OH_ToUpgrade Value="true" />
+<Allow_DEFL_ToUpgrade Value="false" />
+<CompositeAnalysisWx2StackedChords Value="false" />
+<FullyLaminatedAnalysisWx2StackedChords Value="true" />
+<NoUpliftAtInteriorSupports Value="false" />
+<AllowReducedTCBrgReactions Value="true" />
+<UsePOIforK Value="false" />
+<UseCanadianAnalogs Value="false" />
+<FloorTCBumpingRules Value="None" />
+<FloorBCBumpingRules Value="None" />
+<MaxChordPlies Value="2" />
+<TryAllLumberBeforeStacking Value="true" />
+<IgnorePartialStackedChordWx2 Value="false" />
+<BumpChordsAndFloatHeels Value="false" />
+<OverhangPlies>
+<UseOnePlyOnOverhangs Value="false" />
+<MakeBackPlyAsOverhang Value="false" />
+</OverhangPlies>
+</OverallControls>
+<BracingData>
+<minPurlinSpacingTC Value="2-00-00" />
+<maxPurlinSpacingTC Value="6-00-00" />
+<HoldSpacingTC Value="true" />
+<minPurlinSpacingBC Value="2-00-00" />
+<maxPurlinSpacingBC Value="10-00-00" />
+<HoldSpacingBC Value="false" />
+<PurlinPlacementBC Value="Top Edge" />
+<WebBraceType Value="CLR" />
+<FixWebOption Value="BGS" />
+<FixWebOptionShearPanel Value="GS" />
+<WebMaxSize Value="07-04" />
+<ChordMaxSize Value="11-04" />
+<T_BraceMOE Value="999-00-00" />
+<T_BraceAllow2x3 Value="true" />
+<T_BraceAllow2x4 Value="true" />
+<T_BraceAllow2x5 Value="true" />
+<T_BraceAllow2x6 Value="true" />
+<T_BraceAllow2x8 Value="true" />
+<T_BraceAllowDouble Value="false" />
+<L_BraceMOE Value="999-00-00" />
+<L_BraceAllow2x3 Value="true" />
+<L_BraceAllow2x4 Value="true" />
+<L_BraceAllow2x5 Value="true" />
+<L_BraceAllow2x6 Value="true" />
+<L_BraceAllow2x8 Value="true" />
+<L_BraceAllowDouble Value="false" />
+<Scab_BraceMOE Value="999-00-00" />
+<Scab_BraceAllow2x3 Value="true" />
+<Scab_BraceAllow2x4 Value="true" />
+<Scab_BraceAllow2x5 Value="true" />
+<Scab_BraceAllow2x6 Value="true" />
+<Scab_BraceAllow2x8 Value="true" />
+</BracingData>
+</Analysis>
+<DeflectionControl_Roof>
+<Defl_LL_Truss Value="240" />
+<Defl_DL_Truss Value="120" />
+<Defl_TL_Truss Value="180" />
+<Defl_LL_Panel Value="180" />
+<Defl_TL_Panel Value="120" />
+<MaxHorzDisp_LL Value="   0.75000" />
+<MaxHorzDisp_TL Value="   1.25000" />
+<MaxVertDefl_LL Value="   2.00000" />
+<MaxVertDefl_TL Value="   3.00000" />
+<HorzDeflPPTorDPL Value="Flexible" />
+<MinReporting Value="   0.25000" />
+<CreepFactor Value="   1.50000" />
+<CreepFactor2014 Value="   2.00000" />
+<CreepEOR Value="   1.00000" />
+<UseEOR Value="false" />
+<LongTermDefl Value="false" />
+<CamberOptions_Roof>
+<CamberMethod Value="None" />
+<CamberDLFactor Value="   1.00000" />
+<CamberSpanFactor Value="   0.12500" />
+<CamberApplyCreep Value="true" />
+<CamberMinSpan Value=" 144.00000" />
+<CamberMinValue Value="   0.25000" />
+</CamberOptions_Roof>
+</DeflectionControl_Roof>
+<DeflectionControl_Floor>
+<Defl_LL_Truss Value="480" />
+<Defl_DL_Truss Value="120" />
+<Defl_TL_Truss Value="240" />
+<Defl_LL_Panel Value="180" />
+<Defl_TL_Panel Value="120" />
+<MaxHorzDisp_LL Value="   0.75000" />
+<MaxHorzDisp_TL Value="   1.00000" />
+<MaxVertDefl_LL Value="   2.00000" />
+<MaxVertDefl_TL Value="   3.00000" />
+<HorzDeflPPTorDPL Value="Flexible" />
+<MinReporting Value="   0.25000" />
+<CreepFactor Value="   1.50000" />
+<CreepFactor2014 Value="   2.00000" />
+<CreepEOR Value="   1.00000" />
+<UseEOR Value="false" />
+<LongTermDefl Value="false" />
+<CamberOptions_Floor>
+<CamberMethod Value="None" />
+<CamberDLFactor Value="   1.00000" />
+<CamberSpanFactor Value="   0.12500" />
+<CamberApplyCreep Value="true" />
+<CamberMinSpan Value=" 144.00000" />
+<CamberMinValue Value="   0.25000" />
+</CamberOptions_Floor>
+</DeflectionControl_Floor>
+<CanadaDeflectionControl_RoofPart9>
+<Defl_TL_TCPanel Value="180" />
+<Defl_TL_BCPanel Value="240" />
+<Defl_TL_Cantilever Value="120" />
+<Defl_TL_Overhang Value="120" />
+<Defl_TL_BCTruss_Gypsum Value="360" />
+<Defl_TL_BCTruss_Flexible Value="240" />
+<HorzDeflPPTorDPL Value="Flexible" />
+<MinReporting Value="   0.25000" />
+<MaxHorzDisp_Roller Value="   1.00000" />
+</CanadaDeflectionControl_RoofPart9>
+<CanadaDeflectionControl_RoofPart4>
+<Defl_TL_TCPanel Value="180" />
+<Defl_TL_BCPanel Value="360" />
+<Defl_TL_Cantilever Value="120" />
+<Defl_TL_Overhang Value="120" />
+<Defl_TL_BCTruss Value="180" />
+<Defl_DL_BCTruss Value="360" />
+<Defl_LL_BCTruss_Gypsum Value="360" />
+<Defl_LL_BCTruss_Flexible Value="240" />
+<HorzDeflPPTorDPL Value="Flexible" />
+<MinReporting Value="   0.25000" />
+<MaxHorzDisp_Roller Value="   1.00000" />
+</CanadaDeflectionControl_RoofPart4>
+<CanadaDeflectionControl_Farm>
+<Defl_TL_TCPanel Value="180" />
+<Defl_TL_BCPanel Value="240" />
+<Defl_TL_Cantilever Value="120" />
+<Defl_TL_Overhang Value="120" />
+<Defl_TL_BCTruss Value="180" />
+<Defl_DL_BCTruss Value="360" />
+<Defl_LL_BCTruss_Gypsum Value="360" />
+<Defl_LL_BCTruss_Flexible Value="240" />
+<MinReporting Value="   0.25000" />
+<MaxHorzDisp_Roller Value="   1.00000" />
+</CanadaDeflectionControl_Farm>
+<CanadaDeflectionControl_Floor>
+<Defl_TL_TCPanel Value="180" />
+<Defl_TL_BCPanel Value="360" />
+<Defl_TL_Cantilever Value="120" />
+<Defl_TL_BCTruss Value="180" />
+<Defl_DL_BCTruss Value="360" />
+<Defl_LL_BCTruss Value="360" />
+<HorzDeflPPTorDPL Value="Flexible" />
+<MinReporting Value="   0.25000" />
+<MaxHorzDisp_Roller Value="   1.00000" />
+</CanadaDeflectionControl_Floor>
+<Plating>
+<MaxForces>
+<MaxForceWebT_3x2 Value="1500.00000" />
+<MaxForceWebT_4x2 Value="5000.00000" />
+<MaxForceWebT_2x3 Value="3500.00000" />
+<MaxForceWebT_2x4 Value="5000.00000" />
+<MaxForceWebT_2x5 Value="6500.00000" />
+<MaxForceWebT_2x6 Value="8000.00000" />
+<MaxForceWebT_2x8 Value="10000.00000" />
+<MaxForceWebC_3x2 Value="1500.00000" />
+<MaxForceWebC_4x2 Value="5000.00000" />
+<MaxForceWebC_2x3 Value="3500.00000" />
+<MaxForceWebC_2x4 Value="5000.00000" />
+<MaxForceWebC_2x5 Value="6500.00000" />
+<MaxForceWebC_2x6 Value="8000.00000" />
+<MaxForceWebC_2x8 Value="10000.00000" />
+</MaxForces>
+<HandlingPlate>
+<AdjustW Value="   0.00000" />
+<AdjustL Value="   0.00000" />
+<PlateHandlingFactor Value="   1.00000" />
+<MinBite Value="   0.98000" />
+<UseCanadianMinBite Value="true" />
+<MinWidthRotation Value="   3.00000" />
+<MinWidthSliderTiePlate Value="   2.00000" />
+<MinWebScarfCoverage Value="   0.50000" />
+<JointOffset>
+<SoftBoundaryAlongChord Value="false" />
+<SoftBoundaryPerpToChord Value="false" />
+<AllowTPerpPlateOffsetTC Value="true" />
+<AllowTPerpPlateOffsetBC Value="true" />
+</JointOffset>
+</HandlingPlate>
+<OverallCriteria>
+<PlateOrientAngleTC Value=" 160.00000" />
+<PlateOrientAngleBC Value=" 160.00000" />
+<PlatePullToAngleTC Value=" 170.00000" />
+<MaxJSI Value="   1.00000" />
+<CrFactor Value="   0.50000" />
+<CqFactor_2xW Value="   0.80000" />
+<CqAngle_2xW Value="  10.00000" />
+<CqFactor_Wx2 Value="   0.80000" />
+<CqAngle_Wx2 Value="  10.00000" />
+<QCJSI_2xW Value="   0.80000" />
+<QCJSI_Wx2 Value="   0.89000" />
+<EmbedmentFactor Value="   1.00000" />
+<GreenLumberFactor Value="   0.80000" />
+<TreatedLumberFactor Value="   0.80000" />
+<WetServiceFactor Value="   0.80000" />
+<NarrowFaceFactor Value="   0.85000" />
+<IncisingFactor Value="   0.90000" />
+<SingleRollerPass Value="false" />
+<MaxChordOffset45 Value="01-00" />
+<MinChordAngle45 Value="  90.00000" />
+<MaxChordAngle45 Value=" 150.00000" />
+<MinLateralResistance Value=" 375.00000" />
+<MergeSpliceDistFactor Value="   1.00000" />
+<Min3inchPlateAtTCBreaks Value="true" />
+<UseNearbyPlateGableStud Value="true" />
+<UseFullDepthForFlatSplicePlates Value="true" />
+<UseNFPlateBefore18Ga Value="false" />
+<DisableSpliceBlocks Value="false" />
+<Use18GaBeforeSpliceBlock Value="true" />
+<UseSpliceBlocks Value="false" />
+<PlateShearPanelsSymmetrically Value="false" />
+<MaxPercentPlateDimQC Value="  50.00000" />
+<IncreaseForcePercent Value="100" />
+<TrussPlateValues Value="AS Plate" />
+<UseNonInventoryPlates Value="false" />
+<UseStaplesForNSVertStuds Value="false" />
+<StapleOnlyOneSide Value="false" />
+<UseStaplesButPlateEveryNthStud Value="0" />
+<UseStaplesOnStructStuds Value="false" />
+<MinPlateWidthAtPeak Value="01-08" />
+<DgLgMultiPlateCostIncreasePercentage Value="  20.00000" />
+<Block_HoldBackDim Value="0" />
+</OverallCriteria>
+<HeelJointControls>
+<MaxButtCutToExtendIntoOH Value="0" />
+<Heel_HoldBackDim Value="0" />
+<Heel_HoldBackTol Value="01-00" />
+<BrgCoverageRequired Value="true" />
+<MaxScarfForOnePlt Value="1-10-00" />
+<MaxScarfForTwoPlts Value="3-04-00" />
+<MultiPlateCostIncreasePercentage Value="  20.00000" />
+<Use18GaBeforeAutoWedge Value="false" />
+<UseCgrFactor Value="true" />
+</HeelJointControls>
+<BreakJointControls>
+<AlignPlateWithSlopedChordWhenAngleBelow Value=" 130.00000" />
+<AlignPlateWithFlatChordWhenAngleExceeds Value=" 150.00000" />
+</BreakJointControls>
+<BrgBlockPlateControls_2xW>
+<BB_2xW_MaxLengthNoTiePlate Value="1-00-00" />
+<BB_2xW_MinCoverage Value="   0.90000" />
+<BB_2xW_MaxUnsupLength Value="2-06-00" />
+<BB_2xW_MinWidthPlate Value="02-00" />
+</BrgBlockPlateControls_2xW>
+<BrgBlockPlateControls_Wx2>
+<BB_Wx2_MaxLengthNoTiePlate Value="1-00-00" />
+<BB_Wx2_MinCoverage Value="   0.98000" />
+<BB_Wx2_MaxUnsupLength Value="1-04-00" />
+<BB_Wx2_MinWidthPlate Value="02-00" />
+</BrgBlockPlateControls_Wx2>
+<RibbonPost>
+<RP_AttachWithPlates Value="true" />
+<RB_MinCoverage Value="   0.50000" />
+<RP_MinWidthPlate_2xW Value="02-00" />
+<RP_MinWidthPlate_Wx2 Value="01-00" />
+</RibbonPost>
+<MergePlates>
+<MinOverlapIdentical Value="   0.50000" />
+<MinOverlapStructural Value="   1.00000" />
+<MinOverlapNonStructural Value="   1.00000" />
+<MinOverlapTiePlate Value="   0.90000" />
+<MergePassThroughPlatesChord Value="false" />
+<MergePassThroughPlates Value="true" />
+<MergePassthruPlatesMaxDistApart Value="   8.00000" />
+<MergePlatesMaxPassThruLumWdth Value="2x6" />
+<MergeBrgBlockPlatesMaxDistApart Value="   8.00000" />
+<JointTolForNonStruct Value="  12.00000" />
+<MergeSingleCutPlates Value="true" />
+<Merge3WebSingleCutPlates Value="true" />
+</MergePlates>
+</Plating>
+<OneTrussControls>
+<DefaultSizeTC Value="03-08" />
+<DefaultSizeTC_MidSegments Value="03-08" />
+<DefaultSizeBC Value="03-08" />
+<DefaultSizeWeb Value="03-08" />
+<TC_StructSheathingAttached Value="true" />
+<BC_ApprovedSheathingAttached Value="true" />
+<ShowOptionalPurlins Value="false" />
+<UsePurlinsSpacingGreater2Ft Value="true" />
+<UseRepMemberFactors Value="true" />
+<GreenLumber Value="false" />
+<TreatedLumber Value="false" />
+<WetServiceCondition Value="false" />
+<SeasonedLumber Value="true" />
+<LumberIncised Value="false" />
+<Temperature Value="99" />
+<SuppressPlatingForMoment Value="false" />
+<WallTopPlateMaterialUS Value="SPF" />
+<WallTopPlateMaterialCan Value="SPF" />
+<UseCbFactorForWall Value="true" />
+<AutoSeatcutTailBrgs Value="true" />
+<SolidBlockingAtBearings Value="true" />
+<DragLoadForShearPanelTruss Value="false" />
+<TrussBidAsGirderPtLoadMax Value=" 200.00000" />
+<TrussBidAsGirderPLFMax Value="  50.00000" />
+<UseTPICLongSpanTrussRules Value="true" />
+<FlipTrussForProduction Value="false" />
+</OneTrussControls>
+<Other>
+<Use_1p3_HeelFactor Value="true" />
+<ShowPlumbCutLengthInODL Value="false" />
+<SaveTrussExportData Value="false" />
+<SaveSBCA_SIF_File Value="false" />
+<SaveSBCAQC_File Value="false" />
+<GridLinesJointDetailsReport Value="0" />
+<GridLinesJointDetailsReportNonAS Value="0" />
+<GridLinesOnScreenEdit Value="false" />
+<ShadePlatesJointDetailsReport Value="true" />
+<DisplayRibbonNotch Value="true" />
+<TrussSvgLineThickness Value="   0.25000" />
+<TrussAdjustLineThickness Value="false" />
+<TrussODLBoldAllFonts Value="true" />
+<TrussUseSinglePlyFill Value="false" />
+<TrussApplyFillToThisPly Value="Front" />
+<PrintUserLoadcasesWithTrussDrawing Value="true" />
+</Other>
+<UserInterface>
+<UseMultipleCPUThreads Value="4" />
+<AutoSave Value="1800" />
+<AutoSavePath Value="C:\SST\Autosave" />
+<TrussWheelZoomFactor Value="   1.20000" />
+<LayoutWheelZoomFactor Value="   1.25000" />
+<SingleSelectionMode Value="true" />
+<LineWeight Value="10" />
+<MemberOpacity Value="30" />
+<TextSize Value="   0.80000" />
+<TrussExitDistFactor Value="   1.00000" />
+<ExitCommandOnRun Value="true" />
+<ClearAfterProp Value="false" />
+<PlateWhenLumberFails Value="true" />
+<ShowAnalysisOutputAuto Value="false" />
+<RGTFileForExportPDF Value="EngDrwg_PM" />
+<TabToSpacing Value="false" />
+<LayoutOutputLineThickness>
+<RoofPlaneBoundThickness Value="   0.75000" />
+<CeilPlaneBoundThickness Value="   0.30000" />
+<TrussEdgeThickness Value="   0.25000" />
+<WallEdgeThickness Value="   0.25000" />
+</LayoutOutputLineThickness>
+<Hold>
+<HoldLumber Value="false" />
+<HoldPlates Value="false" />
+<PostDoNotBuildNote Value="true" />
+</Hold>
+<ProcessPartialInput>
+<PartialTC Value="false" />
+<PartialBC Value="false" />
+<PartialWeb Value="false" />
+</ProcessPartialInput>
+<DisplayControl>
+<AdditionalCommandsBox Value="true" />
+<DisplayMemberLengthsS Value="true" />
+<DisplayMemberLengthsNS Value="false" />
+<MinLengthToDisplay Value="1-11-00" />
+<DisplayLouverDimensions Value="true" />
+<DisplayAtticDimensions Value="true" />
+<DisplayAtticLivingSpaceLoad Value="false" />
+<MinCalHipExtensionDimension Value="08-12" />
+<DimensionLeftStub Value="true" />
+<DimensionTCRake Value="false" />
+<DimensionFromLeftStub Value="true" />
+<DimensionInsidePeakHeight Value="false" />
+<IncludeTailBrgsInSpanDim Value="false" />
+<DisplayBCElevationEnds Value="false" />
+<JointSelectionBoxSize Value="01-00" />
+<DisplayTrussGeomInLayout Value="true" />
+<DisplayNodesAndAnalogs Value="false" />
+<DisplayShearTensionLines Value="false" />
+<DisplayVoidsInLayout Value="true" />
+<DisplayVerticalWebInLayout Value="false" />
+<DisplayPropsHoverDelay Value="   0.25000" />
+<DisplayPitchPrecision Value="2" />
+<DisplayPitchMinimum Value="   0.05000" />
+<DisplayPieceLabels Value="false" />
+<OptimizeWx2Reporting Value="0" />
+<OverHeightLine>
+<DisplayLine Value="true" />
+<MeasuredAs Value="Overall" />
+<VerticalHeight Value="12-00-00" />
+</OverHeightLine>
+<Color>
+<CurrentPalette Value="0" />
+<ColorPalette>
+<pl1>
+<SelectItem Value="-1932011521" />
+<Wall Value="1970431919" />
+<WallVeneer Value="927764911" />
+<Beam Value="49327" />
+<Truss Value="-1080927800" />
+<FailedTruss Value="-1073741649" />
+<PassedTruss Value="-2098169601" />
+<SelectTruss Value="-16727889" />
+<SelectFailedTruss Value="-16727889" />
+<SelectPassedTruss Value="-16727889" />
+<BevelTruss Value="-1080927745" />
+<DoubleBevelTruss Value="-1080927745" />
+<Plate Value="-421075356" />
+<Hanger Value="-421075331" />
+<HeelIndicator Value="128" />
+<Roof Value="32832" />
+<Ceiling Value="-2147483584" />
+<Hatch Value="255" />
+<LoadedConnectionIndicator Value="49407" />
+<NonLoadedConnectionIndicator Value="-1073741569" />
+<DisabledConnectionIndicator Value="2021161215" />
+<ValidConnector Value="49407" />
+<NonValidConnector Value="-1073741569" />
+<Background Value="-1" />
+<IncompleteTruss Value="-65361" />
+<SelectIncompleteTruss Value="-16727889" />
+<SelectStacklistTruss Value="-1593835521" />
+<Scab Value="16744478" />
+<Workline Value="8388863" />
+<PlateGridLine Value="255" />
+<CADLine Value="255" />
+</pl1>
+<pl2>
+<SelectItem Value="-1593835521" />
+<Wall Value="-757935361" />
+<WallVeneer Value="927764911" />
+<Beam Value="49327" />
+<Truss Value="-354696449" />
+<FailedTruss Value="-355308033" />
+<PassedTruss Value="58312959" />
+<SelectTruss Value="-861443841" />
+<SelectFailedTruss Value="-911663617" />
+<SelectPassedTruss Value="37576959" />
+<BevelTruss Value="-9568001" />
+<DoubleBevelTruss Value="-9568001" />
+<Plate Value="-421075201" />
+<Hanger Value="-421075201" />
+<HeelIndicator Value="128" />
+<Roof Value="-320343488" />
+<Ceiling Value="-2147483584" />
+<Hatch Value="255" />
+<LoadedConnectionIndicator Value="49407" />
+<NonLoadedConnectionIndicator Value="-1073741569" />
+<DisabledConnectionIndicator Value="2021161215" />
+<ValidConnector Value="49407" />
+<NonValidConnector Value="-1073741569" />
+<Background Value="-1" />
+<IncompleteTruss Value="-65361" />
+<SelectIncompleteTruss Value="-16727889" />
+<SelectStacklistTruss Value="-1593835521" />
+<Scab Value="16744478" />
+<Workline Value="8388863" />
+<PlateGridLine Value="255" />
+<CADLine Value="255" />
+</pl2>
+<pl3>
+<SelectItem Value="-8388353" />
+<Wall Value="-757935361" />
+<WallVeneer Value="927764911" />
+<Beam Value="49327" />
+<Truss Value="-1065352961" />
+<FailedTruss Value="-8421377" />
+<PassedTruss Value="310378751" />
+<SelectTruss Value="-8388353" />
+<SelectFailedTruss Value="-8388353" />
+<SelectPassedTruss Value="-8388353" />
+<BevelTruss Value="-9568001" />
+<DoubleBevelTruss Value="-9568001" />
+<Plate Value="-421075320" />
+<Hanger Value="-421075201" />
+<HeelIndicator Value="128" />
+<Roof Value="32832" />
+<Ceiling Value="-2147483584" />
+<Hatch Value="255" />
+<LoadedConnectionIndicator Value="49407" />
+<NonLoadedConnectionIndicator Value="-1073741569" />
+<DisabledConnectionIndicator Value="2021161215" />
+<ValidConnector Value="49407" />
+<NonValidConnector Value="-1073741569" />
+<Background Value="-1" />
+<IncompleteTruss Value="-65361" />
+<SelectIncompleteTruss Value="-8388433" />
+<SelectStacklistTruss Value="-1593835521" />
+<Scab Value="16744478" />
+<Workline Value="8388863" />
+<PlateGridLine Value="255" />
+<CADLine Value="255" />
+</pl3>
+<pl4>
+<SelectItem Value="-1932011521" />
+<Wall Value="-757935361" />
+<WallVeneer Value="927764911" />
+<Beam Value="49327" />
+<Truss Value="-844464641" />
+<FailedTruss Value="-8421377" />
+<PassedTruss Value="-2098167041" />
+<SelectTruss Value="-1932011521" />
+<SelectFailedTruss Value="-511843841" />
+<SelectPassedTruss Value="2108686335" />
+<BevelTruss Value="-9568001" />
+<DoubleBevelTruss Value="-9568001" />
+<Plate Value="-421075201" />
+<Hanger Value="-421075201" />
+<HeelIndicator Value="128" />
+<Roof Value="32832" />
+<Ceiling Value="-2147483584" />
+<Hatch Value="255" />
+<LoadedConnectionIndicator Value="49407" />
+<NonLoadedConnectionIndicator Value="-1073741569" />
+<DisabledConnectionIndicator Value="2021161215" />
+<ValidConnector Value="49407" />
+<NonValidConnector Value="-1073741569" />
+<Background Value="-1" />
+<IncompleteTruss Value="-65361" />
+<SelectIncompleteTruss Value="-16727889" />
+<SelectStacklistTruss Value="-1593835521" />
+<Scab Value="16744478" />
+<Workline Value="8388863" />
+<PlateGridLine Value="255" />
+<CADLine Value="255" />
+</pl4>
+<pl5>
+<SelectItem Value="-1932011521" />
+<Wall Value="-757935361" />
+<WallVeneer Value="927764911" />
+<Beam Value="49327" />
+<Truss Value="-844464641" />
+<FailedTruss Value="-8421377" />
+<PassedTruss Value="-2098167041" />
+<SelectTruss Value="-1932011521" />
+<SelectFailedTruss Value="-511843841" />
+<SelectPassedTruss Value="2108686335" />
+<BevelTruss Value="-9568001" />
+<DoubleBevelTruss Value="-9568001" />
+<Plate Value="-421075201" />
+<Hanger Value="-421075201" />
+<HeelIndicator Value="128" />
+<Roof Value="32832" />
+<Ceiling Value="-2147483584" />
+<Hatch Value="255" />
+<LoadedConnectionIndicator Value="49407" />
+<NonLoadedConnectionIndicator Value="-1073741569" />
+<DisabledConnectionIndicator Value="2021161215" />
+<ValidConnector Value="49407" />
+<NonValidConnector Value="-1073741569" />
+<Background Value="-1" />
+<IncompleteTruss Value="-65361" />
+<SelectIncompleteTruss Value="-16727889" />
+<SelectStacklistTruss Value="-1593835521" />
+<Scab Value="16744478" />
+<Workline Value="8388863" />
+<PlateGridLine Value="255" />
+<CADLine Value="255" />
+</pl5>
+</ColorPalette>
+</Color>
+</DisplayControl>
+<Graphics>
+<AntiAliasing Value="None" />
+<AmbientItensity Value="   0.40000" />
+</Graphics>
+<Logging>
+<LogError Value="true" />
+<LogWarning Value="true" />
+<LogInfo Value="false" />
+<LogSpew Value="false" />
+<LogAudit Value="false" />
+<MaxFileSize Value="1" />
+<MaxFileCount Value="10" />
+<AnalogError Value="false" />
+</Logging>
+</UserInterface>
+<AuditControl>
+<bAuditLoadcases Value="false" />
+<bAuditAB_Reactions Value="false" />
+<bAuditReactions Value="false" />
+<bAuditNodes Value="false" />
+<bAuditAnalogs Value="false" />
+<bAuditCSIfull Value="false" />
+<bAuditPlating Value="false" />
+<bAuditPlatingRotation Value="false" />
+<bAuditMomentCalcs Value="false" />
+<bAuditFasteners Value="false" />
+<bAuditEngCalcs Value="false" />
+<bAuditVibration Value="false" />
+<bAuditTransfer Value="false" />
+<bAuditTesting Value="false" />
+</AuditControl>
+</tdlEnv>
+<Loading>
+<LoadTemplate Description="20-10-0-10@1.25/Pg=30/115MPH-C30-00-00/IRC-2018/ASCE7-16/TPI-2014/II/Roof">
+LoadTemplate:"Roof-Res" "IRC-2018" "ASCE7-16" "TPI-2014" "II" "Roof" 12.00 600 Y Y Y Y Y Y Y N N N N N "NBCC2010/TPIC2011" "Normal" "Roof Part4 - Gypsum ceiling" "Yukon" "Aishihik" Y N N N
+std:20.0 10.0 0.0 10.0 40.0 10.0 5.0 10.0 2.0 N N 1.25 1.60 1.15 1.25 1.60 1.15 0.0 N 1.00 N
+wind:C Encl ASCE7-MWFRS EndZn 115.0 30 0 0 Y Y Y 5.0 5.0 0.0 1.00 N N Open "Category 2" 0.0 N
+snow:C Partial AboveFreeze 30.0 23.1 0 N N Y N "1.00 (Case I)" "Standard" 0.0 -1.0 Y N N N N 0.55 0.80
+vibration:"3/4'' OSB" 0.750 0.01603 0.457 0.03990 "(None)" 0.000 0.00000 0.000 0.00000 0 0 N Y N
+sprinkler:TopAndBot PPandMP 250 25 N N 120 N N 0
+</LoadTemplate>
+<LoadTemplate Description="40-10-0-5@1.15/No Snow/No Wind/IRC-2018/ASCE7-16/TPI-2014/II/Floor">
+LoadTemplate:"Floor-Res" "IRC-2018" "ASCE7-16" "TPI-2014" "II" "Floor" 12.00 600 Y N N Y N N N N N N N N "NBCC2010/TPIC2011" "Normal" "Roof Part4 - Gypsum ceiling" "Yukon" "Aishihik" Y N N N
+std:40.0 10.0 0.0 5.0 40.0 10.0 5.0 5.0 2.0 N N 1.15 1.60 1.15 1.15 1.60 1.15 0.0 N 1.00 N
+wind:C Encl ASCE7-CC EndZn 115.0 15 0 0 Y Y Y 0.0 0.0 0.0 1.00 N N Open "Category 2" 0.0 N
+snow:C Sheltered AllExcept 30.0 23.1 0 N N N N "1.00 (Case I)" "Standard" 0.0 -1.0 Y N N N N 0.55 0.80
+vibration:"3/4'' OSB" 0.750 0.01603 0.457 0.03990 "(None)" 0.000 0.00000 0.000 0.00000 0 0 N Y N
+sprinkler:TopAndBot PPandMP 250 25 N N 120 N N 0
+</LoadTemplate>
+</Loading>
+<FastenerSettings>
+	<Item Ply="0" ID="SDW_0_22_6750_SCREW" MaxSpacingOverride="24" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="2" ID="0_131x3_NAIL" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="3" ID="0_131x3_NAIL" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="4" ID="SDW_0_22_6375_4PLY_SCREW" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="5" ID="SDWS_0_22_8000_5PLY_SCREW" MaxSpacingOverride="24" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="6" ID="Default" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="100" ID="Default" MaxSpacingOverride="9" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="102" ID="" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	<Item Ply="103" ID="" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+</FastenerSettings>
+</tdlObject>

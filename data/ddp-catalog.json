@@ -1,0 +1,1122 @@
+{
+  "generatedAt": "2026-06-18T13:07:47.750Z",
+  "job": {
+    "jobName": "McBride-Plan 193-Elev D-Std. 2nd FL plan1",
+    "jobDesc": "McBride-Plan 193-Elev D-Std. 2nd FL plan",
+    "planName": "1-A",
+    "customer": "Stark Truss"
+  },
+  "summary": {
+    "trussDesigns": 29,
+    "totalTrusses": 87,
+    "miscItems": 4,
+    "designCriteria": {
+      "code": "IRC-2015",
+      "standardLoads": "20-10-0-10",
+      "windMph": 115,
+      "snowPsf": 20,
+      "spacing": "2'-00\"",
+      "loadTemplate": "LEVELROOF"
+    }
+  },
+  "layoutSchedule": [
+    {
+      "mark": "J02",
+      "quantity": 9
+    },
+    {
+      "mark": "J03",
+      "quantity": 6
+    },
+    {
+      "mark": "J03A",
+      "quantity": 1
+    },
+    {
+      "mark": "J03B",
+      "quantity": 1
+    },
+    {
+      "mark": "J04",
+      "quantity": 1
+    },
+    {
+      "mark": "J06",
+      "quantity": 17
+    },
+    {
+      "mark": "J06A",
+      "quantity": 3
+    },
+    {
+      "mark": "J06B",
+      "quantity": 3
+    },
+    {
+      "mark": "J06C",
+      "quantity": 3
+    },
+    {
+      "mark": "T01",
+      "quantity": 10
+    },
+    {
+      "mark": "T02",
+      "quantity": 5
+    },
+    {
+      "mark": "T03",
+      "quantity": 1
+    },
+    {
+      "mark": "T04",
+      "quantity": 1
+    },
+    {
+      "mark": "T05",
+      "quantity": 1
+    },
+    {
+      "mark": "T06",
+      "quantity": 1
+    },
+    {
+      "mark": "T07GE",
+      "quantity": 1
+    },
+    {
+      "mark": "T08",
+      "quantity": 4
+    },
+    {
+      "mark": "T09",
+      "quantity": 3
+    },
+    {
+      "mark": "T09A",
+      "quantity": 3
+    },
+    {
+      "mark": "T10",
+      "quantity": 1
+    },
+    {
+      "mark": "T11",
+      "quantity": 1
+    },
+    {
+      "mark": "T12",
+      "quantity": 1
+    },
+    {
+      "mark": "T13",
+      "quantity": 1
+    },
+    {
+      "mark": "T14",
+      "quantity": 3
+    },
+    {
+      "mark": "T14GE",
+      "quantity": 1
+    },
+    {
+      "mark": "T15",
+      "quantity": 1
+    },
+    {
+      "mark": "T16",
+      "quantity": 2
+    },
+    {
+      "mark": "T16GE",
+      "quantity": 1
+    },
+    {
+      "mark": "T17",
+      "quantity": 1
+    }
+  ],
+  "trusses": [
+    {
+      "mark": "J02",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 20504,
+      "spanDisplay": "2'-0.60\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J02.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.10",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:170 U:19 H:49] [V:90 U:10 H:0] ",
+          "maxDown": 170,
+          "maxUplift": 10
+        }
+      },
+      "quantity": 9
+    },
+    {
+      "mark": "J03",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 30600,
+      "spanDisplay": "3'-0.72\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J03.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.22",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:206 U:16 H:99] [V:136 U:38 H:0] ",
+          "maxDown": 206,
+          "maxUplift": 16
+        }
+      },
+      "quantity": 6
+    },
+    {
+      "mark": "J03A",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 30600,
+      "spanDisplay": "3'-0.72\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J03A.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.23",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:206 U:23 H:66] [V:136 U:24 H:0] ",
+          "maxDown": 206,
+          "maxUplift": 23
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "J03B",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 30600,
+      "spanDisplay": "3'-0.72\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J03B.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.41",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:293 U:33 H:41] [V:205 U:23 H:0] ",
+          "maxDown": 293,
+          "maxUplift": 23
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "J04",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 4,
+      "spanDisplay": "0'-0.00\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J04.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.19",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:226 U:25 H:49] [V:155 U:14 H:0] ",
+          "maxDown": 226,
+          "maxUplift": 14
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "J06",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 60015,
+      "spanDisplay": "6'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J06.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.56",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:303 U:22 H:164] [V:241 U:53 H:164] ",
+          "maxDown": 303,
+          "maxUplift": 22
+        }
+      },
+      "quantity": 17
+    },
+    {
+      "mark": "J06A",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 60015,
+      "spanDisplay": "6'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J06A.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.35",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:303 U:29 H:118] [V:241 U:36 H:0] ",
+          "maxDown": 303,
+          "maxUplift": 29
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "J06B",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 60015,
+      "spanDisplay": "6'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J06B.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.33",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:303 U:32 H:79] [V:248 U:28 H:0] ",
+          "maxDown": 303,
+          "maxUplift": 28
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "J06C",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 60015,
+      "spanDisplay": "6'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "j",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "J06C.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.70",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:523 U:61 H:40] [V:382 U:39 H:0] ",
+          "maxDown": 523,
+          "maxUplift": 39
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "T01",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T01.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.89",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1157 U:108 H:146] [V:1157 U:108 H:0] ",
+          "maxDown": 1157,
+          "maxUplift": 108
+        }
+      },
+      "quantity": 10
+    },
+    {
+      "mark": "T02",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T02.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.88",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1097 U:93 H:-154] [V:1163 U:108 H:0] ",
+          "maxDown": 1163,
+          "maxUplift": 93
+        }
+      },
+      "quantity": 5
+    },
+    {
+      "mark": "T03",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T03.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.63",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1157 U:105 H:115] [V:1157 U:105 H:0] ",
+          "maxDown": 1157,
+          "maxUplift": 105
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T04",
+      "source": "simpson-ddp",
+      "ply": 2,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "gt",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T04.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.83",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:2870 U:399 H:-84] [V:2870 U:399 H:0] ",
+          "maxDown": 2870,
+          "maxUplift": 399
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T05",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T05.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.96",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1177 U:96 H:-209] [V:1159 U:103 H:-209] ",
+          "maxDown": 1177,
+          "maxUplift": 96
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T06",
+      "source": "simpson-ddp",
+      "ply": 2,
+      "spanUnits": 270608,
+      "spanDisplay": "27'-0.73\"",
+      "spacing": "2'-00\"",
+      "trussType": "gt",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T06.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.96",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:2710 U:442 H:-153] [V:2836 U:402 H:-153] ",
+          "maxDown": 2836,
+          "maxUplift": 402
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T07GE",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 20,
+      "spanDisplay": "0'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T07GE.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.12",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1711 U:164 H:155] ",
+          "maxDown": 1711,
+          "maxUplift": 164
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T08",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 20,
+      "spanDisplay": "0'-0.02\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T08.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.82",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:861 U:82 H:164] [V:795 U:67 H:0] ",
+          "maxDown": 861,
+          "maxUplift": 67
+        }
+      },
+      "quantity": 4
+    },
+    {
+      "mark": "T09",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 191108,
+      "spanDisplay": "19'-1.33\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T09.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.78",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:801 U:67 H:-153] [V:794 U:67 H:0] ",
+          "maxDown": 801,
+          "maxUplift": 67
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "T09A",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 190800,
+      "spanDisplay": "19'-0.96\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T09A.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.73",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:790 U:67 H:-153] [V:783 U:66 H:0] ",
+          "maxDown": 790,
+          "maxUplift": 66
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "T10",
+      "source": "simpson-ddp",
+      "ply": 2,
+      "spanUnits": 191108,
+      "spanDisplay": "19'-1.33\"",
+      "spacing": "2'-00\"",
+      "trussType": "gt",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T10.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.91",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:4342 U:360 H:241] [V:4373 U:378 H:241] ",
+          "maxDown": 4373,
+          "maxUplift": 360
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T11",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 191108,
+      "spanDisplay": "19'-1.33\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T11.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.67",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:856 U:77 H:195] [V:796 U:70 H:195] ",
+          "maxDown": 856,
+          "maxUplift": 70
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T12",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 191108,
+      "spanDisplay": "19'-1.33\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T12.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.69",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:856 U:79 H:144] [V:812 U:69 H:144] ",
+          "maxDown": 856,
+          "maxUplift": 69
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T13",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 191108,
+      "spanDisplay": "19'-1.33\"",
+      "spacing": "2'-00\"",
+      "trussType": "gt",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T13.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.96",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1397 U:196 H:90] [V:1413 U:233 H:0] ",
+          "maxDown": 1413,
+          "maxUplift": 196
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T14",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 180808,
+      "spanDisplay": "18'-0.97\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T14.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.71",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:785 U:75 H:146] [V:822 U:79 H:0] ",
+          "maxDown": 822,
+          "maxUplift": 75
+        }
+      },
+      "quantity": 3
+    },
+    {
+      "mark": "T14GE",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 180808,
+      "spanDisplay": "18'-0.97\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T14GE.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.42",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:1107 U:69 H:153] [V:447 U:70 H:0] ",
+          "maxDown": 1107,
+          "maxUplift": 69
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T15",
+      "source": "simpson-ddp",
+      "ply": 2,
+      "spanUnits": 180808,
+      "spanDisplay": "18'-0.97\"",
+      "spacing": "2'-00\"",
+      "trussType": "gt",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T15.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.95",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:4429 U:530 H:153] [V:6419 U:624 H:0] ",
+          "maxDown": 6419,
+          "maxUplift": 530
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T16",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 71100,
+      "spanDisplay": "7'-1.32\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T16.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.14",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:370 U:40 H:-59] [V:374 U:40 H:0] ",
+          "maxDown": 374,
+          "maxUplift": 40
+        }
+      },
+      "quantity": 2
+    },
+    {
+      "mark": "T16GE",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 71100,
+      "spanDisplay": "7'-1.32\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T16GE.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.08",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:745 U:81 H:-59] ",
+          "maxDown": 745,
+          "maxUplift": 81
+        }
+      },
+      "quantity": 1
+    },
+    {
+      "mark": "T17",
+      "source": "simpson-ddp",
+      "ply": 1,
+      "spanUnits": 70700,
+      "spanDisplay": "7'-0.84\"",
+      "spacing": "2'-00\"",
+      "trussType": "t",
+      "loadTemplate": "LEVELROOF",
+      "designCode": "IRC-2015",
+      "windMph": 115,
+      "snowPsf": 20,
+      "loads": {
+        "tcLive": "20.0",
+        "tcDead": "10.0",
+        "bcLive": "0.0",
+        "bcDead": "10.0",
+        "total": "40.0"
+      },
+      "file": "T17.tdlTruss",
+      "engineering": {
+        "maxCsi": "0.12",
+        "weight": null,
+        "deflectionLimitLl": "L/360",
+        "deflectionLimitTl": "L/240",
+        "reactions": {
+          "raw": "[V:283 U:22 H:-66] [V:383 U:42 H:0] ",
+          "maxDown": 383,
+          "maxUplift": 22
+        }
+      },
+      "quantity": 1
+    }
+  ],
+  "misc": [
+    {
+      "mark": "HHUS26-2",
+      "quantity": 1,
+      "kind": "misc"
+    },
+    {
+      "mark": "HHUS210-2",
+      "quantity": 1,
+      "kind": "misc"
+    },
+    {
+      "mark": "HUS26",
+      "quantity": 42,
+      "kind": "misc"
+    },
+    {
+      "mark": "LUS24",
+      "quantity": 23,
+      "kind": "misc"
+    }
+  ],
+  "layoutSvg": "/data/ddp/1-A/1-A.svg"
+}

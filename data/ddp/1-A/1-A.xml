@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<job>
+  <mode>layout</mode>
+  <presets>
+    <job_info>
+      <user_name>System Administrator</user_name>
+      <user_email></user_email>
+      <job_name>McBride-Plan 193-Elev D-Std. 2nd FL plan1</job_name>
+      <job_desc>McBride-Plan 193-Elev D-Std. 2nd FL plan</job_desc>
+      <plan_name>1-A</plan_name>
+      <cs_director>
+        <job_guid>57cc9c82-5344-4ffc-885c-a19829ea964e</job_guid>
+        <trusses_dir>C:\SST_22R5\Local\Projects\McBride-Plan 193-Elev D-Std. 2nd FL plan1\Trusses</trusses_dir>
+        <plan_guid>bf516e91-c727-4179-9c45-0cc402e462d9</plan_guid>
+        <plan_path>C:\SST_22R5\Local\Projects\McBride-Plan 193-Elev D-Std. 2nd FL plan1\1-A</plan_path>
+        <preset_path>C:\SST_22R5\Local\Projects\McBride-Plan 193-Elev D-Std. 2nd FL plan1\Presets\TrussStudio</preset_path>
+        <project_dir>C:\SST_22R5\Local\Projects\McBride-Plan 193-Elev D-Std. 2nd FL plan1</project_dir>
+      </cs_director>
+      <job_comments>
+        <comment1></comment1>
+        <comment2></comment2>
+        <comment3></comment3>
+        <comment4></comment4>
+        <comment5></comment5>
+      </job_comments>
+      <customer_name>Stark Truss</customer_name>
+      <customer_address>
+        <line1></line1>
+        <line2></line2>
+        <line3>,  </line3>
+      </customer_address>
+      <shipping_address>
+        <line1></line1>
+        <line2></line2>
+        <line3>,  </line3>
+      </shipping_address>
+    </job_info>
+  </presets>
+</job>

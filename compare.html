@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOM Compare — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Truss BOM Comparison</strong>
+        <span>MiTek TRE vs Simpson DDP — McBride Plan 193</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <button id="btn-export" class="btn" type="button">Export CSV</button>
+        <label class="filter-toggle">
+          <input id="filter-diff" type="checkbox" />
+          Show differences only
+        </label>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="summary-cards" id="summary-cards"></section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Truss Schedule</h2>
+          <input id="search" class="search-input" type="search" placeholder="Filter by mark…" />
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="bom-table">
+            <thead>
+              <tr>
+                <th>Mark</th>
+                <th>MiTek Qty</th>
+                <th>MiTek Ply</th>
+                <th>MiTek Span</th>
+                <th>Simpson Qty</th>
+                <th>Simpson Ply</th>
+                <th>Simpson Span</th>
+                <th>Spacing</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="bom-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Simpson Hangers &amp; Misc (DDP only)</h2>
+        <div class="misc-grid" id="misc-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/compare.js"></script>
+  </body>
+</html>

@@ -1,0 +1,382 @@
+{
+  "rows": [
+    {
+      "mark": "J02",
+      "mitekQty": 9,
+      "mitekPly": 1,
+      "mitekSpan": "2'-5.25\"",
+      "mitekPitch": "4.16/12",
+      "simpsonQty": 9,
+      "simpsonPly": 1,
+      "simpsonSpan": "2'-0.60\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J03",
+      "mitekQty": 6,
+      "mitekPly": 1,
+      "mitekSpan": "3'-6.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 6,
+      "simpsonPly": 1,
+      "simpsonSpan": "3'-0.72\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J03A",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "3'-6.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "3'-0.72\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J03B",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "3'-6.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "3'-0.72\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J04",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "3'-12.00\"",
+      "mitekPitch": "3.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "0'-0.00\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J06",
+      "mitekQty": 17,
+      "mitekPly": 1,
+      "mitekSpan": "6'-0.94\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 17,
+      "simpsonPly": 1,
+      "simpsonSpan": "6'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J06A",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "6'-0.94\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "6'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J06B",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "6'-0.96\"",
+      "mitekPitch": "6.19/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "6'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "J06C",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "6'-0.94\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "6'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T01",
+      "mitekQty": 10,
+      "mitekPly": 1,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "4.16/12",
+      "simpsonQty": 10,
+      "simpsonPly": 1,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T02",
+      "mitekQty": 5,
+      "mitekPly": 1,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "4.16/12",
+      "simpsonQty": 5,
+      "simpsonPly": 1,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T03",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "4.16/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T04",
+      "mitekQty": 2,
+      "mitekPly": 2,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "4.16/12",
+      "simpsonQty": 1,
+      "simpsonPly": 2,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "qty-diff"
+    },
+    {
+      "mark": "T05",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "70.79/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T06",
+      "mitekQty": 2,
+      "mitekPly": 2,
+      "mitekSpan": "27'-6.50\"",
+      "mitekPitch": "54.79/12",
+      "simpsonQty": 1,
+      "simpsonPly": 2,
+      "simpsonSpan": "27'-0.73\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "qty-diff"
+    },
+    {
+      "mark": "T07GE",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "20'-0.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "0'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T08",
+      "mitekQty": 4,
+      "mitekPly": 1,
+      "mitekSpan": "20'-0.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 4,
+      "simpsonPly": 1,
+      "simpsonSpan": "0'-0.02\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T09",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "19'-11.50\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "19'-1.33\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T09A",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "19'-8.00\"",
+      "mitekPitch": "7.94/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "19'-0.96\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T10",
+      "mitekQty": 2,
+      "mitekPly": 2,
+      "mitekSpan": "19'-11.50\"",
+      "mitekPitch": "3.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 2,
+      "simpsonSpan": "19'-1.33\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "qty-diff"
+    },
+    {
+      "mark": "T11",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "19'-11.50\"",
+      "mitekPitch": "3.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "19'-1.33\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T12",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "19'-11.50\"",
+      "mitekPitch": "3.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "19'-1.33\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T13",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "19'-11.50\"",
+      "mitekPitch": "3.94/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "19'-1.33\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T14",
+      "mitekQty": 3,
+      "mitekPly": 1,
+      "mitekSpan": "18'-8.50\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 3,
+      "simpsonPly": 1,
+      "simpsonSpan": "18'-0.97\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T14GE",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "18'-8.50\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "18'-0.97\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T15",
+      "mitekQty": 2,
+      "mitekPly": 2,
+      "mitekSpan": "18'-8.50\"",
+      "mitekPitch": "6.16/12",
+      "simpsonQty": 1,
+      "simpsonPly": 2,
+      "simpsonSpan": "18'-0.97\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "qty-diff"
+    },
+    {
+      "mark": "T16",
+      "mitekQty": 2,
+      "mitekPly": 1,
+      "mitekSpan": "7'-11.00\"",
+      "mitekPitch": "6.19/12",
+      "simpsonQty": 2,
+      "simpsonPly": 1,
+      "simpsonSpan": "7'-1.32\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T16GE",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "7'-11.00\"",
+      "mitekPitch": "6.19/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "7'-1.32\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    },
+    {
+      "mark": "T17",
+      "mitekQty": 1,
+      "mitekPly": 1,
+      "mitekSpan": "7'-7.00\"",
+      "mitekPitch": "8.85/12",
+      "simpsonQty": 1,
+      "simpsonPly": 1,
+      "simpsonSpan": "7'-0.84\"",
+      "simpsonSpacing": "2'-00\"",
+      "status": "match"
+    }
+  ],
+  "totals": {
+    "mitekTrusses": 91,
+    "simpsonTrusses": 87,
+    "designs": 29,
+    "matches": 25,
+    "differences": 4,
+    "missing": 0
+  },
+  "misc": [
+    {
+      "mark": "HHUS26-2",
+      "quantity": 1,
+      "kind": "misc"
+    },
+    {
+      "mark": "HHUS210-2",
+      "quantity": 1,
+      "kind": "misc"
+    },
+    {
+      "mark": "HUS26",
+      "quantity": 42,
+      "kind": "misc"
+    },
+    {
+      "mark": "LUS24",
+      "quantity": 23,
+      "kind": "misc"
+    }
+  ]
+}

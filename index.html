@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan 193 — IFC 3D Viewer</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="brand">
+        <strong>McBride Plan 193</strong>
+        <span>Lot 17 Fox Creek Estates — Roof Truss Package</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <select id="model-select" class="select-input" aria-label="Select IFC model">
+          <option value="/models/mitek.ifc">MiTek — 2214703-08T</option>
+          <option value="/models/simpson.ifc">Simpson — McBride Plan 193 IFC</option>
+        </select>
+        <label class="btn secondary" for="ifc-input">Open IFC</label>
+        <input id="ifc-input" type="file" accept=".ifc,.IFC" hidden />
+        <button id="btn-fit" class="btn" type="button">Fit View</button>
+        <button id="btn-grid" class="btn" type="button">Grid</button>
+        <button id="btn-axes" class="btn" type="button">Axes</button>
+        <button id="btn-shadow" class="btn" type="button">Shadows</button>
+      </div>
+    </header>
+
+    <main id="viewer-container"></main>
+
+    <div id="filter-banner" class="filter-banner hidden"></div>
+
+    <aside id="info-panel" class="info-panel hidden">
+      <button id="info-close" class="info-close" type="button" aria-label="Close">×</button>
+      <h2>Selected Element</h2>
+      <dl id="info-content"></dl>
+    </aside>
+
+    <footer class="status-bar">
+      <span id="status-text">Initializing viewer…</span>
+      <span id="pick-hint">Hover a member for properties · double-click to pin</span>
+    </footer>
+
+    <div id="hover-tooltip" class="hover-tooltip hidden" aria-hidden="true">
+      <div id="tooltip-title" class="tooltip-title"></div>
+      <dl id="tooltip-content" class="tooltip-content"></dl>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p id="loading-text">Loading IFC model…</p>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

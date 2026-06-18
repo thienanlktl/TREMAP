@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<job>
+  <mode>preset</mode>
+  <presets>
+    <job_info>
+      <cs_director>
+        <preset_path>C:\SST_22R5\Local\Projects\P-100\Presets\TrussStudio</preset_path>
+      </cs_director>
+    </job_info>
+  </presets>
+</job>

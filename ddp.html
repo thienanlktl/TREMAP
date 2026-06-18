@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DDP Inspector — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Simpson DDP Inspector</strong>
+        <span>McBride-Plan 193-Elev D-Std. 2nd FL plan</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <a class="btn secondary" href="/data/ddp.ddp" download>Download DDP</a>
+      </div>
+    </header>
+
+    <main class="page-main ddp-layout ddp-layout-extended">
+      <section class="panel job-panel" id="job-panel"></section>
+
+      <section class="panel layout-panel">
+        <h2>Layout Plan (1-A)</h2>
+        <div class="layout-frame">
+          <img id="layout-svg" src="/data/ddp/1-A/1-A.svg" alt="Truss layout plan 1-A" />
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Layout Schedule</h2>
+        </div>
+        <div class="table-wrap schedule-wrap">
+          <table class="data-table compact" id="schedule-table">
+            <thead><tr><th>Mark</th><th>Qty</th><th>Span</th><th>Type</th></tr></thead>
+            <tbody id="schedule-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Truss Designs</h2>
+          <input id="truss-search" class="search-input" type="search" placeholder="Search truss mark…" />
+        </div>
+        <div class="truss-grid" id="truss-grid"></div>
+      </section>
+
+      <aside class="panel detail-panel hidden" id="detail-panel">
+        <button id="detail-close" class="info-close" type="button" aria-label="Close">×</button>
+        <div id="detail-actions" class="detail-actions"></div>
+        <h2 id="detail-title">Truss Detail</h2>
+        <dl id="detail-content"></dl>
+        <h3 class="detail-subheading">Design Script</h3>
+        <pre id="detail-script" class="script-preview"></pre>
+      </aside>
+    </main>
+
+    <script type="module" src="/ddp.js"></script>
+  </body>
+</html>

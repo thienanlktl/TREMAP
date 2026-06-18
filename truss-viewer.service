@@ -1,0 +1,16 @@
+[Unit]
+Description=Plan 193 Truss Viewer
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/truss-viewer/viewer
+Environment=PORT=8080
+Environment=HOST=0.0.0.0
+ExecStart=/usr/bin/node /home/ubuntu/truss-viewer/viewer/scripts/serve-production.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

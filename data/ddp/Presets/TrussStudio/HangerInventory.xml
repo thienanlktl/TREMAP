@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<HangerInventoryXml>
+  <InventoryList>
+    <Inventory Key="41821b97-7b55-429d-a6e1-0037f763ab88" MaterialName="HU26" IsSpecialOrder="true" Price="0.00" IsUnavailable="false" />
+    <Inventory Key="b002d787-ca55-4087-8326-2b25b84c2b67" MaterialName="LUS24" IsSpecialOrder="true" Price="0.00" IsUnavailable="false" />
+    <Inventory Key="eeec7a29-d3dc-4d8f-be12-455336e98763" MaterialName="HUS26" IsSpecialOrder="true" Price="0.00" IsUnavailable="false" />
+    <Inventory Key="5b8a58e4-9bf0-44a5-b1df-4607aab3f86b" MaterialName="HHUS210-2" IsSpecialOrder="true" Price="0.00" IsUnavailable="false" />
+    <Inventory Key="82bdd72d-2c78-44a9-81f3-8110e6e8c896" MaterialName="HHUS26-2" IsSpecialOrder="true" Price="0.00" IsUnavailable="false" />
+  </InventoryList>
+</HangerInventoryXml>

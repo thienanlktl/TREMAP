@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tdlObject Type="Truss" FileVersion="62" Title="T12" Version="2022.5.0.97" CompatibilityVersion="2022.5.0.97" ID="1b306906-a6be-4806-a5e4-51c0a1e01507" ParentID="b5d9b5b6-983d-42d7-ba3c-ec7b8be1a2aa" LayoutAuto="0" TMC="27f274cecb835da229169a645bc5a27f">
+	<Script>thk:0108
+plys:1
+mfg: 1
+span:191108
+prdspn:191108
+spacing:2-00-00
+type:t
+tc:ha 315 4 12 0 e
+bc:0 e
+web:
+cantl:
+cantr:
+stubl:
+stubr:
+ohl:1008
+ohr:0
+ohla:
+ohra:
+edl:
+edr:
+edla:
+edra:
+brg:400 LL 0 BotChd Flat Wall NoSpec 425 Y N N N Match Y N
+brg:108 RR 0 BotChd Flat Hanger-To-Wall NoSpec 425 Y N N N Match Y N
+ch:1 308 4 308 109 UD 0 NCR 0 NCR N N 308 DCVS DCVS DOUBLE 4 308 4 1 108 2 4 f NONE
+LoadTemplate:"LEVELROOF" "IRC-2015" "ASCE7-10" "TPI-2014" "II" "Roof" 12.00 600 Y Y Y Y Y Y Y N N N N N "NBCC2010/TPIC2011" "Normal" "Roof Part4 - Gypsum ceiling" "Yukon" "Aishihik" Y N N N
+std:20.0 10.0 0.0 10.0 40.0 10.0 5.0 10.0 2.0 N N 1.15 1.60 1.15 1.15 1.60 1.15 0.0 N 1.00 N
+wind:c encl ASCE7-MWFRS EndZn 115.0 25 50 48 Y Y Y 6.0 6.0 0.0 1.00 N N open "Category 2" 0.0 N
+snow:c partial abovefreeze 20.0 15.4 0 Y N N Y "1.00 (Case I)" "Standard" 0.0 -1.0 Y N N N N 0.55 0.80
+vibration:"3/4'' OSB" 0.750 0.01603 0.457 0.03990 "(None)" 0.000 0.00000 0.000 0.00000 0 0 N Y N
+sprinkler:TopAndBot PPandMP 250 25 N N 120 N N 0
+LoadComponent:Y N N N N N N N N 1.00 0.00 "" N N N N N N
+stor:20.0 0 0 N 2 30600
+drag:2000.0 0.0 0.00 N N N 1 -1 -1 -1 -1 -1 -1 -1 -1 0.0 0 TOP 0.0 0 TOP 0.0 0 TOP 0.0 0 TOP 0.50 N
+ac:TCbev 0.00 0.00 0.00 0.00 ExtNone ExtNone none none 45.00 45.00
+BCbev 0.00 0.00 0.00 0.00 ExtNone ExtNone none none 45.00 45.00
+sselect pt 20801 110 0  20801 110 108 
+splice pt 120.000000 0.000000 0
+clear sel
+sselect pt 160000 112 0  160000 112 108 
+removesplice
+sselect pt 110912 -20700 0  110912 -20700 108 
+clearall
+clearall
+sselect pt 40004 10509 0  40004 10509 108 
+select ptl 80611 100 0  80611 100 108 
+clearall
+sselect pt 80907 30014 0  80907 30014 108 
+mselect pt 80807 100 0  80807 100 108 
+mselect pt 150700 -0011 0  150700 -0011 108 
+prop material "05a85d55-a8c0-4148-b968-684e579a16ad"
+sselect pt 130900 30905 0  130900 30905 108 
+prop material "a72cc06b-03e1-4205-ac4c-7fa29ad2df46"
+sselect rbl 50413 10003 0  50413 10003 108  120802 20908 0 
+prop material "e3948d40-a978-414c-ad2c-c3f44d712471"
+sselect rbl 140507 21108 0  140507 21108 108  221005 10715 0 
+prop material "05a85d55-a8c0-4148-b968-684e579a16ad"
+sselect pt 81001 50415 0  81001 50415 108 
+sselect pt 141109 31115 0  141109 31115 108 
+clearall
+sselect pt 140615 40004 0  140615 40004 108 
+prop material "627122be-e0e6-46cb-9f29-c1cda3b0f9fe"
+sselect pt 140500 41103 0  140500 41103 108 
+clearall
+</Script>
+	<DimScript></DimScript>
+	<Settings>
+		<GableShowHatching Value="false" />
+		<WallsAndPlanesAttachRoofPlaneWL Value="false" />
+		<AutoUseArchitecturalDim Value="true" />
+		<ManualUseArchitecturalDim Value="true" />
+		<SpacingUseArchitecturalDim Value="true" />
+		<HipsetPlacementHM Value="true" />
+		<HipsetPlacementCOM Value="true" />
+		<GeometryControlsScissorsWebSeat Value="false" />
+		<OverallControlsFullyLaminatedAnalysisWx2StackedChords Value="true" />
+		<HandlingPlateUseCanadianMinBite Value="true" />
+		<OverallCriteriaUseFullDepthForFlatSplicePlates Value="true" />
+		<OverallCriteriaUse18GaBeforeSpliceBlock Value="true" />
+		<MergePlatesMergePassThroughPlates Value="true" />
+		<OtherSaveTrussExportData Value="true" />
+		<OtherShadePlatesJointDetailsReport Value="true" />
+		<OtherTrussODLBoldAllFonts Value="true" />
+		<TrussColorByTypeGable Value="65535" />
+		<DeflectionControl_RoofDefl_LL_Truss Value="360" />
+		<DeflectionControl_RoofDefl_DL_Truss Value="240" />
+		<DeflectionControl_RoofDefl_TL_Truss Value="240" />
+		<DeflectionControl_FloorDefl_LL_Truss Value="480" />
+		<AtticHeight Value="8-01-14" />
+		<GableStudMinLength Value="06-00" />
+		<GableSheathingThk Value="00-07" />
+		<TrussValleySetSheathingThickness Value="00-08" />
+		<MfgControlsTNdim Value="00-04" />
+		<MfgControlsLayinAdj Value="00-04" />
+		<WallsAndPlanesLength Value="10-08" />
+		<WallsAndPlanesRoofPitchWL Value="   6.00000" />
+		<LumberSizeDataGirder_BC Value="05-08" />
+		<LumberSizeDataHipGirder_BC Value="05-08" />
+		<HipsetJackSpan1 Value="6-00-00" />
+		<ValleySetStudSpacing Value="4-00-00" />
+		<ValleySetNubDim Value="00-04" />
+		<ValleySetSheathingThickness Value="00-08" />
+		<PiggyBackDim Value="11-00-00" />
+		<PiggyBackGapSizeBrace Value="01-09" />
+		<PiggyBackStudSpacing Value="4-00-00" />
+		<ObstructionObstructionElevation Value="8-01-02" />
+		<EndConditions_2xWWedgeMaxShortSide Value="0" />
+		<EndConditions_2xWSL_Length Value="2-06-00" />
+		<EndConditions_2xWTC_GapMeasure Value="75-00-00" />
+		<PanelLengths_2xWPL_2x4TC Value="8-00-00" />
+		<PanelLengths_2xWPL_2x6TC Value="8-00-00" />
+		<PanelLengths_2xWPL_2x8TC Value="8-00-00" />
+		<PanelLengths_2xWPL_EJ_2x4TC Value="8-00-00" />
+		<PanelLengths_2xWPL_2x4BC Value="10-00-00" />
+		<PanelLengths_2xWPL_2x6BC Value="10-00-00" />
+		<PanelLengths_2xWSC_MaxDistBetweenPlates Value="2-00-00" />
+		<EndConditions_Wx2TC_GapMeasure Value="03-08" />
+		<EndConditions_Wx2BC_GapMeasure Value="75-00-00" />
+		<DeflectionControl_FloorMaxHorzDisp_TL Value="   1.00000" />
+		<MaxForcesMaxForceWebT_4x2 Value="5000.00000" />
+		<MaxForcesMaxForceWebC_4x2 Value="5000.00000" />
+		<HandlingPlateMinWidthRotation Value="   3.00000" />
+		<OverallCriteriaCqFactor_Wx2 Value="   0.80000" />
+		<OverallCriteriaQCJSI_Wx2 Value="   0.89000" />
+		<BrgBlockPlateControls_2xWBB_2xW_MaxLengthNoTiePlate Value="06-00" />
+		<BrgBlockPlateControls_Wx2BB_Wx2_MaxLengthNoTiePlate Value="06-00" />
+		<GableStudDir Value="Peak Out" />
+		<GableSheathingType Value="OSB" />
+		<TrussValleySetValleyHeel Value="004" />
+		<TrussValleySetDirection Value="Up Roof" />
+		<WallColorsByElevationWallColorData Value="&lt;?xml version=&quot;1.0&quot;?> &lt;WallColors>  &lt;Coloring wallHeight=&quot;285.25880000000001&quot; wallColor=&quot;1970431919&quot; veneerColor=&quot;927764911&quot; beamColor=&quot;49327&quot; />  &lt;Coloring wallHeight=&quot;0&quot; wallColor=&quot;1970431919&quot; veneerColor=&quot;927764911&quot; beamColor=&quot;49327&quot; />  &lt;Coloring wallHeight=&quot;202.4375&quot; wallColor=&quot;1970431919&quot; veneerColor=&quot;927764911&quot; beamColor=&quot;49327&quot; />  &lt;Coloring wallHeight=&quot;97.0625&quot; wallColor=&quot;1970431919&quot; veneerColor=&quot;927764911&quot; beamColor=&quot;49327&quot; />  &lt;Coloring wallHeight=&quot;97.125&quot; wallColor=&quot;1970431919&quot; veneerColor=&quot;927764911&quot; beamColor=&quot;49327&quot; /> &lt;/WallColors> " />
+		<AutoTextPosPerp Value="Inline" />
+		<AutoLeftEndMarker Value="ArrowOut" />
+		<AutoRightEndMarker Value="ArrowOut" />
+		<ManualTextPosPerp Value="Inline" />
+		<ManualLeftEndMarker Value="ArrowOut" />
+		<ManualRightEndMarker Value="ArrowOut" />
+		<SpacingTextPosPerp Value="Inline" />
+		<SpacingLeftEndMarker Value="ArrowOut" />
+		<SpacingRightEndMarker Value="ArrowOut" />
+		<LabelsDefaultLabels Value="Preset Labels" />
+		<LabelFormatsLabelFormat_1 Value="A##" />
+		<LabelFormatsLabelFormat_2 Value="G##" />
+		<LabelFormatsLabelFormat_3 Value="GE##" />
+		<LabelFormatsLabelFormat_4 Value="F##" />
+		<LabelFormatsLabelFormat_5 Value="FG##" />
+		<LabelFormatsLabelFormat_6 Value="FE##" />
+		<LabelFormatsLabelFormat_7 Value="V##" />
+		<LabelFormatsLabelFormat_8 Value="XX@" />
+		<LabelFormatsLabelFormat_9 Value="XXX@" />
+		<LabelFormatsLabelFormat_10 Value="T##" />
+		<LabelFormatsLabelFormat_11 Value="H##" />
+		<LabelFormatsLabelFormat_12 Value="GE##" />
+		<LabelFormatsLabelFormat_13 Value="PF##" />
+		<LabelFormatsLabelFormat_14 Value="CAP##" />
+		<LabelFormatsLabelFormat_15 Value="F##" />
+		<LabelFormatsLabelFormat_16 Value="FGR##" />
+		<LabelFormatsLabelFormat_17 Value="GRD##" />
+		<LabelFormatsLabelFormat_18 Value="V##" />
+		<LabelFormatsLabelFormat_19 Value="M##" />
+		<LabelFormatsLabelFormat_20 Value="J##" />
+		<LabelFormatsLabelFormat_21 Value="CJ##" />
+		<LabelFormatsLabelFormat_22 Value="SJ##" />
+		<LabelFormatsLabelFormat_23 Value="RAF#" />
+		<LabelFormatsLabelFormat_24 Value="BLK#" />
+		<DefaultTrussLabelsUseEndJackLabelForAllJacks Value="true" />
+		<NextTrussLabelsGirderTrussesFormat Value="G##" />
+		<NextTrussLabelsGirderTrussesNextValue Value="G01" />
+		<NextTrussLabelsWx2TrussesFormat Value="F##" />
+		<NextTrussLabelsWx2TrussesNextValue Value="F01" />
+		<NextTrussLabelsWx2GirderTrussesFormat Value="FG##" />
+		<NextTrussLabelsWx2GirderTrussesNextValue Value="FG01" />
+		<HipSetLabelsHipGirderFormat Value="H##" />
+		<HipSetLabelsHipGirderNextValue Value="H01" />
+		<HipSetLabelsSecondaryHipTrussFormat Value="H##" />
+		<HipSetLabelsSecondaryHipTrussNextValue Value="H01" />
+		<HipSetLabelsEndJackFormat Value="J##" />
+		<HipSetLabelsEndJackNextValue Value="J01" />
+		<HipSetLabelsSideJackFormat Value="J##" />
+		<HipSetLabelsSideJackNextValue Value="J01" />
+		<HipSetLabelsCornerGirderFormat Value="RAF#" />
+		<HipSetLabelsCornerGirderNextValue Value="RAF1" />
+		<HipSetLabelsCornerRafterFormat Value="RAF#" />
+		<HipSetLabelsCornerRafterNextValue Value="RAF1" />
+		<HipSetLabelsStackedCornerRafterNextValue Value="RAF1" />
+		<HipSetLabelsFlyerRafterFormat Value="RAF#" />
+		<HipSetLabelsFlyerRafterNextValue Value="RAF1" />
+		<RafterLabelsRafterFormat Value="RAF#" />
+		<RafterLabelsRafterNextValue Value="RAF1" />
+		<RafterLabelsStackedRafterFormat Value="RAF#" />
+		<RafterLabelsStackedRafterNextValue Value="RAF1" />
+		<ValleySetLabelsValleyTrussFormat Value="V##" />
+		<ValleySetLabelsValleyTrussNextValue Value="V01" />
+		<ValleySetLabelsValleyRafterFormat Value="M##" />
+		<ValleySetLabelsValleyRafterNextValue Value="M01" />
+		<LayInGableLabelsLayInGableFormat Value="PF##" />
+		<LayInGableLabelsLayInGableNextValue Value="PF01" />
+		<PiggyBackLabelsPiggyBackFormat Value="CAP##" />
+		<PiggyBackLabelsPiggyBackNextValue Value="CAP01" />
+		<ShearPanelLabelsShearPanelFormat Value="BLK#" />
+		<ShearPanelLabelsShearPanelNextValue Value="BLK1" />
+		<ShearPanelLabelsBlockFormat Value="BLK#" />
+		<ShearPanelLabelsBlockNextValue Value="BLK1" />
+		<LoadTransferUpdateTransferLoads Value="Only When Analyzing" />
+		<HipsetGirderDrop Value="Partial" />
+		<HipsetPlacementEJ Value="From Center" />
+		<HipsetPlacementSH Value="Peak Down" />
+		<HipsetJackTCBearingType Value="Toenail" />
+		<HipsetJackBCBearingType Value="Toenail" />
+		<LayersLayerSchemes Value="&lt;?xml version=&quot;1.0&quot;?> &lt;Schemes version=&quot;40&quot;>  &lt;Scheme ActLay=&quot;0&quot; SelVis=&quot;1&quot; NonSelVis=&quot;1&quot; LayerIdCounter=&quot;10&quot; SchemeName=&quot;2 Story 90102 - 80102 2x10 floor&quot;>   &lt;LayerNames Names=&quot;1st Floor|Floor Depth|2nd Floor&quot; />   &lt;LayerIds Ids=&quot;0 1 2&quot; />   &lt;LayerInUse Layers=&quot;0&quot; />   &lt;LayerVisible Layers=&quot;7&quot; />   &lt;ObjectVisible Objects=&quot;-1073742210&quot; />   &lt;LayerObjectVisible Object_Layer_0=&quot;-1073741825&quot; Object_Layer_1=&quot;-1073741825&quot; Object_Layer_2=&quot;-1073741825&quot; />   &lt;ObjectSelectable Objects=&quot;1072168959&quot; />   &lt;BottomElevation count=&quot;3&quot; i1=&quot;0&quot; i2=&quot;109.125&quot; i3=&quot;119.125&quot; />   &lt;TopElevation count=&quot;3&quot; i1=&quot;109.125&quot; i2=&quot;119.125&quot; i3=&quot;216.25&quot; />  &lt;/Scheme>  &lt;Scheme ActLay=&quot;0&quot; SelVis=&quot;1&quot; NonSelVis=&quot;1&quot; LayerIdCounter=&quot;10&quot; SchemeName=&quot;1 Story 80102&quot;>   &lt;LayerNames Names=&quot;1st Floor&quot; />   &lt;LayerIds Ids=&quot;0&quot; />   &lt;LayerInUse Layers=&quot;0&quot; />   &lt;LayerVisible Layers=&quot;1&quot; />   &lt;ObjectVisible Objects=&quot;-1073742210&quot; />   &lt;LayerObjectVisible Object_Layer_0=&quot;-1073741825&quot; />   &lt;ObjectSelectable Objects=&quot;1072168959&quot; />   &lt;BottomElevation count=&quot;1&quot; i1=&quot;0&quot; />   &lt;TopElevation count=&quot;1&quot; i1=&quot;97.125&quot; />  &lt;/Scheme>  &lt;Scheme ActLay=&quot;0&quot; SelVis=&quot;1&quot; NonSelVis=&quot;1&quot; LayerIdCounter=&quot;10&quot; SchemeName=&quot;1 Story 90102&quot;>   &lt;LayerNames Names=&quot;1st Floor&quot; />   &lt;LayerIds Ids=&quot;0&quot; />   &lt;LayerInUse Layers=&quot;0&quot; />   &lt;LayerVisible Layers=&quot;1&quot; />   &lt;ObjectVisible Objects=&quot;-1073742210&quot; />   &lt;LayerObjectVisible Object_Layer_0=&quot;-1073741825&quot; />   &lt;ObjectSelectable Objects=&quot;1072168959&quot; />   &lt;BottomElevation count=&quot;1&quot; i1=&quot;0&quot; />   &lt;TopElevation count=&quot;1&quot; i1=&quot;109.125&quot; />  &lt;/Scheme> &lt;/Schemes> " />
+		<LayersDefaultSchemeName Value="1 Story 80102" />
+		<EndConditions_Wx2BB_Detail Value="Ribbon Post" />
+		<Web_Wx2NoChaseWebDir Value="Left to Right" />
+		<BracingDataPurlinPlacementBC Value="Top Edge" />
+		<OverallCriteriaTrussPlateValues Value="AS / Mitek Hybrid" />
+	</Settings>
+	<Info Designer="System Administrator" Customer="Stark Truss" Project="McBride-Plan 193-Elev D-Std. 2nd FL plan1" ProjectTitle="McBride-Plan 193-Elev D-Std. 2nd FL plan1 - McBride-Plan 193-Elev D-Std. 2nd FL plan" />
+	<LumberResults>TC1 05a85d55-a8c0-4148-b968-684e579a16ad
+TC2 627122be-e0e6-46cb-9f29-c1cda3b0f9fe
+BC1 05a85d55-a8c0-4148-b968-684e579a16ad
+BC2 05a85d55-a8c0-4148-b968-684e579a16ad
+WB1 e3948d40-a978-414c-ad2c-c3f44d712471
+WB2 e3948d40-a978-414c-ad2c-c3f44d712471
+WB3 e3948d40-a978-414c-ad2c-c3f44d712471
+WB4 05a85d55-a8c0-4148-b968-684e579a16ad
+WB5 05a85d55-a8c0-4148-b968-684e579a16ad
+</LumberResults>
+	<PlatesResults> 1 414,114    4fbfe6ba-0e35-4fbd-838e-7deaf7bd04f4 (  4.8777,   1.8741)   0.0000 
+ 2 60610,20207    a2725567-583b-4150-8c98-4817fc0ff35f ( 78.6270,  26.4572)  18.4349 
+ 3 120000,40004    5a81223f-de02-43d3-8feb-903fb9136d88 (144.0000,  48.2482)   0.0000 
+ 4 190800,31014    4fbfe6ba-0e35-4fbd-838e-7deaf7bd04f4 (236.0000,  46.8750)   0.0000 
+ 5 60414,308    727515f2-7f9b-4dc0-93a1-dc3b1cf097fa ( 76.8770,   3.5000)  90.0000 
+ 6 100000,112    4fbfe6ba-0e35-4fbd-838e-7deaf7bd04f4 (120.0000,   1.7500)   0.0000 
+ 7 111004,308    852a2863-378e-4020-ab31-461a1bb10568 (142.2500,   3.5000)   0.0000 
+ 8 190912,308    727515f2-7f9b-4dc0-93a1-dc3b1cf097fa (237.7500,   3.5000)  90.0000 
+</PlatesResults>
+	<Notes />
+	<Loading>
+		<LoadTemplate Description="20-10-0-10@1.15/Pg=20/115MPH-c25-00-00/IRC-2015/ASCE7-10/TPI-2014/II/Roof">
+LoadTemplate:"LEVELROOF" "IRC-2015" "ASCE7-10" "TPI-2014" "II" "Roof" 12.00 600 Y Y Y Y Y Y Y N N N N N "NBCC2010/TPIC2011" "Normal" "Roof Part4 - Gypsum ceiling" "Yukon" "Aishihik" Y N N N
+std:20.0 10.0 0.0 10.0 40.0 10.0 5.0 10.0 2.0 N N 1.15 1.60 1.15 1.15 1.60 1.15 0.0 N 1.00 N
+wind:c encl ASCE7-MWFRS EndZn 115.0 25 50 48 Y Y Y 6.0 6.0 0.0 1.00 N N open "Category 2" 0.0 N
+snow:c partial abovefreeze 20.0 15.4 0 Y Y N Y "1.00 (Case I)" "Standard" 0.0 -1.0 Y N N N N 0.55 0.80
+vibration:"3/4'' OSB" 0.750 0.01603 0.457 0.03990 "(None)" 0.000 0.00000 0.000 0.00000 0 0 N Y N
+sprinkler:TopAndBot PPandMP 250 25 N N 120 N N 0
+</LoadTemplate>
+	</Loading>
+	<FastenerSettings>
+		<Item Ply="0" ID="SDW_0_22_6750_SCREW" MaxSpacingOverride="24" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="2" ID="0_131x3_NAIL" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="3" ID="0_131x3_NAIL" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="4" ID="SDW_0_22_6375_4PLY_SCREW" MaxSpacingOverride="12" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="5" ID="SDWS_0_22_8000_5PLY_SCREW" MaxSpacingOverride="24" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="6" ID="Default" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="100" ID="Default" MaxSpacingOverride="9" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="102" ID="" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+		<Item Ply="103" ID="" MaxSpacingOverride="-1" MinSpacingTrigger="0" MaxNumNailsTrigger="999" HeadSideLoading="false" />
+	</FastenerSettings>
+	<State>
+		<Inputs>
+			<CompatibilityVersion Val="2022.5.0.0" />
+			<ProfileHash Val="5abb57409530e2abe0ea5856998b3706" />
+			<SetSliderGradeToChord Val="false" />
+			<GeomXMSizes Val="0010111" />
+		</Inputs>
+		<Span Val="239.5" />
+		<FullSpan Val="239.5" />
+		<AnalysisStatus Val="Passed" />
+		<Members>
+			<Member Id="1" L="-10.50000 -3.25182 0.00000 -10.50000 0.43750 0.00000 " R="144.00000 51.93750 0.00000 144.00000 48.24818 0.00000 " />
+			<Member Id="2" L="144.00000 46.87500 0.00000 144.00000 50.37500 0.00000 " R="239.50000 50.37500 0.00000 239.50000 46.87500 0.00000 " />
+			<Member Id="3" L="0.00000 0.00000 0.00000 -0.00000 0.24818 0.00000 9.75547 3.50000 0.00000 " R="120.00000 3.50000 0.00000 120.00000 0.00000 0.00000 " />
+			<Member Id="4" L="120.00000 0.00000 0.00000 120.00000 3.50000 0.00000 " R="239.50000 3.50000 0.00000 239.50000 0.00000 0.00000 " />
+			<Member Id="5" L="78.62700 3.50000 0.00000 75.12700 3.50000 0.00000 " R="75.12700 25.29051 0.00000 78.62700 26.45718 0.00000 " />
+			<Member Id="6" L="78.62700 24.59060 0.00000 78.62700 26.45718 0.00000 81.27699 27.34051 0.00000 " R="140.50000 5.36658 0.00000 140.50000 3.50000 0.00000 135.46930 3.50000 0.00000 " />
+			<Member Id="7" L="144.00000 3.50000 0.00000 140.50000 3.50000 0.00000 " R="140.50000 47.08151 0.00000 144.00000 48.24818 0.00000 " />
+			<Member Id="8" L="148.10367 3.50000 0.00000 144.00000 3.50000 0.00000 144.00000 5.43474 0.00000 " R="231.89633 46.87500 0.00000 236.00000 46.87500 0.00000 236.00000 44.94026 0.00000 " />
+			<Member Id="9" L="239.50000 3.50000 0.00000 236.00000 3.50000 0.00000 " R="236.00000 46.87500 0.00000 239.50000 46.87500 0.00000 " />
+		</Members>
+		<Bearings>
+			<Bearing Id="1" L="0.00000 -0.00000 0.00000 " R="4.00000 -0.00000 0.00000 " V="856.90209" H="144.45284" U="79.11028" VF="1.15000" UF="1.60000" RV="0.00000" RU="856.90209" VRL="1.15000" HVR="0.00000" HVRF="1.00000" HNVR="4.00000" HNVRF="0.00000" CL="0.00000" DSR="0.00000" BLS="-99999.00000" BSL="99999.00000" XLS="-99999.00000" NLS="99999.00000" XSS="-99999.00000" NSSU="99999.00000" XWS="0.00000" NWS="0.00000" GHB="0.00000" XGHB="0.00000" XEU="-99999.00000" NEU="99999.00000" CUV="0.00000" CUD="0.00000" />
+			<Bearing Id="2" L="238.00000 -0.00000 0.00000 " R="239.50000 -0.00000 0.00000 " V="812.65647" H="144.45284" U="69.43032" VF="1.15000" UF="1.60000" RV="0.00000" RU="812.65647" VRL="1.15000" HVR="0.00000" HVRF="1.00000" HNVR="1.50000" HNVRF="0.00000" CL="0.00000" DSR="0.00000" BLS="-99999.00000" BSL="99999.00000" XLS="-99999.00000" NLS="99999.00000" XSS="-99999.00000" NSSU="99999.00000" XWS="0.00000" NWS="0.00000" GHB="0.00000" XGHB="0.00000" XEU="-99999.00000" NEU="99999.00000" CUV="0.00000" CUD="0.00000" />
+		</Bearings>
+		<CamberSpliceOffsets_TC />
+		<CamberSpliceOffsets_BC />
+		<Reactions Val="[V:856 U:79 H:144] [V:812 U:69 H:144] " />
+		<MaxCSI Val="0.69" />
+	</State>
+	<ExportData Version="1" Qty="1" Span="19.95833" TotalLengthOfFlatBC="239.5" Plies="1" OCSpacing="24" tcPurlinOC="0" tcNumPurlins="0" bcPurlinOC="0" bcNumPurlins="0" NumBraces="0" GirderSpan="0" camber="0" weight="96.79764">
+		<TCPitches count="2" i1="4" i2="0" />
+		<BCPitches count="1" i1="0" />
+		<Profile OAHeight="55.18932" peakHeight="51.9375" spanToPeak="144" leftHeel="3.9375" rightHeel="50.375" leftOH="10.5" rightOH="0" leftSeatCut="0" rightSeatCut="0" leftCant="0" rightCant="0" />
+		<StdLoad BuildingCode="IRC-2015" DesignStandard="TPI-2014" LoadStandard="ASCE7-10" RiskCategory="II" TCLL="20" TCDL="10" BCLL="0" BCDL="10" />
+		<SnowLoad GroundSnowPSF="20" ThermalCondition="abovefreeze" TerrainCategory="c" SnowExposure="partial" SnowRoofType="steel" />
+		<Members>
+			<Member Id="1" Usage="TopChord" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #2" CuttingLabel="TC1" OALength="164.02397">
+				<LPoints count="2" x1="-10.5" y1="-3.25182" x2="-10.5" y2="0.4375" />
+				<RPoints count="2" x1="144" y1="51.9375" x2="144" y2="48.24818" />
+				<LCutAngles count="1" i1="71.56505" />
+				<RCutAngles count="1" i1="71.56505" />
+			</Member>
+			<Member Id="2" Usage="TopChord" Width="3.5" Thickness="1.5" Grade="SP 2400/2.0" CuttingLabel="TC2" OALength="95.5">
+				<LPoints count="2" x1="144" y1="46.875" x2="144" y2="50.375" />
+				<RPoints count="2" x1="239.5" y1="50.375" x2="239.5" y2="46.875" />
+				<LCutAngles count="1" i1="90" />
+				<RCutAngles count="1" i1="90" />
+			</Member>
+			<Member Id="3" Usage="BottomChord" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #2" CuttingLabel="BC1" OALength="120">
+				<LPoints count="3" x1="0" y1="0" x2="-0" y2="0.24818" x3="9.75547" y3="3.5" />
+				<RPoints count="2" x1="120" y1="3.5" x2="120" y2="0" />
+				<LCutAngles count="2" i1="90" i2="18.43495" />
+				<RCutAngles count="1" i1="90" />
+			</Member>
+			<Member Id="10" Usage="BottomChord" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #2" CuttingLabel="BC2" OALength="119.5">
+				<LPoints count="2" x1="120" y1="0" x2="120" y2="3.5" />
+				<RPoints count="2" x1="239.5" y1="3.5" x2="239.5" y2="0" />
+				<LCutAngles count="1" i1="90" />
+				<RCutAngles count="1" i1="90" />
+			</Member>
+			<Member Id="4" Usage="Web" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #3/Stud" CuttingLabel="WB1" OALength="22.95718">
+				<LPoints count="2" x1="78.627" y1="3.5" x2="75.127" y2="3.5" />
+				<RPoints count="2" x1="75.127" y1="25.29051" x2="78.627" y2="26.45718" />
+				<LCutAngles count="1" i1="90" />
+				<RCutAngles count="1" i1="71.56505" />
+			</Member>
+			<Member Id="5" Usage="Web" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #3/Stud" CuttingLabel="WB2" OALength="65.9947">
+				<LPoints count="3" x1="78.627" y1="24.5906" x2="78.627" y2="26.45718" x3="81.27699" y3="27.34051" />
+				<RPoints count="3" x1="140.5" y1="5.36658" x2="140.5" y2="3.5" x3="135.4693" y3="3.5" />
+				<LCutAngles count="2" i1="69.64328" i2="38.79167" />
+				<RCutAngles count="2" i1="69.64328" i2="20.35672" />
+			</Member>
+			<Member Id="6" Usage="Web" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #3/Stud" CuttingLabel="WB3" OALength="44.74818">
+				<LPoints count="2" x1="144" y1="3.5" x2="140.5" y2="3.5" />
+				<RPoints count="2" x1="140.5" y1="47.08151" x2="144" y2="48.24818" />
+				<LCutAngles count="1" i1="90" />
+				<RCutAngles count="1" i1="71.56505" />
+			</Member>
+			<Member Id="7" Usage="Web" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #2" CuttingLabel="WB4" OALength="101.71229">
+				<LPoints count="3" x1="148.10367" y1="3.5" x2="144" y2="3.5" x3="144" y3="5.43474" />
+				<RPoints count="3" x1="231.89633" y1="46.875" x2="236" y2="46.875" x3="236" y3="44.94026" />
+				<LCutAngles count="2" i1="25.24235" i2="64.75765" />
+				<RCutAngles count="2" i1="25.24235" i2="64.75765" />
+			</Member>
+			<Member Id="8" Usage="Web" Width="3.5" Thickness="1.5" Grade="SP (ALSC6-2013) #2" CuttingLabel="WB5" OALength="43.375">
+				<LPoints count="2" x1="239.5" y1="3.5" x2="236" y2="3.5" />
+				<RPoints count="2" x1="236" y1="46.875" x2="239.5" y2="46.875" />
+				<LCutAngles count="1" i1="90" />
+				<RCutAngles count="1" i1="90" />
+			</Member>
+		</Members>
+		<Plates>
+			<Plate Name="3x4" Series="AS 20" Gauge="20" Width="3" Length="4" count="4" x1="2.8777" y1="3.3741" x2="6.8777" y2="3.3741" x3="6.8777" y3="0.3741" x4="2.8777" y4="0.3741" />
+			<Plate Name="4x4" Series="AS 20" Gauge="20" Width="4" Length="4" count="4" x1="76.09718" y1="27.72211" x2="79.89191" y2="28.98702" x3="81.15682" y3="25.19229" x4="77.36209" y4="23.92738" />
+			<Plate Name="4x6" Series="AS 20" Gauge="20" Width="4" Length="6" count="4" x1="141" y1="50.2482" x2="147" y2="50.2482" x3="147" y3="46.2482" x4="141" y4="46.2482" />
+			<Plate Name="3x4" Series="AS 20" Gauge="20" Width="3" Length="4" count="4" x1="234" y1="48.375" x2="238" y2="48.375" x3="238" y3="45.375" x4="234" y4="45.375" />
+			<Plate Name="1.5x3" Series="AS 20" Gauge="20" Width="1.5" Length="3" count="4" x1="76.127" y1="2" x2="76.127" y2="5" x3="77.627" y3="5" x4="77.627" y4="2" />
+			<Plate Name="3x4" Series="AS 20" Gauge="20" Width="3" Length="4" count="4" x1="118" y1="3.25" x2="122" y2="3.25" x3="122" y3="0.25" x4="118" y4="0.25" />
+			<Plate Name="4x8" Series="AS 20" Gauge="20" Width="4" Length="8" count="4" x1="138.25" y1="5.5" x2="146.25" y2="5.5" x3="146.25" y3="1.5" x4="138.25" y4="1.5" />
+			<Plate Name="1.5x3" Series="AS 20" Gauge="20" Width="1.5" Length="3" count="4" x1="237" y1="2" x2="237" y2="5" x3="238.5" y3="5" x4="238.5" y4="2" />
+		</Plates>
+		<Bearings>
+			<Bearing Id="1" Type="Wall" Width="4" Leftx="0" Lefty="-0" Rightx="4" Righty="-0" />
+			<Bearing Id="2" Type="Hanger-To-Wall" Width="1.5" Leftx="238" Lefty="-0" Rightx="239.5" Righty="-0" />
+		</Bearings>
+	</ExportData>
+	<LoadTransfer>
+		<Reaction BrgXLoc=" 2.00" WhereBrgAttached="BottomChord">
+			<Max Dead="-421.24" RfLive="-435.67" Live="0.00" Snow="-338.60" Wind="105.23" EQ="0.00" />
+			<Min Dead="-421.24" RfLive="-399.59" Live="0.00" Snow="-92.77" Wind="331.85" EQ="0.00" />
+		</Reaction>
+		<Reaction BrgXLoc="237.75" WhereBrgAttached="BottomChord">
+			<Max Dead="-398.10" RfLive="-398.74" Live="0.00" Snow="-414.56" Wind="91.43" EQ="0.00" />
+			<Min Dead="-398.10" RfLive="-397.67" Live="0.00" Snow="-104.94" Wind="308.29" EQ="0.00" />
+		</Reaction>
+	</LoadTransfer>
+</tdlObject>

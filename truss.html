@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truss Detail — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body">
+    <header class="toolbar">
+      <div class="brand">
+        <strong id="page-title">Truss Detail</strong>
+        <span>MiTek TRE vs Simpson DDP — side-by-side</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <select id="mark-select" class="select-input" aria-label="Select truss mark"></select>
+        <a id="btn-view-mitek" class="btn secondary" href="#">3D MiTek</a>
+        <a id="btn-view-simpson" class="btn secondary" href="#">3D Simpson</a>
+        <a id="btn-split" class="btn" href="/split.html">Split 3D</a>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <section class="panel">
+        <div class="compare-banner" id="compare-status"></div>
+        <div class="table-wrap">
+          <table class="data-table compare-side-table" id="compare-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th class="mitek-col">MiTek TRE</th>
+                <th class="simpson-col">Simpson DDP</th>
+              </tr>
+            </thead>
+            <tbody id="compare-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="dual-panel">
+        <article class="panel source-panel mitek-panel">
+          <h2>MiTek — Members &amp; Plates</h2>
+          <div id="mitek-detail"></div>
+        </article>
+        <article class="panel source-panel simpson-panel">
+          <h2>Simpson — Design Script</h2>
+          <div id="simpson-detail"></div>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="/truss.js"></script>
+  </body>
+</html>

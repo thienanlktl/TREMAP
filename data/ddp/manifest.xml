@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DesignDataXmlVM xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Plans>
+    <DesignDataElevation PlanDisplayOrder="0" DisplayOrder="0">
+      <Key>bf516e91-c727-4179-9c45-0cc402e462d9</Key>
+      <Name>A</Name>
+      <PlanName>1</PlanName>
+      <Trusses>
+        <DesignDataTruss>
+          <Key>1cb7d09e-f708-41dc-9580-4128024480f8</Key>
+          <Name>J02</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>c79d7491-aebf-4b27-98a6-fae6e48a1f75</Key>
+          <Name>J03</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>ce987686-76c8-464b-927c-c2cdc1c5a3ca</Key>
+          <Name>J03A</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>6eae0289-794c-4754-bb57-8c7de2bbb2f1</Key>
+          <Name>J03B</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>63b49fa0-2ddc-4f20-aca2-3994acdfdaa1</Key>
+          <Name>J04</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>63a0fb55-2863-41c3-9030-59a8485b3f13</Key>
+          <Name>J06</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>363e218a-e54c-41ff-8e62-999325d6699b</Key>
+          <Name>J06A</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>1eb94472-f943-4d1a-a16b-ba7f42d7338e</Key>
+          <Name>J06B</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>5791305c-6be6-4806-baf6-1dd1ec420e1e</Key>
+          <Name>J06C</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>bd9594e2-a0a5-47c5-ba42-b8fcf0fa16a9</Key>
+          <Name>T01</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>65bfef81-08ff-4ac5-a926-83092bfa50c7</Key>
+          <Name>T02</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>a12ae6e8-70de-43e1-a232-23227de7e6a4</Key>
+          <Name>T03</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>5407d063-2205-4d09-acda-d5bc2574e969</Key>
+          <Name>T04</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>0c63270e-9625-492f-a140-9eba502e4bfe</Key>
+          <Name>T05</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>85a8e8e3-7ef2-4276-8f07-41cca67033bf</Key>
+          <Name>T06</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>fbbd7981-69bf-4e60-a470-17b9113d761b</Key>
+          <Name>T07GE</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>c5d607d9-04f3-42fe-a4ba-41e12a655293</Key>
+          <Name>T08</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>1bbe4329-8687-4ea1-a87b-c1af42cc7dcb</Key>
+          <Name>T09</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>93a6f4ec-0a35-467e-a06f-6d3ecfe3b9b8</Key>
+          <Name>T09A</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>4754624c-e423-442f-ae7d-332d52a1066a</Key>
+          <Name>T10</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>fb7783c2-6e49-476a-a10c-a2f34a5c5406</Key>
+          <Name>T11</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>1b306906-a6be-4806-a5e4-51c0a1e01507</Key>
+          <Name>T12</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>6f1a4cbb-e47d-42c3-92c3-a5d98ff69136</Key>
+          <Name>T13</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>b355bc36-3ee7-4372-818f-2d2d8f7a1b20</Key>
+          <Name>T14</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>1e0dea33-8e9f-4c5d-907c-e2727acb9f85</Key>
+          <Name>T14GE</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>3c31877b-ce00-4981-a2e1-ec61cd4151c8</Key>
+          <Name>T15</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>a5ce1cda-5e6f-45b5-ac9e-bf7493654fa7</Key>
+          <Name>T16</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>17f1d58b-705e-40a9-9013-ec8a22b0222a</Key>
+          <Name>T16GE</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataTruss>
+          <Key>c66f8391-bc20-48cb-b90b-7ee707ff8eba</Key>
+          <Name>T17</Name>
+          <IsUserManaged>false</IsUserManaged>
+        </DesignDataTruss>
+        <DesignDataMiscItem>
+          <Key>2badfc49-890d-4efc-8e71-457d6595d77c</Key>
+          <Name>HHUS26-2</Name>
+          <DesignApplicationType>CSDirector</DesignApplicationType>
+        </DesignDataMiscItem>
+        <DesignDataMiscItem>
+          <Key>23a80899-c25a-42d4-9e2f-30c8534f373e</Key>
+          <Name>HHUS210-2</Name>
+          <DesignApplicationType>CSDirector</DesignApplicationType>
+        </DesignDataMiscItem>
+        <DesignDataMiscItem>
+          <Key>997a0e83-04b5-4882-9a0a-b53eedf0ebf7</Key>
+          <Name>HUS26</Name>
+          <DesignApplicationType>CSDirector</DesignApplicationType>
+        </DesignDataMiscItem>
+        <DesignDataMiscItem>
+          <Key>15123b96-3047-4104-80a3-b19a71848641</Key>
+          <Name>LUS24</Name>
+          <DesignApplicationType>CSDirector</DesignApplicationType>
+        </DesignDataMiscItem>
+      </Trusses>
+      <StackList>
+        <DesignDataStackItem StackOrder="1" Quantity="9" IsLastItemInBandingPack="false" ComponentKey="1cb7d09e-f708-41dc-9580-4128024480f8" />
+        <DesignDataStackItem StackOrder="2" Quantity="6" IsLastItemInBandingPack="false" ComponentKey="c79d7491-aebf-4b27-98a6-fae6e48a1f75" />
+        <DesignDataStackItem StackOrder="3" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="ce987686-76c8-464b-927c-c2cdc1c5a3ca" />
+        <DesignDataStackItem StackOrder="4" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="6eae0289-794c-4754-bb57-8c7de2bbb2f1" />
+        <DesignDataStackItem StackOrder="5" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="63b49fa0-2ddc-4f20-aca2-3994acdfdaa1" />
+        <DesignDataStackItem StackOrder="6" Quantity="17" IsLastItemInBandingPack="false" ComponentKey="63a0fb55-2863-41c3-9030-59a8485b3f13" />
+        <DesignDataStackItem StackOrder="7" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="363e218a-e54c-41ff-8e62-999325d6699b" />
+        <DesignDataStackItem StackOrder="8" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="1eb94472-f943-4d1a-a16b-ba7f42d7338e" />
+        <DesignDataStackItem StackOrder="9" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="5791305c-6be6-4806-baf6-1dd1ec420e1e" />
+        <DesignDataStackItem StackOrder="10" Quantity="10" IsLastItemInBandingPack="false" ComponentKey="bd9594e2-a0a5-47c5-ba42-b8fcf0fa16a9" />
+        <DesignDataStackItem StackOrder="11" Quantity="5" IsLastItemInBandingPack="false" ComponentKey="65bfef81-08ff-4ac5-a926-83092bfa50c7" />
+        <DesignDataStackItem StackOrder="12" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="a12ae6e8-70de-43e1-a232-23227de7e6a4" />
+        <DesignDataStackItem StackOrder="13" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="5407d063-2205-4d09-acda-d5bc2574e969" />
+        <DesignDataStackItem StackOrder="14" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="0c63270e-9625-492f-a140-9eba502e4bfe" />
+        <DesignDataStackItem StackOrder="15" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="85a8e8e3-7ef2-4276-8f07-41cca67033bf" />
+        <DesignDataStackItem StackOrder="16" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="fbbd7981-69bf-4e60-a470-17b9113d761b" />
+        <DesignDataStackItem StackOrder="17" Quantity="4" IsLastItemInBandingPack="false" ComponentKey="c5d607d9-04f3-42fe-a4ba-41e12a655293" />
+        <DesignDataStackItem StackOrder="18" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="1bbe4329-8687-4ea1-a87b-c1af42cc7dcb" />
+        <DesignDataStackItem StackOrder="19" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="93a6f4ec-0a35-467e-a06f-6d3ecfe3b9b8" />
+        <DesignDataStackItem StackOrder="20" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="4754624c-e423-442f-ae7d-332d52a1066a" />
+        <DesignDataStackItem StackOrder="21" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="fb7783c2-6e49-476a-a10c-a2f34a5c5406" />
+        <DesignDataStackItem StackOrder="22" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="1b306906-a6be-4806-a5e4-51c0a1e01507" />
+        <DesignDataStackItem StackOrder="23" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="6f1a4cbb-e47d-42c3-92c3-a5d98ff69136" />
+        <DesignDataStackItem StackOrder="24" Quantity="3" IsLastItemInBandingPack="false" ComponentKey="b355bc36-3ee7-4372-818f-2d2d8f7a1b20" />
+        <DesignDataStackItem StackOrder="25" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="1e0dea33-8e9f-4c5d-907c-e2727acb9f85" />
+        <DesignDataStackItem StackOrder="26" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="3c31877b-ce00-4981-a2e1-ec61cd4151c8" />
+        <DesignDataStackItem StackOrder="27" Quantity="2" IsLastItemInBandingPack="false" ComponentKey="a5ce1cda-5e6f-45b5-ac9e-bf7493654fa7" />
+        <DesignDataStackItem StackOrder="28" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="17f1d58b-705e-40a9-9013-ec8a22b0222a" />
+        <DesignDataStackItem StackOrder="29" Quantity="1" IsLastItemInBandingPack="false" ComponentKey="c66f8391-bc20-48cb-b90b-7ee707ff8eba" />
+        <DesignDataStackItem StackOrder="30" Quantity="1" IsLastItemInBandingPack="false" MiscItemKey="2badfc49-890d-4efc-8e71-457d6595d77c" />
+        <DesignDataStackItem StackOrder="31" Quantity="1" IsLastItemInBandingPack="false" MiscItemKey="23a80899-c25a-42d4-9e2f-30c8534f373e" />
+        <DesignDataStackItem StackOrder="32" Quantity="42" IsLastItemInBandingPack="false" MiscItemKey="997a0e83-04b5-4882-9a0a-b53eedf0ebf7" />
+        <DesignDataStackItem StackOrder="33" Quantity="23" IsLastItemInBandingPack="false" MiscItemKey="15123b96-3047-4104-80a3-b19a71848641" />
+      </StackList>
+    </DesignDataElevation>
+  </Plans>
+  <StockLengthList>
+    <LengthItem Name="SCL" Value="48,60" MaterialType="5" />
+    <LengthItem Name="1 to 14" Value="1,2,3,4,5,6,7,8,10,12,14" MaterialType="1" />
+    <LengthItem Name="Primary" Value="8,20" MaterialType="1" />
+    <LengthItem Name="1 to 16" Value="1,2,3,4,5,6,7,8,10,12,14,16" MaterialType="1" />
+    <LengthItem Name="1 to 8" Value="1,2,3,4,5,6,7,8" MaterialType="1" />
+    <LengthItem Name="1 to 20" Value="1,2,3,4,5,6,7,8,10,12,14,16,18,20" MaterialType="1" />
+    <LengthItem Name="Secondary" Value="16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60" MaterialType="3" />
+    <LengthItem Name="Secondary" Value="1,2,3,4,5,6,7,8,10,12,14,16,18,20" MaterialType="1" />
+    <LengthItem Name="Primary" Value="16,24,48,60" MaterialType="3" />
+    <LengthItem Name="Secondary" Value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60" MaterialType="2" />
+    <LengthItem Name="Primary" Value="24,48,60" MaterialType="2" />
+  </StockLengthList>
+  <PickLengthList>
+    <LengthItem Name="1 to 8" Value="1,2,3,4,5,6,7,8" MaterialType="1" />
+    <LengthItem Name="SCL" Value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60" MaterialType="5" />
+    <LengthItem Name="Dimensional Lumber" Value="1,2,3,4,5,6,7,8,10,12,14,16,18,20" MaterialType="1" />
+    <LengthItem Name="1 to 16" Value="1,2,3,4,5,6,7,8,10,12,14,16" MaterialType="1" />
+    <LengthItem Name="I-Joists" Value="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60" MaterialType="2" />
+    <LengthItem Name="1 to 20" Value="1,2,3,4,5,6,7,8,10,12,14,16,18,20" MaterialType="1" />
+    <LengthItem Name="1 to 14" Value="1,2,3,4,5,6,7,8,10,12,14" MaterialType="1" />
+    <LengthItem Name="Glulams" Value="16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60" MaterialType="3" />
+  </PickLengthList>
+  <PlateCostList>
+    <PlateCost PlateType="21" PlateGauge="20">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+    <PlateCost PlateType="7" PlateGauge="18">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+    <PlateCost PlateType="20" PlateGauge="18">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+    <PlateCost PlateType="9" PlateGauge="18">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+    <PlateCost PlateType="8" PlateGauge="18">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+    <PlateCost PlateType="10" PlateGauge="20">
+      <Cost>0.0000</Cost>
+    </PlateCost>
+  </PlateCostList>
+  <Sets />
+  <LumberInventory>
+    <InventoryList>
+      <Inventory Key="1d9368fa-663c-4291-86e2-1d567ffa244a" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="82fd10f1-ef21-4561-9bc1-25ed72485cc5" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="ab19d38b-dc32-4b2c-a0c2-39dad82cea67" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="016be8bf-b467-4e90-846e-511388abbca8" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="34ca1c71-d3de-4a13-8b3f-72ef8a662d4e" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="7835134d-6c20-48e5-a0b6-7d9dbf531262" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="cd3f4223-9f0a-4b8c-b700-c8768004de00" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="04f13901-8f36-4e6d-91e2-cc97549903bc" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="b6ac23af-91e7-42e0-a24c-d5b5cc2901ec" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="da7fb878-329e-471a-847b-d9e163b95620" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="d71e324a-e439-4047-b7ae-e561e656a8b4" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="87e8327f-c9be-4f2d-ac92-e9941e25f99b" MaterialKey="05afb6e3-f36b-49a1-b219-2adfb95ab043" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" MaterialName="SYP (June2013) #1   2 x   6" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="7ce01f19-eff3-4694-bcd2-0b3b9734c791" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="dab10812-4870-4841-b232-0ea2b826a7f1" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="85960a55-01f5-465e-a89d-12736e3f5fb7" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="0c7c2490-5f26-40f3-955d-2d5f734fbf0c" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="1fa0f6a0-d73c-4917-a845-33aadc1d376b" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="19771b68-7a7c-4d3f-a8bd-399fc25e3d09" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="f702de7f-5b4d-4a9b-80ab-47a011466e29" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="c37d0bbd-6506-4688-866e-4bdc76a5281f" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="6f27c086-4d31-4f04-b304-5e29a2210723" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="4bc61304-ffae-477d-8b60-8cbfe93b28d8" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="686d1795-189a-4aaf-b2be-ca58c4467fbb" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="de3dc05a-ffb0-4e8c-bd22-cbed3a878756" MaterialKey="0948986c-6675-4e7d-ad5a-f492e749baac" LegacyId="LUM~SP_2400/2.0_2_8" MaterialName="SYP 2400/2.0   2 x   8" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="2b2c095b-2635-49e6-a5f1-195994b5874a" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="ebc9ee34-c00f-4402-adc7-198f866c7664" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="ae3225ee-940a-4937-a159-1d657f4c221b" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="e8aaa232-877f-41c9-981e-36d6fa80e185" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="5e7f42f3-0fcb-4d44-850c-37857c183355" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="f320d686-7333-4a20-8262-3a171b6e3f0b" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="4da83756-3aa9-42fd-a5f9-699cc8928794" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="f09bf809-cc9a-4ca1-b569-87afc7b0f495" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="954a7a76-b959-4a86-96c4-adccb88741ff" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="80f31120-f2a5-4e5e-af47-b6b2623105b2" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="2737d7f6-3521-4145-94d9-d2f2dab3d348" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="f9c5810b-c20d-4d91-877a-fc250c3b7055" MaterialKey="73c11615-1cd7-4710-aa77-ef2f9a5f4915" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" MaterialName="SYP (June2013) #1   2 x  12" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="a7b4c321-d74e-44ea-b668-22bd8695edb7" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="e9d5e8c1-5512-4483-be7a-2bb913c778e3" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="964c8c97-9e39-41b7-9bf4-36498a71d4c5" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="d7d7714c-3c3c-4ba6-b96b-3fb2457cd254" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="17746fb8-0ab6-4710-9b88-4797bab34403" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="578e7efc-beca-4c2f-9a37-4ef33ed85d5f" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="18844ae6-2dc2-4416-9561-7f69b387fb98" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="faf336dc-3b84-4812-9c3a-9b5d38052439" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="aad6101c-f72f-47dc-802c-9fe705b683fb" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="fdcb48c5-683d-484a-9f76-e63bb933ebaf" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="733cdd5e-162b-4a93-b8be-f5bd371f4943" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="10b70b57-74ea-408b-8798-f5c6ec042fc6" MaterialKey="df6795f1-fe9d-4b6a-b408-2930bf876cca" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" MaterialName="SYP (June2013) #1   2 x  10" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="6fba53f7-6123-480d-af0a-10b4024e9ea0" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="80d519ce-1ded-4204-bbc0-4f36dbee3aac" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="d2bfda0e-a7e6-47ac-97b7-512a63e8357b" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="9c980a92-cb1b-4b1a-9fb8-53b95074d9ad" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="710bcb27-ce24-49be-8cd3-5c814bd0dc90" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="8fe77b3f-9fbc-43df-9a7e-837aa5409dd4" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="554bc1a0-45a5-4768-a2a5-999587694523" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="a73f273d-f825-4991-8de4-9de90a146ccd" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="2f33015d-3212-43b6-83de-d1fd353cd6cd" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="383798b8-9c70-4b38-ad34-d6d023bdf2db" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="64831d6f-f817-4f67-a306-e62efe3e4b7c" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="10520189-c214-4492-b528-f68022cc51ed" MaterialKey="adc51882-d82c-4f36-b3bb-d109d834a934" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" MaterialName="SYP (June2013) #2   2 x   6" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="04e5e9f4-22b7-42f2-9da3-37108a1ccdfb" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="73bc6b6d-a151-4ed2-a64f-4e4fb77e7689" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="eeb701f0-b706-4dbe-ac63-834d1a2b3f8e" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="85bf9e4f-65fc-4f2c-b7e4-8cac7dcd3ea7" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="980394d4-1d55-43d3-9188-a9b825439422" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="4c5bafce-471b-487b-8888-ad247f0ae06d" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="000fe9af-9fbe-4e03-951e-b52d35cedda6" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="20d1f572-2440-4829-ac4f-c68618cbc77c" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="b437c8eb-091f-4b3d-b156-dc797e694592" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="f1c50b69-6fdf-4b1f-8b30-e8239dad24dc" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="1b826690-a572-460d-b1c8-e99b5f74521e" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="593c0d05-268f-4672-9e8b-fdaf513c2a4c" MaterialKey="636790ce-38d9-4386-b6ff-f6c45af765b6" LegacyId="LUM~SP_2400/2.0_2_10" MaterialName="SYP 2400/2.0   2 x  10" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="2c184649-10c1-450b-9e8f-51c0105f9249" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="b1e6a7c4-29de-4e0d-943e-55fd22cdc0dd" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="a6bc7ee0-5087-4ce4-bd88-6856d24799f5" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="c50b0e52-7c78-4d37-8fcb-8650ece1e542" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="eff790d0-81c1-4633-be87-9d14c8f9eb91" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="8975bc93-9a8d-4d33-9fbe-a392716677d6" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="683ba4ef-d0c1-44b0-bbaa-b9728f0bc5b9" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="aa45ff41-78b9-4c33-96a1-c1c8daec1e7a" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="2f3c6b9b-40dd-4132-bbb0-cdb2e758ac8c" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="074715c2-cdc3-4879-a5cd-e8cc7e6a8c9a" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="9dfb1870-262b-4c53-acc3-eeb581447f17" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="7b7d06e2-d34f-445f-99db-fc238ce084f8" MaterialKey="94de264e-8863-4659-8adb-38d22d19efeb" LegacyId="LUM~SP_2400/2.0_2_12" MaterialName="SYP 2400/2.0   2 x  12" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="69e1759c-c5eb-4ef0-a008-084fefe3f767" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="dcd4e814-9ead-4ce3-b781-09c1ec3b8c95" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="5875ecdb-ed42-44b5-a570-3876c40ce9d5" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="fa54f7da-2632-41aa-843f-7d3e349c6646" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="fc28ed10-304b-4fc1-963b-7d78a8530154" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="3cc25e26-2646-45ec-ac6c-8f65b0c43014" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="a2b6807e-b0ab-4afb-aaca-90301de0d726" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="929d69b4-293b-4a29-a805-b0227fe0848f" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="320c38bf-50ff-4622-a905-d35e46f0711a" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="9f1f3870-f4b9-448e-89f4-d40e90e77d7a" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="abc55c01-2bf4-4b3b-ba07-e6271fe337ca" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="f70669b0-9385-4f71-b8e9-f0b8ca514ae7" MaterialKey="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" MaterialName="SYP (June2013) #1   2 x   4" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="96b816da-88dc-48a8-886b-492dd0121c7b" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="e6f6c539-40a1-4d9a-a38e-700e68285f6f" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="15172add-bc04-4210-88f7-a7032bda4262" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="cb59fa93-e5a6-41d2-a26f-aaef7c83238d" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="3ab17c20-bf99-47ba-8fe5-b3924034eeb4" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="646ac05c-3bd4-4ae1-bcee-bceac89254d0" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="c8f75237-0972-4f96-934a-c04b63eaa0b7" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="6e4c44b3-c3bb-4133-8ef0-c62815992e68" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="f901da60-cbbf-4faa-9fac-deafe87f444d" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="1a0575b0-138c-46c2-a313-df99ab93b374" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="b541d161-7e46-48bc-813d-ecbac49dc595" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="44d976c5-9d27-4214-8bb1-fb282cf3ff1d" MaterialKey="05a85d55-a8c0-4148-b968-684e579a16ad" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" MaterialName="SYP (June2013) #2   2 x   4" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="2e8eb25d-e40e-44f5-91f2-12503137b9dd" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="04165202-d4c3-4b2f-afc7-185fd4e48dbd" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="439e005a-bd2a-4f73-9e8b-1dc0e7939d21" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="5c28c903-d03b-4f66-bce2-281ccb17df3a" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="064c85a1-ebce-40ce-ad08-294e9aab3220" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="4f1f388a-2a34-40d1-b61d-3eb53d3305e7" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="2bd7d51b-88c8-4e29-b762-4268ee3f8db2" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="0b4114c0-2b91-4fef-ad09-8b82b75b0a7b" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="a37569b3-9596-45f2-b49f-c2704eca1961" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="94a1ed7c-a289-4413-b469-ed88d9e074d1" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="07944ccb-f56f-4af3-8b7c-ee623db9a3ae" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="cc49f9b3-e269-46b5-b448-ef09b823a44d" MaterialKey="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" LegacyId="LUM~SP_2400/2.0_2_4" MaterialName="SYP 2400/2.0   2 x   4" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="886a003a-6869-4e9c-923f-16e564a6b7c9" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="c7bcecc6-d663-4ef3-8e99-1e03cbfb5c4d" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="f988312f-e638-4130-b513-1e0f5bce9afc" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="a05a7c20-a61f-49bf-ade0-29db50c8d789" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="148d09ce-af82-4ee1-9615-3884ce4fdfed" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="654a6c3b-7cd6-4f12-94c3-4ab9dd342090" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="de329986-ae75-43b7-9779-760ea5986ac2" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="b95d291d-1093-4868-a745-c540068a1c0b" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="50408290-09da-4e29-9ea3-c648cd8e336b" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="b8e30951-fb80-4c6a-b66d-d1ce405992c2" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="e95e6696-c350-4c9b-b468-eba5cc6b8514" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="7cd0fc8c-420b-4c0a-bafa-f72178f48d6b" MaterialKey="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" MaterialName="SYP (June2013) #2   2 x  12" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="7dae4467-6300-417a-b8e2-04f9462e7d51" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="57df46f3-c4d2-4dea-9332-13b7f8adeabd" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="7e2f908b-11da-4fd6-85df-1cad0070edf2" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="168.0000" Price="0.00" />
+      <Inventory Key="3d762b86-a13a-4786-944b-293a820c1527" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="120.0000" Price="0.00" />
+      <Inventory Key="b337e6d1-836a-48a5-91cd-2f513c3e60ab" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="5301ae6d-0c07-43d2-a480-32f1d7ca2b75" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="6378c680-c884-4688-b1cd-3ee888dc733b" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="144.0000" Price="0.00" />
+      <Inventory Key="fff6316f-165c-46b1-8335-bc9debe6ab41" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="192.0000" Price="0.00" />
+      <Inventory Key="09fc8d0f-fc2f-4065-9229-bd75db399ce2" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="fa0e8288-5f6e-40c3-b60b-bf63073547d2" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="60.0000" Price="0.00" />
+      <Inventory Key="a1c503fc-d09a-40c0-a0e1-fbd2b4e513d6" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="f6eba85a-fbb9-4513-93fb-fe9a00d7e67d" MaterialKey="107d7107-205e-4034-b5ca-320f01f8442d" LegacyId="LUM~SP_2400/2.0_2_6" MaterialName="SYP 2400/2.0   2 x   6" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="69e1ecf0-719d-460b-a0d4-039225e421b8" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="12.0000" Price="0.00" />
+      <Inventory Key="24363691-6e98-4044-8fc5-280436e21162" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="36.0000" Price="0.00" />
+      <Inventory Key="10b7f760-aed3-4654-851c-2dfeddfbfe24" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="48.0000" Price="0.00" />
+      <Inventory Key="acdc4a8e-f006-469f-a5c6-39ecfd6bc984" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="96.0000" Price="0.00" />
+      <Inventory Key="59bf8b4c-8cfd-4eb7-a737-6d92c494b1e1" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="84.0000" Price="0.00" />
+      <Inventory Key="6cdd7a46-06d4-43f0-a9e4-9601587c1080" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="72.0000" Price="0.00" />
+      <Inventory Key="c775a9c3-8043-4610-867a-99cb1f389a85" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="24.0000" Price="0.00" />
+      <Inventory Key="85b4d22f-f657-4609-9a6f-adc384a9cba2" MaterialKey="e3948d40-a978-414c-ad2c-c3f44d712471" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" MaterialName="SYP (June2013) #3/Stud   2 x   4" StockLength="60.0000" Price="0.00" />
+    </InventoryList>
+    <LumberMaterialList>
+      <Lumber Key="e3948d40-a978-414c-ad2c-c3f44d712471" Name="SYP (June2013) #3/Stud   2 x   4" Size="2x4" SizeWhenOrientedFlat="4x2" Thickness="1.5" Width="3.5" Grade="#3/Stud" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="1" PickLengths="12,24,36,48,60,72,84,96" PickLengthName="1 to 8" BoardType="NSC,WWD,WDW,NSW" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#3/Stud_2_4" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="05a85d55-a8c0-4148-b968-684e579a16ad" Name="SYP (June2013) #2   2 x   4" Size="2x4" SizeWhenOrientedFlat="4x2" Thickness="1.5" Width="3.5" Grade="#2" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="2" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="CDW,NSW,WDW,NSC,WWD,CWD" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#2_2_4" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="a72cc06b-03e1-4205-ac4c-7fa29ad2df46" Name="SYP (June2013) #1   2 x   4" Size="2x4" SizeWhenOrientedFlat="4x2" Thickness="1.5" Width="3.5" Grade="#1" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="3" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="CWD,WWD,WDW,NSC,NSW,CDW" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#1_2_4" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="627122be-e0e6-46cb-9f29-c1cda3b0f9fe" Name="SYP 2400/2.0   2 x   4" Size="2x4" SizeWhenOrientedFlat="4x2" Thickness="1.5" Width="3.5" Grade="2400/2.0" Species="SP" SpeciesName="SP" Sequence="4" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="NSW,CWD,WDW,NSC,CDW,WWD" SCL="false" LegacyId="LUM~SP_2400/2.0_2_4" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="adc51882-d82c-4f36-b3bb-d109d834a934" Name="SYP (June2013) #2   2 x   6" Size="2x6" SizeWhenOrientedFlat="6x2" Thickness="1.5" Width="5.5" Grade="#2" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="5" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="CWD,WWD,NSW,CDW,WDW,NSC" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#2_2_6" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="05afb6e3-f36b-49a1-b219-2adfb95ab043" Name="SYP (June2013) #1   2 x   6" Size="2x6" SizeWhenOrientedFlat="6x2" Thickness="1.5" Width="5.5" Grade="#1" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="6" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WDW,CDW,CWD,NSW,NSC,WWD" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#1_2_6" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="107d7107-205e-4034-b5ca-320f01f8442d" Name="SYP 2400/2.0   2 x   6" Size="2x6" SizeWhenOrientedFlat="6x2" Thickness="1.5" Width="5.5" Grade="2400/2.0" Species="SP" SpeciesName="SP" Sequence="7" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="CDW,WDW,WWD,NSC,CWD,NSW" SCL="false" LegacyId="LUM~SP_2400/2.0_2_6" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="0948986c-6675-4e7d-ad5a-f492e749baac" Name="SYP 2400/2.0   2 x   8" Size="2x8" SizeWhenOrientedFlat="8x2" Thickness="1.5" Width="7.25" Grade="2400/2.0" Species="SP" SpeciesName="SP" Sequence="8" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="CWD,WDW,NSC,WWD,CDW,NSW" SCL="false" LegacyId="LUM~SP_2400/2.0_2_8" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="df6795f1-fe9d-4b6a-b408-2930bf876cca" Name="SYP (June2013) #1   2 x  10" Size="2x10" SizeWhenOrientedFlat="10x2" Thickness="1.5" Width="9.25" Grade="#1" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="9" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WDW,NSC,NSW,WWD,CDW,CWD" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#1_2_10" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="636790ce-38d9-4386-b6ff-f6c45af765b6" Name="SYP 2400/2.0   2 x  10" Size="2x10" SizeWhenOrientedFlat="10x2" Thickness="1.5" Width="9.25" Grade="2400/2.0" Species="SP" SpeciesName="SP" Sequence="10" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WDW,CWD,WWD,NSW,NSC,CDW" SCL="false" LegacyId="LUM~SP_2400/2.0_2_10" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="ffdfb270-7b4e-4e17-bc8a-d8c570fc48e0" Name="SYP (June2013) #2   2 x  12" Size="2x12" SizeWhenOrientedFlat="12x2" Thickness="1.5" Width="11.25" Grade="#2" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="11" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WWD,WDW,CDW,NSW,NSC,CWD" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#2_2_12" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="73c11615-1cd7-4710-aa77-ef2f9a5f4915" Name="SYP (June2013) #1   2 x  12" Size="2x12" SizeWhenOrientedFlat="12x2" Thickness="1.5" Width="11.25" Grade="#1" Species="SP (ALSC6-2013)" SpeciesName="SP (ALSC6-2013)" Sequence="12" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WDW,CDW,NSW,NSC,WWD,CWD" SCL="false" LegacyId="LUM~SP (ALSC6-2013)_#1_2_12" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+      <Lumber Key="94de264e-8863-4659-8adb-38d22d19efeb" Name="SYP 2400/2.0   2 x  12" Size="2x12" SizeWhenOrientedFlat="12x2" Thickness="1.5" Width="11.25" Grade="2400/2.0" Species="SP" SpeciesName="SP" Sequence="13" PickLengths="12,24,36,48,60,72,84,96,120,144,168,192" PickLengthName="1 to 16" BoardType="WWD,CDW,CWD,NSC,WDW,NSW" SCL="false" LegacyId="LUM~SP_2400/2.0_2_12" IsUnavailable="false" IsUserSpecifiedSelectionPriority="true" />
+    </LumberMaterialList>
+  </LumberInventory>
+  <PlatesInventory>
+    <SortByGauge>true</SortByGauge>
+    <InventoryList>
+      <Inventory Key="4ac21bcc-5122-46b9-a64a-057cf7b8c0b9" MaterialKey="7355c8c9-26e4-411c-95c7-1705d53cd465" LegacyId="PLT~AS_HS_12000_20000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 12x20" Gauge="18" Length="20" Width="12" Weight="3.59256" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="416964c1-02dc-4110-b6b9-10a1b13e6c38" MaterialKey="1ced262d-f785-4311-a230-689cc44fbf81" LegacyId="PLT~AS_HS_06000_12000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 6x12" Gauge="18" Length="12" Width="6" Weight="1.077768" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="69ad4ae5-b4da-4877-8848-1810351be0ca" MaterialKey="07895371-5749-433e-bcc6-aa8db6c6657e" LegacyId="PLT~AS_08000_08000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 8x8" Gauge="20" Length="8" Width="8" Weight=".736064" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="49301e19-b091-411a-bfca-1b78d4f30a41" MaterialKey="3bbd3015-b160-4c97-899d-039f9b6cb912" LegacyId="PLT~AS_04000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 4x12" Gauge="20" Length="12" Width="4" Weight=".552048" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="03c6091b-5749-4b82-b044-1ea5d0f8752a" MaterialKey="d2f3112b-169a-48f2-aa69-ba82a643950e" LegacyId="PLT~AS_03000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 3x10" Gauge="20" Length="10" Width="3" Weight=".34503" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="c4b7ff59-cc15-4932-8bbe-2591b83c4907" MaterialKey="84a496d0-b442-4400-beea-2e2635c13a0d" LegacyId="PLT~AS_03000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 3x12" Gauge="20" Length="12" Width="3" Weight=".414036" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="c82c894c-ae69-4370-b247-28d91525cc5d" MaterialKey="1d741359-02e2-4adb-b4d2-14cc0346a665" LegacyId="PLT~AS_02000_04000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 2x4" Gauge="20" Length="4" Width="2" Weight=".092008" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="ade6fd4d-af91-4722-8a65-33b15a8e81e7" MaterialKey="2dad31dc-24ac-4eb3-92dd-cd539178faac" LegacyId="PLT~AS_10000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 10x10" Gauge="20" Length="10" Width="10" Weight="1.1501" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="00900f2b-5351-4675-9390-33dc27409efa" MaterialKey="8edeb9a3-0c4a-487e-b28d-77e76a500078" LegacyId="PLT~AS_HS_07000_16000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 7x16" Gauge="18" Length="16" Width="7" Weight="1.676528" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="acc6334b-ae71-4335-b7dc-3879d7933bf5" MaterialKey="2731b653-44e4-41e1-81e0-80d5790e180a" LegacyId="PLT~AS_12000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 12x12" Gauge="20" Length="12" Width="12" Weight="1.656144" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="27be0853-39b1-41eb-b0e5-38d24bcd7401" MaterialKey="7a1eeb38-ba67-4bee-8999-c867ee6fd302" LegacyId="PLT~AS_10000_20000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 10x20" Gauge="20" Length="20" Width="10" Weight="2.3002" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="98488afa-cbeb-4861-a390-4b2275805980" MaterialKey="01528784-f3a2-4262-a099-56144ef5cd03" LegacyId="PLT~AS_HS_12000_14000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 12x14" Gauge="18" Length="14" Width="12" Weight="2.514792" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="0c7ee92e-dd89-43fb-a04d-6136f195f02d" MaterialKey="bde52baf-2251-47ac-acc8-8f1cb6e34ace" LegacyId="PLT~AS_HS_03000_08000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 3x8" Gauge="18" Length="8" Width="3" Weight=".359256" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="57fa6230-562c-419f-b6e6-64ec7105bc9f" MaterialKey="d156f806-00bd-4b9b-ac60-dec24733e8de" LegacyId="PLT~AS_03000_06000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 3x6" Gauge="20" Length="6" Width="3" Weight=".207018" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="713bff5e-efec-4b62-9c31-683578e7a070" MaterialKey="a5d5b661-f710-4aca-9635-e58310f46315" LegacyId="PLT~AS_HS_05000_12000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 5x12" Gauge="18" Length="12" Width="5" Weight=".89814" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="5528e654-400c-44cc-8ec8-7123abe4d0ed" MaterialKey="ec2481c3-503a-4ff0-b444-34093c8047e7" LegacyId="PLT~AS_06000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 6x12" Gauge="20" Length="12" Width="6" Weight=".828072" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="6d12455a-ccb9-44ce-b908-71e4fb6caf20" MaterialKey="ab0f0156-33b0-40f2-8b92-0e115c2f7ac7" LegacyId="PLT~AS_HS_08000_16000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 8x16" Gauge="18" Length="16" Width="8" Weight="1.916032" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="99ee9858-a507-4e6d-ab00-76bdd0613e1e" MaterialKey="e99cb3df-4a12-4448-b6ce-3171a3223807" LegacyId="PLT~AS_HS_08000_10000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 8x10" Gauge="18" Length="10" Width="8" Weight="1.19752" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="9c0a9fa7-e8a5-4a01-b6b6-774ce066cd67" MaterialKey="ecc3ef3f-8b96-42db-9269-0f20c8c0c957" LegacyId="PLT~AS_03000_08000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 3x8" Gauge="20" Length="8" Width="3" Weight=".276024" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="5c8fde3d-fc58-44c9-8317-7ead46781da7" MaterialKey="ecb5ed09-a160-4d98-ac79-5e5f30383be6" LegacyId="PLT~AS_04000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 4x10" Gauge="20" Length="10" Width="4" Weight=".46004" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="dfb7bf6a-c9f7-431f-8aab-7ed60daee34e" MaterialKey="5a81223f-de02-43d3-8feb-903fb9136d88" LegacyId="PLT~AS_04000_06000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 4x6" Gauge="20" Length="6" Width="4" Weight=".276024" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="34765775-a710-43d7-82c5-7fb5f1186644" MaterialKey="727515f2-7f9b-4dc0-93a1-dc3b1cf097fa" LegacyId="PLT~AS_01500_03000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 1.5x3" Gauge="20" Length="3" Width="1.5" Weight=".051755" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="3f4be35e-eeca-42a4-a6e8-81012a13132c" MaterialKey="80ec7e94-aa30-4571-a08b-5008e6323a43" LegacyId="PLT~AS_12000_18000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 12x18" Gauge="20" Length="18" Width="12" Weight="2.484216" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="cefd900f-4a72-4797-af2d-88dce3789764" MaterialKey="45113845-c842-463c-97d7-0635ed2369cf" LegacyId="PLT~AS_08000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 8x12" Gauge="20" Length="12" Width="8" Weight="1.104096" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="8f538e3f-cdc4-4710-8318-8c7739c681e3" MaterialKey="8dca067e-7686-4508-9087-b651ad603d4b" LegacyId="PLT~AS_10000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 10x12" Gauge="20" Length="12" Width="10" Weight="1.38012" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="efbeac3b-3775-4496-8244-8ceeb928328b" MaterialKey="9c9d20b5-8493-4955-bebf-585d0ce4e27c" LegacyId="PLT~AS_HS_06000_08000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 6x8" Gauge="18" Length="8" Width="6" Weight=".718512" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="0147caaf-88ba-4081-abeb-8e0827301255" MaterialKey="ec8cc1dd-afb6-4890-ac50-2632cb1a4dbf" LegacyId="PLT~AS_HS_05000_08000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 5x8" Gauge="18" Length="8" Width="5" Weight=".59876" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="8ebd17f2-7759-4be8-b054-8f8ec0be9dd4" MaterialKey="50a0a430-dc0e-418d-ba18-397b4c27f966" LegacyId="PLT~AS_08000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 8x10" Gauge="20" Length="10" Width="8" Weight=".92008" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="b9db2619-5451-4e77-bcbe-95e0f598c640" MaterialKey="495eeb9d-0526-4137-b86d-607ca658d5cc" LegacyId="PLT~AS_HS_10000_10000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 10x10" Gauge="18" Length="10" Width="10" Weight="1.4969" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="3e7c4023-cdff-47ab-a337-982c394ae2a5" MaterialKey="e4b6dd0a-21a2-40e7-b567-23bdcaa4bf74" LegacyId="PLT~AS_05000_08000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 5x8" Gauge="20" Length="8" Width="5" Weight=".46004" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="570bf83e-f6a1-4b35-b966-9ca63aa543cf" MaterialKey="a2725567-583b-4150-8c98-4817fc0ff35f" LegacyId="PLT~AS_04000_04000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 4x4" Gauge="20" Length="4" Width="4" Weight=".184016" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="8d9a8353-873e-456a-8ec9-a03c4ce18dcb" MaterialKey="f8d56627-7da0-4970-9159-9a7b7a86bdbf" LegacyId="PLT~AS_05000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 5x12" Gauge="20" Length="12" Width="5" Weight=".69006" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="8f5b3dea-7056-4f6b-832d-a35047798525" MaterialKey="852a2863-378e-4020-ab31-461a1bb10568" LegacyId="PLT~AS_04000_08000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 4x8" Gauge="20" Length="8" Width="4" Weight=".368032" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="b81db2fa-24d8-4ebe-97c4-ba4f0c2c7957" MaterialKey="4a2e0488-a6a4-4f18-8317-317ca4cf3822" LegacyId="PLT~AS_HS_07000_12000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 7x12" Gauge="18" Length="12" Width="7" Weight="1.257396" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="22a8b55c-0dfb-4f39-9fd0-bcb7daeb93f7" MaterialKey="d4b23f9b-04a1-47c7-83b1-989be31526f6" LegacyId="PLT~AS_HS_03000_10000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 3x10" Gauge="18" Length="10" Width="3" Weight=".44907" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="383c2a98-1ff9-4e3f-884a-be5288475237" MaterialKey="7a5f49fd-417a-4b2c-b29a-a4bd06ba1efd" LegacyId="PLT~AS_06000_06000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 6x6" Gauge="20" Length="6" Width="6" Weight=".414036" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="58df7555-9493-4c06-9b2d-c880c5bc2d5f" MaterialKey="ad76f95b-6705-4df6-95a8-001ef9006e26" LegacyId="PLT~AS_HS_05000_10000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 5x10" Gauge="18" Length="10" Width="5" Weight=".74845" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="f5807b1f-692a-4a70-9133-c9dd09ade479" MaterialKey="1f37246a-bc5f-42be-a9e4-4a54c3953896" LegacyId="PLT~AS_06000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 6x10" Gauge="20" Length="10" Width="6" Weight=".69006" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="1443736e-579a-4866-aca2-d07863dba01b" MaterialKey="980997f0-cc42-4e6e-9483-318abeadd955" LegacyId="PLT~AS_07000_12000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 7x12" Gauge="20" Length="12" Width="7" Weight=".966084" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="fa6aaff3-4343-49fa-bc41-d5ced48245d9" MaterialKey="4fbfe6ba-0e35-4fbd-838e-7deaf7bd04f4" LegacyId="PLT~AS_03000_04000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 3x4" Gauge="20" Length="4" Width="3" Weight=".138012" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="20945cb9-39cd-4a8f-b3b4-dfdc458449d2" MaterialKey="a5750e86-94dd-441d-993b-ddb7ecdf87db" LegacyId="PLT~AS_HS_06000_16000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 6x16" Gauge="18" Length="16" Width="6" Weight="1.437024" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="f290ff16-c21d-41a0-bb34-e7a85381fc4b" MaterialKey="e1ad6d2d-e0ba-4ff8-8973-0c638adbc51f" LegacyId="PLT~AS_HS_06000_10000-43" PlateTypeKey="f2bbfdb8-44d1-45c6-a179-84cffd5461ed" SeriesName="High Strength" MaterialName="AS_HS 18G 6x10" Gauge="18" Length="10" Width="6" Weight=".89814" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="9b1aef0e-645e-411d-af1e-f4ea1cf8a629" MaterialKey="d377a585-f282-4660-aad2-a4414cef2c9a" LegacyId="PLT~AS_05000_10000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 5x10" Gauge="20" Length="10" Width="5" Weight=".57505" Price="0.00" IsUnavailable="false" />
+      <Inventory Key="69b824b8-d987-413c-9686-fc1d64c4c83e" MaterialKey="899ba8ce-a56a-4a48-97a4-d770742eb08e" LegacyId="PLT~AS_06000_08000-33" PlateTypeKey="2b3500cb-c1b0-4654-af08-a8b13db9ead6" SeriesName="Standard" MaterialName="AS 20G 6x8" Gauge="20" Length="8" Width="6" Weight=".552048" Price="0.00" IsUnavailable="false" />
+    </InventoryList>
+  </PlatesInventory>
+  <MiscItemInventory>
+    <Items>
+      <MiscItem Key="2badfc49-890d-4efc-8e71-457d6595d77c" Category="Hanger" Name="HHUS26-2" UnitTypeKey="353b8c40-8585-4cfb-bf18-352a3cd77a36" Cost="0.0000" IsUserManaged="false" IsSpecialOrder="true" IsTaxable="false" />
+      <MiscItem Key="23a80899-c25a-42d4-9e2f-30c8534f373e" Category="Hanger" Name="HHUS210-2" UnitTypeKey="353b8c40-8585-4cfb-bf18-352a3cd77a36" Cost="0.0000" IsUserManaged="false" IsSpecialOrder="true" IsTaxable="false" />
+      <MiscItem Key="997a0e83-04b5-4882-9a0a-b53eedf0ebf7" Category="Hanger" Name="HUS26" UnitTypeKey="353b8c40-8585-4cfb-bf18-352a3cd77a36" Cost="0.0000" IsUserManaged="false" IsSpecialOrder="true" IsTaxable="false" />
+      <MiscItem Key="15123b96-3047-4104-80a3-b19a71848641" Category="Hanger" Name="LUS24" UnitTypeKey="353b8c40-8585-4cfb-bf18-352a3cd77a36" Cost="0.0000" IsUserManaged="false" IsSpecialOrder="true" IsTaxable="false" />
+    </Items>
+  </MiscItemInventory>
+  <Groups>
+    <Group Name="Imported" DisplayOrder="10001">
+      <Component Key="1cb7d09e-f708-41dc-9580-4128024480f8" Sequence="0" />
+      <Component Key="c79d7491-aebf-4b27-98a6-fae6e48a1f75" Sequence="1" />
+      <Component Key="ce987686-76c8-464b-927c-c2cdc1c5a3ca" Sequence="2" />
+      <Component Key="6eae0289-794c-4754-bb57-8c7de2bbb2f1" Sequence="3" />
+      <Component Key="63b49fa0-2ddc-4f20-aca2-3994acdfdaa1" Sequence="4" />
+      <Component Key="63a0fb55-2863-41c3-9030-59a8485b3f13" Sequence="5" />
+      <Component Key="363e218a-e54c-41ff-8e62-999325d6699b" Sequence="6" />
+      <Component Key="1eb94472-f943-4d1a-a16b-ba7f42d7338e" Sequence="7" />
+      <Component Key="5791305c-6be6-4806-baf6-1dd1ec420e1e" Sequence="8" />
+      <Component Key="bd9594e2-a0a5-47c5-ba42-b8fcf0fa16a9" Sequence="9" />
+      <Component Key="65bfef81-08ff-4ac5-a926-83092bfa50c7" Sequence="10" />
+      <Component Key="a12ae6e8-70de-43e1-a232-23227de7e6a4" Sequence="11" />
+      <Component Key="5407d063-2205-4d09-acda-d5bc2574e969" Sequence="12" />
+      <Component Key="0c63270e-9625-492f-a140-9eba502e4bfe" Sequence="13" />
+      <Component Key="85a8e8e3-7ef2-4276-8f07-41cca67033bf" Sequence="14" />
+      <Component Key="fbbd7981-69bf-4e60-a470-17b9113d761b" Sequence="15" />
+      <Component Key="c5d607d9-04f3-42fe-a4ba-41e12a655293" Sequence="16" />
+      <Component Key="1bbe4329-8687-4ea1-a87b-c1af42cc7dcb" Sequence="17" />
+      <Component Key="93a6f4ec-0a35-467e-a06f-6d3ecfe3b9b8" Sequence="18" />
+      <Component Key="4754624c-e423-442f-ae7d-332d52a1066a" Sequence="19" />
+      <Component Key="fb7783c2-6e49-476a-a10c-a2f34a5c5406" Sequence="20" />
+      <Component Key="1b306906-a6be-4806-a5e4-51c0a1e01507" Sequence="21" />
+      <Component Key="6f1a4cbb-e47d-42c3-92c3-a5d98ff69136" Sequence="22" />
+      <Component Key="b355bc36-3ee7-4372-818f-2d2d8f7a1b20" Sequence="23" />
+      <Component Key="1e0dea33-8e9f-4c5d-907c-e2727acb9f85" Sequence="24" />
+      <Component Key="3c31877b-ce00-4981-a2e1-ec61cd4151c8" Sequence="25" />
+      <Component Key="a5ce1cda-5e6f-45b5-ac9e-bf7493654fa7" Sequence="26" />
+      <Component Key="17f1d58b-705e-40a9-9013-ec8a22b0222a" Sequence="27" />
+      <Component Key="c66f8391-bc20-48cb-b90b-7ee707ff8eba" Sequence="28" />
+    </Group>
+  </Groups>
+  <PlanGroups />
+  <OriginalDesigner>SimpsonDesignServices</OriginalDesigner>
+</DesignDataXmlVM>

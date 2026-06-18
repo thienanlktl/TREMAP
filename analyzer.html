@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truss Analyzer — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body analyzer-body">
+    <header class="toolbar analyzer-toolbar">
+      <div class="brand">
+        <strong>Truss Analyzer</strong>
+        <span id="analyzer-subtitle">MiTek TRE engineering — Plan 193</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <label class="analyzer-select-label">
+          Truss
+          <select id="truss-select" class="analyzer-select"></select>
+        </label>
+        <button id="export-json" class="btn accent" type="button">JSON Export</button>
+      </div>
+    </header>
+
+    <main class="analyzer-main">
+      <aside class="analyzer-panel analyzer-left" id="carried-panel">
+        <div class="analyzer-panel-head">
+          <h2 id="carried-title">Carried Loads</h2>
+          <span id="carried-count" class="analyzer-count"></span>
+        </div>
+        <div class="analyzer-table-wrap">
+          <table class="data-table compact analyzer-load-table" id="carried-table">
+            <thead>
+              <tr>
+                <th>Truss</th>
+                <th>Offset</th>
+                <th class="col-down">Down</th>
+                <th class="col-up">Uplift</th>
+              </tr>
+            </thead>
+            <tbody id="carried-body"></tbody>
+          </table>
+        </div>
+        <p id="carried-empty" class="analyzer-empty hidden">No carried truss loads in this design.</p>
+      </aside>
+
+      <section class="analyzer-center">
+        <div class="analyzer-diagram analyzer-elevation">
+          <div class="analyzer-diagram-head">
+            <h3>Side Elevation</h3>
+            <span id="elevation-caption"></span>
+          </div>
+          <svg id="elevation-svg" class="analyzer-svg" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="analyzer-diagram analyzer-plan">
+          <div class="analyzer-diagram-head">
+            <h3>Plan — Lay &amp; Spacing</h3>
+            <span id="plan-caption"></span>
+          </div>
+          <svg id="plan-svg" class="analyzer-svg" viewBox="0 0 800 180" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+      </section>
+
+      <aside class="analyzer-panel analyzer-right">
+        <h2>Results &amp; Materials</h2>
+        <dl class="analyzer-results" id="results-dl"></dl>
+
+        <h3 class="detail-subheading">Selected Node</h3>
+        <dl class="analyzer-results" id="node-dl">
+          <dt>Status</dt>
+          <dd id="node-status">Click a load point or member on the diagram</dd>
+        </dl>
+      </aside>
+    </main>
+
+    <script type="module" src="/analyzer.js"></script>
+  </body>
+</html>
