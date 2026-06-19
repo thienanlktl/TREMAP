@@ -1,0 +1,73 @@
+Primary Parameters,Joist,Truss,Multi
+CONNECTION TYPE,,,Yes
+Connection Type,,,Multi-Truss (Flush Bottom)
+,,,
+JOB SETTINGS,,,Yes
+Hanger Type,,,All Types
+Fastener Type,,,All Types
+Configuration,,,Left=T06; Center=T05; Right=T02
+ANSI/TPI 1 Evaluation,,,No
+Download Duration,,,Floor (CD=1.0)
+Uplift Duration,,,Wind / Seismic (CD=1.6)
+Job ID,,,T15
+Quantity,,,2
+,,,
+HEADER / GIRDER (CARRYING MEMBER),,,Yes
+Member Type,,,Truss — SP
+Type,,,Truss
+Lumber Species,,,SP
+Width,,,1.5
+Bottom Chord Width,,,1.5
+Depth,,,3.5
+Bottom Chord Height,,,6.16
+Number of Plies,,,2
+Vertical Width (King Post),,,1.5
+Total Height,,,86.052
+Member ID,,,T15
+Lumber Finish,,,Rough Sawn
+,,,
+JOIST / TRUSS / JACK (CARRIED MEMBER),,,Yes
+Member Type,,,
+Lumber Species,,,
+Width,,,
+Bottom Chord Width,,,
+Heel Height,,,
+Depth,,,
+Number of Plies,,,
+Member ID,,,
+Download (ASD),,,
+Upload (ASD),,,
+Slope (Degrees),,,
+Lumber Finish,,,
+,,,
+LEFT HIP (CARRIED MEMBER),,,Yes
+Member Type (Controlled by Jack inputs),,,Truss — SP
+Lumber Species (Controlled by Jack inputs),,,SP
+Bottom Chord Width,,,1.5
+Heel Height,,,52.98
+Number of Plies,,,2
+Member ID,,,T06
+Download (ASD),,,1332
+Uplift (ASD),,,1331
+Skew (Degrees),,,0
+Slope (Degrees),,,77.6
+,,,
+RIGHT HIP (CARRIED MEMBER),,,Yes
+Member Type (Controlled by Jack inputs),,,Truss — SP
+Lumber Species (Controlled by Jack inputs),,,SP
+Bottom Chord Width,,,1.5
+Heel Height,,,4.16
+Number of Plies,,,2
+Member ID,,,T02
+Download (ASD),,,551
+Uplift (ASD),,,405
+Skew (Degrees),,,0
+Slope (Degrees),,,19.1
+,,,
+HANGER OPTIONS,,,
+Skew,,,
+Slope,,,
+Top Flange Bend,,,
+Top Flange Slope,,,
+Offset Direction (Top Flange Only),,,
+"High, Low, Center Flush",,,

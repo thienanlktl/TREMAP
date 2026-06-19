@@ -1,0 +1,212 @@
+{
+  "mark": "J06B",
+  "treFile": "j06b.tre",
+  "trussType": "Jack-Closed",
+  "girder": false,
+  "role": "carried",
+  "connectionType": "multi",
+  "connectionColumn": "multi",
+  "connectionLabel": "Multi-Truss (Flush Bottom)",
+  "spanDisplay": "6'-0.96\"",
+  "pitch": "6.19/12",
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 21,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "hangerOptions": null,
+    "carryingMember": null,
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 6.19,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 226,
+          "uplift": 51
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 27.3,
+          "slopeType": 1
+        },
+        "memberId": "J06B"
+      }
+    ]
+  },
+  "filledCells": [
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "CONNECTION TYPE",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "Connection Type",
+      "column": "multi",
+      "value": "Multi-Truss (Flush Bottom)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "JOB SETTINGS",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Hanger Type",
+      "column": "multi",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Fastener Type",
+      "column": "multi",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "ANSI/TPI 1 Evaluation",
+      "column": "multi",
+      "value": "No"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Download Duration",
+      "column": "multi",
+      "value": "Floor (CD=1.0)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Uplift Duration",
+      "column": "multi",
+      "value": "Wind / Seismic (CD=1.6)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Job ID",
+      "column": "multi",
+      "value": "J06B"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Quantity",
+      "column": "multi",
+      "value": 3
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member Type",
+      "column": "multi",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Species",
+      "column": "multi",
+      "value": "SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Heel Height",
+      "column": "multi",
+      "value": 6.19
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Depth",
+      "column": "multi",
+      "value": 3.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "multi",
+      "value": 1
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member ID",
+      "column": "multi",
+      "value": "J06B"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Download (ASD)",
+      "column": "multi",
+      "value": 226
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Upload (ASD)",
+      "column": "multi",
+      "value": 51
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Slope (Degrees)",
+      "column": "multi",
+      "value": 27.3
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Finish",
+      "column": "multi",
+      "value": "Rough Sawn"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "LEFT HIP (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "RIGHT HIP (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    }
+  ]
+}

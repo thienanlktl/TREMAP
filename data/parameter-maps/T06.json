@@ -1,0 +1,380 @@
+{
+  "mark": "T06",
+  "treFile": "t06.tre",
+  "trussType": "Roof Special Girder",
+  "girder": true,
+  "role": "carrying",
+  "connectionType": "multi",
+  "connectionColumn": "multi",
+  "connectionLabel": "Multi-Truss (Flush Bottom)",
+  "spanDisplay": "27'-6.50\"",
+  "pitch": "54.79/12",
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 21,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "hangerOptions": null,
+    "carryingMember": {
+      "width": 1.5,
+      "depth": 3.5,
+      "material": 7,
+      "ply": 2,
+      "kingHeight": 59.788,
+      "kingWidth": 1.5,
+      "topChordPly": 2
+    },
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 6.16,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 117,
+          "uplift": 131
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 27.2,
+          "slopeType": 1
+        },
+        "memberId": "J06"
+      },
+      {
+        "width": 1.5,
+        "depth": 6.19,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 163,
+          "uplift": 103
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 27.3,
+          "slopeType": 1
+        },
+        "memberId": "J06B"
+      },
+      {
+        "width": 1.5,
+        "depth": 6.16,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 231,
+          "uplift": 154
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 27.2,
+          "slopeType": 1
+        },
+        "memberId": "J06C"
+      }
+    ]
+  },
+  "filledCells": [
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "CONNECTION TYPE",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "Connection Type",
+      "column": "multi",
+      "value": "Multi-Truss (Flush Bottom)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "JOB SETTINGS",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Hanger Type",
+      "column": "multi",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Fastener Type",
+      "column": "multi",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Configuration",
+      "column": "multi",
+      "value": "Left=J06; Center=J06B; Right=J06C"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "ANSI/TPI 1 Evaluation",
+      "column": "multi",
+      "value": "No"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Download Duration",
+      "column": "multi",
+      "value": "Floor (CD=1.0)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Uplift Duration",
+      "column": "multi",
+      "value": "Wind / Seismic (CD=1.6)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Job ID",
+      "column": "multi",
+      "value": "T06"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Quantity",
+      "column": "multi",
+      "value": 2
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member Type",
+      "column": "multi",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Type",
+      "column": "multi",
+      "value": "Truss"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Species",
+      "column": "multi",
+      "value": "SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Depth",
+      "column": "multi",
+      "value": 3.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Bottom Chord Height",
+      "column": "multi",
+      "value": 52.98
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "multi",
+      "value": 2
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Vertical Width (King Post)",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Total Height",
+      "column": "multi",
+      "value": 59.788
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member ID",
+      "column": "multi",
+      "value": "T06"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Finish",
+      "column": "multi",
+      "value": "Rough Sawn"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "LEFT HIP (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Member Type (Controlled by Jack inputs)",
+      "column": "multi",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Lumber Species (Controlled by Jack inputs)",
+      "column": "multi",
+      "value": "SP"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Heel Height",
+      "column": "multi",
+      "value": 6.16
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "multi",
+      "value": 2
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Member ID",
+      "column": "multi",
+      "value": "J06"
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Download (ASD)",
+      "column": "multi",
+      "value": 117
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Uplift (ASD)",
+      "column": "multi",
+      "value": 131
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Skew (Degrees)",
+      "column": "multi",
+      "value": 0
+    },
+    {
+      "section": "LEFT HIP (CARRIED MEMBER)",
+      "parameter": "Slope (Degrees)",
+      "column": "multi",
+      "value": 27.2
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "RIGHT HIP (CARRIED MEMBER)",
+      "column": "multi",
+      "value": "Yes"
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Member Type (Controlled by Jack inputs)",
+      "column": "multi",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Lumber Species (Controlled by Jack inputs)",
+      "column": "multi",
+      "value": "SP"
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Heel Height",
+      "column": "multi",
+      "value": 6.16
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "multi",
+      "value": 2
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Member ID",
+      "column": "multi",
+      "value": "J06C"
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Download (ASD)",
+      "column": "multi",
+      "value": 231
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Uplift (ASD)",
+      "column": "multi",
+      "value": 154
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Skew (Degrees)",
+      "column": "multi",
+      "value": 0
+    },
+    {
+      "section": "RIGHT HIP (CARRIED MEMBER)",
+      "parameter": "Slope (Degrees)",
+      "column": "multi",
+      "value": 27.2
+    }
+  ]
+}

@@ -44,6 +44,8 @@ export default defineConfig({
         mitek: path.resolve(__dirname, "mitek.html"),
         truss: path.resolve(__dirname, "truss.html"),
         analyzer: path.resolve(__dirname, "analyzer.html"),
+        hanger: path.resolve(__dirname, "hanger-selector.html"),
+        paramMaps: path.resolve(__dirname, "parameter-maps.html"),
       },
     },
   },

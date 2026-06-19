@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-06-19T07:53:52.188Z",
+  "schemaReference": "Parameters Map.csv",
+  "source": "Parameters Map.csv template + MiTek TRE calculations",
+  "count": 29,
+  "marks": [
+    "J02",
+    "J03",
+    "J03A",
+    "J03B",
+    "J04",
+    "J06",
+    "J06A",
+    "J06B",
+    "J06C",
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07GE",
+    "T08",
+    "T09",
+    "T09A",
+    "T10",
+    "T11",
+    "T12",
+    "T13",
+    "T14",
+    "T14GE",
+    "T15",
+    "T16",
+    "T16GE",
+    "T17"
+  ],
+  "maps": {
+    "J02": {
+      "file": "J02.csv",
+      "json": "J02.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 115,
+      "uplift": 21
+    },
+    "J03": {
+      "file": "J03.csv",
+      "json": "J03.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 140,
+      "uplift": 33
+    },
+    "J03A": {
+      "file": "J03A.csv",
+      "json": "J03A.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 142,
+      "uplift": 41
+    },
+    "J03B": {
+      "file": "J03B.csv",
+      "json": "J03B.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Jack-Closed Girder",
+      "download": 211,
+      "uplift": 66
+    },
+    "J04": {
+      "file": "J04.csv",
+      "json": "J04.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 173,
+      "uplift": 34
+    },
+    "J06": {
+      "file": "J06.csv",
+      "json": "J06.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 210,
+      "uplift": 78
+    },
+    "J06A": {
+      "file": "J06A.csv",
+      "json": "J06A.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 214,
+      "uplift": 51
+    },
+    "J06B": {
+      "file": "J06B.csv",
+      "json": "J06B.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carried",
+      "trussType": "Jack-Closed",
+      "download": 226,
+      "uplift": 51
+    },
+    "J06C": {
+      "file": "J06C.csv",
+      "json": "J06C.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Jack-Closed Girder",
+      "download": 321,
+      "uplift": 92
+    },
+    "T01": {
+      "file": "T01.csv",
+      "json": "T01.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 895,
+      "uplift": 176
+    },
+    "T02": {
+      "file": "T02.csv",
+      "json": "T02.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 896,
+      "uplift": 155
+    },
+    "T03": {
+      "file": "T03.csv",
+      "json": "T03.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Hip",
+      "download": 944,
+      "uplift": 156
+    },
+    "T04": {
+      "file": "T04.csv",
+      "json": "T04.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Hip Girder",
+      "download": 2399,
+      "uplift": 674
+    },
+    "T05": {
+      "file": "T05.csv",
+      "json": "T05.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Roof Special",
+      "download": 1065,
+      "uplift": 217
+    },
+    "T06": {
+      "file": "T06.csv",
+      "json": "T06.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Roof Special Girder",
+      "download": 2351,
+      "uplift": 810
+    },
+    "T07GE": {
+      "file": "T07GE.csv",
+      "json": "T07GE.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common Supported Gable",
+      "download": 120,
+      "uplift": 62
+    },
+    "T08": {
+      "file": "T08.csv",
+      "json": "T08.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 617,
+      "uplift": 125
+    },
+    "T09": {
+      "file": "T09.csv",
+      "json": "T09.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 572,
+      "uplift": 99
+    },
+    "T09A": {
+      "file": "T09A.csv",
+      "json": "T09A.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 563,
+      "uplift": 96
+    },
+    "T10": {
+      "file": "T10.csv",
+      "json": "T10.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Monopitch Girder",
+      "download": 3158,
+      "uplift": 695
+    },
+    "T11": {
+      "file": "T11.csv",
+      "json": "T11.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Monopitch",
+      "download": 707,
+      "uplift": 179
+    },
+    "T12": {
+      "file": "T12.csv",
+      "json": "T12.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Monopitch",
+      "download": 747,
+      "uplift": 173
+    },
+    "T13": {
+      "file": "T13.csv",
+      "json": "T13.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Half Hip Girder",
+      "download": 1116,
+      "uplift": 415
+    },
+    "T14": {
+      "file": "T14.csv",
+      "json": "T14.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 594,
+      "uplift": 116
+    },
+    "T14GE": {
+      "file": "T14GE.csv",
+      "json": "T14GE.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common Structural Gable",
+      "download": 424,
+      "uplift": 124
+    },
+    "T15": {
+      "file": "T15.csv",
+      "json": "T15.json",
+      "connectionType": "multi",
+      "connectionColumn": "multi",
+      "role": "carrying",
+      "trussType": "Common Girder",
+      "download": 4386,
+      "uplift": 979
+    },
+    "T16": {
+      "file": "T16.csv",
+      "json": "T16.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common",
+      "download": 267,
+      "uplift": 63
+    },
+    "T16GE": {
+      "file": "T16GE.csv",
+      "json": "T16GE.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common Supported Gable",
+      "download": 130,
+      "uplift": 19
+    },
+    "T17": {
+      "file": "T17.csv",
+      "json": "T17.json",
+      "connectionType": "truss",
+      "connectionColumn": "truss",
+      "role": "carried",
+      "trussType": "Common Girder",
+      "download": 1075,
+      "uplift": null
+    }
+  }
+}

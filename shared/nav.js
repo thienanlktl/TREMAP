@@ -6,6 +6,8 @@ export function renderNav(active) {
     { id: "analyzer", href: "/analyzer.html", label: "Truss Analyzer" },
     { id: "mitek", href: "/mitek.html", label: "MiTek Inspector" },
     { id: "ddp", href: "/ddp.html", label: "DDP Inspector" },
+    { id: "hanger", href: "/hanger-selector.html", label: "Hanger Ref" },
+    { id: "param-maps", href: "/parameter-maps.html", label: "Param Maps" },
   ];
 
   const nav = document.createElement("nav");

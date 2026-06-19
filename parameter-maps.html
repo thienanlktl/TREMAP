@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRE Parameter Maps — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body pm-page">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>TRE Parameter Maps</strong>
+        <span id="pm-subtitle">MiTek TRE → Simpson Hanger Selector</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions pm-actions">
+        <label class="pm-select-label">
+          TRE mark
+          <select id="pm-mark-select" class="select-input"></select>
+        </label>
+        <label class="pm-toggle">
+          <input id="pm-filled-only" type="checkbox" />
+          Filled rows only
+        </label>
+        <button id="pm-copy-csv" class="btn secondary" type="button">Copy CSV</button>
+        <button id="pm-download-csv" class="btn secondary" type="button">Download CSV</button>
+      </div>
+    </header>
+
+    <main class="pm-main">
+      <section class="panel pm-summary-panel">
+        <p id="pm-summary" class="pm-summary"></p>
+        <div class="pm-view-tabs" role="tablist">
+          <button id="pm-tab-table" class="pm-view-tab active" type="button" role="tab">Table</button>
+          <button id="pm-tab-raw" class="pm-view-tab" type="button" role="tab">Raw CSV</button>
+          <button id="pm-tab-api" class="pm-view-tab" type="button" role="tab">API JSON</button>
+        </div>
+      </section>
+
+      <section class="panel pm-table-panel" id="pm-panel-table">
+        <div class="table-wrap pm-table-wrap">
+          <table class="data-table compact pm-table" id="pm-table">
+            <thead id="pm-thead"></thead>
+            <tbody id="pm-tbody"></tbody>
+          </table>
+        </div>
+        <p id="pm-row-count" class="pm-row-count"></p>
+      </section>
+
+      <section class="panel pm-raw-panel hidden" id="pm-panel-raw">
+        <pre class="pm-raw" id="pm-raw-csv"></pre>
+      </section>
+
+      <section class="panel pm-raw-panel hidden" id="pm-panel-api">
+        <pre class="pm-raw" id="pm-api-json"></pre>
+      </section>
+    </main>
+
+    <script type="module" src="/parameter-maps.js"></script>
+  </body>
+</html>

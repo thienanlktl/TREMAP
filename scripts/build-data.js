@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { buildParameterMaps } from "./build-parameter-map.js";
 import { buildTrussAnalysisCatalog } from "./parse-tre-analyzer.js";
 import { assertProjectData, resolveProjectRoot } from "./resolve-project-root.js";
 
@@ -539,6 +540,9 @@ function main() {
 
   const trussAnalysis = buildTrussAnalysisCatalog(projectRoot);
   fs.writeFileSync(path.join(dataOut, "truss-analysis.json"), JSON.stringify(trussAnalysis, null, 2));
+
+  const parameterMaps = buildParameterMaps(projectRoot, dataOut);
+  console.log(`Parameter maps: ${parameterMaps.count} TRE files → data/parameter-maps/`);
 
   console.log(`Wrote ${comparison.rows.length} BOM rows (${comparison.totals.matches} matches)`);
   console.log(`Truss analysis: ${trussAnalysis.count} designs, ${trussAnalysis.girders.length} girders`);

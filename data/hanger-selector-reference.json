@@ -1,0 +1,362 @@
+{
+  "meta": {
+    "title": "Simpson Strong-Tie Hanger Selector — Parameter Reference",
+    "appUrl": "https://app.strongtie.com/hs",
+    "apiBase": "https://api.strongtie.com/gws",
+    "apiEndpoint": "POST /hanger-selector/hangers",
+    "sources": [
+      "https://docs.strongtie.com/help-center/hanger-selector/differences-between-cs-and-hs",
+      "https://docs.strongtie.com/home-page/connector-selector/apis/openapi/joist/paths/~1api~1Hangers/post",
+      "https://docs.strongtie.com/home-page/connector-selector/apis/openapi/trussmulti-truss/paths/~1api~1trusshangers/post"
+    ],
+    "notes": [
+      "All three UI connection types use one API endpoint; flushOption distinguishes joist vs truss.",
+      "Loads are ASD (Allowable Stress Design) in pounds unless noted.",
+      "Download/uplift duration factors map to designInformations.downloadDurationType and upliftLoadDurationType."
+    ]
+  },
+  "connectionTypes": [
+    {
+      "id": "joist_flush_top",
+      "uiLabel": "Joist (Flush Top)",
+      "description": "Carried joist hangs from bottom of header/beam with top of joist flush to header bottom.",
+      "flushOption": "TOP",
+      "carriedMemberCount": { "min": 1, "max": 1, "label": "Single joist" },
+      "hangerOptions": "required",
+      "carryingMemberExtraFields": ["topChord"],
+      "diagram": "Header (carrying) above → hanger wraps joist bottom (carried)"
+    },
+    {
+      "id": "truss_flush_bottom",
+      "uiLabel": "Truss (Flush Bottom)",
+      "description": "Single truss hung from girder with bottom chord flush to girder support line.",
+      "flushOption": "BOTTOM",
+      "carriedMemberCount": { "min": 1, "max": 1, "label": "Single truss in carriedMembers[0]" },
+      "hangerOptions": null,
+      "carryingMemberExtraFields": ["kingHeight", "kingWidth", "topChordPly"],
+      "diagram": "Girder (carrying) → one truss (carried) at bottom flush"
+    },
+    {
+      "id": "multi_truss_flush_bottom",
+      "uiLabel": "Multi-Truss (Flush Bottom)",
+      "description": "Up to three trusses on one girder hanger (left, center, right positions).",
+      "flushOption": "BOTTOM",
+      "carriedMemberCount": { "min": 2, "max": 3, "label": "2–3 entries in carriedMembers array" },
+      "hangerOptions": null,
+      "carryingMemberExtraFields": ["kingHeight", "kingWidth", "topChordPly"],
+      "nullSlotRules": [
+        { "configuration": "Left + Center", "nullIndex": 2, "note": "carriedMembers[2] = null" },
+        { "configuration": "Left + Right", "nullIndex": 1, "note": "carriedMembers[1] = null" },
+        { "configuration": "Center + Right", "nullIndex": 0, "note": "carriedMembers[0] = null" }
+      ],
+      "diagram": "Girder → up to 3 truss seats (use null slot for unused position)"
+    }
+  ],
+  "uiSections": [
+    {
+      "id": "connection_type",
+      "uiLabel": "Connection Type",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        {
+          "uiLabel": "Connection Type",
+          "apiField": "flushOption",
+          "type": "enum",
+          "enumKey": "flushOption",
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "job_settings",
+      "uiLabel": "Job Settings",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Hanger Type", "apiField": "style", "type": "enum", "enumKey": "style", "uiHint": "All Types / Face / Top Flange" },
+        { "uiLabel": "Fastener Type", "apiField": "fastenerType", "type": "enum", "enumKey": "fastenerType" },
+        { "uiLabel": "Download Duration", "apiField": "designInformations.downloadDurationType", "type": "integer", "uiHint": "e.g. Floor = 100" },
+        { "uiLabel": "Uplift Duration", "apiField": "designInformations.upliftLoadDurationType", "type": "integer", "uiHint": "e.g. Quake/Wind = 160" },
+        { "uiLabel": "Building Code", "apiField": "buildingCode", "type": "enum", "enumKey": "buildingCode" },
+        { "uiLabel": "Concealed Flange", "apiField": "concealed", "type": "enum", "enumKey": "concealed" },
+        { "uiLabel": "Ledger Connection", "apiField": "ledger", "type": "enum", "enumKey": "ledger" },
+        { "uiLabel": "ANSI TPI", "apiField": "ansitpi", "type": "enum", "enumKey": "ansitpi", "appliesTo": ["truss_flush_bottom", "multi_truss_flush_bottom"] },
+        { "uiLabel": "Sort Results By", "apiField": "sort", "type": "enum", "enumKey": "sort" },
+        { "uiLabel": "Job ID", "apiField": null, "type": "string", "uiHint": "UI-only label for job list export" },
+        { "uiLabel": "Quantity", "apiField": null, "type": "integer", "uiHint": "UI-only quantity for job list / CSV" }
+      ]
+    },
+    {
+      "id": "filters",
+      "uiLabel": "Hanger Filters (optional)",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Series Filter", "apiField": "filters.series", "type": "string" },
+        { "uiLabel": "Model Filter", "apiField": "filters.model", "type": "string" },
+        { "uiLabel": "Width Filter", "apiField": "filters.width", "type": "number", "unit": "in" },
+        { "uiLabel": "Depth Filter", "apiField": "filters.depth", "type": "number", "unit": "in" },
+        { "uiLabel": "Web Stiffeners", "apiField": "filters.webStiffeners", "type": "enum", "enumKey": "webStiffeners" }
+      ]
+    },
+    {
+      "id": "carrying_member",
+      "uiLabel": "Header / Girder (Carrying Member)",
+      "apiField": "carryingMember",
+      "legacyApiField": "headerMember | girder",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Member Type", "apiField": "carryingMember.material", "type": "enum", "enumKey": "material", "uiHint": "Solid Sawn, Truss, I-Joist, etc." },
+        { "uiLabel": "Lumber Species", "apiField": "carryingMember.material", "type": "enum", "enumKey": "material" },
+        { "uiLabel": "Width", "apiField": "carryingMember.width", "type": "number", "unit": "in", "uiHint": "e.g. 1.5 for 2x" },
+        { "uiLabel": "Depth", "apiField": "carryingMember.depth", "type": "number", "unit": "in", "uiHint": "actual depth, e.g. 5.5 for 2x6" },
+        { "uiLabel": "Number of Plies", "apiField": "carryingMember.ply", "type": "integer" },
+        { "uiLabel": "Top Chord Ply", "apiField": "carryingMember.topChordPly", "type": "integer", "appliesTo": ["truss_flush_bottom", "multi_truss_flush_bottom"] },
+        { "uiLabel": "Top Chord", "apiField": "carryingMember.topChord", "type": "integer", "appliesTo": ["joist_flush_top"], "uiHint": "4x2 floor truss use case" },
+        { "uiLabel": "King Post Height", "apiField": "carryingMember.kingHeight", "type": "number", "unit": "in", "appliesTo": ["truss_flush_bottom", "multi_truss_flush_bottom"] },
+        { "uiLabel": "King Post Width", "apiField": "carryingMember.kingWidth", "type": "number", "unit": "in", "appliesTo": ["truss_flush_bottom", "multi_truss_flush_bottom"] },
+        { "uiLabel": "Member ID", "apiField": null, "type": "string", "uiHint": "UI label only" },
+        { "uiLabel": "Lumber Finish", "apiField": null, "type": "string", "uiHint": "Rough Sawn / S4S — UI only in HS app" }
+      ]
+    },
+    {
+      "id": "carried_member",
+      "uiLabel": "Joist / Truss (Carried Member)",
+      "apiField": "carriedMembers[]",
+      "legacyApiField": "joistMember | truss[]",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Member Type", "apiField": "carriedMembers[].material", "type": "enum", "enumKey": "material" },
+        { "uiLabel": "Lumber Species", "apiField": "carriedMembers[].material", "type": "enum", "enumKey": "material" },
+        { "uiLabel": "Width", "apiField": "carriedMembers[].width", "type": "number", "unit": "in" },
+        { "uiLabel": "Depth", "apiField": "carriedMembers[].depth", "type": "number", "unit": "in" },
+        { "uiLabel": "Number of Plies", "apiField": "carriedMembers[].ply", "type": "integer" },
+        { "uiLabel": "Download (ASD)", "apiField": "carriedMembers[].loads.load", "type": "integer", "unit": "lb" },
+        { "uiLabel": "Uplift (ASD)", "apiField": "carriedMembers[].loads.uplift", "type": "integer", "unit": "lb" },
+        { "uiLabel": "Member ID", "apiField": null, "type": "string", "uiHint": "UI label only" },
+        { "uiLabel": "Lumber Finish", "apiField": null, "type": "string", "uiHint": "UI only" }
+      ]
+    },
+    {
+      "id": "slope_skew",
+      "uiLabel": "Slope & Skew (per carried member)",
+      "apiField": "carriedMembers[].angle",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Skew (Degrees)", "apiField": "carriedMembers[].angle.skewAngle", "type": "number", "unit": "deg" },
+        { "uiLabel": "Skew Direction", "apiField": "carriedMembers[].angle.skewType", "type": "enum", "enumKey": "skewType", "uiHint": "Left / Right" },
+        { "uiLabel": "Slope (Degrees)", "apiField": "carriedMembers[].angle.slopeAngle", "type": "number", "unit": "deg" },
+        { "uiLabel": "Slope Direction", "apiField": "carriedMembers[].angle.slopeType", "type": "enum", "enumKey": "slopeType", "uiHint": "Up / Down" }
+      ]
+    },
+    {
+      "id": "hanger_options",
+      "uiLabel": "Hanger Options (Top Flange)",
+      "apiField": "hangerOptions.topFlangeOptions",
+      "appliesTo": ["joist_flush_top"],
+      "fields": [
+        { "uiLabel": "Top Flange Bend", "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedType", "type": "enum", "enumKey": "topFlangeOpenClosedType", "uiHint": "Closed / Open" },
+        { "uiLabel": "Top Flange Bend Angle", "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedAngle", "type": "number", "unit": "deg" },
+        { "uiLabel": "Top Flange Slope", "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownType", "type": "enum", "enumKey": "topFlangeSlopedDownType", "uiHint": "Down Left / Down Right" },
+        { "uiLabel": "Top Flange Slope Angle", "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownAngle", "type": "number", "unit": "deg" },
+        { "uiLabel": "Offset Direction", "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset", "type": "enum", "enumKey": "topFlangeOffset", "uiHint": "Centered / High-Low-Center flush" }
+      ]
+    },
+    {
+      "id": "output",
+      "uiLabel": "Output",
+      "appliesTo": ["joist_flush_top", "truss_flush_bottom", "multi_truss_flush_bottom"],
+      "fields": [
+        { "uiLabel": "Model", "apiField": "response.models[].model", "type": "string" },
+        { "uiLabel": "Installed Cost", "apiField": "response.models[].installedCost", "type": "number" },
+        { "uiLabel": "Download Capacity", "apiField": "response.models[].download", "type": "integer", "unit": "lb" },
+        { "uiLabel": "Uplift Capacity", "apiField": "response.models[].uplift", "type": "integer", "unit": "lb" },
+        { "uiLabel": "TF / Face / Joist Fasteners", "apiField": "response.models[].fasteners", "type": "object" },
+        { "uiLabel": "3D Viewer Layers", "apiField": null, "type": "ui", "uiHint": "Carrying, Carried, Hanger visibility toggles" },
+        { "uiLabel": "Job List / CSV", "apiField": null, "type": "export", "uiHint": "Add to job list, download CSV, fastener totals" }
+      ]
+    }
+  ],
+  "enums": {
+    "flushOption": [
+      { "value": "TOP", "label": "Joist (Flush Top)" },
+      { "value": "BOTTOM", "label": "Truss / Multi-Truss (Flush Bottom)" }
+    ],
+    "buildingCode": [
+      { "value": 0, "label": "Invalid" },
+      { "value": 20, "label": "IBC 2012" },
+      { "value": 21, "label": "IBC 2015" },
+      { "value": 22, "label": "US Last" },
+      { "value": 40, "label": "Canada First" },
+      { "value": 41, "label": "NBCC 2015" },
+      { "value": 42, "label": "NBCC 2020" }
+    ],
+    "concealed": [
+      { "value": 0, "label": "Any" },
+      { "value": 1, "label": "No concealed flange" },
+      { "value": 2, "label": "Concealed flange only" }
+    ],
+    "fastenerType": [
+      { "value": 0, "label": "All Types" },
+      { "value": 1, "label": "10d + 1.5\" nails" },
+      { "value": 2, "label": "10d nails" },
+      { "value": 3, "label": "16d nails" },
+      { "value": 4, "label": "SDS screws" },
+      { "value": 1000, "label": "Nails (generic)" },
+      { "value": 2000, "label": "Bolts" },
+      { "value": 3000, "label": "Screws" },
+      { "value": 3100, "label": "SD screws" },
+      { "value": 3200, "label": "SDS screws" },
+      { "value": 4000, "label": "Anchors" },
+      { "value": 9999, "label": "Other" }
+    ],
+    "style": [
+      { "value": 0, "label": "All Types" },
+      { "value": 1, "label": "Face mount" },
+      { "value": 2, "label": "Top flange" }
+    ],
+    "ledger": [
+      { "value": 0, "label": "No ledger" },
+      { "value": 1, "label": "Ledger connection" }
+    ],
+    "ansitpi": [
+      { "value": 0, "label": "No" },
+      { "value": 1, "label": "Yes" },
+      { "value": 2, "label": "Double" },
+      { "value": 3, "label": "Ends" },
+      { "value": 4, "label": "Interior" },
+      { "value": 5, "label": "Ends 1/4" },
+      { "value": 6, "label": "Interior 1/4" }
+    ],
+    "sort": [
+      { "value": 0, "label": "Default" },
+      { "value": 1, "label": "Model" },
+      { "value": 2, "label": "Width" },
+      { "value": 3, "label": "Height" },
+      { "value": 4, "label": "Bearing" },
+      { "value": 5, "label": "Top flange depth" },
+      { "value": 6, "label": "Header nails" },
+      { "value": 7, "label": "Joist nails" },
+      { "value": 8, "label": "Top flange nails" },
+      { "value": 9, "label": "Download capacity" },
+      { "value": 10, "label": "Uplift capacity" },
+      { "value": 11, "label": "Installed cost index" },
+      { "value": 12, "label": "MSRP" }
+    ],
+    "webStiffeners": [
+      { "value": 0, "label": "Free (any)" },
+      { "value": 1, "label": "Imposed required" },
+      { "value": 2, "label": "Exempt" }
+    ],
+    "skewType": [
+      { "value": 0, "label": "None" },
+      { "value": 1, "label": "Left" },
+      { "value": 2, "label": "Right" }
+    ],
+    "slopeType": [
+      { "value": 0, "label": "None" },
+      { "value": 1, "label": "Up" },
+      { "value": 2, "label": "Down" }
+    ],
+    "topFlangeOpenClosedType": [
+      { "value": 0, "label": "None" },
+      { "value": 1, "label": "Closed" },
+      { "value": 2, "label": "Open" }
+    ],
+    "topFlangeSlopedDownType": [
+      { "value": 0, "label": "None" },
+      { "value": 1, "label": "Down left" },
+      { "value": 2, "label": "Down right" }
+    ],
+    "topFlangeOffset": [
+      { "value": 0, "label": "Centered (no offset)" },
+      { "value": 1, "label": "Left offset" },
+      { "value": 2, "label": "Right offset" }
+    ],
+    "material": [
+      { "value": 0, "label": "None" },
+      { "value": 1, "label": "Solid Sawn — DF" },
+      { "value": 2, "label": "Solid Sawn — HF" },
+      { "value": 3, "label": "Solid Sawn — SP" },
+      { "value": 4, "label": "Solid Sawn — SPF" },
+      { "value": 5, "label": "Truss — DF" },
+      { "value": 6, "label": "Truss — HF" },
+      { "value": 7, "label": "Truss — SP" },
+      { "value": 8, "label": "Truss — SPF" },
+      { "value": 9, "label": "Glulam DF/SP" },
+      { "value": 10, "label": "I-Joist (generic)" },
+      { "value": 11, "label": "I-Joist — DF" },
+      { "value": 12, "label": "LSL" },
+      { "value": 13, "label": "LVL DF/SP" },
+      { "value": 14, "label": "PSL" },
+      { "value": 15, "label": "Masonry" },
+      { "value": 16, "label": "Masonry TOW" },
+      { "value": 19, "label": "I-Joist — SPF" },
+      { "value": 20, "label": "Glulam SPF" },
+      { "value": 21, "label": "LVL SPF" },
+      { "value": 24, "label": "Concrete" },
+      { "value": 50, "label": "SST (Simpson)" }
+    ],
+    "durationType": [
+      { "value": 100, "label": "Floor / standard (CD=1.0)" },
+      { "value": 160, "label": "Wind / seismic (CD=1.6)" }
+    ]
+  },
+  "exampleRequests": {
+    "joist_flush_top": {
+      "flushOption": "TOP",
+      "buildingCode": 20,
+      "concealed": 0,
+      "fastenerType": 0,
+      "style": 0,
+      "ledger": 0,
+      "sort": 12,
+      "designInformations": { "downloadDurationType": 100, "upliftLoadDurationType": 160 },
+      "filters": { "depth": 0, "width": 0, "series": "", "model": "", "webStiffeners": 0 },
+      "carryingMember": { "width": 1.5, "depth": 5.5, "material": 1, "ply": 1, "topChord": 1 },
+      "carriedMembers": [{
+        "width": 1.5, "depth": 5.5, "material": 1, "ply": 1,
+        "loads": { "load": 590, "uplift": 540 },
+        "angle": { "skewAngle": 0, "skewType": 0, "slopeAngle": 0, "slopeType": 0 }
+      }],
+      "hangerOptions": {
+        "topFlangeOptions": {
+          "topFlangeOffset": 0,
+          "topFlangeOpenClosedAngle": 0,
+          "topFlangeOpenClosedType": 0,
+          "topFlangeSlopedDownAngle": 0,
+          "topFlangeSlopedDownType": 0
+        }
+      }
+    },
+    "truss_flush_bottom": {
+      "flushOption": "BOTTOM",
+      "ansitpi": 0,
+      "buildingCode": 20,
+      "concealed": 0,
+      "fastenerType": 0,
+      "style": 0,
+      "ledger": 0,
+      "sort": 12,
+      "designInformations": { "downloadDurationType": 100, "upliftLoadDurationType": 160 },
+      "filters": { "depth": 0, "width": 0, "series": "", "model": "", "webStiffeners": 0 },
+      "hangerOptions": null,
+      "carryingMember": { "width": 1.5, "depth": 9.25, "material": 5, "ply": 1, "kingHeight": 0, "kingWidth": 0, "topChordPly": 0 },
+      "carriedMembers": [{
+        "width": 1.5, "depth": 7, "material": 5, "ply": 1,
+        "loads": { "load": 100, "uplift": 125 },
+        "angle": { "skewAngle": 0, "skewType": 0, "slopeAngle": 0, "slopeType": 0 }
+      }]
+    },
+    "multi_truss_flush_bottom": {
+      "flushOption": "BOTTOM",
+      "ansitpi": 0,
+      "buildingCode": 20,
+      "carryingMember": { "width": 1.5, "depth": 9.25, "material": 5, "ply": 1, "kingHeight": 0, "kingWidth": 0, "topChordPly": 0 },
+      "carriedMembers": [
+        { "width": 1.5, "depth": 5.5, "material": 5, "ply": 1, "loads": { "load": 0, "uplift": 0 }, "angle": { "skewAngle": 45, "skewType": 1, "slopeAngle": 0, "slopeType": 0 } },
+        { "width": 1.5, "depth": 5.5, "material": 5, "ply": 1, "loads": { "load": 0, "uplift": 0 }, "angle": { "skewAngle": 0, "skewType": 0, "slopeAngle": 0, "slopeType": 0 } },
+        { "width": 1.5, "depth": 5.5, "material": 5, "ply": 1, "loads": { "load": 0, "uplift": 0 }, "angle": { "skewAngle": 45, "skewType": 2, "slopeAngle": 0, "slopeType": 0 } }
+      ],
+      "hangerOptions": null
+    }
+  }
+}

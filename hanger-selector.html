@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanger Selector Reference — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body hs-page">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Simpson Hanger Selector Reference</strong>
+        <span>Parameter map for Joist, Truss, and Multi-Truss connection types</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions">
+        <a class="btn" href="https://app.strongtie.com/hs" target="_blank" rel="noopener">Open HS App</a>
+        <button id="btn-copy-json" class="btn secondary" type="button">Copy JSON</button>
+      </div>
+    </header>
+
+    <main class="page-main hs-main">
+      <section class="hs-intro panel">
+        <p id="hs-intro-text"></p>
+        <div class="hs-meta" id="hs-meta"></div>
+      </section>
+
+      <section class="hs-type-tabs" id="type-tabs" role="tablist"></section>
+
+      <div class="hs-layout">
+        <section class="panel hs-detail" id="type-detail"></section>
+        <aside class="panel hs-side">
+          <h2>Multi-Truss slot rules</h2>
+          <div id="null-rules"></div>
+          <h2>Example API body</h2>
+          <pre class="hs-json" id="example-json"></pre>
+        </aside>
+      </div>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>MiTek TRE → Parameter Maps</h2>
+          <a class="btn secondary" href="/parameter-maps.html">Open full CSV viewer</a>
+        </div>
+        <p id="tre-map-summary" class="hs-desc"></p>
+        <label class="pm-select-label">
+          TRE mark
+          <select id="tre-map-select" class="select-input"></select>
+        </label>
+        <div class="table-wrap">
+          <table class="data-table" id="tre-map-table">
+            <thead>
+              <tr>
+                <th>Primary Parameters</th>
+                <th>Joist</th>
+                <th>Truss</th>
+                <th>Multi</th>
+              </tr>
+            </thead>
+            <tbody id="tre-map-body"></tbody>
+          </table>
+        </div>
+        <h3>Generated API body</h3>
+        <pre class="hs-json" id="tre-map-api"></pre>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Parameter sections</h2>
+          <input id="param-search" class="search-input" type="search" placeholder="Filter parameters…" />
+        </div>
+        <div id="param-sections"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Enums</h2>
+          <select id="enum-select" class="select-input"></select>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="enum-table">
+            <thead>
+              <tr>
+                <th>Value</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody id="enum-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/hanger-selector.js"></script>
+  </body>
+</html>
