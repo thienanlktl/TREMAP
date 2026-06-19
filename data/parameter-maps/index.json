@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-06-19T07:53:52.188Z",
+  "generatedAt": "2026-06-19T08:02:24.918Z",
   "schemaReference": "Parameters Map.csv",
-  "source": "Parameters Map.csv template + MiTek TRE calculations",
+  "simpsonHsUrl": "https://app.strongtie.com/hs",
+  "purpose": "All Joist / Truss / Multi columns filled from MiTek TRE — pick the column that matches your Simpson Hanger Selector connection type.",
   "count": 29,
   "marks": [
     "J02",
@@ -38,8 +39,7 @@
     "J02": {
       "file": "J02.csv",
       "json": "J02.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 115,
@@ -48,8 +48,7 @@
     "J03": {
       "file": "J03.csv",
       "json": "J03.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 140,
@@ -58,8 +57,7 @@
     "J03A": {
       "file": "J03A.csv",
       "json": "J03A.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 142,
@@ -68,8 +66,7 @@
     "J03B": {
       "file": "J03B.csv",
       "json": "J03B.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Jack-Closed Girder",
       "download": 211,
@@ -78,8 +75,7 @@
     "J04": {
       "file": "J04.csv",
       "json": "J04.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 173,
@@ -88,8 +84,7 @@
     "J06": {
       "file": "J06.csv",
       "json": "J06.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 210,
@@ -98,8 +93,7 @@
     "J06A": {
       "file": "J06A.csv",
       "json": "J06A.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 214,
@@ -108,8 +102,7 @@
     "J06B": {
       "file": "J06B.csv",
       "json": "J06B.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carried",
       "trussType": "Jack-Closed",
       "download": 226,
@@ -118,8 +111,7 @@
     "J06C": {
       "file": "J06C.csv",
       "json": "J06C.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Jack-Closed Girder",
       "download": 321,
@@ -128,8 +120,7 @@
     "T01": {
       "file": "T01.csv",
       "json": "T01.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 895,
@@ -138,8 +129,7 @@
     "T02": {
       "file": "T02.csv",
       "json": "T02.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 896,
@@ -148,8 +138,7 @@
     "T03": {
       "file": "T03.csv",
       "json": "T03.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Hip",
       "download": 944,
@@ -158,8 +147,7 @@
     "T04": {
       "file": "T04.csv",
       "json": "T04.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Hip Girder",
       "download": 2399,
@@ -168,8 +156,7 @@
     "T05": {
       "file": "T05.csv",
       "json": "T05.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Roof Special",
       "download": 1065,
@@ -178,8 +165,7 @@
     "T06": {
       "file": "T06.csv",
       "json": "T06.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Roof Special Girder",
       "download": 2351,
@@ -188,8 +174,7 @@
     "T07GE": {
       "file": "T07GE.csv",
       "json": "T07GE.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common Supported Gable",
       "download": 120,
@@ -198,8 +183,7 @@
     "T08": {
       "file": "T08.csv",
       "json": "T08.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 617,
@@ -208,8 +192,7 @@
     "T09": {
       "file": "T09.csv",
       "json": "T09.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 572,
@@ -218,8 +201,7 @@
     "T09A": {
       "file": "T09A.csv",
       "json": "T09A.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 563,
@@ -228,8 +210,7 @@
     "T10": {
       "file": "T10.csv",
       "json": "T10.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Monopitch Girder",
       "download": 3158,
@@ -238,8 +219,7 @@
     "T11": {
       "file": "T11.csv",
       "json": "T11.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Monopitch",
       "download": 707,
@@ -248,8 +228,7 @@
     "T12": {
       "file": "T12.csv",
       "json": "T12.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Monopitch",
       "download": 747,
@@ -258,8 +237,7 @@
     "T13": {
       "file": "T13.csv",
       "json": "T13.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Half Hip Girder",
       "download": 1116,
@@ -268,8 +246,7 @@
     "T14": {
       "file": "T14.csv",
       "json": "T14.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 594,
@@ -278,8 +255,7 @@
     "T14GE": {
       "file": "T14GE.csv",
       "json": "T14GE.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common Structural Gable",
       "download": 424,
@@ -288,8 +264,7 @@
     "T15": {
       "file": "T15.csv",
       "json": "T15.json",
-      "connectionType": "multi",
-      "connectionColumn": "multi",
+      "suggestedConnection": "multi",
       "role": "carrying",
       "trussType": "Common Girder",
       "download": 4386,
@@ -298,8 +273,7 @@
     "T16": {
       "file": "T16.csv",
       "json": "T16.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common",
       "download": 267,
@@ -308,8 +282,7 @@
     "T16GE": {
       "file": "T16GE.csv",
       "json": "T16GE.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common Supported Gable",
       "download": 130,
@@ -318,8 +291,7 @@
     "T17": {
       "file": "T17.csv",
       "json": "T17.json",
-      "connectionType": "truss",
-      "connectionColumn": "truss",
+      "suggestedConnection": "truss",
       "role": "carried",
       "trussType": "Common Girder",
       "download": 1075,

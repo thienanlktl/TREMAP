@@ -1,18 +1,18 @@
 Primary Parameters,Joist,Truss,Multi
-CONNECTION TYPE,,,Yes
-Connection Type,,,Multi-Truss (Flush Bottom)
+CONNECTION TYPE,Yes,Yes,Yes
+Connection Type,Joist (Flush Top),Truss (Flush Bottom),Multi-Truss (Flush Bottom)
 ,,,
-JOB SETTINGS,,,Yes
-Hanger Type,,,All Types
-Fastener Type,,,All Types
+JOB SETTINGS,Yes,Yes,Yes
+Hanger Type,All Types,All Types,All Types
+Fastener Type,All Types,All Types,All Types
 Configuration,,,
-ANSI/TPI 1 Evaluation,,,No
-Download Duration,,,Floor (CD=1.0)
-Uplift Duration,,,Wind / Seismic (CD=1.6)
-Job ID,,,J02
-Quantity,,,9
+ANSI/TPI 1 Evaluation,,No,No
+Download Duration,Floor (CD=1.0),Floor (CD=1.0),Floor (CD=1.0)
+Uplift Duration,Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6)
+Job ID,J02,J02,J02
+Quantity,9,9,9
 ,,,
-HEADER / GIRDER (CARRYING MEMBER),,,Yes
+HEADER / GIRDER (CARRYING MEMBER),Yes,Yes,Yes
 Member Type,,,
 Type,,,
 Lumber Species,,,
@@ -26,19 +26,19 @@ Total Height,,,
 Member ID,,,
 Lumber Finish,,,
 ,,,
-JOIST / TRUSS / JACK (CARRIED MEMBER),,,Yes
-Member Type,,,Truss — SP
-Lumber Species,,,SP
-Width,,,1.5
-Bottom Chord Width,,,1.5
-Heel Height,,,4.16
-Depth,,,3.5
-Number of Plies,,,1
-Member ID,,,J02
-Download (ASD),,,115
-Upload (ASD),,,21
+JOIST / TRUSS / JACK (CARRIED MEMBER),Yes,Yes,Yes
+Member Type,Solid Sawn — SP,Truss — SP,Truss — SP
+Lumber Species,SP,SP,SP
+Width,1.5,1.5,1.5
+Bottom Chord Width,,1.5,1.5
+Heel Height,,4.16,4.16
+Depth,3.5,4.16,4.16
+Number of Plies,1,1,1
+Member ID,J02,J02,J02
+Download (ASD),115,115,115
+Upload (ASD),21,21,21
 Slope (Degrees),,,19.1
-Lumber Finish,,,Rough Sawn
+Lumber Finish,Rough Sawn,Rough Sawn,Rough Sawn
 ,,,
 LEFT HIP (CARRIED MEMBER),,,Yes
 Member Type (Controlled by Jack inputs),,,
@@ -64,9 +64,9 @@ Uplift (ASD),,,
 Skew (Degrees),,,
 Slope (Degrees),,,
 ,,,
-HANGER OPTIONS,,,
-Skew,,,
-Slope,,,
+HANGER OPTIONS,Yes,Yes,
+Skew,0,0,
+Slope,19.1,19.1,
 Top Flange Bend,,,
 Top Flange Slope,,,
 Offset Direction (Top Flange Only),,,

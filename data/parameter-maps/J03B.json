@@ -4,69 +4,226 @@
   "trussType": "Jack-Closed Girder",
   "girder": true,
   "role": "carrying",
-  "connectionType": "multi",
-  "connectionColumn": "multi",
-  "connectionLabel": "Multi-Truss (Flush Bottom)",
+  "suggestedConnection": "multi",
   "spanDisplay": "3'-6.00\"",
   "pitch": "7.94/12",
-  "apiBody": {
-    "flushOption": "BOTTOM",
-    "ansitpi": 0,
-    "buildingCode": 21,
-    "concealed": 0,
-    "fastenerType": 0,
-    "style": 0,
-    "ledger": 0,
-    "sort": 12,
-    "designInformations": {
-      "downloadDurationType": 100,
-      "upliftLoadDurationType": 160
-    },
-    "filters": {
-      "depth": 0,
-      "width": 0,
-      "series": "",
-      "model": "",
-      "webStiffeners": 0
-    },
-    "hangerOptions": null,
-    "carryingMember": {
-      "width": 1.5,
-      "depth": 3.5,
-      "material": 7,
-      "ply": 1,
-      "kingHeight": 23.2065,
-      "kingWidth": 1.5,
-      "topChordPly": 1
-    },
-    "carriedMembers": [
-      null,
-      {
+  "simpsonHsUrl": "https://app.strongtie.com/hs",
+  "usageNote": "Open Simpson Hanger Selector, choose Joist / Truss / Multi-Truss, then copy values from the matching column in the CSV.",
+  "connectionOptions": {
+    "joist": "Joist (Flush Top)",
+    "truss": "Truss (Flush Bottom)",
+    "multi": "Multi-Truss (Flush Bottom)"
+  },
+  "apiBodies": {
+    "joist": {
+      "flushOption": "TOP",
+      "ansitpi": 0,
+      "buildingCode": 21,
+      "concealed": 0,
+      "fastenerType": 0,
+      "style": 0,
+      "ledger": 0,
+      "sort": 12,
+      "designInformations": {
+        "downloadDurationType": 100,
+        "upliftLoadDurationType": 160
+      },
+      "filters": {
+        "depth": 0,
+        "width": 0,
+        "series": "",
+        "model": "",
+        "webStiffeners": 0
+      },
+      "hangerOptions": {
+        "topFlangeOptions": {}
+      },
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Joist (Flush Top)",
+      "carryingMember": {
         "width": 1.5,
-        "depth": 3.94,
+        "depth": 3.5,
+        "material": 3,
+        "ply": 1,
+        "kingHeight": 0,
+        "kingWidth": 0,
+        "topChordPly": 0,
+        "topChord": 1
+      },
+      "carriedMembers": [
+        {
+          "width": 1.5,
+          "depth": 7.94,
+          "material": 3,
+          "ply": 1,
+          "loads": {
+            "load": 211,
+            "uplift": 66
+          },
+          "angle": {
+            "skewAngle": 0,
+            "skewType": 0,
+            "slopeAngle": 33.5,
+            "slopeType": 1
+          },
+          "memberId": "J03B"
+        }
+      ]
+    },
+    "truss": {
+      "flushOption": "BOTTOM",
+      "ansitpi": 0,
+      "buildingCode": 21,
+      "concealed": 0,
+      "fastenerType": 0,
+      "style": 0,
+      "ledger": 0,
+      "sort": 12,
+      "designInformations": {
+        "downloadDurationType": 100,
+        "upliftLoadDurationType": 160
+      },
+      "filters": {
+        "depth": 0,
+        "width": 0,
+        "series": "",
+        "model": "",
+        "webStiffeners": 0
+      },
+      "hangerOptions": null,
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Truss (Flush Bottom)",
+      "carryingMember": {
+        "width": 1.5,
+        "depth": 3.5,
         "material": 7,
         "ply": 1,
-        "loads": {
-          "load": 75,
-          "uplift": 68
-        },
-        "angle": {
-          "skewAngle": 0,
-          "skewType": 0,
-          "slopeAngle": 18.2,
-          "slopeType": 1
-        },
-        "memberId": "J04"
+        "kingHeight": 23.2065,
+        "kingWidth": 1.5,
+        "topChordPly": 1,
+        "topChord": 0
       },
-      null
+      "carriedMembers": [
+        {
+          "width": 1.5,
+          "depth": 7.94,
+          "material": 7,
+          "ply": 1,
+          "loads": {
+            "load": 211,
+            "uplift": 66
+          },
+          "angle": {
+            "skewAngle": 0,
+            "skewType": 0,
+            "slopeAngle": 33.5,
+            "slopeType": 1
+          },
+          "memberId": "J03B"
+        }
+      ]
+    },
+    "multi": {
+      "flushOption": "BOTTOM",
+      "ansitpi": 0,
+      "buildingCode": 21,
+      "concealed": 0,
+      "fastenerType": 0,
+      "style": 0,
+      "ledger": 0,
+      "sort": 12,
+      "designInformations": {
+        "downloadDurationType": 100,
+        "upliftLoadDurationType": 160
+      },
+      "filters": {
+        "depth": 0,
+        "width": 0,
+        "series": "",
+        "model": "",
+        "webStiffeners": 0
+      },
+      "hangerOptions": null,
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Multi-Truss (Flush Bottom)",
+      "carryingMember": {
+        "width": 1.5,
+        "depth": 3.5,
+        "material": 7,
+        "ply": 1,
+        "kingHeight": 23.2065,
+        "kingWidth": 1.5,
+        "topChordPly": 1
+      },
+      "carriedMembers": [
+        null,
+        {
+          "width": 1.5,
+          "depth": 3.94,
+          "material": 7,
+          "ply": 1,
+          "loads": {
+            "load": 75,
+            "uplift": 68
+          },
+          "angle": {
+            "skewAngle": 0,
+            "skewType": 0,
+            "slopeAngle": 18.2,
+            "slopeType": 1
+          },
+          "memberId": "J04"
+        },
+        null
+      ]
+    }
+  },
+  "hsReference": {
+    "title": "Simpson Strong-Tie Hanger Selector — Parameter Reference",
+    "appUrl": "https://app.strongtie.com/hs",
+    "apiBase": "https://api.strongtie.com/gws",
+    "apiEndpoint": "POST /hanger-selector/hangers",
+    "sources": [
+      "https://docs.strongtie.com/help-center/hanger-selector/differences-between-cs-and-hs",
+      "https://docs.strongtie.com/home-page/connector-selector/apis/openapi/joist/paths/~1api~1Hangers/post",
+      "https://docs.strongtie.com/home-page/connector-selector/apis/openapi/trussmulti-truss/paths/~1api~1trusshangers/post"
+    ],
+    "notes": [
+      "All three UI connection types use one API endpoint; flushOption distinguishes joist vs truss.",
+      "Loads are ASD (Allowable Stress Design) in pounds unless noted.",
+      "Download/uplift duration factors map to designInformations.downloadDurationType and upliftLoadDurationType."
     ]
   },
   "filledCells": [
     {
       "section": "CONNECTION TYPE",
       "parameter": "CONNECTION TYPE",
+      "column": "joist",
+      "value": "Yes"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "CONNECTION TYPE",
+      "column": "truss",
+      "value": "Yes"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "CONNECTION TYPE",
       "column": "multi",
       "value": "Yes"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "Connection Type",
+      "column": "joist",
+      "value": "Joist (Flush Top)"
+    },
+    {
+      "section": "CONNECTION TYPE",
+      "parameter": "Connection Type",
+      "column": "truss",
+      "value": "Truss (Flush Bottom)"
     },
     {
       "section": "CONNECTION TYPE",
@@ -77,13 +234,49 @@
     {
       "section": "JOB SETTINGS",
       "parameter": "JOB SETTINGS",
+      "column": "joist",
+      "value": "Yes"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "JOB SETTINGS",
+      "column": "truss",
+      "value": "Yes"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "JOB SETTINGS",
       "column": "multi",
       "value": "Yes"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Hanger Type",
+      "column": "joist",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Hanger Type",
+      "column": "truss",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Hanger Type",
       "column": "multi",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Fastener Type",
+      "column": "joist",
+      "value": "All Types"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Fastener Type",
+      "column": "truss",
       "value": "All Types"
     },
     {
@@ -101,8 +294,26 @@
     {
       "section": "JOB SETTINGS",
       "parameter": "ANSI/TPI 1 Evaluation",
+      "column": "truss",
+      "value": "No"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "ANSI/TPI 1 Evaluation",
       "column": "multi",
       "value": "No"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Download Duration",
+      "column": "joist",
+      "value": "Floor (CD=1.0)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Download Duration",
+      "column": "truss",
+      "value": "Floor (CD=1.0)"
     },
     {
       "section": "JOB SETTINGS",
@@ -113,8 +324,32 @@
     {
       "section": "JOB SETTINGS",
       "parameter": "Uplift Duration",
+      "column": "joist",
+      "value": "Wind / Seismic (CD=1.6)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Uplift Duration",
+      "column": "truss",
+      "value": "Wind / Seismic (CD=1.6)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Uplift Duration",
       "column": "multi",
       "value": "Wind / Seismic (CD=1.6)"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Job ID",
+      "column": "joist",
+      "value": "J03B"
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Job ID",
+      "column": "truss",
+      "value": "J03B"
     },
     {
       "section": "JOB SETTINGS",
@@ -125,8 +360,32 @@
     {
       "section": "JOB SETTINGS",
       "parameter": "Quantity",
+      "column": "joist",
+      "value": 1
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Quantity",
+      "column": "truss",
+      "value": 1
+    },
+    {
+      "section": "JOB SETTINGS",
+      "parameter": "Quantity",
       "column": "multi",
       "value": 1
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
+      "column": "joist",
+      "value": "Yes"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
+      "column": "truss",
+      "value": "Yes"
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
@@ -137,8 +396,26 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Member Type",
+      "column": "joist",
+      "value": "Solid Sawn — SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member Type",
+      "column": "truss",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member Type",
       "column": "multi",
       "value": "Truss — SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Type",
+      "column": "truss",
+      "value": "Truss"
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
@@ -149,13 +426,43 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Lumber Species",
+      "column": "joist",
+      "value": "SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Species",
+      "column": "truss",
+      "value": "SP"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Species",
       "column": "multi",
       "value": "SP"
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Width",
+      "column": "joist",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Width",
+      "column": "truss",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Width",
       "column": "multi",
+      "value": 1.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "truss",
       "value": 1.5
     },
     {
@@ -167,8 +474,26 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Depth",
+      "column": "joist",
+      "value": 3.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Depth",
+      "column": "truss",
+      "value": 3.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Depth",
       "column": "multi",
       "value": 3.5
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Bottom Chord Height",
+      "column": "truss",
+      "value": 7.94
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
@@ -179,8 +504,26 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Number of Plies",
+      "column": "joist",
+      "value": 1
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "truss",
+      "value": 1
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Number of Plies",
       "column": "multi",
       "value": 1
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Vertical Width (King Post)",
+      "column": "truss",
+      "value": 1.5
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
@@ -191,8 +534,26 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Total Height",
+      "column": "truss",
+      "value": 23.2065
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Total Height",
       "column": "multi",
       "value": 23.2065
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member ID",
+      "column": "joist",
+      "value": "J03B"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Member ID",
+      "column": "truss",
+      "value": "J03B"
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
@@ -203,14 +564,158 @@
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Lumber Finish",
+      "column": "joist",
+      "value": "Rough Sawn"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Finish",
+      "column": "truss",
+      "value": "Rough Sawn"
+    },
+    {
+      "section": "HEADER / GIRDER (CARRYING MEMBER)",
+      "parameter": "Lumber Finish",
       "column": "multi",
       "value": "Rough Sawn"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "column": "joist",
+      "value": "Yes"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "column": "truss",
+      "value": "Yes"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "column": "multi",
       "value": "Yes"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member Type",
+      "column": "joist",
+      "value": "Solid Sawn — SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member Type",
+      "column": "truss",
+      "value": "Truss — SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Species",
+      "column": "joist",
+      "value": "SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Species",
+      "column": "truss",
+      "value": "SP"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Width",
+      "column": "joist",
+      "value": 1.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Width",
+      "column": "truss",
+      "value": 1.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Bottom Chord Width",
+      "column": "truss",
+      "value": 1.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Heel Height",
+      "column": "truss",
+      "value": 7.94
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Depth",
+      "column": "joist",
+      "value": 3.5
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Depth",
+      "column": "truss",
+      "value": 7.94
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "joist",
+      "value": 1
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Number of Plies",
+      "column": "truss",
+      "value": 1
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member ID",
+      "column": "joist",
+      "value": "J03B"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Member ID",
+      "column": "truss",
+      "value": "J03B"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Download (ASD)",
+      "column": "joist",
+      "value": 211
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Download (ASD)",
+      "column": "truss",
+      "value": 211
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Upload (ASD)",
+      "column": "joist",
+      "value": 66
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Upload (ASD)",
+      "column": "truss",
+      "value": 66
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Finish",
+      "column": "joist",
+      "value": "Rough Sawn"
+    },
+    {
+      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
+      "parameter": "Lumber Finish",
+      "column": "truss",
+      "value": "Rough Sawn"
     },
     {
       "section": "LEFT HIP (CARRIED MEMBER)",
@@ -223,6 +728,42 @@
       "parameter": "RIGHT HIP (CARRIED MEMBER)",
       "column": "multi",
       "value": "Yes"
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "HANGER OPTIONS",
+      "column": "joist",
+      "value": "Yes"
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "HANGER OPTIONS",
+      "column": "truss",
+      "value": "Yes"
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "Skew",
+      "column": "joist",
+      "value": 0
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "Skew",
+      "column": "truss",
+      "value": 0
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "Slope",
+      "column": "joist",
+      "value": 33.5
+    },
+    {
+      "section": "HANGER OPTIONS",
+      "parameter": "Slope",
+      "column": "truss",
+      "value": 33.5
     }
   ]
 }
