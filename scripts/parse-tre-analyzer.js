@@ -145,6 +145,105 @@ function parseReactions(content) {
   return reactions;
 }
 
+function parseHangerLoadingInfo(content) {
+  const seats = [];
+  const pattern = /^LG(\d+)T=(.+)$/gm;
+
+  for (const match of content.matchAll(pattern)) {
+    const parts = match[2].trim().split(/\s+/);
+    if (parts.length < 16) {
+      continue;
+    }
+
+    const mark = parts[4]?.trim().toUpperCase();
+    if (!mark || !/^[TJ]\d/.test(mark)) {
+      continue;
+    }
+
+    seats.push({
+      groupIndex: Number.parseInt(match[1], 10),
+      mark,
+      xFeet: Number.parseFloat(parts[2]),
+      xInches: Number.parseFloat(parts[2]) * 12,
+      width: Number.parseFloat(parts[5]),
+      depth: Number.parseFloat(parts[6]),
+      materialCode: Number.parseInt(parts[7], 10),
+      ply: Number.parseInt(parts[8], 10),
+      skewAngle: Number.parseFloat(parts[14]),
+      skewType: Number.parseInt(parts[15], 10),
+      slopeAngle: Number.parseFloat(parts[17]),
+    });
+  }
+
+  return seats.sort((a, b) => a.xInches - b.xInches || a.mark.localeCompare(b.mark));
+}
+
+function parseBearings(content) {
+  const sectionMatch = content.match(/BEARING INFO[\s\S]*?(?=\n\[|\nNOTES|\nTRUSS INFO|$)/);
+  if (!sectionMatch) {
+    return [];
+  }
+
+  const bearings = [];
+  for (const line of sectionMatch[0].split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!/^\d+\s+\d+/.test(trimmed)) {
+      continue;
+    }
+
+    const parts = trimmed.split(/\s+/);
+    const brIndex = parts.findIndex((part) => /^BR\d/i.test(part));
+    if (brIndex < 0 || parts.length < brIndex + 10) {
+      continue;
+    }
+
+    const angleRad = Number.parseFloat(parts[parts.length - 4]);
+    const skewType = Number.parseInt(parts[parts.length - 3], 10);
+    bearings.push({
+      xInches: Number.parseFloat(parts[3]),
+      bearingType: Number.parseInt(parts[6], 10),
+      width: Number.parseFloat(parts[parts.length - 8]),
+      skewAngleDeg: Number.isFinite(angleRad) ? Math.round((angleRad * 180) / Math.PI) : 0,
+      skewType,
+      label: parts[brIndex],
+    });
+  }
+
+  return bearings;
+}
+
+export function buildGirderIndex(treCatalog) {
+  const index = {};
+
+  for (const [girderMark, ctx] of Object.entries(treCatalog)) {
+    if (ctx.role !== "carrying") {
+      continue;
+    }
+
+    for (const load of ctx.tre.carriedLoads ?? []) {
+      const existing = index[load.mark];
+      if (!existing || load.reactionDown > (existing.load?.reactionDown ?? 0)) {
+        index[load.mark] = { girderMark, girderCtx: ctx, load, seat: null };
+      }
+    }
+
+    for (const seat of ctx.tre.hangerSeats ?? []) {
+      const existing = index[seat.mark];
+      const entry = {
+        girderMark,
+        girderCtx: ctx,
+        load: existing?.load ?? null,
+        seat,
+      };
+      if (!existing || (seat.xInches ?? 0) < (existing.seat?.xInches ?? Infinity)) {
+        index[seat.mark] = entry;
+      }
+    }
+  }
+
+  return index;
+}
+
 export function parseTreAnalyzer(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
   const base = path.basename(filePath, ".tre");
@@ -174,6 +273,8 @@ export function parseTreAnalyzer(filePath) {
   const members = parseMembers(content);
   const carriedLoads = parseCarriedLoads(content);
   const reactions = parseReactions(content);
+  const hangerSeats = parseHangerLoadingInfo(content);
+  const bearings = parseBearings(content);
 
   return {
     mark,
@@ -207,6 +308,8 @@ export function parseTreAnalyzer(filePath) {
     },
     members,
     carriedLoads,
+    hangerSeats,
+    bearings,
     designDate: readTreField(content, "Date"),
     designCode: content.match(/(IRC\d{4}\/TPI\d{4})/)?.[1] ?? null,
   };

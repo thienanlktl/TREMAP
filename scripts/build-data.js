@@ -541,7 +541,15 @@ function main() {
   const trussAnalysis = buildTrussAnalysisCatalog(projectRoot);
   fs.writeFileSync(path.join(dataOut, "truss-analysis.json"), JSON.stringify(trussAnalysis, null, 2));
 
-  const parameterMaps = buildParameterMaps(projectRoot, dataOut);
+  const templateCandidates = [
+    path.join(projectRoot, "Parameters Map.csv"),
+    path.join(viewerRoot, "..", "Parameters Map.csv"),
+  ];
+  const templatePath = templateCandidates.find((candidate) => fs.existsSync(candidate));
+
+  const parameterMaps = buildParameterMaps(projectRoot, dataOut, {
+    templatePath: templatePath ?? templateCandidates[0],
+  });
   console.log(`Parameter maps: ${parameterMaps.count} TRE files → data/parameter-maps/`);
 
   console.log(`Wrote ${comparison.rows.length} BOM rows (${comparison.totals.matches} matches)`);

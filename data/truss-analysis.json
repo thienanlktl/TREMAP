@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T13:44:24.213Z",
+  "generatedAt": "2026-06-22T04:31:02.821Z",
   "count": 29,
   "trusses": {
     "J02": {
@@ -287,6 +287,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 29.250072,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -612,6 +631,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 41.999908,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -1105,6 +1143,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 41.999908,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -1589,6 +1646,39 @@
           "uplift": -68
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "J04",
+          "xFeet": 18.75,
+          "xInches": 225,
+          "width": 1.5,
+          "depth": 19.936,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 3.5
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 41.999908,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -1877,6 +1967,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 47.999939,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -2148,6 +2257,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0.000001,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 72.9375,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -2536,6 +2664,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0.000001,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 72.9375,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -2924,6 +3071,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 72.963409,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -3328,6 +3494,65 @@
           "xInches": 49.692,
           "reactionDown": 42,
           "uplift": -39
+        }
+      ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "J02",
+          "xFeet": 19.6875,
+          "xInches": 236.25,
+          "width": 1.5,
+          "depth": 18.7831,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 1.75
+        },
+        {
+          "groupIndex": 1,
+          "mark": "J02",
+          "xFeet": 25.6875,
+          "xInches": 308.25,
+          "width": 1.5,
+          "depth": 18.7831,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 1.75
+        },
+        {
+          "groupIndex": 2,
+          "mark": "J02",
+          "xFeet": 49.6875,
+          "xInches": 596.25,
+          "width": 1.5,
+          "depth": 18.7831,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 1.75
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0.000001,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 72.9375,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
         }
       ],
       "designDate": "1/10/2023",
@@ -3923,6 +4148,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -4474,6 +4718,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -5100,6 +5363,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -5930,6 +6212,195 @@
           "uplift": -154
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "J06C",
+          "xFeet": 30.0001,
+          "xInches": 360.0012,
+          "width": 1.5,
+          "depth": 17.1006,
+          "materialCode": 9,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72552
+        },
+        {
+          "groupIndex": 1,
+          "mark": "J06B",
+          "xFeet": 54.0001,
+          "xInches": 648.0012,
+          "width": 1.5,
+          "depth": 29.1005,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.74995
+        },
+        {
+          "groupIndex": 2,
+          "mark": "J06A",
+          "xFeet": 78,
+          "xInches": 936,
+          "width": 1.5,
+          "depth": 41.1006,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 3,
+          "mark": "J06",
+          "xFeet": 102.063,
+          "xInches": 1224.756,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 4,
+          "mark": "J06",
+          "xFeet": 117.25,
+          "xInches": 1407,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 5,
+          "mark": "J06",
+          "xFeet": 141.25,
+          "xInches": 1695,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 6,
+          "mark": "J06",
+          "xFeet": 165.25,
+          "xInches": 1983,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 7,
+          "mark": "J06",
+          "xFeet": 189.25,
+          "xInches": 2271,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 8,
+          "mark": "J06",
+          "xFeet": 213.25,
+          "xInches": 2559,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 9,
+          "mark": "J06",
+          "xFeet": 228.438,
+          "xInches": 2741.256,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 10,
+          "mark": "J06A",
+          "xFeet": 252.5,
+          "xInches": 3030,
+          "width": 1.5,
+          "depth": 41.1006,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72554
+        },
+        {
+          "groupIndex": 11,
+          "mark": "J06B",
+          "xFeet": 276.5,
+          "xInches": 3318,
+          "width": 1.5,
+          "depth": 29.1005,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.74995
+        },
+        {
+          "groupIndex": 12,
+          "mark": "J06C",
+          "xFeet": 300.5,
+          "xInches": 3606,
+          "width": 1.5,
+          "depth": 17.1006,
+          "materialCode": 9,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -1.72552
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -6686,6 +7157,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -7621,6 +8111,195 @@
           "uplift": -154
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "J06",
+          "xFeet": 21.25,
+          "xInches": 255,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 1,
+          "mark": "J06",
+          "xFeet": 45.25,
+          "xInches": 543,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 2,
+          "mark": "J06",
+          "xFeet": 69.25,
+          "xInches": 831,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 3,
+          "mark": "J06",
+          "xFeet": 93.25,
+          "xInches": 1119,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 4,
+          "mark": "J06",
+          "xFeet": 117.25,
+          "xInches": 1407,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 5,
+          "mark": "J06",
+          "xFeet": 141.25,
+          "xInches": 1695,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 6,
+          "mark": "J06",
+          "xFeet": 165.25,
+          "xInches": 1983,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 7,
+          "mark": "J06",
+          "xFeet": 189.25,
+          "xInches": 2271,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 8,
+          "mark": "J06",
+          "xFeet": 213.25,
+          "xInches": 2559,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 9,
+          "mark": "J06",
+          "xFeet": 228.5,
+          "xInches": 2742,
+          "width": 1.5,
+          "depth": 54.7814,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 10,
+          "mark": "J06A",
+          "xFeet": 252.5,
+          "xInches": 3030,
+          "width": 1.5,
+          "depth": 41.1006,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.00002
+        },
+        {
+          "groupIndex": 11,
+          "mark": "J06B",
+          "xFeet": 276.5,
+          "xInches": 3318,
+          "width": 1.5,
+          "depth": 29.1005,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7.02443
+        },
+        {
+          "groupIndex": 12,
+          "mark": "J06C",
+          "xFeet": 300.5,
+          "xInches": 3606,
+          "width": 1.5,
+          "depth": 17.1006,
+          "materialCode": 9,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 330.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -8293,6 +8972,17 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": -0.000008,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 180,
+          "skewType": 1,
+          "label": "BR1"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -8948,6 +9638,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 240,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 180,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -9411,6 +10120,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0.500015,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR7"
+        },
+        {
+          "xInches": 239.999954,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -10000,6 +10728,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 238.499954,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 5.5,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR4"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -10960,6 +11707,143 @@
           "uplift": -272
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "T08",
+          "xFeet": 24.75,
+          "xInches": 297,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7
+        },
+        {
+          "groupIndex": 1,
+          "mark": "T08",
+          "xFeet": 48.75,
+          "xInches": 585,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7
+        },
+        {
+          "groupIndex": 2,
+          "mark": "T08",
+          "xFeet": 72.75,
+          "xInches": 873,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": -7
+        },
+        {
+          "groupIndex": 3,
+          "mark": "T09",
+          "xFeet": 96.75,
+          "xInches": 1161,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 0.333344
+        },
+        {
+          "groupIndex": 4,
+          "mark": "T09",
+          "xFeet": 120.75,
+          "xInches": 1449,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 0.333344
+        },
+        {
+          "groupIndex": 5,
+          "mark": "T09",
+          "xFeet": 144.75,
+          "xInches": 1737,
+          "width": 1.5,
+          "depth": 7.94597,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 0.333344
+        },
+        {
+          "groupIndex": 6,
+          "mark": "T09A",
+          "xFeet": 168.75,
+          "xInches": 2025,
+          "width": 1.5,
+          "depth": 7.94601,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 2.66667
+        },
+        {
+          "groupIndex": 7,
+          "mark": "T09A",
+          "xFeet": 192.75,
+          "xInches": 2313,
+          "width": 1.5,
+          "depth": 7.94601,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 2.66667
+        },
+        {
+          "groupIndex": 8,
+          "mark": "T09A",
+          "xFeet": 216.75,
+          "xInches": 2601,
+          "width": 1.5,
+          "depth": 7.94601,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 2.66667
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 239.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -11583,6 +12467,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 239.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -12071,6 +12974,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 239.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -12769,6 +13691,130 @@
           "uplift": -71
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "J03B",
+          "xFeet": 48.7499,
+          "xInches": 584.9988,
+          "width": 1.5,
+          "depth": 18.3768,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.5
+        },
+        {
+          "groupIndex": 1,
+          "mark": "J03A",
+          "xFeet": 72.7499,
+          "xInches": 872.9988,
+          "width": 1.5,
+          "depth": 26.3768,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49997
+        },
+        {
+          "groupIndex": 2,
+          "mark": "J03",
+          "xFeet": 96.7499,
+          "xInches": 1160.9987999999998,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        },
+        {
+          "groupIndex": 3,
+          "mark": "J03",
+          "xFeet": 120.75,
+          "xInches": 1449,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        },
+        {
+          "groupIndex": 4,
+          "mark": "J03",
+          "xFeet": 144.75,
+          "xInches": 1737,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        },
+        {
+          "groupIndex": 5,
+          "mark": "J03",
+          "xFeet": 168.75,
+          "xInches": 2025,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        },
+        {
+          "groupIndex": 6,
+          "mark": "J03",
+          "xFeet": 192.75,
+          "xInches": 2313,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        },
+        {
+          "groupIndex": 7,
+          "mark": "J03",
+          "xFeet": 216.75,
+          "xInches": 2601,
+          "width": 1.5,
+          "depth": 35.9326,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 90,
+          "skewType": 0,
+          "slopeAngle": -3.49996
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 239.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -13232,6 +14278,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0.000001,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 220.000031,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -13924,6 +14989,33 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 180,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 220.000031,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        },
+        {
+          "xInches": 140,
+          "bearingType": 81,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR5"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -14649,6 +15741,104 @@
           "uplift": -405
         }
       ],
+      "hangerSeats": [
+        {
+          "groupIndex": 0,
+          "mark": "T06",
+          "xFeet": 74.4375,
+          "xInches": 893.25,
+          "width": 1.5,
+          "depth": 52.9756,
+          "materialCode": 8,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 7.00002
+        },
+        {
+          "groupIndex": 1,
+          "mark": "T05",
+          "xFeet": 97.6875,
+          "xInches": 1172.25,
+          "width": 1.5,
+          "depth": 68.9755,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 6.99998
+        },
+        {
+          "groupIndex": 2,
+          "mark": "T02",
+          "xFeet": 121.687,
+          "xInches": 1460.244,
+          "width": 1.5,
+          "depth": 4.16811,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 6.99998
+        },
+        {
+          "groupIndex": 3,
+          "mark": "T02",
+          "xFeet": 145.688,
+          "xInches": 1748.2559999999999,
+          "width": 1.5,
+          "depth": 4.16811,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 6.99998
+        },
+        {
+          "groupIndex": 4,
+          "mark": "T02",
+          "xFeet": 169.688,
+          "xInches": 2036.2559999999999,
+          "width": 1.5,
+          "depth": 4.16811,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 6.99998
+        },
+        {
+          "groupIndex": 5,
+          "mark": "T02",
+          "xFeet": 193.688,
+          "xInches": 2324.256,
+          "width": 1.5,
+          "depth": 4.16811,
+          "materialCode": 1,
+          "ply": 2,
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 6.99998
+        }
+      ],
+      "bearings": [
+        {
+          "xInches": 0.000001,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 220.000031,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -15020,6 +16210,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 3.999996,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 270,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 90.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -15429,6 +16638,17 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 4,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 180,
+          "skewType": 1,
+          "label": "BR1"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     },
@@ -15834,6 +17054,25 @@
         }
       ],
       "carriedLoads": [],
+      "hangerSeats": [],
+      "bearings": [
+        {
+          "xInches": 0,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR1"
+        },
+        {
+          "xInches": 86.5,
+          "bearingType": 3,
+          "width": 1.5,
+          "skewAngleDeg": 90,
+          "skewType": 1,
+          "label": "BR3"
+        }
+      ],
       "designDate": "1/10/2023",
       "designCode": "IRC2015/TPI2014"
     }

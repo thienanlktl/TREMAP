@@ -5,10 +5,10 @@ Connection Type,Joist (Flush Top),Truss (Flush Bottom),Multi-Truss (Flush Bottom
 JOB SETTINGS,Yes,Yes,Yes
 Hanger Type,All Types,All Types,All Types
 Fastener Type,All Types,All Types,All Types
-Configuration,,,Center=J04
+Configuration,,,Center
 ANSI/TPI 1 Evaluation,,No,No
-Download Duration,Floor (CD=1.0),Floor (CD=1.0),Floor (CD=1.0)
-Uplift Duration,Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6)
+Download Duration,Floor / standard (CD=1.0),Floor / standard (CD=1.0),Floor / standard (CD=1.0)
+Uplift Duration,Wind / seismic (CD=1.6),Wind / seismic (CD=1.6),Wind / seismic (CD=1.6)
 Job ID,J03B,J03B,J03B
 Quantity,1,1,1
 ,,,
@@ -65,7 +65,7 @@ Skew (Degrees),,,
 Slope (Degrees),,,
 ,,,
 HANGER OPTIONS,Yes,Yes,
-Skew,0,0,
+Skew,90,90,
 Slope,33.5,33.5,
 Top Flange Bend,,,
 Top Flange Slope,,,

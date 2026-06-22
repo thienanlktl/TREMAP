@@ -7,8 +7,8 @@ Hanger Type,All Types,All Types,All Types
 Fastener Type,All Types,All Types,All Types
 Configuration,,,
 ANSI/TPI 1 Evaluation,,No,No
-Download Duration,Floor (CD=1.0),Floor (CD=1.0),Floor (CD=1.0)
-Uplift Duration,Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6)
+Download Duration,Floor / standard (CD=1.0),Floor / standard (CD=1.0),Floor / standard (CD=1.0)
+Uplift Duration,Wind / seismic (CD=1.6),Wind / seismic (CD=1.6),Wind / seismic (CD=1.6)
 Job ID,T07GE,T07GE,T07GE
 Quantity,1,1,1
 ,,,

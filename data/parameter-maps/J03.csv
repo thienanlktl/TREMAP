@@ -7,24 +7,24 @@ Hanger Type,All Types,All Types,All Types
 Fastener Type,All Types,All Types,All Types
 Configuration,,,
 ANSI/TPI 1 Evaluation,,No,No
-Download Duration,Floor (CD=1.0),Floor (CD=1.0),Floor (CD=1.0)
-Uplift Duration,Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6),Wind / Seismic (CD=1.6)
+Download Duration,Floor / standard (CD=1.0),Floor / standard (CD=1.0),Floor / standard (CD=1.0)
+Uplift Duration,Wind / seismic (CD=1.6),Wind / seismic (CD=1.6),Wind / seismic (CD=1.6)
 Job ID,J03,J03,J03
 Quantity,6,6,6
 ,,,
 HEADER / GIRDER (CARRYING MEMBER),Yes,Yes,Yes
-Member Type,,,
-Type,,,
-Lumber Species,,,
-Width,,,
-Bottom Chord Width,,,
-Depth,,,
-Bottom Chord Height,,,
-Number of Plies,,,
-Vertical Width (King Post),,,
-Total Height,,,
-Member ID,,,
-Lumber Finish,,,
+Member Type,Solid Sawn — SP,Truss — SP,Truss — SP
+Type,,Truss,Truss
+Lumber Species,SP,SP,SP
+Width,1.5,1.5,1.5
+Bottom Chord Width,,1.5,1.5
+Depth,3.5,3.5,3.5
+Bottom Chord Height,,3.94,3.94
+Number of Plies,1,1,1
+Vertical Width (King Post),,1.5,1.5
+Total Height,,39.1893,39.1893
+Member ID,T13,T13,T13
+Lumber Finish,Rough Sawn,Rough Sawn,Rough Sawn
 ,,,
 JOIST / TRUSS / JACK (CARRIED MEMBER),Yes,Yes,Yes
 Member Type,Solid Sawn — SP,Truss — SP,Truss — SP
@@ -65,7 +65,7 @@ Skew (Degrees),,,
 Slope (Degrees),,,
 ,,,
 HANGER OPTIONS,Yes,Yes,
-Skew,0,0,
+Skew,90,90,
 Slope,33.5,33.5,
 Top Flange Bend,,,
 Top Flange Slope,,,

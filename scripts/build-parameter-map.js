@@ -1,16 +1,23 @@
 import fs from "fs";
 import path from "path";
 import { parseCsv } from "../shared/parse-csv.js";
-import { parseTreAnalyzer } from "./parse-tre-analyzer.js";
+import {
+  buildGirderIndex,
+  parseTreAnalyzer,
+} from "./parse-tre-analyzer.js";
+import {
+  buildParameterFieldMap,
+  connectionUiLabel,
+  defaultApiBody,
+  describeMultiConfiguration,
+  jobSettingDefaults,
+  loadHsReference,
+  materialLabelFromRef,
+  resolveFieldMeta,
+} from "./hs-reference.js";
 
 const PLACEHOLDER = "update this value with your caculation data in tre file";
 const LUMBER_DEPTHS = { 4: 3.5, 6: 5.5, 8: 7.25, 10: 9.25, 12: 11.25 };
-
-const CONNECTION_LABELS = {
-  joist: "Joist (Flush Top)",
-  truss: "Truss (Flush Bottom)",
-  multi: "Multi-Truss (Flush Bottom)",
-};
 
 const SECTION_NAMES = new Set([
   "CONNECTION TYPE",
@@ -99,7 +106,10 @@ function joistMaterialEnum(species) {
   return { SP: 3, DF: 1, HF: 2, SPF: 4 }[species] ?? 3;
 }
 
-function materialLabel(column, species) {
+function materialLabel(column, species, hsRef) {
+  if (hsRef) {
+    return materialLabelFromRef(hsRef, column, species);
+  }
   if (column === "joist") {
     return (
       { SP: "Solid Sawn — SP", DF: "Solid Sawn — DF", HF: "Solid Sawn — HF", SPF: "Solid Sawn — SPF" }[
@@ -133,7 +143,7 @@ function isPlaceholder(value) {
 function suggestConnection(tre) {
   const trussType = tre.trussType ?? "";
   if (/joist|i-joist|floor joist/i.test(trussType) && !/truss/i.test(trussType)) return "joist";
-  if (tre.girder && tre.carriedLoads.length > 0) {
+  if (tre.girder && (tre.carriedLoads.length > 0 || tre.hangerSeats.length > 0)) {
     const marks = new Set(tre.carriedLoads.map((entry) => entry.mark));
     if (marks.size >= 2) return "multi";
   }
@@ -141,8 +151,9 @@ function suggestConnection(tre) {
   return "truss";
 }
 
-function groupCarriedBySeat(carriedLoads) {
+function groupCarriedBySeat(carriedLoads, hangerSeats = []) {
   const byMark = new Map();
+
   for (const entry of carriedLoads) {
     const existing = byMark.get(entry.mark);
     if (!existing) {
@@ -154,6 +165,31 @@ function groupCarriedBySeat(carriedLoads) {
     existing.xFeet = Math.min(existing.xFeet, entry.xFeet);
   }
 
+  for (const seat of hangerSeats) {
+    const existing = byMark.get(seat.mark);
+    if (!existing) {
+      byMark.set(seat.mark, {
+        mark: seat.mark,
+        xFeet: seat.xFeet,
+        xInches: seat.xInches,
+        reactionDown: 0,
+        uplift: 0,
+        skewAngle: seat.skewAngle,
+        skewType: seat.skewType,
+        hangerDepth: seat.depth,
+        hangerWidth: seat.width,
+        hangerPly: seat.ply,
+      });
+      continue;
+    }
+    existing.skewAngle = seat.skewAngle ?? existing.skewAngle;
+    existing.skewType = seat.skewType ?? existing.skewType;
+    existing.hangerDepth = seat.depth ?? existing.hangerDepth;
+    existing.hangerWidth = seat.width ?? existing.hangerWidth;
+    existing.hangerPly = seat.ply ?? existing.hangerPly;
+    existing.xFeet = Math.min(existing.xFeet ?? seat.xFeet, seat.xFeet);
+  }
+
   const sorted = [...byMark.values()].sort((a, b) => a.xFeet - b.xFeet);
   if (sorted.length === 0) return { left: null, center: null, right: null };
   if (sorted.length === 1) return { left: null, center: sorted[0], right: null };
@@ -163,6 +199,30 @@ function groupCarriedBySeat(carriedLoads) {
     center: sorted[Math.floor(sorted.length / 2)],
     right: sorted[sorted.length - 1],
   };
+}
+
+function enrichContext(ctx, girderIndex) {
+  const link = girderIndex[ctx.tre.mark];
+  if (!link) {
+    return ctx;
+  }
+
+  return {
+    ...ctx,
+    carryingGirder: link.girderCtx,
+    carryingGirderMark: link.girderMark,
+    girderSeat: link.seat,
+    girderLoad: link.load,
+    skewAngle: link.seat?.skewAngle ?? ctx.skewAngle ?? 0,
+    skewType: link.seat?.skewType ?? ctx.skewType ?? 0,
+  };
+}
+
+function carryingContext(ctx) {
+  if (ctx.role === "carrying") {
+    return ctx;
+  }
+  return ctx.carryingGirder ?? null;
 }
 
 function buildTreContext(filePath) {
@@ -178,7 +238,7 @@ function buildTreContext(filePath) {
     tre.engineering.reactionMax ?? Number.parseInt(readTreField(content, "Reaction1") ?? "", 10);
   const upliftRaw = tre.engineering.maxUplift1 ?? readTreField(content, "Max Uplift1");
   const uplift = upliftRaw != null ? Math.abs(Number.parseInt(String(upliftRaw), 10)) : null;
-  const seats = groupCarriedBySeat(tre.carriedLoads);
+  const seats = groupCarriedBySeat(tre.carriedLoads, tre.hangerSeats);
 
   const bcMember = tre.members.find((member) => member.role === "bc");
   const bcFromMember = parseLumberSize(bcMember?.size);
@@ -202,8 +262,17 @@ function buildTreContext(filePath) {
     uplift: Number.isNaN(uplift) ? null : uplift,
     trussHeight: Number.isNaN(trussHeight) ? null : trussHeight,
     seats,
-    role: tre.girder && tre.carriedLoads.length > 0 ? "carrying" : "carried",
+    role:
+      tre.girder && (tre.carriedLoads.length > 0 || tre.hangerSeats.length > 0)
+        ? "carrying"
+        : "carried",
     suggestedConnection: suggestConnection(tre),
+    skewAngle: 0,
+    skewType: 0,
+    carryingGirder: null,
+    carryingGirderMark: null,
+    girderSeat: null,
+    girderLoad: null,
   };
 }
 
@@ -232,15 +301,7 @@ function columnAllowed(label, column, section) {
   return Boolean(applies[column]);
 }
 
-function describeConfiguration(seats) {
-  const parts = [];
-  if (seats.left) parts.push(`Left=${seats.left.mark}`);
-  if (seats.center) parts.push(`Center=${seats.center.mark}`);
-  if (seats.right) parts.push(`Right=${seats.right.mark}`);
-  return parts.join("; ");
-}
-
-function computeCellValue(ctx, section, label, column, treCatalog) {
+function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
   if (!columnAllowed(label, column, section)) {
     return "";
   }
@@ -255,12 +316,14 @@ function computeCellValue(ctx, section, label, column, treCatalog) {
   const inHip = section.includes("HIP");
   const seat = inHip ? hipSeat(ctx, section) : null;
   const hipCtx = hipContext(ctx, seat, treCatalog);
+  const carryCtx = carryingContext(ctx);
+  const jobDefaults = jobSettingDefaults(hsRef, column);
 
   if (inHip && !seat) {
     return "";
   }
 
-  if (inCarrying && ctx.role === "carried") {
+  if (inCarrying && ctx.role === "carried" && !carryCtx) {
     return "";
   }
 
@@ -270,41 +333,53 @@ function computeCellValue(ctx, section, label, column, treCatalog) {
 
   switch (label) {
     case "Connection Type":
-      return CONNECTION_LABELS[column];
+      return connectionUiLabel(hsRef, column) ?? "";
     case "Hanger Type":
+      return jobDefaults.hangerType;
     case "Fastener Type":
-      return "All Types";
+      return jobDefaults.fastenerType;
     case "Configuration":
-      return ctx.role === "carrying" ? describeConfiguration(ctx.seats) : "";
+      return ctx.role === "carrying" ? describeMultiConfiguration(ctx.seats) : "";
     case "ANSI/TPI 1 Evaluation":
-      return "No";
+      return jobDefaults.ansiTpi;
     case "Download Duration":
-      return "Floor (CD=1.0)";
+      return jobDefaults.downloadDuration;
     case "Uplift Duration":
-      return "Wind / Seismic (CD=1.6)";
+      return jobDefaults.upliftDuration;
     case "Job ID":
     case "Member ID":
       if (inHip && seat) return seat.mark;
+      if (inCarrying && carryCtx) return carryCtx.tre.mark;
       return tre.mark;
     case "Quantity":
       return tre.quantity;
     case "Member Type":
     case "Member Type (Controlled by Jack inputs)":
-      return materialLabel(column, inHip ? (hipCtx?.species ?? ctx.species) : ctx.species);
+      if (inCarrying && carryCtx) {
+        return materialLabel(column, carryCtx.species, hsRef);
+      }
+      return materialLabel(
+        column,
+        inHip ? (hipCtx?.species ?? ctx.species) : ctx.species,
+        hsRef,
+      );
     case "Type":
       return "Truss";
     case "Lumber Species":
     case "Lumber Species (Controlled by Jack inputs)":
+      if (inCarrying && carryCtx) return carryCtx.species;
       return inHip ? (hipCtx?.species ?? ctx.species) : ctx.species;
     case "Width":
-      if (inCarrying || (ctx.role === "carrying" && !inCarried && !inHip)) {
+      if (inCarrying && carryCtx) return carryCtx.carryingWidth;
+      if (ctx.role === "carrying" && !inCarried && !inHip) {
         return ctx.carryingWidth;
       }
       return inHip ? (hipCtx?.width ?? ctx.width) : ctx.width;
     case "Bottom Chord Width":
       return inHip ? (hipCtx?.width ?? ctx.width) : ctx.width;
     case "Depth":
-      if (inCarrying || (ctx.role === "carrying" && !inCarried && !inHip)) {
+      if (inCarrying && carryCtx) return carryCtx.carryingDepth;
+      if (ctx.role === "carrying" && !inCarried && !inHip) {
         return ctx.carryingDepth;
       }
       if (column === "joist") {
@@ -313,15 +388,19 @@ function computeCellValue(ctx, section, label, column, treCatalog) {
       return inHip ? (hipCtx?.heelHeight ?? ctx.heelHeight) : ctx.heelHeight;
     case "Bottom Chord Height":
     case "Heel Height":
+      if (inCarrying && carryCtx) return carryCtx.heelHeight;
       return inHip ? (hipCtx?.heelHeight ?? ctx.heelHeight) : ctx.heelHeight;
     case "Number of Plies":
-      if (inCarrying || (ctx.role === "carrying" && !inCarried && !inHip)) {
+      if (inCarrying && carryCtx) return carryCtx.carryingPly;
+      if (ctx.role === "carrying" && !inCarried && !inHip) {
         return ctx.carryingPly;
       }
       return inHip ? (hipCtx?.tre?.ply ?? ctx.tre.ply) : tre.ply;
     case "Vertical Width (King Post)":
+      if (inCarrying && carryCtx) return carryCtx.width;
       return ctx.width;
     case "Total Height":
+      if (inCarrying && carryCtx) return carryCtx.trussHeight;
       return ctx.trussHeight;
     case "Lumber Finish":
       return "Rough Sawn";
@@ -335,8 +414,11 @@ function computeCellValue(ctx, section, label, column, treCatalog) {
     case "Slope (Degrees)":
       return inHip ? (hipCtx?.slopeDeg ?? ctx.slopeDeg) : ctx.slopeDeg;
     case "Skew (Degrees)":
+      if (inHip && seat) return seat.skewAngle ?? 0;
+      return ctx.skewAngle ?? 0;
     case "Skew":
-      return 0;
+      if (inHip && seat) return seat.skewAngle ?? 0;
+      return ctx.skewAngle ?? 0;
     case "Slope":
       return ctx.slopeDeg;
     default:
@@ -344,7 +426,7 @@ function computeCellValue(ctx, section, label, column, treCatalog) {
   }
 }
 
-function buildCsvFromTemplate(templateRows, ctx, treCatalog) {
+function buildCsvFromTemplate(templateRows, ctx, treCatalog, hsRef) {
   let currentSection = "";
   const out = [];
 
@@ -369,7 +451,7 @@ function buildCsvFromTemplate(templateRows, ctx, treCatalog) {
         continue;
       }
 
-      cells.push(computeCellValue(ctx, currentSection, row.label, column, treCatalog));
+      cells.push(computeCellValue(ctx, currentSection, row.label, column, treCatalog, hsRef));
     }
 
     out.push(cells.map(csvEscape).join(","));
@@ -378,10 +460,12 @@ function buildCsvFromTemplate(templateRows, ctx, treCatalog) {
   return out.join("\n");
 }
 
-function buildApiBodyForColumn(ctx, column, treCatalog) {
+function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
   const { tre } = ctx;
-  const flushOption = column === "joist" ? "TOP" : "BOTTOM";
   const material = column === "joist" ? ctx.joistMaterial : ctx.trussMaterial;
+  const carryCtx = carryingContext(ctx);
+  const base = defaultApiBody(hsRef, column) ?? {};
+  const connectionLabel = connectionUiLabel(hsRef, column) ?? column;
 
   const carriedFromCtx = (seat, sourceCtx) => ({
     width: sourceCtx.width,
@@ -393,8 +477,8 @@ function buildApiBodyForColumn(ctx, column, treCatalog) {
       uplift: seat ? Math.abs(seat.uplift ?? 0) : sourceCtx.uplift ?? 0,
     },
     angle: {
-      skewAngle: 0,
-      skewType: 0,
+      skewAngle: seat?.skewAngle ?? sourceCtx.skewAngle ?? 0,
+      skewType: seat?.skewType ?? sourceCtx.skewType ?? 0,
       slopeAngle: sourceCtx.slopeDeg,
       slopeType: sourceCtx.slopeDeg > 0 ? 1 : 0,
     },
@@ -402,19 +486,10 @@ function buildApiBodyForColumn(ctx, column, treCatalog) {
   });
 
   const body = {
-    flushOption,
-    ansitpi: 0,
-    buildingCode: 21,
-    concealed: 0,
-    fastenerType: 0,
-    style: 0,
-    ledger: 0,
-    sort: 12,
-    designInformations: { downloadDurationType: 100, upliftLoadDurationType: 160 },
-    filters: { depth: 0, width: 0, series: "", model: "", webStiffeners: 0 },
-    hangerOptions: column === "joist" ? { topFlangeOptions: {} } : null,
+    ...base,
     simpsonHsUrl: "https://app.strongtie.com/hs",
-    connectionLabel: CONNECTION_LABELS[column],
+    connectionLabel,
+    hangerOptions: column === "joist" ? base.hangerOptions ?? { topFlangeOptions: {} } : null,
   };
 
   if (column === "multi" && ctx.role === "carrying") {
@@ -446,7 +521,18 @@ function buildApiBodyForColumn(ctx, column, treCatalog) {
             topChordPly: column === "truss" ? tre.ply : 0,
             topChord: column === "joist" ? 1 : 0,
           }
-        : null;
+        : carryCtx
+          ? {
+              width: carryCtx.carryingWidth,
+              depth: carryCtx.carryingDepth,
+              material: column === "joist" ? carryCtx.joistMaterial : carryCtx.trussMaterial,
+              ply: carryCtx.carryingPly,
+              kingHeight: column === "truss" ? carryCtx.trussHeight ?? 0 : 0,
+              kingWidth: column === "truss" ? carryCtx.width : 0,
+              topChordPly: column === "truss" ? carryCtx.tre.ply : 0,
+              topChord: column === "joist" ? 1 : 0,
+            }
+          : null;
     body.carriedMembers = [carriedFromCtx(null, ctx)];
   }
 
@@ -469,10 +555,8 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
   const mapsDir = path.join(dataOutDir, "parameter-maps");
   fs.mkdirSync(mapsDir, { recursive: true });
 
-  const hsRefPath = path.join(dataOutDir, "hanger-selector-reference.json");
-  const hsReference = fs.existsSync(hsRefPath)
-    ? JSON.parse(fs.readFileSync(hsRefPath, "utf8"))
-    : null;
+  const hsReference = loadHsReference(dataOutDir);
+  const parameterFieldMap = buildParameterFieldMap(hsReference);
 
   const treFiles = fs
     .readdirSync(projectRoot)
@@ -485,10 +569,22 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     treCatalog[ctx.tre.mark] = ctx;
   }
 
+  const girderIndex = buildGirderIndex(treCatalog);
+  for (const mark of Object.keys(treCatalog)) {
+    treCatalog[mark] = enrichContext(treCatalog[mark], girderIndex);
+  }
+
+  const connectionOptions = {
+    joist: connectionUiLabel(hsReference, "joist"),
+    truss: connectionUiLabel(hsReference, "truss"),
+    multi: connectionUiLabel(hsReference, "multi"),
+  };
+
   const index = {
     generatedAt: new Date().toISOString(),
     schemaReference: path.basename(templatePath),
     simpsonHsUrl: "https://app.strongtie.com/hs",
+    hsReferenceTitle: hsReference?.meta?.title ?? null,
     purpose:
       "All Joist / Truss / Multi columns filled from MiTek TRE — pick the column that matches your Simpson Hanger Selector connection type.",
     count: 0,
@@ -499,7 +595,7 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
   for (const file of treFiles) {
     const ctx = treCatalog[path.basename(file, ".tre").toUpperCase()];
     const mark = ctx.tre.mark;
-    const csv = buildCsvFromTemplate(templateRows, ctx, treCatalog);
+    const csv = buildCsvFromTemplate(templateRows, ctx, treCatalog, hsReference);
 
     const json = {
       mark,
@@ -507,19 +603,21 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       trussType: ctx.tre.trussType,
       girder: ctx.tre.girder,
       role: ctx.role,
+      carryingGirderMark: ctx.carryingGirderMark ?? null,
       suggestedConnection: ctx.suggestedConnection,
       spanDisplay: ctx.tre.spanDisplay,
       pitch: ctx.tre.pitch,
       simpsonHsUrl: "https://app.strongtie.com/hs",
       usageNote:
         "Open Simpson Hanger Selector, choose Joist / Truss / Multi-Truss, then copy values from the matching column in the CSV.",
-      connectionOptions: CONNECTION_LABELS,
+      connectionOptions,
       apiBodies: {
-        joist: buildApiBodyForColumn(ctx, "joist", treCatalog),
-        truss: buildApiBodyForColumn(ctx, "truss", treCatalog),
-        multi: buildApiBodyForColumn(ctx, "multi", treCatalog),
+        joist: buildApiBodyForColumn(ctx, "joist", treCatalog, hsReference),
+        truss: buildApiBodyForColumn(ctx, "truss", treCatalog, hsReference),
+        multi: buildApiBodyForColumn(ctx, "multi", treCatalog, hsReference),
       },
       hsReference: hsReference?.meta ?? null,
+      parameterFieldMap,
       filledCells: [],
     };
 
@@ -531,9 +629,17 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       if (!row.label) continue;
       for (const column of ["joist", "truss", "multi"]) {
         if (!isPlaceholder(row[column])) continue;
-        const value = computeCellValue(ctx, currentSection, row.label, column, treCatalog);
+        const value = computeCellValue(ctx, currentSection, row.label, column, treCatalog, hsReference);
         if (value !== "") {
-          json.filledCells.push({ section: currentSection, parameter: row.label, column, value });
+          const fieldMeta = resolveFieldMeta(parameterFieldMap, row.label, column);
+          json.filledCells.push({
+            section: currentSection,
+            parameter: row.label,
+            column,
+            value,
+            apiField: fieldMeta?.apiField ?? null,
+            hsSection: fieldMeta?.sectionLabel ?? null,
+          });
         }
       }
     }
@@ -547,6 +653,7 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       json: `${mark}.json`,
       suggestedConnection: ctx.suggestedConnection,
       role: ctx.role,
+      carryingGirderMark: ctx.carryingGirderMark ?? null,
       trussType: ctx.tre.trussType,
       download: ctx.download,
       uplift: ctx.uplift,

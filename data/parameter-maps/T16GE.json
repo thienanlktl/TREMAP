@@ -4,6 +4,7 @@
   "trussType": "Common Supported Gable",
   "girder": false,
   "role": "carried",
+  "carryingGirderMark": null,
   "suggestedConnection": "truss",
   "spanDisplay": "7'-11.00\"",
   "pitch": "6.19/12",
@@ -17,8 +18,7 @@
   "apiBodies": {
     "joist": {
       "flushOption": "TOP",
-      "ansitpi": 0,
-      "buildingCode": 21,
+      "buildingCode": 20,
       "concealed": 0,
       "fastenerType": 0,
       "style": 0,
@@ -35,11 +35,6 @@
         "model": "",
         "webStiffeners": 0
       },
-      "hangerOptions": {
-        "topFlangeOptions": {}
-      },
-      "simpsonHsUrl": "https://app.strongtie.com/hs",
-      "connectionLabel": "Joist (Flush Top)",
       "carryingMember": null,
       "carriedMembers": [
         {
@@ -59,12 +54,23 @@
           },
           "memberId": "T16GE"
         }
-      ]
+      ],
+      "hangerOptions": {
+        "topFlangeOptions": {
+          "topFlangeOffset": 0,
+          "topFlangeOpenClosedAngle": 0,
+          "topFlangeOpenClosedType": 0,
+          "topFlangeSlopedDownAngle": 0,
+          "topFlangeSlopedDownType": 0
+        }
+      },
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Joist (Flush Top)"
     },
     "truss": {
       "flushOption": "BOTTOM",
       "ansitpi": 0,
-      "buildingCode": 21,
+      "buildingCode": 20,
       "concealed": 0,
       "fastenerType": 0,
       "style": 0,
@@ -82,8 +88,6 @@
         "webStiffeners": 0
       },
       "hangerOptions": null,
-      "simpsonHsUrl": "https://app.strongtie.com/hs",
-      "connectionLabel": "Truss (Flush Bottom)",
       "carryingMember": null,
       "carriedMembers": [
         {
@@ -103,31 +107,14 @@
           },
           "memberId": "T16GE"
         }
-      ]
+      ],
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Truss (Flush Bottom)"
     },
     "multi": {
       "flushOption": "BOTTOM",
       "ansitpi": 0,
-      "buildingCode": 21,
-      "concealed": 0,
-      "fastenerType": 0,
-      "style": 0,
-      "ledger": 0,
-      "sort": 12,
-      "designInformations": {
-        "downloadDurationType": 100,
-        "upliftLoadDurationType": 160
-      },
-      "filters": {
-        "depth": 0,
-        "width": 0,
-        "series": "",
-        "model": "",
-        "webStiffeners": 0
-      },
-      "hangerOptions": null,
-      "simpsonHsUrl": "https://app.strongtie.com/hs",
-      "connectionLabel": "Multi-Truss (Flush Bottom)",
+      "buildingCode": 20,
       "carryingMember": null,
       "carriedMembers": [
         null,
@@ -149,7 +136,10 @@
           "memberId": "T16GE"
         },
         null
-      ]
+      ],
+      "hangerOptions": null,
+      "simpsonHsUrl": "https://app.strongtie.com/hs",
+      "connectionLabel": "Multi-Truss (Flush Bottom)"
     }
   },
   "hsReference": {
@@ -168,456 +158,1849 @@
       "Download/uplift duration factors map to designInformations.downloadDurationType and upliftLoadDurationType."
     ]
   },
+  "parameterFieldMap": {
+    "Connection Type": {
+      "joist": {
+        "apiField": "flushOption",
+        "sectionId": "connection_type",
+        "sectionLabel": "Connection Type",
+        "type": "enum",
+        "enumKey": "flushOption"
+      },
+      "truss": {
+        "apiField": "flushOption",
+        "sectionId": "connection_type",
+        "sectionLabel": "Connection Type",
+        "type": "enum",
+        "enumKey": "flushOption"
+      },
+      "multi": {
+        "apiField": "flushOption",
+        "sectionId": "connection_type",
+        "sectionLabel": "Connection Type",
+        "type": "enum",
+        "enumKey": "flushOption"
+      }
+    },
+    "Hanger Type": {
+      "joist": {
+        "apiField": "style",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "style"
+      },
+      "truss": {
+        "apiField": "style",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "style"
+      },
+      "multi": {
+        "apiField": "style",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "style"
+      }
+    },
+    "Fastener Type": {
+      "joist": {
+        "apiField": "fastenerType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "fastenerType"
+      },
+      "truss": {
+        "apiField": "fastenerType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "fastenerType"
+      },
+      "multi": {
+        "apiField": "fastenerType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "fastenerType"
+      }
+    },
+    "Download Duration": {
+      "joist": {
+        "apiField": "designInformations.downloadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "designInformations.downloadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "designInformations.downloadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Uplift Duration": {
+      "joist": {
+        "apiField": "designInformations.upliftLoadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "designInformations.upliftLoadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "designInformations.upliftLoadDurationType",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Building Code": {
+      "joist": {
+        "apiField": "buildingCode",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "buildingCode"
+      },
+      "truss": {
+        "apiField": "buildingCode",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "buildingCode"
+      },
+      "multi": {
+        "apiField": "buildingCode",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "buildingCode"
+      }
+    },
+    "Concealed Flange": {
+      "joist": {
+        "apiField": "concealed",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "concealed"
+      },
+      "truss": {
+        "apiField": "concealed",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "concealed"
+      },
+      "multi": {
+        "apiField": "concealed",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "concealed"
+      }
+    },
+    "Ledger Connection": {
+      "joist": {
+        "apiField": "ledger",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ledger"
+      },
+      "truss": {
+        "apiField": "ledger",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ledger"
+      },
+      "multi": {
+        "apiField": "ledger",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ledger"
+      }
+    },
+    "ANSI/TPI 1 Evaluation": {
+      "truss": {
+        "apiField": "ansitpi",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ansitpi"
+      },
+      "multi": {
+        "apiField": "ansitpi",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ansitpi"
+      }
+    },
+    "ANSI TPI": {
+      "truss": {
+        "apiField": "ansitpi",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ansitpi"
+      },
+      "multi": {
+        "apiField": "ansitpi",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "ansitpi"
+      }
+    },
+    "Sort Results By": {
+      "joist": {
+        "apiField": "sort",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "sort"
+      },
+      "truss": {
+        "apiField": "sort",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "sort"
+      },
+      "multi": {
+        "apiField": "sort",
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "enum",
+        "enumKey": "sort"
+      }
+    },
+    "Job ID": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Quantity": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "job_settings",
+        "sectionLabel": "Job Settings",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Series Filter": {
+      "joist": {
+        "apiField": "filters.series",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "filters.series",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "filters.series",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Model Filter": {
+      "joist": {
+        "apiField": "filters.model",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "filters.model",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "filters.model",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Width Filter": {
+      "joist": {
+        "apiField": "filters.width",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "filters.width",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "filters.width",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Depth Filter": {
+      "joist": {
+        "apiField": "filters.depth",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "filters.depth",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "filters.depth",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Web Stiffeners": {
+      "joist": {
+        "apiField": "filters.webStiffeners",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "enum",
+        "enumKey": "webStiffeners"
+      },
+      "truss": {
+        "apiField": "filters.webStiffeners",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "enum",
+        "enumKey": "webStiffeners"
+      },
+      "multi": {
+        "apiField": "filters.webStiffeners",
+        "sectionId": "filters",
+        "sectionLabel": "Hanger Filters (optional)",
+        "type": "enum",
+        "enumKey": "webStiffeners"
+      }
+    },
+    "Member Type (Controlled by Jack inputs)": {
+      "joist": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      }
+    },
+    "Member Type": {
+      "joist": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      }
+    },
+    "Lumber Species (Controlled by Jack inputs)": {
+      "joist": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      }
+    },
+    "Lumber Species": {
+      "joist": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].material",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "enum",
+        "enumKey": "material"
+      }
+    },
+    "Bottom Chord Width": {
+      "joist": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Width": {
+      "joist": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].width",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Heel Height": {
+      "joist": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Depth": {
+      "joist": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].depth",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Number of Plies": {
+      "joist": {
+        "apiField": "carriedMembers[].ply",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].ply",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].ply",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Top Chord Ply": {
+      "truss": {
+        "apiField": "carryingMember.topChordPly",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.topChordPly",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Top Chord": {
+      "joist": {
+        "apiField": "carryingMember.topChord",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Bottom Chord Height": {
+      "truss": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Total Height": {
+      "truss": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "King Post Height": {
+      "truss": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.kingHeight",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Vertical Width (King Post)": {
+      "truss": {
+        "apiField": "carryingMember.kingWidth",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.kingWidth",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "King Post Width": {
+      "truss": {
+        "apiField": "carryingMember.kingWidth",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carryingMember.kingWidth",
+        "sectionId": "carrying_member",
+        "sectionLabel": "Header / Girder (Carrying Member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Member ID": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Lumber Finish": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Download (ASD)": {
+      "joist": {
+        "apiField": "carriedMembers[].loads.load",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].loads.load",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].loads.load",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Upload (ASD)": {
+      "joist": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Uplift (ASD)": {
+      "joist": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].loads.uplift",
+        "sectionId": "carried_member",
+        "sectionLabel": "Joist / Truss (Carried Member)",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Skew (Degrees)": {
+      "joist": {
+        "apiField": "carriedMembers[].angle.skewAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].angle.skewAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].angle.skewAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Skew Direction": {
+      "joist": {
+        "apiField": "carriedMembers[].angle.skewType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "skewType"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].angle.skewType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "skewType"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].angle.skewType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "skewType"
+      }
+    },
+    "Slope (Degrees)": {
+      "joist": {
+        "apiField": "carriedMembers[].angle.slopeAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "carriedMembers[].angle.slopeAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "carriedMembers[].angle.slopeAngle",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Slope Direction": {
+      "joist": {
+        "apiField": "carriedMembers[].angle.slopeType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "slopeType"
+      },
+      "truss": {
+        "apiField": "carriedMembers[].angle.slopeType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "slopeType"
+      },
+      "multi": {
+        "apiField": "carriedMembers[].angle.slopeType",
+        "sectionId": "slope_skew",
+        "sectionLabel": "Slope & Skew (per carried member)",
+        "type": "enum",
+        "enumKey": "slopeType"
+      }
+    },
+    "Top Flange Bend": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOpenClosedType"
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOpenClosedType"
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOpenClosedType"
+      }
+    },
+    "Top Flange Bend Angle": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOpenClosedAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Top Flange Slope": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeSlopedDownType"
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeSlopedDownType"
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownType",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeSlopedDownType"
+      }
+    },
+    "Top Flange Slope Angle": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeSlopedDownAngle",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "High, Low, Center Flush": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      }
+    },
+    "Offset Direction (Top Flange Only)": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      }
+    },
+    "Offset Direction": {
+      "joist": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "truss": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      },
+      "multi": {
+        "apiField": "hangerOptions.topFlangeOptions.topFlangeOffset",
+        "sectionId": "hanger_options",
+        "sectionLabel": "Hanger Options (Top Flange)",
+        "type": "enum",
+        "enumKey": "topFlangeOffset"
+      }
+    },
+    "Model": {
+      "joist": {
+        "apiField": "response.models[].model",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "string",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "response.models[].model",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "string",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "response.models[].model",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "string",
+        "enumKey": null
+      }
+    },
+    "Installed Cost": {
+      "joist": {
+        "apiField": "response.models[].installedCost",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "number",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "response.models[].installedCost",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "number",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "response.models[].installedCost",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "number",
+        "enumKey": null
+      }
+    },
+    "Download Capacity": {
+      "joist": {
+        "apiField": "response.models[].download",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "response.models[].download",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "response.models[].download",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "Uplift Capacity": {
+      "joist": {
+        "apiField": "response.models[].uplift",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "response.models[].uplift",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "response.models[].uplift",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "integer",
+        "enumKey": null
+      }
+    },
+    "TF / Face / Joist Fasteners": {
+      "joist": {
+        "apiField": "response.models[].fasteners",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "object",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": "response.models[].fasteners",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "object",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": "response.models[].fasteners",
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "object",
+        "enumKey": null
+      }
+    },
+    "3D Viewer Layers": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "ui",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "ui",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "ui",
+        "enumKey": null
+      }
+    },
+    "Job List / CSV": {
+      "joist": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "export",
+        "enumKey": null
+      },
+      "truss": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "export",
+        "enumKey": null
+      },
+      "multi": {
+        "apiField": null,
+        "sectionId": "output",
+        "sectionLabel": "Output",
+        "type": "export",
+        "enumKey": null
+      }
+    }
+  },
   "filledCells": [
     {
       "section": "CONNECTION TYPE",
       "parameter": "CONNECTION TYPE",
       "column": "joist",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "CONNECTION TYPE",
       "parameter": "CONNECTION TYPE",
       "column": "truss",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "CONNECTION TYPE",
       "parameter": "CONNECTION TYPE",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "CONNECTION TYPE",
       "parameter": "Connection Type",
       "column": "joist",
-      "value": "Joist (Flush Top)"
+      "value": "Joist (Flush Top)",
+      "apiField": "flushOption",
+      "hsSection": "Connection Type"
     },
     {
       "section": "CONNECTION TYPE",
       "parameter": "Connection Type",
       "column": "truss",
-      "value": "Truss (Flush Bottom)"
+      "value": "Truss (Flush Bottom)",
+      "apiField": "flushOption",
+      "hsSection": "Connection Type"
     },
     {
       "section": "CONNECTION TYPE",
       "parameter": "Connection Type",
       "column": "multi",
-      "value": "Multi-Truss (Flush Bottom)"
+      "value": "Multi-Truss (Flush Bottom)",
+      "apiField": "flushOption",
+      "hsSection": "Connection Type"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "JOB SETTINGS",
       "column": "joist",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "JOB SETTINGS",
       "column": "truss",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "JOB SETTINGS",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Hanger Type",
       "column": "joist",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "style",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Hanger Type",
       "column": "truss",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "style",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Hanger Type",
       "column": "multi",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "style",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Fastener Type",
       "column": "joist",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "fastenerType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Fastener Type",
       "column": "truss",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "fastenerType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Fastener Type",
       "column": "multi",
-      "value": "All Types"
+      "value": "All Types",
+      "apiField": "fastenerType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "ANSI/TPI 1 Evaluation",
       "column": "truss",
-      "value": "No"
+      "value": "No",
+      "apiField": "ansitpi",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "ANSI/TPI 1 Evaluation",
       "column": "multi",
-      "value": "No"
+      "value": "No",
+      "apiField": "ansitpi",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "joist",
-      "value": "Floor (CD=1.0)"
+      "value": "Floor / standard (CD=1.0)",
+      "apiField": "designInformations.downloadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "truss",
-      "value": "Floor (CD=1.0)"
+      "value": "Floor / standard (CD=1.0)",
+      "apiField": "designInformations.downloadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "multi",
-      "value": "Floor (CD=1.0)"
+      "value": "Floor / standard (CD=1.0)",
+      "apiField": "designInformations.downloadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Uplift Duration",
       "column": "joist",
-      "value": "Wind / Seismic (CD=1.6)"
+      "value": "Wind / seismic (CD=1.6)",
+      "apiField": "designInformations.upliftLoadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Uplift Duration",
       "column": "truss",
-      "value": "Wind / Seismic (CD=1.6)"
+      "value": "Wind / seismic (CD=1.6)",
+      "apiField": "designInformations.upliftLoadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Uplift Duration",
       "column": "multi",
-      "value": "Wind / Seismic (CD=1.6)"
+      "value": "Wind / seismic (CD=1.6)",
+      "apiField": "designInformations.upliftLoadDurationType",
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Job ID",
       "column": "joist",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Job ID",
       "column": "truss",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Job ID",
       "column": "multi",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Quantity",
       "column": "joist",
-      "value": 1
+      "value": 1,
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Quantity",
       "column": "truss",
-      "value": 1
+      "value": 1,
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
       "parameter": "Quantity",
       "column": "multi",
-      "value": 1
+      "value": 1,
+      "apiField": null,
+      "hsSection": "Job Settings"
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
       "column": "joist",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
       "column": "truss",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "column": "joist",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "column": "truss",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member Type",
       "column": "joist",
-      "value": "Solid Sawn — SP"
+      "value": "Solid Sawn — SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member Type",
       "column": "truss",
-      "value": "Truss — SP"
+      "value": "Truss — SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member Type",
       "column": "multi",
-      "value": "Truss — SP"
+      "value": "Truss — SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Species",
       "column": "joist",
-      "value": "SP"
+      "value": "SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Species",
       "column": "truss",
-      "value": "SP"
+      "value": "SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Species",
       "column": "multi",
-      "value": "SP"
+      "value": "SP",
+      "apiField": "carriedMembers[].material",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Width",
       "column": "joist",
-      "value": 1.5
+      "value": 1.5,
+      "apiField": "carriedMembers[].width",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Width",
       "column": "truss",
-      "value": 1.5
+      "value": 1.5,
+      "apiField": "carriedMembers[].width",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Width",
       "column": "multi",
-      "value": 1.5
+      "value": 1.5,
+      "apiField": "carriedMembers[].width",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Bottom Chord Width",
       "column": "truss",
-      "value": 1.5
+      "value": 1.5,
+      "apiField": "carriedMembers[].width",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Bottom Chord Width",
       "column": "multi",
-      "value": 1.5
+      "value": 1.5,
+      "apiField": "carriedMembers[].width",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Heel Height",
       "column": "truss",
-      "value": 6.19
+      "value": 6.19,
+      "apiField": "carriedMembers[].depth",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Heel Height",
       "column": "multi",
-      "value": 6.19
+      "value": 6.19,
+      "apiField": "carriedMembers[].depth",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Depth",
       "column": "joist",
-      "value": 3.5
+      "value": 3.5,
+      "apiField": "carriedMembers[].depth",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Depth",
       "column": "truss",
-      "value": 6.19
+      "value": 6.19,
+      "apiField": "carriedMembers[].depth",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Depth",
       "column": "multi",
-      "value": 6.19
+      "value": 6.19,
+      "apiField": "carriedMembers[].depth",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Number of Plies",
       "column": "joist",
-      "value": 1
+      "value": 1,
+      "apiField": "carriedMembers[].ply",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Number of Plies",
       "column": "truss",
-      "value": 1
+      "value": 1,
+      "apiField": "carriedMembers[].ply",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Number of Plies",
       "column": "multi",
-      "value": 1
+      "value": 1,
+      "apiField": "carriedMembers[].ply",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member ID",
       "column": "joist",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member ID",
       "column": "truss",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member ID",
       "column": "multi",
-      "value": "T16GE"
+      "value": "T16GE",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "joist",
-      "value": 130
+      "value": 130,
+      "apiField": "carriedMembers[].loads.load",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "truss",
-      "value": 130
+      "value": 130,
+      "apiField": "carriedMembers[].loads.load",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "multi",
-      "value": 130
+      "value": 130,
+      "apiField": "carriedMembers[].loads.load",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Upload (ASD)",
       "column": "joist",
-      "value": 19
+      "value": 19,
+      "apiField": "carriedMembers[].loads.uplift",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Upload (ASD)",
       "column": "truss",
-      "value": 19
+      "value": 19,
+      "apiField": "carriedMembers[].loads.uplift",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Upload (ASD)",
       "column": "multi",
-      "value": 19
+      "value": 19,
+      "apiField": "carriedMembers[].loads.uplift",
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Slope (Degrees)",
       "column": "multi",
-      "value": 27.3
+      "value": 27.3,
+      "apiField": "carriedMembers[].angle.slopeAngle",
+      "hsSection": "Slope & Skew (per carried member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Finish",
       "column": "joist",
-      "value": "Rough Sawn"
+      "value": "Rough Sawn",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Finish",
       "column": "truss",
-      "value": "Rough Sawn"
+      "value": "Rough Sawn",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Finish",
       "column": "multi",
-      "value": "Rough Sawn"
+      "value": "Rough Sawn",
+      "apiField": null,
+      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "LEFT HIP (CARRIED MEMBER)",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "RIGHT HIP (CARRIED MEMBER)",
       "column": "multi",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "HANGER OPTIONS",
       "column": "joist",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "HANGER OPTIONS",
       "column": "truss",
-      "value": "Yes"
+      "value": "Yes",
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "Skew",
       "column": "joist",
-      "value": 0
+      "value": 0,
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "Skew",
       "column": "truss",
-      "value": 0
+      "value": 0,
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "Slope",
       "column": "joist",
-      "value": 27.3
+      "value": 27.3,
+      "apiField": null,
+      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
       "parameter": "Slope",
       "column": "truss",
-      "value": 27.3
+      "value": 27.3,
+      "apiField": null,
+      "hsSection": null
     }
   ]
 }
