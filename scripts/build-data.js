@@ -3,7 +3,11 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { buildParameterMaps } from "./build-parameter-map.js";
 import { buildTrussAnalysisCatalog } from "./parse-tre-analyzer.js";
-import { assertProjectData, resolveProjectRoot } from "./resolve-project-root.js";
+import {
+  assertProjectData,
+  resolveParameterMapTemplate,
+  resolveProjectRoot,
+} from "./resolve-project-root.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const viewerRoot = path.resolve(__dirname, "..");
@@ -541,14 +545,11 @@ function main() {
   const trussAnalysis = buildTrussAnalysisCatalog(projectRoot);
   fs.writeFileSync(path.join(dataOut, "truss-analysis.json"), JSON.stringify(trussAnalysis, null, 2));
 
-  const templateCandidates = [
-    path.join(projectRoot, "Parameters Map.csv"),
-    path.join(viewerRoot, "..", "Parameters Map.csv"),
-  ];
-  const templatePath = templateCandidates.find((candidate) => fs.existsSync(candidate));
+  const templatePath = resolveParameterMapTemplate(projectRoot, viewerRoot);
 
   const parameterMaps = buildParameterMaps(projectRoot, dataOut, {
-    templatePath: templatePath ?? templateCandidates[0],
+    viewerRoot,
+    templatePath: templatePath ?? undefined,
   });
   console.log(`Parameter maps: ${parameterMaps.count} TRE files → data/parameter-maps/`);
 

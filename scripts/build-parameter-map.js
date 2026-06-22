@@ -5,6 +5,7 @@ import {
   buildGirderIndex,
   parseTreAnalyzer,
 } from "./parse-tre-analyzer.js";
+import { resolveParameterMapTemplate } from "./resolve-project-root.js";
 import {
   buildParameterFieldMap,
   connectionUiLabel,
@@ -540,9 +541,14 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
 }
 
 export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
-  const templatePath = options.templatePath ?? path.join(projectRoot, "Parameters Map.csv");
-  if (!fs.existsSync(templatePath)) {
-    throw new Error(`Parameters Map template not found: ${templatePath}`);
+  const viewerRoot = options.viewerRoot ?? dataOutDir.replace(/[/\\]data[/\\]?$/, "");
+  const templatePath =
+    options.templatePath ?? resolveParameterMapTemplate(projectRoot, viewerRoot);
+  if (!templatePath) {
+    throw new Error(
+      `Parameters Map template not found. Checked project root (${projectRoot}), ` +
+        `project-data/, and parent folder. Run npm run sync-project-data to copy the template.`,
+    );
   }
 
   const templateRows = parseCsv(fs.readFileSync(templatePath, "utf8")).map((parts) => ({

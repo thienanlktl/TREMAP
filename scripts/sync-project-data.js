@@ -11,6 +11,7 @@ const FILES = [
   "2214703-08T.ifc",
   "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc",
   "McBride-Plan 193-Elev D-Std. 2nd FL plan - DDP.ddp",
+  "Parameters Map.csv",
 ];
 
 function copyFile(src, dest) {

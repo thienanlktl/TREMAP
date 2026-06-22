@@ -37,3 +37,14 @@ export function assertProjectData(projectRoot) {
     );
   }
 }
+
+/** Simpson HS parameter map schema — must ship with project-data/ on Railway. */
+export function resolveParameterMapTemplate(projectRoot, viewerRoot) {
+  const candidates = [
+    path.join(projectRoot, "Parameters Map.csv"),
+    path.join(viewerRoot, "project-data", "Parameters Map.csv"),
+    path.join(viewerRoot, "..", "Parameters Map.csv"),
+  ];
+
+  return candidates.find((candidate) => fs.existsSync(candidate)) ?? null;
+}

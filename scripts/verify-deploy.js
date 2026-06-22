@@ -11,6 +11,7 @@ const required = [
   "scripts/serve-production.js",
   "public/wasm/web-ifc.wasm",
   "project-data/2214703-08T.ifc",
+  "project-data/Parameters Map.csv",
   "main.js",
   "index.html",
 ];
