@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truss Connections — Plan 193</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body class="page-body pm-page">
+    <header class="toolbar">
+      <div class="brand">
+        <strong>Truss Connections</strong>
+        <span id="cn-subtitle">One Simpson hanger per truss-to-truss link</span>
+      </div>
+      <div id="site-nav" class="site-nav-slot"></div>
+      <div class="actions pm-actions">
+        <label class="pm-select-label">
+          Connection
+          <select id="cn-connection-select" class="select-input"></select>
+        </label>
+        <button id="cn-copy-api" class="btn secondary" type="button">Copy API JSON</button>
+        <a
+          id="cn-hs-link"
+          class="btn primary"
+          href="https://app.strongtie.com/hs"
+          target="_blank"
+          rel="noopener"
+          >Open Simpson HS</a
+        >
+      </div>
+    </header>
+
+    <main class="pm-main">
+      <section class="panel pm-summary-panel">
+        <p id="cn-summary" class="pm-summary"></p>
+        <p class="pm-summary">
+          Each connection merges <strong>TRE</strong> (relationship + seat loads + skew),
+          <strong>Simpson IFC</strong> (bearing type), and
+          <strong>Simpson Hanger Selector</strong> technical fields.
+          Paste the API JSON into
+          <a href="https://app.strongtie.com/hs" target="_blank" rel="noopener">Truss (Flush Bottom)</a>
+          to choose <em>one</em> hanger model for that link.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2 class="cn-section-title">Connection detail</h2>
+        <dl class="hs-kv cn-kv" id="cn-detail"></dl>
+      </section>
+
+      <section class="panel pm-raw-panel">
+        <h2 class="cn-section-title">Simpson Hanger Selector — API body</h2>
+        <pre class="pm-raw" id="cn-api-json"></pre>
+      </section>
+    </main>
+
+    <script type="module" src="/connections.js"></script>
+  </body>
+</html>

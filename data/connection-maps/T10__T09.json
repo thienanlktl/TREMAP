@@ -1,0 +1,133 @@
+{
+  "connectionId": "T10__T09",
+  "carryingMark": "T10",
+  "carriedMark": "T09",
+  "simpsonHsConnectionType": "truss",
+  "simpsonHsConnectionLabel": "Truss (Flush Bottom)",
+  "position": "center",
+  "seatConfiguration": "Left + Center + Right",
+  "loadsAsd": {
+    "download": 390,
+    "uplift": 276
+  },
+  "geometry": {
+    "skewAngle": 270,
+    "skewType": 1,
+    "slopeAngle": 33.5
+  },
+  "sources": {
+    "tre": {
+      "carrying": {
+        "mark": "T10",
+        "trussType": "Monopitch Girder",
+        "spanDisplay": "19'-11.50\"",
+        "pitch": "3.94/12",
+        "ply": 2,
+        "girder": true,
+        "width": 1.5,
+        "depth": 5.5,
+        "heelHeight": 3.94,
+        "slopeDeg": 18.2,
+        "trussHeight": 83.7727,
+        "species": "SP"
+      },
+      "carried": {
+        "mark": "T09",
+        "trussType": "Common",
+        "spanDisplay": "19'-11.50\"",
+        "pitch": "7.94/12",
+        "ply": 1,
+        "girder": false,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 8.27,
+        "slopeDeg": 33.5,
+        "trussHeight": 87.9393,
+        "species": "SP"
+      }
+    },
+    "ifc": {
+      "carrying": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Wall"
+          }
+        ],
+        "hasHangerToTruss": false,
+        "wallOnly": true
+      },
+      "carried": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Truss"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "validated": true
+    }
+  },
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)",
+    "hangerOptions": null,
+    "carryingMember": {
+      "width": 1.5,
+      "depth": 3.5,
+      "material": 7,
+      "ply": 2,
+      "kingHeight": 83.7727,
+      "kingWidth": 1.5,
+      "topChordPly": 2,
+      "topChord": 0
+    },
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 8.27,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 390,
+          "uplift": 276
+        },
+        "angle": {
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 33.5,
+          "slopeType": 1
+        },
+        "memberId": "T09"
+      }
+    ]
+  },
+  "selectedHanger": null,
+  "selectionNote": "One Simpson hanger for T10 → T09. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs"
+}

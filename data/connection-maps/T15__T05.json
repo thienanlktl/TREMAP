@@ -1,0 +1,130 @@
+{
+  "connectionId": "T15__T05",
+  "carryingMark": "T15",
+  "carriedMark": "T05",
+  "simpsonHsConnectionType": "truss",
+  "simpsonHsConnectionLabel": "Truss (Flush Bottom)",
+  "position": "center",
+  "seatConfiguration": "Left + Center + Right",
+  "loadsAsd": {
+    "download": 787,
+    "uplift": 465
+  },
+  "geometry": {
+    "skewAngle": 270,
+    "skewType": 1,
+    "slopeAngle": 80.4
+  },
+  "sources": {
+    "tre": {
+      "carrying": {
+        "mark": "T15",
+        "trussType": "Common Girder",
+        "spanDisplay": "18'-8.50\"",
+        "pitch": "6.16/12",
+        "ply": 2,
+        "girder": true,
+        "width": 1.5,
+        "depth": 5.5,
+        "heelHeight": 6.16,
+        "slopeDeg": 27.2,
+        "trussHeight": 86.052,
+        "species": "SP"
+      },
+      "carried": {
+        "mark": "T05",
+        "trussType": "Roof Special",
+        "spanDisplay": "27'-6.50\"",
+        "pitch": "70.79/12",
+        "ply": 1,
+        "girder": false,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 68.98,
+        "slopeDeg": 80.4,
+        "trussHeight": 75.788,
+        "species": "SP"
+      }
+    },
+    "ifc": {
+      "carrying": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          }
+        ],
+        "hasHangerToTruss": false,
+        "wallOnly": true
+      },
+      "carried": {
+        "bearings": [
+          {
+            "connectionType": "Hanger-To-Truss"
+          },
+          {
+            "connectionType": "Wall"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "validated": true
+    }
+  },
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)",
+    "hangerOptions": null,
+    "carryingMember": {
+      "width": 1.5,
+      "depth": 3.5,
+      "material": 7,
+      "ply": 2,
+      "kingHeight": 86.052,
+      "kingWidth": 1.5,
+      "topChordPly": 2,
+      "topChord": 0
+    },
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 68.98,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 787,
+          "uplift": 465
+        },
+        "angle": {
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 80.4,
+          "slopeType": 1
+        },
+        "memberId": "T05"
+      }
+    ]
+  },
+  "selectedHanger": null,
+  "selectionNote": "One Simpson hanger for T15 → T05. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs"
+}

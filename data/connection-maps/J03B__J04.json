@@ -1,0 +1,133 @@
+{
+  "connectionId": "J03B__J04",
+  "carryingMark": "J03B",
+  "carriedMark": "J04",
+  "simpsonHsConnectionType": "truss",
+  "simpsonHsConnectionLabel": "Truss (Flush Bottom)",
+  "position": "center",
+  "seatConfiguration": "Center",
+  "loadsAsd": {
+    "download": 75,
+    "uplift": 68
+  },
+  "geometry": {
+    "skewAngle": 270,
+    "skewType": 1,
+    "slopeAngle": 18.2
+  },
+  "sources": {
+    "tre": {
+      "carrying": {
+        "mark": "J03B",
+        "trussType": "Jack-Closed Girder",
+        "spanDisplay": "3'-6.00\"",
+        "pitch": "7.94/12",
+        "ply": 1,
+        "girder": true,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 7.94,
+        "slopeDeg": 33.5,
+        "trussHeight": 23.2065,
+        "species": "SP"
+      },
+      "carried": {
+        "mark": "J04",
+        "trussType": "Jack-Closed",
+        "spanDisplay": "3'-12.00\"",
+        "pitch": "3.94/12",
+        "ply": 1,
+        "girder": false,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 3.94,
+        "slopeDeg": 18.2,
+        "trussHeight": 23.1893,
+        "species": "SP"
+      }
+    },
+    "ifc": {
+      "carrying": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Truss"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "carried": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Truss"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "validated": true
+    }
+  },
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)",
+    "hangerOptions": null,
+    "carryingMember": {
+      "width": 1.5,
+      "depth": 3.5,
+      "material": 7,
+      "ply": 1,
+      "kingHeight": 23.2065,
+      "kingWidth": 1.5,
+      "topChordPly": 1,
+      "topChord": 0
+    },
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 3.94,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 75,
+          "uplift": 68
+        },
+        "angle": {
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 18.2,
+          "slopeType": 1
+        },
+        "memberId": "J04"
+      }
+    ]
+  },
+  "selectedHanger": null,
+  "selectionNote": "One Simpson hanger for J03B → J04. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs"
+}

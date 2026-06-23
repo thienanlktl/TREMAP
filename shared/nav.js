@@ -8,6 +8,7 @@ export function renderNav(active) {
     { id: "ddp", href: "/ddp.html", label: "DDP Inspector" },
     { id: "hanger", href: "/hanger-selector.html", label: "Hanger Ref" },
     { id: "param-maps", href: "/parameter-maps.html", label: "Param Maps" },
+    { id: "connections", href: "/connections.html", label: "Connections" },
   ];
 
   const nav = document.createElement("nav");

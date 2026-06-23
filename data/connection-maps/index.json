@@ -1,0 +1,217 @@
+{
+  "generatedAt": "2026-06-23T08:00:49.345Z",
+  "purpose": "Each entry is one physical truss-to-truss hanger connection. Technical inputs are merged from MiTek TRE (Truss Analyzer), Simpson IFC bearings, and Simpson Hanger Selector fields — use apiBody to select one hanger per connection.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs",
+  "count": 19,
+  "connections": [
+    {
+      "connectionId": "J03B__J04",
+      "carryingMark": "J03B",
+      "carriedMark": "J04",
+      "position": "center",
+      "download": 75,
+      "uplift": 68,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "J03B__J04.json"
+    },
+    {
+      "connectionId": "J06C__J02",
+      "carryingMark": "J06C",
+      "carriedMark": "J02",
+      "position": "center",
+      "download": 42,
+      "uplift": 39,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "J06C__J02.json"
+    },
+    {
+      "connectionId": "T04__J06",
+      "carryingMark": "T04",
+      "carriedMark": "J06",
+      "position": "right",
+      "download": 117,
+      "uplift": 131,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T04__J06.json"
+    },
+    {
+      "connectionId": "T04__J06A",
+      "carryingMark": "T04",
+      "carriedMark": "J06A",
+      "position": "center",
+      "download": 117,
+      "uplift": 104,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T04__J06A.json"
+    },
+    {
+      "connectionId": "T04__J06B",
+      "carryingMark": "T04",
+      "carriedMark": "J06B",
+      "position": "other",
+      "download": 163,
+      "uplift": 103,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T04__J06B.json"
+    },
+    {
+      "connectionId": "T04__J06C",
+      "carryingMark": "T04",
+      "carriedMark": "J06C",
+      "position": "left",
+      "download": 231,
+      "uplift": 154,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T04__J06C.json"
+    },
+    {
+      "connectionId": "T06__J06",
+      "carryingMark": "T06",
+      "carriedMark": "J06",
+      "position": "left",
+      "download": 117,
+      "uplift": 131,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T06__J06.json"
+    },
+    {
+      "connectionId": "T06__J06A",
+      "carryingMark": "T06",
+      "carriedMark": "J06A",
+      "position": "other",
+      "download": 117,
+      "uplift": 104,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T06__J06A.json"
+    },
+    {
+      "connectionId": "T06__J06B",
+      "carryingMark": "T06",
+      "carriedMark": "J06B",
+      "position": "center",
+      "download": 163,
+      "uplift": 103,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T06__J06B.json"
+    },
+    {
+      "connectionId": "T06__J06C",
+      "carryingMark": "T06",
+      "carriedMark": "J06C",
+      "position": "right",
+      "download": 231,
+      "uplift": 154,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T06__J06C.json"
+    },
+    {
+      "connectionId": "T10__T08",
+      "carryingMark": "T10",
+      "carriedMark": "T08",
+      "position": "left",
+      "download": 390,
+      "uplift": 276,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T10__T08.json"
+    },
+    {
+      "connectionId": "T10__T09",
+      "carryingMark": "T10",
+      "carriedMark": "T09",
+      "position": "center",
+      "download": 390,
+      "uplift": 276,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T10__T09.json"
+    },
+    {
+      "connectionId": "T10__T09A",
+      "carryingMark": "T10",
+      "carriedMark": "T09A",
+      "position": "right",
+      "download": 384,
+      "uplift": 272,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T10__T09A.json"
+    },
+    {
+      "connectionId": "T13__J03",
+      "carryingMark": "T13",
+      "carriedMark": "J03",
+      "position": "right",
+      "download": 61,
+      "uplift": 71,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T13__J03.json"
+    },
+    {
+      "connectionId": "T13__J03A",
+      "carryingMark": "T13",
+      "carriedMark": "J03A",
+      "position": "center",
+      "download": 61,
+      "uplift": 60,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T13__J03A.json"
+    },
+    {
+      "connectionId": "T13__J03B",
+      "carryingMark": "T13",
+      "carriedMark": "J03B",
+      "position": "left",
+      "download": 120,
+      "uplift": 88,
+      "skewAngle": 90,
+      "simpsonHsConnectionType": "truss",
+      "file": "T13__J03B.json"
+    },
+    {
+      "connectionId": "T15__T02",
+      "carryingMark": "T15",
+      "carriedMark": "T02",
+      "position": "right",
+      "download": 551,
+      "uplift": 405,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T15__T02.json"
+    },
+    {
+      "connectionId": "T15__T05",
+      "carryingMark": "T15",
+      "carriedMark": "T05",
+      "position": "center",
+      "download": 787,
+      "uplift": 465,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T15__T05.json"
+    },
+    {
+      "connectionId": "T15__T06",
+      "carryingMark": "T15",
+      "carriedMark": "T06",
+      "position": "left",
+      "download": 1332,
+      "uplift": 1331,
+      "skewAngle": 270,
+      "simpsonHsConnectionType": "truss",
+      "file": "T15__T06.json"
+    }
+  ]
+}

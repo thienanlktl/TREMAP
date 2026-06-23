@@ -6,9 +6,11 @@ import {
 } from "./parse-tre-analyzer.js";
 import { resolveParameterMapTemplate } from "./resolve-project-root.js";
 import { parseSimpsonIfcBearings } from "./parse-simpson-ifc-bearings.js";
+import { buildConnectionMaps } from "./build-connection-maps.js";
 import {
   buildCarriedByIndex,
   buildTrussConnectionGraph,
+  connectionId,
   primaryParentLink,
   resolveConnectionType,
 } from "./truss-connections.js";
@@ -763,14 +765,33 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     fs.copyFileSync(path.join(mapsDir, "index.json"), path.join(projectMapsDir, "index.json"));
   }
 
+  const connectionIndex = buildConnectionMaps({
+    connectionGraph,
+    treCatalog,
+    simpsonBearings,
+    hsReference,
+    dataOutDir,
+  });
+
+  const enrichedLinks = connectionGraph.map((link) => ({
+    ...link,
+    connectionId: connectionId(link.carryingMark, link.carriedMark),
+    connectionMapFile: `connection-maps/${connectionId(link.carryingMark, link.carriedMark)}.json`,
+    simpsonHsConnectionType: "truss",
+    simpsonHsConnectionLabel: connectionUiLabel(hsReference, "truss"),
+  }));
+
   fs.writeFileSync(
     path.join(mapsDir, "truss-connections.json"),
     JSON.stringify(
       {
         generatedAt: new Date().toISOString(),
         simpsonIfcSource: simpsonBearings.source ?? null,
-        count: connectionGraph.length,
-        links: connectionGraph,
+        purpose:
+          "Truss-to-truss relationships from TRE. Each link has one connection map for Simpson Hanger Selector.",
+        connectionMapIndex: "connection-maps/index.json",
+        count: enrichedLinks.length,
+        links: enrichedLinks,
         byCarriedMark: carriedByIndex,
       },
       null,
@@ -778,5 +799,5 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     ),
   );
 
-  return index;
+  return { ...index, connectionCount: connectionIndex.count };
 }

@@ -552,6 +552,7 @@ function main() {
     templatePath: templatePath ?? undefined,
   });
   console.log(`Parameter maps: ${parameterMaps.count} TRE files → data/parameter-maps/`);
+  console.log(`Connection maps: ${parameterMaps.connectionCount ?? 0} truss links → data/connection-maps/`);
 
   console.log(`Wrote ${comparison.rows.length} BOM rows (${comparison.totals.matches} matches)`);
   console.log(`Truss analysis: ${trussAnalysis.count} designs, ${trussAnalysis.girders.length} girders`);

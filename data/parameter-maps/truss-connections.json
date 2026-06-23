@@ -1,6 +1,8 @@
 {
-  "generatedAt": "2026-06-23T07:37:10.469Z",
+  "generatedAt": "2026-06-23T08:00:49.346Z",
   "simpsonIfcSource": "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc",
+  "purpose": "Truss-to-truss relationships from TRE. Each link has one connection map for Simpson Hanger Selector.",
+  "connectionMapIndex": "connection-maps/index.json",
   "count": 19,
   "links": [
     {
@@ -13,7 +15,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "J03B__J04",
+      "connectionMapFile": "connection-maps/J03B__J04.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J02",
@@ -25,7 +31,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "J06C__J02",
+      "connectionMapFile": "connection-maps/J06C__J02.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06",
@@ -37,7 +47,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T04__J06",
+      "connectionMapFile": "connection-maps/T04__J06.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06A",
@@ -49,7 +63,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T04__J06A",
+      "connectionMapFile": "connection-maps/T04__J06A.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06B",
@@ -61,7 +79,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T04__J06B",
+      "connectionMapFile": "connection-maps/T04__J06B.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06C",
@@ -73,7 +95,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T04__J06C",
+      "connectionMapFile": "connection-maps/T04__J06C.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06",
@@ -85,7 +111,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T06__J06",
+      "connectionMapFile": "connection-maps/T06__J06.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06A",
@@ -97,7 +127,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T06__J06A",
+      "connectionMapFile": "connection-maps/T06__J06A.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06B",
@@ -109,7 +143,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T06__J06B",
+      "connectionMapFile": "connection-maps/T06__J06B.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J06C",
@@ -121,7 +159,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T06__J06C",
+      "connectionMapFile": "connection-maps/T06__J06C.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T08",
@@ -133,7 +175,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T10__T08",
+      "connectionMapFile": "connection-maps/T10__T08.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T09",
@@ -145,7 +191,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T10__T09",
+      "connectionMapFile": "connection-maps/T10__T09.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T09A",
@@ -157,7 +207,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T10__T09A",
+      "connectionMapFile": "connection-maps/T10__T09A.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J03",
@@ -169,7 +223,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T13__J03",
+      "connectionMapFile": "connection-maps/T13__J03.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J03A",
@@ -181,7 +239,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T13__J03A",
+      "connectionMapFile": "connection-maps/T13__J03A.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "J03B",
@@ -193,7 +255,11 @@
       "skewAngle": 90,
       "skewType": 0,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T13__J03B",
+      "connectionMapFile": "connection-maps/T13__J03B.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T02",
@@ -205,7 +271,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T15__T02",
+      "connectionMapFile": "connection-maps/T15__T02.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T05",
@@ -217,7 +287,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T15__T05",
+      "connectionMapFile": "connection-maps/T15__T05.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     },
     {
       "carriedMark": "T06",
@@ -229,7 +303,11 @@
       "skewAngle": 270,
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+      "connectionId": "T15__T06",
+      "connectionMapFile": "connection-maps/T15__T06.json",
+      "simpsonHsConnectionType": "truss",
+      "simpsonHsConnectionLabel": "Truss (Flush Bottom)"
     }
   ],
   "byCarriedMark": {

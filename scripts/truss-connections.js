@@ -1,5 +1,10 @@
 import { describeMultiConfiguration } from "./hs-reference.js";
 
+/** Stable id for one carrying → carried truss connection. */
+export function connectionId(carryingMark, carriedMark) {
+  return `${carryingMark}__${carriedMark}`;
+}
+
 function seatPosition(seats, mark) {
   if (seats.left?.mark === mark) return "left";
   if (seats.center?.mark === mark) return "center";
