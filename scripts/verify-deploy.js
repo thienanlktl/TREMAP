@@ -14,6 +14,7 @@ const required = [
   "project-data/Parameters Map.csv",
   "main.js",
   "index.html",
+  "connections.html",
 ];
 
 const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));

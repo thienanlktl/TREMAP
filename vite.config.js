@@ -46,6 +46,7 @@ export default defineConfig({
         analyzer: path.resolve(__dirname, "analyzer.html"),
         hanger: path.resolve(__dirname, "hanger-selector.html"),
         paramMaps: path.resolve(__dirname, "parameter-maps.html"),
+        connections: path.resolve(__dirname, "connections.html"),
       },
     },
   },
