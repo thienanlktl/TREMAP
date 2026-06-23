@@ -265,7 +265,7 @@ async function renderTreParameterMap(mark) {
   }
 
   const meta = treMapIndex.maps[mark];
-  treMapSummary.textContent = `${mark} · ${mapJson.trussType} · ${mapJson.role} member · suggested ${mapJson.suggestedConnection ?? "truss"} · span ${mapJson.spanDisplay ?? "—"} · use Joist / Truss / Multi column in Simpson HS`;
+  treMapSummary.textContent = `${mark} · ${mapJson.trussType} · ${mapJson.role} member · ${mapJson.connectionType ?? mapJson.suggestedConnection ?? "truss"} · span ${mapJson.spanDisplay ?? "—"}`;
 
   const csvResponse = await fetch(`/data/parameter-maps/${mark}.csv`);
   const csvText = csvResponse.ok ? await csvResponse.text() : "";
@@ -286,5 +286,5 @@ async function renderTreParameterMap(mark) {
     }),
   );
 
-  treMapApi.textContent = JSON.stringify(mapJson.apiBodies ?? {}, null, 2);
+  treMapApi.textContent = JSON.stringify(mapJson.apiBody ?? mapJson.apiBodies ?? {}, null, 2);
 }

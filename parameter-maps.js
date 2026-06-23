@@ -111,8 +111,8 @@ async function loadMark(mark) {
     currentJson?.treFile,
     currentJson?.trussType,
     currentJson?.role ? `${currentJson.role} member` : null,
-    currentJson?.suggestedConnection
-      ? `suggested: ${currentJson.suggestedConnection} (pick Joist / Truss / Multi in Simpson HS)`
+    currentJson?.connectionType ?? currentJson?.suggestedConnection
+      ? `connection: ${currentJson.connectionType ?? currentJson.suggestedConnection}`
       : null,
     meta?.download != null ? `download ${meta.download} lb` : null,
     meta?.uplift != null ? `uplift ${meta.uplift} lb` : null,
@@ -121,7 +121,11 @@ async function loadMark(mark) {
     .join(" · ");
 
   rawCsvEl.textContent = currentCsvText;
-  apiJsonEl.textContent = JSON.stringify(currentJson?.apiBodies ?? {}, null, 2);
+  apiJsonEl.textContent = JSON.stringify(
+    currentJson?.apiBody ?? currentJson?.apiBodies ?? {},
+    null,
+    2,
+  );
   renderTableRows(parseCsv(currentCsvText), filledOnly.checked);
 
   const url = new URL(window.location.href);
@@ -142,7 +146,7 @@ async function init() {
       const option = document.createElement("option");
       option.value = mark;
       const meta = treMapIndex.maps[mark];
-      option.textContent = `${mark} — ${meta.trussType} (suggested: ${meta.suggestedConnection})`;
+      option.textContent = `${mark} — ${meta.trussType} (${meta.connectionType ?? meta.suggestedConnection})`;
       return option;
     }),
   );

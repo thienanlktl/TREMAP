@@ -2,10 +2,16 @@ import fs from "fs";
 import path from "path";
 import { parseCsv } from "../shared/parse-csv.js";
 import {
-  buildGirderIndex,
   parseTreAnalyzer,
 } from "./parse-tre-analyzer.js";
 import { resolveParameterMapTemplate } from "./resolve-project-root.js";
+import { parseSimpsonIfcBearings } from "./parse-simpson-ifc-bearings.js";
+import {
+  buildCarriedByIndex,
+  buildTrussConnectionGraph,
+  primaryParentLink,
+  resolveConnectionType,
+} from "./truss-connections.js";
 import {
   buildParameterFieldMap,
   connectionUiLabel,
@@ -141,17 +147,6 @@ function isPlaceholder(value) {
   return String(value ?? "").trim().toLowerCase() === PLACEHOLDER.toLowerCase();
 }
 
-function suggestConnection(tre) {
-  const trussType = tre.trussType ?? "";
-  if (/joist|i-joist|floor joist/i.test(trussType) && !/truss/i.test(trussType)) return "joist";
-  if (tre.girder && (tre.carriedLoads.length > 0 || tre.hangerSeats.length > 0)) {
-    const marks = new Set(tre.carriedLoads.map((entry) => entry.mark));
-    if (marks.size >= 2) return "multi";
-  }
-  if (/^J/.test(tre.mark) && /jack|hip|valley/i.test(trussType)) return "multi";
-  return "truss";
-}
-
 function groupCarriedBySeat(carriedLoads, hangerSeats = []) {
   const byMark = new Map();
 
@@ -202,20 +197,25 @@ function groupCarriedBySeat(carriedLoads, hangerSeats = []) {
   };
 }
 
-function enrichContext(ctx, girderIndex) {
-  const link = girderIndex[ctx.tre.mark];
-  if (!link) {
-    return ctx;
+function enrichContext(ctx, carriedByIndex, treCatalog) {
+  const parentLinks = carriedByIndex[ctx.tre.mark] ?? [];
+  const primary = primaryParentLink(parentLinks);
+
+  if (!primary) {
+    return { ...ctx, parentLinks };
   }
 
+  const girderCtx = treCatalog[primary.carryingMark];
   return {
     ...ctx,
-    carryingGirder: link.girderCtx,
-    carryingGirderMark: link.girderMark,
-    girderSeat: link.seat,
-    girderLoad: link.load,
-    skewAngle: link.seat?.skewAngle ?? ctx.skewAngle ?? 0,
-    skewType: link.seat?.skewType ?? ctx.skewType ?? 0,
+    parentLinks,
+    carryingGirder: girderCtx,
+    carryingGirderMark: primary.carryingMark,
+    seatDownload: primary.download,
+    seatUplift: primary.uplift,
+    seatPosition: primary.position,
+    skewAngle: primary.skewAngle ?? ctx.skewAngle ?? 0,
+    skewType: primary.skewType ?? ctx.skewType ?? 0,
   };
 }
 
@@ -240,6 +240,10 @@ function buildTreContext(filePath) {
   const upliftRaw = tre.engineering.maxUplift1 ?? readTreField(content, "Max Uplift1");
   const uplift = upliftRaw != null ? Math.abs(Number.parseInt(String(upliftRaw), 10)) : null;
   const seats = groupCarriedBySeat(tre.carriedLoads, tre.hangerSeats);
+  const role =
+    tre.girder && (tre.carriedLoads.length > 0 || tre.hangerSeats.length > 0)
+      ? "carrying"
+      : "carried";
 
   const bcMember = tre.members.find((member) => member.role === "bc");
   const bcFromMember = parseLumberSize(bcMember?.size);
@@ -263,11 +267,10 @@ function buildTreContext(filePath) {
     uplift: Number.isNaN(uplift) ? null : uplift,
     trussHeight: Number.isNaN(trussHeight) ? null : trussHeight,
     seats,
-    role:
-      tre.girder && (tre.carriedLoads.length > 0 || tre.hangerSeats.length > 0)
-        ? "carrying"
-        : "carried",
-    suggestedConnection: suggestConnection(tre),
+    role,
+    connectionType: null,
+    hangerRole: "standalone",
+    connectionReason: "",
     skewAngle: 0,
     skewType: 0,
     carryingGirder: null,
@@ -302,25 +305,48 @@ function columnAllowed(label, column, section) {
   return Boolean(applies[column]);
 }
 
+function sectionHeaderVisible(ctx, section, column, seat) {
+  const inCarrying = section.includes("CARRYING");
+  const inCarried = section.includes("CARRIED") && !section.includes("HIP");
+  const inHip = section.includes("HIP");
+
+  if (inHip) {
+    return Boolean(seat);
+  }
+  if (inCarrying) {
+    return ctx.role === "carrying" || Boolean(carryingContext(ctx));
+  }
+  if (inCarried) {
+    return ctx.role !== "carrying";
+  }
+  return true;
+}
+
 function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
+  if (!ctx.connectionType || column !== ctx.connectionType) {
+    return "";
+  }
+
   if (!columnAllowed(label, column, section)) {
     return "";
   }
 
+  const seat = section.includes("HIP") ? hipSeat(ctx, section) : null;
+
   if (SECTION_NAMES.has(label) || label.startsWith("LEFT HIP") || label.startsWith("RIGHT HIP")) {
-    return "Yes";
+    return sectionHeaderVisible(ctx, section, column, seat) ? "Yes" : "";
   }
 
   const { tre } = ctx;
   const inCarrying = section.includes("CARRYING");
   const inCarried = section.includes("CARRIED") && !section.includes("HIP");
   const inHip = section.includes("HIP");
-  const seat = inHip ? hipSeat(ctx, section) : null;
-  const hipCtx = hipContext(ctx, seat, treCatalog);
+  const hipSeatEntry = inHip ? seat : null;
+  const hipCtx = hipContext(ctx, hipSeatEntry, treCatalog);
   const carryCtx = carryingContext(ctx);
   const jobDefaults = jobSettingDefaults(hsRef, column);
 
-  if (inHip && !seat) {
+  if (inHip && !hipSeatEntry) {
     return "";
   }
 
@@ -349,7 +375,7 @@ function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
       return jobDefaults.upliftDuration;
     case "Job ID":
     case "Member ID":
-      if (inHip && seat) return seat.mark;
+      if (inHip && hipSeatEntry) return hipSeatEntry.mark;
       if (inCarrying && carryCtx) return carryCtx.tre.mark;
       return tre.mark;
     case "Quantity":
@@ -406,19 +432,21 @@ function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
     case "Lumber Finish":
       return "Rough Sawn";
     case "Download (ASD)":
-      if (inHip && seat) return seat.reactionDown || "";
+      if (inHip && hipSeatEntry) return hipSeatEntry.reactionDown || "";
+      if (inCarried && ctx.seatDownload) return ctx.seatDownload;
       return ctx.download ?? "";
     case "Upload (ASD)":
     case "Uplift (ASD)":
-      if (inHip && seat) return seat.uplift ? Math.abs(seat.uplift) : "";
+      if (inHip && hipSeatEntry) return hipSeatEntry.uplift ? Math.abs(hipSeatEntry.uplift) : "";
+      if (inCarried && ctx.seatUplift) return ctx.seatUplift;
       return ctx.uplift ?? "";
     case "Slope (Degrees)":
       return inHip ? (hipCtx?.slopeDeg ?? ctx.slopeDeg) : ctx.slopeDeg;
     case "Skew (Degrees)":
-      if (inHip && seat) return seat.skewAngle ?? 0;
+      if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
       return ctx.skewAngle ?? 0;
     case "Skew":
-      if (inHip && seat) return seat.skewAngle ?? 0;
+      if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
       return ctx.skewAngle ?? 0;
     case "Slope":
       return ctx.slopeDeg;
@@ -474,8 +502,12 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
     material,
     ply: sourceCtx.tre?.ply ?? sourceCtx.tre.ply,
     loads: {
-      load: seat ? seat.reactionDown : sourceCtx.download ?? 0,
-      uplift: seat ? Math.abs(seat.uplift ?? 0) : sourceCtx.uplift ?? 0,
+      load: seat
+        ? seat.reactionDown
+        : sourceCtx.seatDownload ?? sourceCtx.download ?? 0,
+      uplift: seat
+        ? Math.abs(seat.uplift ?? 0)
+        : sourceCtx.seatUplift ?? sourceCtx.uplift ?? 0,
     },
     angle: {
       skewAngle: seat?.skewAngle ?? sourceCtx.skewAngle ?? 0,
@@ -569,15 +601,43 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     .filter((name) => /^[tj]\d+[a-z]*\.tre$/i.test(name))
     .sort();
 
+  const simpsonIfcPath =
+    options.simpsonIfcPath ??
+    [
+      path.join(projectRoot, "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc"),
+      path.join(viewerRoot, "project-data", "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc"),
+      path.join(viewerRoot, "..", "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc"),
+    ].find((candidate) => fs.existsSync(candidate));
+  const simpsonBearings = simpsonIfcPath
+    ? parseSimpsonIfcBearings(simpsonIfcPath)
+    : { byMark: {}, found: false };
+
   const treCatalog = {};
   for (const file of treFiles) {
     const ctx = buildTreContext(path.join(projectRoot, file));
     treCatalog[ctx.tre.mark] = ctx;
   }
 
-  const girderIndex = buildGirderIndex(treCatalog);
+  const connectionGraph = buildTrussConnectionGraph(treCatalog);
+  const carriedByIndex = buildCarriedByIndex(connectionGraph);
+
   for (const mark of Object.keys(treCatalog)) {
-    treCatalog[mark] = enrichContext(treCatalog[mark], girderIndex);
+    const ctx = treCatalog[mark];
+    const resolved = resolveConnectionType(
+      ctx,
+      simpsonBearings.byMark[mark],
+      connectionGraph,
+    );
+    treCatalog[mark] = enrichContext(
+      {
+        ...ctx,
+        connectionType: resolved.connectionType,
+        hangerRole: resolved.hangerRole,
+        connectionReason: resolved.reason,
+      },
+      carriedByIndex,
+      treCatalog,
+    );
   }
 
   const connectionOptions = {
@@ -592,7 +652,8 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     simpsonHsUrl: "https://app.strongtie.com/hs",
     hsReferenceTitle: hsReference?.meta?.title ?? null,
     purpose:
-      "All Joist / Truss / Multi columns filled from MiTek TRE — pick the column that matches your Simpson Hanger Selector connection type.",
+      "Each TRE maps to one Simpson Hanger Selector connection type from TRE truss links + Simpson IFC bearings.",
+    trussConnectionCount: connectionGraph.length,
     count: 0,
     marks: [],
     maps: {},
@@ -601,7 +662,11 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
   for (const file of treFiles) {
     const ctx = treCatalog[path.basename(file, ".tre").toUpperCase()];
     const mark = ctx.tre.mark;
-    const csv = buildCsvFromTemplate(templateRows, ctx, treCatalog, hsReference);
+    const connectionType = ctx.connectionType;
+    const csv =
+      connectionType == null
+        ? buildCsvFromTemplate(templateRows, ctx, treCatalog, hsReference)
+        : buildCsvFromTemplate(templateRows, ctx, treCatalog, hsReference);
 
     const json = {
       mark,
@@ -609,19 +674,36 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       trussType: ctx.tre.trussType,
       girder: ctx.tre.girder,
       role: ctx.role,
+      hangerRole: ctx.hangerRole,
+      connectionReason: ctx.connectionReason,
       carryingGirderMark: ctx.carryingGirderMark ?? null,
-      suggestedConnection: ctx.suggestedConnection,
+      parentLinks: ctx.parentLinks ?? [],
+      simpsonIfcBearings: simpsonBearings.byMark[mark] ?? null,
+      connectionType,
+      suggestedConnection: connectionType,
       spanDisplay: ctx.tre.spanDisplay,
       pitch: ctx.tre.pitch,
       simpsonHsUrl: "https://app.strongtie.com/hs",
       usageNote:
-        "Open Simpson Hanger Selector, choose Joist / Truss / Multi-Truss, then copy values from the matching column in the CSV.",
+        connectionType == null
+          ? ctx.connectionReason
+          : `Open Simpson Hanger Selector, choose "${connectionUiLabel(hsReference, connectionType) ?? connectionType}", then copy values from the filled column.`,
       connectionOptions,
-      apiBodies: {
-        joist: buildApiBodyForColumn(ctx, "joist", treCatalog, hsReference),
-        truss: buildApiBodyForColumn(ctx, "truss", treCatalog, hsReference),
-        multi: buildApiBodyForColumn(ctx, "multi", treCatalog, hsReference),
-      },
+      apiBody:
+        connectionType == null
+          ? null
+          : buildApiBodyForColumn(ctx, connectionType, treCatalog, hsReference),
+      apiBodies:
+        connectionType == null
+          ? {}
+          : {
+              [connectionType]: buildApiBodyForColumn(
+                ctx,
+                connectionType,
+                treCatalog,
+                hsReference,
+              ),
+            },
       hsReference: hsReference?.meta ?? null,
       parameterFieldMap,
       filledCells: [],
@@ -634,6 +716,7 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       }
       if (!row.label) continue;
       for (const column of ["joist", "truss", "multi"]) {
+        if (column !== connectionType) continue;
         if (!isPlaceholder(row[column])) continue;
         const value = computeCellValue(ctx, currentSection, row.label, column, treCatalog, hsReference);
         if (value !== "") {
@@ -657,7 +740,9 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     index.maps[mark] = {
       file: `${mark}.csv`,
       json: `${mark}.json`,
-      suggestedConnection: ctx.suggestedConnection,
+      suggestedConnection: connectionType,
+      connectionType,
+      hangerRole: ctx.hangerRole,
       role: ctx.role,
       carryingGirderMark: ctx.carryingGirderMark ?? null,
       trussType: ctx.tre.trussType,
@@ -677,6 +762,21 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
     }
     fs.copyFileSync(path.join(mapsDir, "index.json"), path.join(projectMapsDir, "index.json"));
   }
+
+  fs.writeFileSync(
+    path.join(mapsDir, "truss-connections.json"),
+    JSON.stringify(
+      {
+        generatedAt: new Date().toISOString(),
+        simpsonIfcSource: simpsonBearings.source ?? null,
+        count: connectionGraph.length,
+        links: connectionGraph,
+        byCarriedMark: carriedByIndex,
+      },
+      null,
+      2,
+    ),
+  );
 
   return index;
 }

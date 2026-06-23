@@ -4,78 +4,100 @@
   "trussType": "Common",
   "girder": false,
   "role": "carried",
+  "hangerRole": "carried",
+  "connectionReason": "Hung from T10 — Truss (Flush Bottom)",
   "carryingGirderMark": "T10",
+  "parentLinks": [
+    {
+      "carriedMark": "T08",
+      "carryingMark": "T10",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 390,
+      "uplift": 276,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    }
+  ],
+  "simpsonIfcBearings": {
+    "bearings": [
+      {
+        "connectionType": "Wall"
+      },
+      {
+        "connectionType": "Hanger-To-Truss"
+      }
+    ],
+    "hasHangerToTruss": true,
+    "wallOnly": false
+  },
+  "connectionType": "truss",
   "suggestedConnection": "truss",
   "spanDisplay": "20'-0.00\"",
   "pitch": "7.94/12",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
-  "usageNote": "Open Simpson Hanger Selector, choose Joist / Truss / Multi-Truss, then copy values from the matching column in the CSV.",
+  "usageNote": "Open Simpson Hanger Selector, choose \"Truss (Flush Bottom)\", then copy values from the filled column.",
   "connectionOptions": {
     "joist": "Joist (Flush Top)",
     "truss": "Truss (Flush Bottom)",
     "multi": "Multi-Truss (Flush Bottom)"
   },
-  "apiBodies": {
-    "joist": {
-      "flushOption": "TOP",
-      "buildingCode": 20,
-      "concealed": 0,
-      "fastenerType": 0,
-      "style": 0,
-      "ledger": 0,
-      "sort": 12,
-      "designInformations": {
-        "downloadDurationType": 100,
-        "upliftLoadDurationType": 160
-      },
-      "filters": {
-        "depth": 0,
-        "width": 0,
-        "series": "",
-        "model": "",
-        "webStiffeners": 0
-      },
-      "carryingMember": {
-        "width": 1.5,
-        "depth": 3.5,
-        "material": 3,
-        "ply": 2,
-        "kingHeight": 0,
-        "kingWidth": 0,
-        "topChordPly": 0,
-        "topChord": 1
-      },
-      "carriedMembers": [
-        {
-          "width": 1.5,
-          "depth": 7.94,
-          "material": 3,
-          "ply": 1,
-          "loads": {
-            "load": 617,
-            "uplift": 125
-          },
-          "angle": {
-            "skewAngle": 270,
-            "skewType": 1,
-            "slopeAngle": 33.5,
-            "slopeType": 1
-          },
-          "memberId": "T08"
-        }
-      ],
-      "hangerOptions": {
-        "topFlangeOptions": {
-          "topFlangeOffset": 0,
-          "topFlangeOpenClosedAngle": 0,
-          "topFlangeOpenClosedType": 0,
-          "topFlangeSlopedDownAngle": 0,
-          "topFlangeSlopedDownType": 0
-        }
-      },
-      "simpsonHsUrl": "https://app.strongtie.com/hs",
-      "connectionLabel": "Joist (Flush Top)"
+  "apiBody": {
+    "flushOption": "BOTTOM",
+    "ansitpi": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "style": 0,
+    "ledger": 0,
+    "sort": 12,
+    "designInformations": {
+      "downloadDurationType": 100,
+      "upliftLoadDurationType": 160
     },
+    "filters": {
+      "depth": 0,
+      "width": 0,
+      "series": "",
+      "model": "",
+      "webStiffeners": 0
+    },
+    "hangerOptions": null,
+    "carryingMember": {
+      "width": 1.5,
+      "depth": 3.5,
+      "material": 7,
+      "ply": 2,
+      "kingHeight": 83.7727,
+      "kingWidth": 1.5,
+      "topChordPly": 2,
+      "topChord": 0
+    },
+    "carriedMembers": [
+      {
+        "width": 1.5,
+        "depth": 7.94,
+        "material": 7,
+        "ply": 1,
+        "loads": {
+          "load": 390,
+          "uplift": 276
+        },
+        "angle": {
+          "skewAngle": 270,
+          "skewType": 1,
+          "slopeAngle": 33.5,
+          "slopeType": 1
+        },
+        "memberId": "T08"
+      }
+    ],
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)"
+  },
+  "apiBodies": {
     "truss": {
       "flushOption": "BOTTOM",
       "ansitpi": 0,
@@ -114,8 +136,8 @@
           "material": 7,
           "ply": 1,
           "loads": {
-            "load": 617,
-            "uplift": 125
+            "load": 390,
+            "uplift": 276
           },
           "angle": {
             "skewAngle": 270,
@@ -128,36 +150,6 @@
       ],
       "simpsonHsUrl": "https://app.strongtie.com/hs",
       "connectionLabel": "Truss (Flush Bottom)"
-    },
-    "multi": {
-      "flushOption": "BOTTOM",
-      "ansitpi": 0,
-      "buildingCode": 20,
-      "carryingMember": null,
-      "carriedMembers": [
-        null,
-        {
-          "width": 1.5,
-          "depth": 7.94,
-          "material": 7,
-          "ply": 1,
-          "loads": {
-            "load": 617,
-            "uplift": 125
-          },
-          "angle": {
-            "skewAngle": 270,
-            "skewType": 1,
-            "slopeAngle": 33.5,
-            "slopeType": 1
-          },
-          "memberId": "T08"
-        },
-        null
-      ],
-      "hangerOptions": null,
-      "simpsonHsUrl": "https://app.strongtie.com/hs",
-      "connectionLabel": "Multi-Truss (Flush Bottom)"
     }
   },
   "hsReference": {
@@ -1423,34 +1415,10 @@
     {
       "section": "CONNECTION TYPE",
       "parameter": "CONNECTION TYPE",
-      "column": "joist",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "CONNECTION TYPE",
-      "parameter": "CONNECTION TYPE",
       "column": "truss",
       "value": "Yes",
       "apiField": null,
       "hsSection": null
-    },
-    {
-      "section": "CONNECTION TYPE",
-      "parameter": "CONNECTION TYPE",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "CONNECTION TYPE",
-      "parameter": "Connection Type",
-      "column": "joist",
-      "value": "Joist (Flush Top)",
-      "apiField": "flushOption",
-      "hsSection": "Connection Type"
     },
     {
       "section": "CONNECTION TYPE",
@@ -1461,44 +1429,12 @@
       "hsSection": "Connection Type"
     },
     {
-      "section": "CONNECTION TYPE",
-      "parameter": "Connection Type",
-      "column": "multi",
-      "value": "Multi-Truss (Flush Bottom)",
-      "apiField": "flushOption",
-      "hsSection": "Connection Type"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "JOB SETTINGS",
-      "column": "joist",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
       "section": "JOB SETTINGS",
       "parameter": "JOB SETTINGS",
       "column": "truss",
       "value": "Yes",
       "apiField": null,
       "hsSection": null
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "JOB SETTINGS",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Hanger Type",
-      "column": "joist",
-      "value": "All Types",
-      "apiField": "style",
-      "hsSection": "Job Settings"
     },
     {
       "section": "JOB SETTINGS",
@@ -1510,32 +1446,8 @@
     },
     {
       "section": "JOB SETTINGS",
-      "parameter": "Hanger Type",
-      "column": "multi",
-      "value": "All Types",
-      "apiField": "style",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Fastener Type",
-      "column": "joist",
-      "value": "All Types",
-      "apiField": "fastenerType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
       "parameter": "Fastener Type",
       "column": "truss",
-      "value": "All Types",
-      "apiField": "fastenerType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Fastener Type",
-      "column": "multi",
       "value": "All Types",
       "apiField": "fastenerType",
       "hsSection": "Job Settings"
@@ -1550,42 +1462,10 @@
     },
     {
       "section": "JOB SETTINGS",
-      "parameter": "ANSI/TPI 1 Evaluation",
-      "column": "multi",
-      "value": "No",
-      "apiField": "ansitpi",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Download Duration",
-      "column": "joist",
-      "value": "Floor / standard (CD=1.0)",
-      "apiField": "designInformations.downloadDurationType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "truss",
       "value": "Floor / standard (CD=1.0)",
       "apiField": "designInformations.downloadDurationType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Download Duration",
-      "column": "multi",
-      "value": "Floor / standard (CD=1.0)",
-      "apiField": "designInformations.downloadDurationType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Uplift Duration",
-      "column": "joist",
-      "value": "Wind / seismic (CD=1.6)",
-      "apiField": "designInformations.upliftLoadDurationType",
       "hsSection": "Job Settings"
     },
     {
@@ -1598,41 +1478,9 @@
     },
     {
       "section": "JOB SETTINGS",
-      "parameter": "Uplift Duration",
-      "column": "multi",
-      "value": "Wind / seismic (CD=1.6)",
-      "apiField": "designInformations.upliftLoadDurationType",
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Job ID",
-      "column": "joist",
-      "value": "T08",
-      "apiField": null,
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
       "parameter": "Job ID",
       "column": "truss",
       "value": "T08",
-      "apiField": null,
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Job ID",
-      "column": "multi",
-      "value": "T08",
-      "apiField": null,
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "JOB SETTINGS",
-      "parameter": "Quantity",
-      "column": "joist",
-      "value": 4,
       "apiField": null,
       "hsSection": "Job Settings"
     },
@@ -1645,22 +1493,6 @@
       "hsSection": "Job Settings"
     },
     {
-      "section": "JOB SETTINGS",
-      "parameter": "Quantity",
-      "column": "multi",
-      "value": 4,
-      "apiField": null,
-      "hsSection": "Job Settings"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
-      "column": "joist",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
       "column": "truss",
@@ -1670,32 +1502,8 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "HEADER / GIRDER (CARRYING MEMBER)",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Member Type",
-      "column": "joist",
-      "value": "Solid Sawn — SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Member Type",
       "column": "truss",
-      "value": "Truss — SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Member Type",
-      "column": "multi",
       "value": "Truss — SP",
       "apiField": "carriedMembers[].material",
       "hsSection": "Joist / Truss (Carried Member)"
@@ -1710,22 +1518,6 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Type",
-      "column": "multi",
-      "value": "Truss",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Lumber Species",
-      "column": "joist",
-      "value": "SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Lumber Species",
       "column": "truss",
       "value": "SP",
@@ -1734,32 +1526,8 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Lumber Species",
-      "column": "multi",
-      "value": "SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Width",
-      "column": "joist",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Width",
       "column": "truss",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Width",
-      "column": "multi",
       "value": 1.5,
       "apiField": "carriedMembers[].width",
       "hsSection": "Joist / Truss (Carried Member)"
@@ -1774,32 +1542,8 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Bottom Chord Width",
-      "column": "multi",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Depth",
-      "column": "joist",
-      "value": 3.5,
-      "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Depth",
       "column": "truss",
-      "value": 3.5,
-      "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Depth",
-      "column": "multi",
       "value": 3.5,
       "apiField": "carriedMembers[].depth",
       "hsSection": "Joist / Truss (Carried Member)"
@@ -1814,32 +1558,8 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Bottom Chord Height",
-      "column": "multi",
-      "value": 3.94,
-      "apiField": "carryingMember.kingHeight",
-      "hsSection": "Header / Girder (Carrying Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Number of Plies",
-      "column": "joist",
-      "value": 2,
-      "apiField": "carriedMembers[].ply",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Number of Plies",
       "column": "truss",
-      "value": 2,
-      "apiField": "carriedMembers[].ply",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Number of Plies",
-      "column": "multi",
       "value": 2,
       "apiField": "carriedMembers[].ply",
       "hsSection": "Joist / Truss (Carried Member)"
@@ -1854,14 +1574,6 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Vertical Width (King Post)",
-      "column": "multi",
-      "value": 1.5,
-      "apiField": "carryingMember.kingWidth",
-      "hsSection": "Header / Girder (Carrying Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Total Height",
       "column": "truss",
       "value": 83.7727,
@@ -1870,41 +1582,9 @@
     },
     {
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Total Height",
-      "column": "multi",
-      "value": 83.7727,
-      "apiField": "carryingMember.kingHeight",
-      "hsSection": "Header / Girder (Carrying Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Member ID",
-      "column": "joist",
-      "value": "T10",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Member ID",
       "column": "truss",
       "value": "T10",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Member ID",
-      "column": "multi",
-      "value": "T10",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Lumber Finish",
-      "column": "joist",
-      "value": "Rough Sawn",
       "apiField": null,
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1917,44 +1597,12 @@
       "hsSection": "Joist / Truss (Carried Member)"
     },
     {
-      "section": "HEADER / GIRDER (CARRYING MEMBER)",
-      "parameter": "Lumber Finish",
-      "column": "multi",
-      "value": "Rough Sawn",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "column": "joist",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "column": "truss",
       "value": "Yes",
       "apiField": null,
       "hsSection": null
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Member Type",
-      "column": "joist",
-      "value": "Solid Sawn — SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
@@ -1966,22 +1614,6 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Member Type",
-      "column": "multi",
-      "value": "Truss — SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Lumber Species",
-      "column": "joist",
-      "value": "SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Lumber Species",
       "column": "truss",
       "value": "SP",
@@ -1990,32 +1622,8 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Lumber Species",
-      "column": "multi",
-      "value": "SP",
-      "apiField": "carriedMembers[].material",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Width",
-      "column": "joist",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Width",
       "column": "truss",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Width",
-      "column": "multi",
       "value": 1.5,
       "apiField": "carriedMembers[].width",
       "hsSection": "Joist / Truss (Carried Member)"
@@ -2030,14 +1638,6 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Bottom Chord Width",
-      "column": "multi",
-      "value": 1.5,
-      "apiField": "carriedMembers[].width",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Heel Height",
       "column": "truss",
       "value": 7.94,
@@ -2046,42 +1646,10 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Heel Height",
-      "column": "multi",
-      "value": 7.94,
-      "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Depth",
-      "column": "joist",
-      "value": 3.5,
-      "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Depth",
       "column": "truss",
       "value": 7.94,
       "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Depth",
-      "column": "multi",
-      "value": 7.94,
-      "apiField": "carriedMembers[].depth",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Number of Plies",
-      "column": "joist",
-      "value": 1,
-      "apiField": "carriedMembers[].ply",
       "hsSection": "Joist / Truss (Carried Member)"
     },
     {
@@ -2094,22 +1662,6 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Number of Plies",
-      "column": "multi",
-      "value": 1,
-      "apiField": "carriedMembers[].ply",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Member ID",
-      "column": "joist",
-      "value": "T08",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Member ID",
       "column": "truss",
       "value": "T08",
@@ -2118,74 +1670,18 @@
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Member ID",
-      "column": "multi",
-      "value": "T08",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Download (ASD)",
-      "column": "joist",
-      "value": 617,
-      "apiField": "carriedMembers[].loads.load",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "truss",
-      "value": 617,
+      "value": 390,
       "apiField": "carriedMembers[].loads.load",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Download (ASD)",
-      "column": "multi",
-      "value": 617,
-      "apiField": "carriedMembers[].loads.load",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Upload (ASD)",
-      "column": "joist",
-      "value": 125,
-      "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },
     {
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Upload (ASD)",
       "column": "truss",
-      "value": 125,
+      "value": 276,
       "apiField": "carriedMembers[].loads.uplift",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Upload (ASD)",
-      "column": "multi",
-      "value": 125,
-      "apiField": "carriedMembers[].loads.uplift",
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Slope (Degrees)",
-      "column": "multi",
-      "value": 33.5,
-      "apiField": "carriedMembers[].angle.slopeAngle",
-      "hsSection": "Slope & Skew (per carried member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Lumber Finish",
-      "column": "joist",
-      "value": "Rough Sawn",
-      "apiField": null,
       "hsSection": "Joist / Truss (Carried Member)"
     },
     {
@@ -2195,38 +1691,6 @@
       "value": "Rough Sawn",
       "apiField": null,
       "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
-      "parameter": "Lumber Finish",
-      "column": "multi",
-      "value": "Rough Sawn",
-      "apiField": null,
-      "hsSection": "Joist / Truss (Carried Member)"
-    },
-    {
-      "section": "LEFT HIP (CARRIED MEMBER)",
-      "parameter": "LEFT HIP (CARRIED MEMBER)",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "RIGHT HIP (CARRIED MEMBER)",
-      "parameter": "RIGHT HIP (CARRIED MEMBER)",
-      "column": "multi",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "HANGER OPTIONS",
-      "parameter": "HANGER OPTIONS",
-      "column": "joist",
-      "value": "Yes",
-      "apiField": null,
-      "hsSection": null
     },
     {
       "section": "HANGER OPTIONS",
@@ -2239,24 +1703,8 @@
     {
       "section": "HANGER OPTIONS",
       "parameter": "Skew",
-      "column": "joist",
-      "value": 270,
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "HANGER OPTIONS",
-      "parameter": "Skew",
       "column": "truss",
       "value": 270,
-      "apiField": null,
-      "hsSection": null
-    },
-    {
-      "section": "HANGER OPTIONS",
-      "parameter": "Slope",
-      "column": "joist",
-      "value": 33.5,
       "apiField": null,
       "hsSection": null
     },

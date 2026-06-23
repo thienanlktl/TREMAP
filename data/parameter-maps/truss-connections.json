@@ -1,0 +1,495 @@
+{
+  "generatedAt": "2026-06-23T07:37:10.469Z",
+  "simpsonIfcSource": "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc",
+  "count": 19,
+  "links": [
+    {
+      "carriedMark": "J04",
+      "carryingMark": "J03B",
+      "position": "center",
+      "configuration": "Center",
+      "download": 75,
+      "uplift": 68,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J02",
+      "carryingMark": "J06C",
+      "position": "center",
+      "configuration": "Center",
+      "download": 42,
+      "uplift": 39,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06",
+      "carryingMark": "T04",
+      "position": "right",
+      "configuration": "Left + Center + Right",
+      "download": 117,
+      "uplift": 131,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06A",
+      "carryingMark": "T04",
+      "position": "center",
+      "configuration": "Left + Center + Right",
+      "download": 117,
+      "uplift": 104,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06B",
+      "carryingMark": "T04",
+      "position": "other",
+      "configuration": "Left + Center + Right",
+      "download": 163,
+      "uplift": 103,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06C",
+      "carryingMark": "T04",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 231,
+      "uplift": 154,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06",
+      "carryingMark": "T06",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 117,
+      "uplift": 131,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06A",
+      "carryingMark": "T06",
+      "position": "other",
+      "configuration": "Left + Center + Right",
+      "download": 117,
+      "uplift": 104,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06B",
+      "carryingMark": "T06",
+      "position": "center",
+      "configuration": "Left + Center + Right",
+      "download": 163,
+      "uplift": 103,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J06C",
+      "carryingMark": "T06",
+      "position": "right",
+      "configuration": "Left + Center + Right",
+      "download": 231,
+      "uplift": 154,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T08",
+      "carryingMark": "T10",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 390,
+      "uplift": 276,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T09",
+      "carryingMark": "T10",
+      "position": "center",
+      "configuration": "Left + Center + Right",
+      "download": 390,
+      "uplift": 276,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T09A",
+      "carryingMark": "T10",
+      "position": "right",
+      "configuration": "Left + Center + Right",
+      "download": 384,
+      "uplift": 272,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J03",
+      "carryingMark": "T13",
+      "position": "right",
+      "configuration": "Left + Center + Right",
+      "download": 61,
+      "uplift": 71,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J03A",
+      "carryingMark": "T13",
+      "position": "center",
+      "configuration": "Left + Center + Right",
+      "download": 61,
+      "uplift": 60,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "J03B",
+      "carryingMark": "T13",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 120,
+      "uplift": 88,
+      "skewAngle": 90,
+      "skewType": 0,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T02",
+      "carryingMark": "T15",
+      "position": "right",
+      "configuration": "Left + Center + Right",
+      "download": 551,
+      "uplift": 405,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T05",
+      "carryingMark": "T15",
+      "position": "center",
+      "configuration": "Left + Center + Right",
+      "download": 787,
+      "uplift": 465,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    },
+    {
+      "carriedMark": "T06",
+      "carryingMark": "T15",
+      "position": "left",
+      "configuration": "Left + Center + Right",
+      "download": 1332,
+      "uplift": 1331,
+      "skewAngle": 270,
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+    }
+  ],
+  "byCarriedMark": {
+    "J04": [
+      {
+        "carriedMark": "J04",
+        "carryingMark": "J03B",
+        "position": "center",
+        "configuration": "Center",
+        "download": 75,
+        "uplift": 68,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J02": [
+      {
+        "carriedMark": "J02",
+        "carryingMark": "J06C",
+        "position": "center",
+        "configuration": "Center",
+        "download": 42,
+        "uplift": 39,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J06": [
+      {
+        "carriedMark": "J06",
+        "carryingMark": "T04",
+        "position": "right",
+        "configuration": "Left + Center + Right",
+        "download": 117,
+        "uplift": 131,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      },
+      {
+        "carriedMark": "J06",
+        "carryingMark": "T06",
+        "position": "left",
+        "configuration": "Left + Center + Right",
+        "download": 117,
+        "uplift": 131,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J06A": [
+      {
+        "carriedMark": "J06A",
+        "carryingMark": "T04",
+        "position": "center",
+        "configuration": "Left + Center + Right",
+        "download": 117,
+        "uplift": 104,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      },
+      {
+        "carriedMark": "J06A",
+        "carryingMark": "T06",
+        "position": "other",
+        "configuration": "Left + Center + Right",
+        "download": 117,
+        "uplift": 104,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J06B": [
+      {
+        "carriedMark": "J06B",
+        "carryingMark": "T04",
+        "position": "other",
+        "configuration": "Left + Center + Right",
+        "download": 163,
+        "uplift": 103,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      },
+      {
+        "carriedMark": "J06B",
+        "carryingMark": "T06",
+        "position": "center",
+        "configuration": "Left + Center + Right",
+        "download": 163,
+        "uplift": 103,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J06C": [
+      {
+        "carriedMark": "J06C",
+        "carryingMark": "T04",
+        "position": "left",
+        "configuration": "Left + Center + Right",
+        "download": 231,
+        "uplift": 154,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      },
+      {
+        "carriedMark": "J06C",
+        "carryingMark": "T06",
+        "position": "right",
+        "configuration": "Left + Center + Right",
+        "download": 231,
+        "uplift": 154,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T08": [
+      {
+        "carriedMark": "T08",
+        "carryingMark": "T10",
+        "position": "left",
+        "configuration": "Left + Center + Right",
+        "download": 390,
+        "uplift": 276,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T09": [
+      {
+        "carriedMark": "T09",
+        "carryingMark": "T10",
+        "position": "center",
+        "configuration": "Left + Center + Right",
+        "download": 390,
+        "uplift": 276,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T09A": [
+      {
+        "carriedMark": "T09A",
+        "carryingMark": "T10",
+        "position": "right",
+        "configuration": "Left + Center + Right",
+        "download": 384,
+        "uplift": 272,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J03": [
+      {
+        "carriedMark": "J03",
+        "carryingMark": "T13",
+        "position": "right",
+        "configuration": "Left + Center + Right",
+        "download": 61,
+        "uplift": 71,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J03A": [
+      {
+        "carriedMark": "J03A",
+        "carryingMark": "T13",
+        "position": "center",
+        "configuration": "Left + Center + Right",
+        "download": 61,
+        "uplift": 60,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "J03B": [
+      {
+        "carriedMark": "J03B",
+        "carryingMark": "T13",
+        "position": "left",
+        "configuration": "Left + Center + Right",
+        "download": 120,
+        "uplift": 88,
+        "skewAngle": 90,
+        "skewType": 0,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T02": [
+      {
+        "carriedMark": "T02",
+        "carryingMark": "T15",
+        "position": "right",
+        "configuration": "Left + Center + Right",
+        "download": 551,
+        "uplift": 405,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T05": [
+      {
+        "carriedMark": "T05",
+        "carryingMark": "T15",
+        "position": "center",
+        "configuration": "Left + Center + Right",
+        "download": 787,
+        "uplift": 465,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ],
+    "T06": [
+      {
+        "carriedMark": "T06",
+        "carryingMark": "T15",
+        "position": "left",
+        "configuration": "Left + Center + Right",
+        "download": 1332,
+        "uplift": 1331,
+        "skewAngle": 270,
+        "skewType": 1,
+        "simpsonHsType": "truss",
+        "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      }
+    ]
+  }
+}
