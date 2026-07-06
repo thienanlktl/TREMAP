@@ -1,5 +1,7 @@
 import { mountNav } from "./shared/nav.js";
 import { parseCsv } from "./shared/parse-csv.js";
+import { mountSSTPanel } from "./shared/sst-panel.js";
+import { prepareSSTPayload } from "./shared/sst-payload.js";
 
 mountNav("hanger");
 
@@ -24,7 +26,7 @@ const enumSelect = document.getElementById("enum-select");
 const enumBody = document.getElementById("enum-body");
 
 introText.textContent =
-  "Local reference collected from Simpson Strong-Tie Hanger Selector UI and API docs. Use this to map truss reactions and member sizes before opening the live selector.";
+  "Local reference + live SST API. Map truss reactions from MiTek TRE data, save your Bearer token, then query Simpson Hanger Selector directly.";
 
 metaEl.innerHTML = `
   <a href="${data.meta.appUrl}" target="_blank" rel="noopener">Hanger Selector app</a>
@@ -221,6 +223,50 @@ const treMapBody = document.getElementById("tre-map-body");
 const treMapApi = document.getElementById("tre-map-api");
 let treMapIndex = null;
 const treMapCache = new Map();
+let currentTreMap = null;
+let sstPanel = null;
+
+async function loadBatchTreMaps() {
+  if (!treMapIndex?.marks?.length) {
+    return [];
+  }
+
+  const items = [];
+  for (const mark of treMapIndex.marks) {
+    let mapJson = treMapCache.get(mark);
+    if (!mapJson) {
+      const response = await fetch(`/data/parameter-maps/${mark}.json`);
+      if (!response.ok) {
+        continue;
+      }
+      mapJson = await response.json();
+      treMapCache.set(mark, mapJson);
+    }
+
+    const raw = mapJson.apiBody ?? mapJson.apiBodies?.truss;
+    const payload = prepareSSTPayload(raw);
+    const download = payload?.carriedMembers?.[0]?.loads?.load ?? 0;
+    if (!payload || download <= 0) {
+      continue;
+    }
+
+    items.push({
+      label: mark,
+      payload,
+    });
+  }
+  return items;
+}
+
+const sstPanelSlot = document.getElementById("sst-panel-slot");
+if (sstPanelSlot) {
+  sstPanel = mountSSTPanel(sstPanelSlot, {
+    getPayload: () => currentTreMap?.apiBody ?? currentTreMap?.apiBodies?.truss,
+    getLabel: () => (currentTreMap ? `${currentTreMap.mark} (${currentTreMap.connectionType ?? "truss"})` : ""),
+    getBatchItems: loadBatchTreMaps,
+    batchLabel: "Query all carried trusses",
+  });
+}
 
 async function loadTreParameterMaps() {
   if (!treMapSelect) {
@@ -264,7 +310,7 @@ async function renderTreParameterMap(mark) {
     treMapCache.set(mark, mapJson);
   }
 
-  const meta = treMapIndex.maps[mark];
+  currentTreMap = mapJson;
   treMapSummary.textContent = `${mark} · ${mapJson.trussType} · ${mapJson.role} member · ${mapJson.connectionType ?? mapJson.suggestedConnection ?? "truss"} · span ${mapJson.spanDisplay ?? "—"}`;
 
   const csvResponse = await fetch(`/data/parameter-maps/${mark}.csv`);
@@ -287,4 +333,5 @@ async function renderTreParameterMap(mark) {
   );
 
   treMapApi.textContent = JSON.stringify(mapJson.apiBody ?? mapJson.apiBodies ?? {}, null, 2);
+  sstPanel?.notifySelectionChanged();
 }

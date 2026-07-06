@@ -1,7 +1,10 @@
 import fs from "fs";
 import http from "http";
+import https from "https";
 import path from "path";
 import { fileURLToPath } from "url";
+
+const SST_UPSTREAM = "https://api.strongtie.com/gws/hanger-selector/hangers";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distRoot = path.resolve(__dirname, "..", "dist");
 const port = Number.parseInt(process.env.PORT ?? "8080", 10);
@@ -41,13 +44,55 @@ function sendFile(res, filePath) {
   fs.createReadStream(filePath).pipe(res);
 }
 
+function proxySSTRequest(req, res) {
+  const chunks = [];
+  req.on("data", (chunk) => chunks.push(chunk));
+  req.on("end", () => {
+    const body = Buffer.concat(chunks);
+    const upstream = new URL(SST_UPSTREAM);
+    const headers = { ...req.headers, host: upstream.host };
+    delete headers.connection;
+
+    const proxyReq = https.request(
+      {
+        protocol: upstream.protocol,
+        hostname: upstream.hostname,
+        port: upstream.port || 443,
+        path: upstream.pathname,
+        method: "POST",
+        headers,
+      },
+      (proxyRes) => {
+        res.writeHead(proxyRes.statusCode ?? 502, proxyRes.headers);
+        proxyRes.pipe(res);
+      },
+    );
+
+    proxyReq.on("error", (error) => {
+      res.statusCode = 502;
+      res.setHeader("Content-Type", "text/plain; charset=utf-8");
+      res.end(`SST proxy error: ${error.message}`);
+    });
+
+    proxyReq.end(body);
+  });
+}
+
 const server = http.createServer((req, res) => {
-  let urlPath = req.url ?? "/";
-  if (urlPath === "/") {
-    urlPath = "/index.html";
+  const requestUrl = req.url ?? "/";
+  const urlPath = requestUrl.split("?")[0];
+
+  if (urlPath === "/api/sst/hangers" && req.method === "POST") {
+    proxySSTRequest(req, res);
+    return;
   }
 
-  let filePath = safePath(urlPath);
+  let filePathInput = urlPath;
+  if (filePathInput === "/") {
+    filePathInput = "/index.html";
+  }
+
+  let filePath = safePath(filePathInput);
   if (!filePath) {
     res.statusCode = 403;
     res.end("Forbidden");

@@ -33,6 +33,15 @@ export default defineConfig({
   server: {
     port: 5173,
     open: "/",
+    proxy: {
+      "/api/sst": {
+        target: "https://api.strongtie.com",
+        changeOrigin: true,
+        secure: true,
+        rewrite: (requestPath) =>
+          requestPath.replace(/^\/api\/sst/, "/gws/hanger-selector"),
+      },
+    },
   },
   build: {
     rollupOptions: {

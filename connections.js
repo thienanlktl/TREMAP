@@ -1,4 +1,6 @@
 import { mountNav } from "./shared/nav.js";
+import { mountSSTPanel } from "./shared/sst-panel.js";
+import { prepareSSTPayload } from "./shared/sst-payload.js";
 
 mountNav("connections");
 
@@ -9,6 +11,44 @@ const apiJsonEl = document.getElementById("cn-api-json");
 
 let connectionIndex = null;
 let currentConnection = null;
+let sstPanel = null;
+
+async function loadBatchConnections() {
+  if (!connectionIndex?.connections?.length) {
+    return [];
+  }
+
+  const items = [];
+  for (const entry of connectionIndex.connections) {
+    const response = await fetch(`/data/connection-maps/${entry.connectionId}.json`);
+    if (!response.ok) {
+      continue;
+    }
+    const data = await response.json();
+    const payload = prepareSSTPayload(data.apiBody);
+    if (!payload) {
+      continue;
+    }
+    items.push({
+      label: `${data.carryingMark} → ${data.carriedMark}`,
+      payload,
+    });
+  }
+  return items;
+}
+
+const sstPanelSlot = document.getElementById("sst-panel-slot");
+if (sstPanelSlot) {
+  sstPanel = mountSSTPanel(sstPanelSlot, {
+    getPayload: () => currentConnection?.apiBody,
+    getLabel: () =>
+      currentConnection
+        ? `${currentConnection.carryingMark} → ${currentConnection.carriedMark}`
+        : "",
+    getBatchItems: loadBatchConnections,
+    batchLabel: "Query all connections",
+  });
+}
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -63,6 +103,8 @@ async function loadConnection(connectionId) {
   const url = new URL(window.location.href);
   url.searchParams.set("id", connectionId);
   history.replaceState(null, "", url);
+
+  sstPanel?.notifySelectionChanged();
 }
 
 async function init() {

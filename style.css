@@ -1239,6 +1239,93 @@ body {
   font-size: 0.78rem;
 }
 
+/* SST live API panel */
+.sst-panel {
+  margin-top: 1rem;
+}
+
+.sst-token-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.sst-token-input {
+  width: 100%;
+  max-width: 42rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.sst-token-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.sst-token-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sst-token-ok {
+  color: #86efac;
+}
+
+.sst-token-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.sst-status {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.sst-error {
+  color: #fca5a5;
+}
+
+.sst-query-label {
+  margin: 0.25rem 0 0;
+}
+
+.sst-results-table td:nth-child(2),
+.sst-results-table td:nth-child(3) {
+  font-variant-numeric: tabular-nums;
+}
+
+.sst-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.sst-auto-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.sst-batch-ok {
+  color: #86efac;
+  font-weight: 600;
+}
+
+.sst-batch-err {
+  color: #fca5a5;
+  font-weight: 600;
+}
+
 /* TRE Parameter Maps page */
 .pm-page .page-main {
   overflow: auto;
