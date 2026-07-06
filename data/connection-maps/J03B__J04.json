@@ -13,7 +13,8 @@
   "geometry": {
     "skewAngle": 270,
     "skewType": 1,
-    "slopeAngle": 18.2
+    "slopeAngle": 0,
+    "roofPitchDeg": 18.4
   },
   "sources": {
     "tre": {
@@ -21,13 +22,13 @@
         "mark": "J03B",
         "trussType": "Jack-Closed Girder",
         "spanDisplay": "3'-6.00\"",
-        "pitch": "7.94/12",
+        "pitch": "8.00/12",
         "ply": 1,
         "girder": true,
         "width": 1.5,
         "depth": 3.5,
         "heelHeight": 7.94,
-        "slopeDeg": 33.5,
+        "slopeDeg": 33.7,
         "trussHeight": 23.2065,
         "species": "SP"
       },
@@ -35,13 +36,13 @@
         "mark": "J04",
         "trussType": "Jack-Closed",
         "spanDisplay": "3'-12.00\"",
-        "pitch": "3.94/12",
+        "pitch": "4.00/12",
         "ply": 1,
         "girder": false,
         "width": 1.5,
         "depth": 3.5,
         "heelHeight": 3.94,
-        "slopeDeg": 18.2,
+        "slopeDeg": 18.4,
         "trussHeight": 23.1893,
         "species": "SP"
       }
@@ -120,8 +121,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 18.2,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "J04"
       }

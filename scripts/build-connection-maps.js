@@ -75,8 +75,12 @@ export function buildApiBodyForConnection(link, carryingCtx, carriedCtx, hsRef) 
         angle: {
           skewAngle: link.skewAngle ?? 0,
           skewType: link.skewType ?? 0,
-          slopeAngle: carriedCtx.slopeDeg ?? 0,
-          slopeType: (carriedCtx.slopeDeg ?? 0) > 0 ? 1 : 0,
+          // Flush-bottom truss/jack hangers bear on a LEVEL seat: the carried
+          // member's bottom chord is horizontal at the hanger, so connection
+          // slope is 0. The roof/top-chord pitch does not apply here.
+          // (Per engineering review, 2026-07-01.)
+          slopeAngle: 0,
+          slopeType: 0,
         },
         memberId: link.carriedMark,
       },
@@ -125,7 +129,10 @@ export function buildConnectionMaps({
       geometry: {
         skewAngle: link.skewAngle,
         skewType: link.skewType,
-        slopeAngle: carriedCtx.slopeDeg,
+        // Level bearing seat for a flush-bottom hanger — connection slope is 0.
+        // Roof pitch retained separately for reference only.
+        slopeAngle: 0,
+        roofPitchDeg: carriedCtx.slopeDeg,
       },
       sources: {
         tre: {

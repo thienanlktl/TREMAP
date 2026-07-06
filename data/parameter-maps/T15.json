@@ -20,7 +20,7 @@
   "connectionType": "multi",
   "suggestedConnection": "multi",
   "spanDisplay": "18'-8.50\"",
-  "pitch": "6.16/12",
+  "pitch": "8.00/12",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
   "usageNote": "Open Simpson Hanger Selector, choose \"Multi-Truss (Flush Bottom)\", then copy values from the filled column.",
   "connectionOptions": {
@@ -54,8 +54,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 77.6,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "T06"
       },
@@ -71,8 +71,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 80.4,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "T05"
       },
@@ -88,8 +88,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 19.1,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "T02"
       }
@@ -125,8 +125,8 @@
           "angle": {
             "skewAngle": 270,
             "skewType": 1,
-            "slopeAngle": 77.6,
-            "slopeType": 1
+            "slopeAngle": 0,
+            "slopeType": 0
           },
           "memberId": "T06"
         },
@@ -142,8 +142,8 @@
           "angle": {
             "skewAngle": 270,
             "skewType": 1,
-            "slopeAngle": 80.4,
-            "slopeType": 1
+            "slopeAngle": 0,
+            "slopeType": 0
           },
           "memberId": "T05"
         },
@@ -159,8 +159,8 @@
           "angle": {
             "skewAngle": 270,
             "skewType": 1,
-            "slopeAngle": 19.1,
-            "slopeType": 1
+            "slopeAngle": 0,
+            "slopeType": 0
           },
           "memberId": "T02"
         }
@@ -1706,7 +1706,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Slope (Degrees)",
       "column": "multi",
-      "value": 77.6,
+      "value": 0,
       "apiField": "carriedMembers[].angle.slopeAngle",
       "hsSection": "Slope & Skew (per carried member)"
     },
@@ -1794,7 +1794,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Slope (Degrees)",
       "column": "multi",
-      "value": 19.1,
+      "value": 0,
       "apiField": "carriedMembers[].angle.slopeAngle",
       "hsSection": "Slope & Skew (per carried member)"
     }

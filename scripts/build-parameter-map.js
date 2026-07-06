@@ -443,7 +443,8 @@ function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
       if (inCarried && ctx.seatUplift) return ctx.seatUplift;
       return ctx.uplift ?? "";
     case "Slope (Degrees)":
-      return inHip ? (hipCtx?.slopeDeg ?? ctx.slopeDeg) : ctx.slopeDeg;
+      // Carried member sits in a flush-bottom hanger on a level seat -> slope 0.
+      return 0;
     case "Skew (Degrees)":
       if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
       return ctx.skewAngle ?? 0;
@@ -451,7 +452,8 @@ function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
       if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
       return ctx.skewAngle ?? 0;
     case "Slope":
-      return ctx.slopeDeg;
+      // Hanger seat is level for flush-bottom truss/jack connections -> slope 0.
+      return 0;
     default:
       return "";
   }
@@ -514,8 +516,10 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
     angle: {
       skewAngle: seat?.skewAngle ?? sourceCtx.skewAngle ?? 0,
       skewType: seat?.skewType ?? sourceCtx.skewType ?? 0,
-      slopeAngle: sourceCtx.slopeDeg,
-      slopeType: sourceCtx.slopeDeg > 0 ? 1 : 0,
+      // Flush-bottom hanger: carried member bears on a level seat, so slope is 0.
+      // Roof/top-chord pitch is not the connection slope. (Eng. review 2026-07-01.)
+      slopeAngle: 0,
+      slopeType: 0,
     },
     memberId: seat?.mark ?? tre.mark,
   });

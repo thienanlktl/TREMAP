@@ -48,7 +48,7 @@
   "connectionType": "multi",
   "suggestedConnection": "multi",
   "spanDisplay": "6'-0.94\"",
-  "pitch": "6.16/12",
+  "pitch": "8.00/12",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
   "usageNote": "Open Simpson Hanger Selector, choose \"Multi-Truss (Flush Bottom)\", then copy values from the filled column.",
   "connectionOptions": {
@@ -83,8 +83,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 19.1,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "J02"
       },
@@ -122,8 +122,8 @@
           "angle": {
             "skewAngle": 270,
             "skewType": 1,
-            "slopeAngle": 19.1,
-            "slopeType": 1
+            "slopeAngle": 0,
+            "slopeType": 0
           },
           "memberId": "J02"
         },

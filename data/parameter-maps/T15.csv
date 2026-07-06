@@ -50,7 +50,7 @@ Member ID,,,T06
 Download (ASD),,,1332
 Uplift (ASD),,,1331
 Skew (Degrees),,,270
-Slope (Degrees),,,77.6
+Slope (Degrees),,,0
 ,,,
 RIGHT HIP (CARRIED MEMBER),,,Yes
 Member Type (Controlled by Jack inputs),,,Truss — SP
@@ -62,7 +62,7 @@ Member ID,,,T02
 Download (ASD),,,551
 Uplift (ASD),,,405
 Skew (Degrees),,,270
-Slope (Degrees),,,19.1
+Slope (Degrees),,,0
 ,,,
 HANGER OPTIONS,,,
 Skew,,,

@@ -161,15 +161,15 @@ function parseTreFile(filePath) {
     }
   }
 
-  const pitchMatch = content.match(/^ROOF BASICS\r?\n[^\n]+\r?\n([^\n]+)/m);
+  // Roof slope is the top-chord angle in RADIANS at field index 2 of the
+  // ROOF BASICS +1 line (same line as span). The +2 line is overhang/heel
+  // geometry, not rise/run — reading it gave bogus pitches (e.g. 80°/77°).
   let pitch = null;
-  if (pitchMatch) {
-    const pitchParts = pitchMatch[1].trim().split(/\s+/);
-    if (pitchParts.length >= 1) {
-      const riseRun = Number.parseFloat(pitchParts[0]);
-      if (!Number.isNaN(riseRun)) {
-        pitch = `${riseRun.toFixed(2)}/12`;
-      }
+  if (roofIdx >= 0 && lines[roofIdx + 1]) {
+    const roofParts = lines[roofIdx + 1].trim().split(/\s+/);
+    const slopeRad = roofParts.length >= 3 ? Number.parseFloat(roofParts[2]) : NaN;
+    if (!Number.isNaN(slopeRad)) {
+      pitch = `${(Math.abs(Math.tan(slopeRad)) * 12).toFixed(2)}/12`;
     }
   }
 

@@ -13,7 +13,8 @@
   "geometry": {
     "skewAngle": 270,
     "skewType": 1,
-    "slopeAngle": 33.5
+    "slopeAngle": 0,
+    "roofPitchDeg": 33.7
   },
   "sources": {
     "tre": {
@@ -21,13 +22,13 @@
         "mark": "T10",
         "trussType": "Monopitch Girder",
         "spanDisplay": "19'-11.50\"",
-        "pitch": "3.94/12",
+        "pitch": "4.00/12",
         "ply": 2,
         "girder": true,
         "width": 1.5,
         "depth": 5.5,
         "heelHeight": 3.94,
-        "slopeDeg": 18.2,
+        "slopeDeg": 18.4,
         "trussHeight": 83.7727,
         "species": "SP"
       },
@@ -35,13 +36,13 @@
         "mark": "T09",
         "trussType": "Common",
         "spanDisplay": "19'-11.50\"",
-        "pitch": "7.94/12",
+        "pitch": "8.00/12",
         "ply": 1,
         "girder": false,
         "width": 1.5,
         "depth": 3.5,
         "heelHeight": 8.27,
-        "slopeDeg": 33.5,
+        "slopeDeg": 33.7,
         "trussHeight": 87.9393,
         "species": "SP"
       }
@@ -120,8 +121,8 @@
         "angle": {
           "skewAngle": 270,
           "skewType": 1,
-          "slopeAngle": 33.5,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "T09"
       }

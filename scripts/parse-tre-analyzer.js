@@ -261,12 +261,18 @@ export function parseTreAnalyzer(filePath) {
   const spanField = readTreField(content, "Span");
   const spanInchesResolved = spanField ? Number.parseFloat(spanField) : spanInches;
 
-  const pitchLine = content.split(/\r?\n/)[roofIdx + 2];
+  // Roof slope lives on the ROOF BASICS +1 line as the top-chord angle in
+  // RADIANS at field index 2 (e.g. 0.463648 = 6/12, 0.321751 = 4/12), alongside
+  // span at index 1. The +2 line is overhang/heel geometry, NOT rise/run — reading
+  // its first token produced bogus pitches (e.g. T05/T06 -> 80°/77°).
+  const roofBasicsParts =
+    roofIdx >= 0 ? content.split(/\r?\n/)[roofIdx + 1]?.trim().split(/\s+/) : null;
   let pitch = null;
-  if (pitchLine) {
-    const riseRun = Number.parseFloat(pitchLine.trim().split(/\s+/)[0]);
-    if (!Number.isNaN(riseRun)) {
-      pitch = `${riseRun.toFixed(2)}/12`;
+  if (roofBasicsParts && roofBasicsParts.length >= 3) {
+    const slopeRad = Number.parseFloat(roofBasicsParts[2]);
+    if (!Number.isNaN(slopeRad)) {
+      const rise = Math.abs(Math.tan(slopeRad)) * 12;
+      pitch = `${rise.toFixed(2)}/12`;
     }
   }
 

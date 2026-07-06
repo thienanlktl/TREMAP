@@ -48,7 +48,7 @@
   "connectionType": "truss",
   "suggestedConnection": "truss",
   "spanDisplay": "6'-0.96\"",
-  "pitch": "6.19/12",
+  "pitch": "8.00/12",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
   "usageNote": "Open Simpson Hanger Selector, choose \"Truss (Flush Bottom)\", then copy values from the filled column.",
   "connectionOptions": {
@@ -100,8 +100,8 @@
         "angle": {
           "skewAngle": 90,
           "skewType": 0,
-          "slopeAngle": 27.3,
-          "slopeType": 1
+          "slopeAngle": 0,
+          "slopeType": 0
         },
         "memberId": "J06B"
       }
@@ -154,8 +154,8 @@
           "angle": {
             "skewAngle": 90,
             "skewType": 0,
-            "slopeAngle": 27.3,
-            "slopeType": 1
+            "slopeAngle": 0,
+            "slopeType": 0
           },
           "memberId": "J06B"
         }
@@ -1724,7 +1724,7 @@
       "section": "HANGER OPTIONS",
       "parameter": "Slope",
       "column": "truss",
-      "value": 27.3,
+      "value": 0,
       "apiField": null,
       "hsSection": null
     }
