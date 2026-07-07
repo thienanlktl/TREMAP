@@ -133,16 +133,16 @@ export function jobSettingDefaults(hsRef, column) {
     };
   }
 
+  // Values follow the reference contract (shared/sst-mapper.js): All-types hanger
+  // + fastener, Roof download duration (CD=1.25), Wind/seismic uplift (CD=1.6),
+  // Interior ANSI/TPI. Labels are resolved from the HS reference enums so the CSV
+  // display matches exactly what the apiBody submits.
   return {
-    hangerType: enumLabel(hsRef, "style", example.style) ?? "All Types",
-    fastenerType: enumLabel(hsRef, "fastenerType", example.fastenerType) ?? "All Types",
-    downloadDuration:
-      enumLabel(hsRef, "durationType", example.designInformations?.downloadDurationType) ??
-      "Floor / standard (CD=1.0)",
-    upliftDuration:
-      enumLabel(hsRef, "durationType", example.designInformations?.upliftLoadDurationType) ??
-      "Wind / seismic (CD=1.6)",
-    ansiTpi: enumLabel(hsRef, "ansitpi", example.ansitpi ?? 0) ?? "No",
+    hangerType: enumLabel(hsRef, "style", 0) ?? "All Types",
+    fastenerType: enumLabel(hsRef, "fastenerType", 0) ?? "All Types",
+    downloadDuration: enumLabel(hsRef, "durationType", 125) ?? "Roof (CD=1.25)",
+    upliftDuration: enumLabel(hsRef, "durationType", 160) ?? "Wind / seismic (CD=1.6)",
+    ansiTpi: enumLabel(hsRef, "ansitpi", 6) ?? "Interior",
   };
 }
 

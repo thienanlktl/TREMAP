@@ -30,30 +30,31 @@
   },
   "apiBody": {
     "flushOption": "BOTTOM",
-    "ansitpi": 0,
+    "ansitpi": 6,
     "buildingCode": 20,
     "carryingMember": {
       "width": 1.5,
       "depth": 3.5,
-      "material": 7,
+      "material": 5,
       "ply": 2,
-      "kingHeight": 86.052,
-      "kingWidth": 1.5,
-      "topChordPly": 2
+      "topChord": 0,
+      "topChordPly": 0,
+      "kingWidth": 0,
+      "kingHeight": 24
     },
     "carriedMembers": [
       {
         "width": 1.5,
         "depth": 52.98,
-        "material": 7,
+        "material": 5,
         "ply": 2,
         "loads": {
           "load": 1332,
           "uplift": 1331
         },
         "angle": {
-          "skewAngle": 270,
-          "skewType": 1,
+          "skewAngle": 0,
+          "skewType": 0,
           "slopeAngle": 0,
           "slopeType": 0
         },
@@ -62,15 +63,15 @@
       {
         "width": 1.5,
         "depth": 68.98,
-        "material": 7,
+        "material": 5,
         "ply": 1,
         "loads": {
           "load": 787,
           "uplift": 465
         },
         "angle": {
-          "skewAngle": 270,
-          "skewType": 1,
+          "skewAngle": 0,
+          "skewType": 0,
           "slopeAngle": 0,
           "slopeType": 0
         },
@@ -79,15 +80,15 @@
       {
         "width": 1.5,
         "depth": 4.16,
-        "material": 7,
+        "material": 5,
         "ply": 1,
         "loads": {
           "load": 551,
           "uplift": 405
         },
         "angle": {
-          "skewAngle": 270,
-          "skewType": 1,
+          "skewAngle": 0,
+          "skewType": 0,
           "slopeAngle": 0,
           "slopeType": 0
         },
@@ -95,36 +96,53 @@
       }
     ],
     "hangerOptions": null,
+    "style": 0,
+    "concealed": 0,
+    "fastenerType": 0,
+    "sort": 0,
+    "ledger": 0,
+    "designInformations": {
+      "downloadDurationType": 125,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "model": "",
+      "series": "",
+      "webStiffeners": 0,
+      "width": 0
+    },
     "simpsonHsUrl": "https://app.strongtie.com/hs",
     "connectionLabel": "Multi-Truss (Flush Bottom)"
   },
   "apiBodies": {
     "multi": {
       "flushOption": "BOTTOM",
-      "ansitpi": 0,
+      "ansitpi": 6,
       "buildingCode": 20,
       "carryingMember": {
         "width": 1.5,
         "depth": 3.5,
-        "material": 7,
+        "material": 5,
         "ply": 2,
-        "kingHeight": 86.052,
-        "kingWidth": 1.5,
-        "topChordPly": 2
+        "topChord": 0,
+        "topChordPly": 0,
+        "kingWidth": 0,
+        "kingHeight": 24
       },
       "carriedMembers": [
         {
           "width": 1.5,
           "depth": 52.98,
-          "material": 7,
+          "material": 5,
           "ply": 2,
           "loads": {
             "load": 1332,
             "uplift": 1331
           },
           "angle": {
-            "skewAngle": 270,
-            "skewType": 1,
+            "skewAngle": 0,
+            "skewType": 0,
             "slopeAngle": 0,
             "slopeType": 0
           },
@@ -133,15 +151,15 @@
         {
           "width": 1.5,
           "depth": 68.98,
-          "material": 7,
+          "material": 5,
           "ply": 1,
           "loads": {
             "load": 787,
             "uplift": 465
           },
           "angle": {
-            "skewAngle": 270,
-            "skewType": 1,
+            "skewAngle": 0,
+            "skewType": 0,
             "slopeAngle": 0,
             "slopeType": 0
           },
@@ -150,15 +168,15 @@
         {
           "width": 1.5,
           "depth": 4.16,
-          "material": 7,
+          "material": 5,
           "ply": 1,
           "loads": {
             "load": 551,
             "uplift": 405
           },
           "angle": {
-            "skewAngle": 270,
-            "skewType": 1,
+            "skewAngle": 0,
+            "skewType": 0,
             "slopeAngle": 0,
             "slopeType": 0
           },
@@ -166,6 +184,22 @@
         }
       ],
       "hangerOptions": null,
+      "style": 0,
+      "concealed": 0,
+      "fastenerType": 0,
+      "sort": 0,
+      "ledger": 0,
+      "designInformations": {
+        "downloadDurationType": 125,
+        "upliftLoadDurationType": 160
+      },
+      "filters": {
+        "depth": 0,
+        "model": "",
+        "series": "",
+        "webStiffeners": 0,
+        "width": 0
+      },
       "simpsonHsUrl": "https://app.strongtie.com/hs",
       "connectionLabel": "Multi-Truss (Flush Bottom)"
     }
@@ -1482,7 +1516,7 @@
       "section": "JOB SETTINGS",
       "parameter": "ANSI/TPI 1 Evaluation",
       "column": "multi",
-      "value": "No",
+      "value": "Interior 1/4",
       "apiField": "ansitpi",
       "hsSection": "Job Settings"
     },
@@ -1490,7 +1524,7 @@
       "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "multi",
-      "value": "Floor / standard (CD=1.0)",
+      "value": "Roof (CD=1.25)",
       "apiField": "designInformations.downloadDurationType",
       "hsSection": "Job Settings"
     },

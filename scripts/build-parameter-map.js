@@ -24,6 +24,15 @@ import {
   materialLabelFromRef,
   resolveFieldMeta,
 } from "./hs-reference.js";
+import {
+  MATERIAL_TRUSS,
+  ANSITPI_INTERIOR,
+  BUILDING_CODE_IRC2018,
+  STYLE_ALL,
+  FASTENER_ALL,
+  DL_DURATION_ROOF,
+  UL_DURATION_WIND_QUAKE,
+} from "../shared/sst-mapper.js";
 
 const PLACEHOLDER = "update this value with your caculation data in tre file";
 const LUMBER_DEPTHS = { 4: 3.5, 6: 5.5, 8: 7.25, 10: 9.25, 12: 11.25 };
@@ -107,8 +116,11 @@ function parseSpecies(lumberStr) {
   return "SP";
 }
 
-function trussMaterialEnum(species) {
-  return { SP: 7, DF: 5, HF: 6, SPF: 8 }[species] ?? 7;
+function trussMaterialEnum() {
+  // Simpson `material` is the member TYPE, not the wood species: a roof truss is
+  // always MATERIAL_TRUSS (5). (The old species map sent SP -> 7 = "Floor Truss",
+  // the wrong member type.) Matches the reference contract.
+  return MATERIAL_TRUSS;
 }
 
 function joistMaterialEnum(species) {
@@ -514,10 +526,10 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
         : sourceCtx.seatUplift ?? sourceCtx.uplift ?? 0,
     },
     angle: {
-      skewAngle: seat?.skewAngle ?? sourceCtx.skewAngle ?? 0,
-      skewType: seat?.skewType ?? sourceCtx.skewType ?? 0,
-      // Flush-bottom hanger: carried member bears on a level seat, so slope is 0.
-      // Roof/top-chord pitch is not the connection slope. (Eng. review 2026-07-01.)
+      // Skew + slope = 0 per the reference contract: the seat is level and the
+      // carried member's plan orientation is not available from the TRE/IFC data.
+      skewAngle: 0,
+      skewType: 0,
       slopeAngle: 0,
       slopeType: 0,
     },
@@ -526,6 +538,20 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
 
   const body = {
     ...base,
+    // Reference contract (shared/sst-mapper.js): Roof download + wind/quake uplift
+    // durations, Interior ANSI/TPI, default sort/style/fastener, IRC 2018.
+    style: STYLE_ALL,
+    buildingCode: BUILDING_CODE_IRC2018,
+    concealed: 0,
+    fastenerType: FASTENER_ALL,
+    sort: 0,
+    ledger: 0,
+    ansitpi: ANSITPI_INTERIOR,
+    designInformations: {
+      downloadDurationType: DL_DURATION_ROOF,
+      upliftLoadDurationType: UL_DURATION_WIND_QUAKE,
+    },
+    filters: { depth: 0, model: "", series: "", webStiffeners: 0, width: 0 },
     simpsonHsUrl: "https://app.strongtie.com/hs",
     connectionLabel,
     hangerOptions: column === "joist" ? base.hangerOptions ?? { topFlangeOptions: {} } : null,
@@ -537,9 +563,10 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
       depth: ctx.carryingDepth,
       material: ctx.trussMaterial,
       ply: ctx.carryingPly,
-      kingHeight: ctx.trussHeight ?? 0,
-      kingWidth: ctx.width,
-      topChordPly: tre.ply,
+      topChord: 0,
+      topChordPly: 0,
+      kingWidth: 0,
+      kingHeight: Math.max(ctx.heelHeight ?? 0, ctx.carryingDepth ?? 0, 24.0),
     };
     body.carriedMembers = [ctx.seats.left, ctx.seats.center, ctx.seats.right].map((seat) =>
       seat ? carriedFromCtx(seat, treCatalog[seat.mark] ?? ctx) : null,
@@ -555,9 +582,12 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
             depth: ctx.carryingDepth,
             material,
             ply: ctx.carryingPly,
-            kingHeight: column === "truss" ? ctx.trussHeight ?? 0 : 0,
-            kingWidth: column === "truss" ? ctx.width : 0,
-            topChordPly: column === "truss" ? tre.ply : 0,
+            kingHeight:
+              column === "truss"
+                ? Math.max(ctx.heelHeight ?? 0, ctx.carryingDepth ?? 0, 24.0)
+                : 0,
+            kingWidth: 0,
+            topChordPly: 0,
             topChord: column === "joist" ? 1 : 0,
           }
         : carryCtx
@@ -566,9 +596,12 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
               depth: carryCtx.carryingDepth,
               material: column === "joist" ? carryCtx.joistMaterial : carryCtx.trussMaterial,
               ply: carryCtx.carryingPly,
-              kingHeight: column === "truss" ? carryCtx.trussHeight ?? 0 : 0,
-              kingWidth: column === "truss" ? carryCtx.width : 0,
-              topChordPly: column === "truss" ? carryCtx.tre.ply : 0,
+              kingHeight:
+                column === "truss"
+                  ? Math.max(carryCtx.heelHeight ?? 0, carryCtx.carryingDepth ?? 0, 24.0)
+                  : 0,
+              kingWidth: 0,
+              topChordPly: 0,
               topChord: column === "joist" ? 1 : 0,
             }
           : null;

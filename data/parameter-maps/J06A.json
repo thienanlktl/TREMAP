@@ -58,47 +58,47 @@
   },
   "apiBody": {
     "flushOption": "BOTTOM",
-    "ansitpi": 0,
+    "ansitpi": 6,
     "buildingCode": 20,
     "concealed": 0,
     "fastenerType": 0,
     "style": 0,
     "ledger": 0,
-    "sort": 12,
+    "sort": 0,
     "designInformations": {
-      "downloadDurationType": 100,
+      "downloadDurationType": 125,
       "upliftLoadDurationType": 160
     },
     "filters": {
       "depth": 0,
-      "width": 0,
-      "series": "",
       "model": "",
-      "webStiffeners": 0
+      "series": "",
+      "webStiffeners": 0,
+      "width": 0
     },
     "hangerOptions": null,
     "carryingMember": {
       "width": 1.5,
       "depth": 3.5,
-      "material": 7,
+      "material": 5,
       "ply": 2,
-      "kingHeight": 59.8298,
-      "kingWidth": 1.5,
-      "topChordPly": 2,
+      "kingHeight": 24,
+      "kingWidth": 0,
+      "topChordPly": 0,
       "topChord": 0
     },
     "carriedMembers": [
       {
         "width": 1.5,
         "depth": 6.16,
-        "material": 7,
+        "material": 5,
         "ply": 1,
         "loads": {
           "load": 117,
           "uplift": 104
         },
         "angle": {
-          "skewAngle": 90,
+          "skewAngle": 0,
           "skewType": 0,
           "slopeAngle": 0,
           "slopeType": 0
@@ -112,47 +112,47 @@
   "apiBodies": {
     "truss": {
       "flushOption": "BOTTOM",
-      "ansitpi": 0,
+      "ansitpi": 6,
       "buildingCode": 20,
       "concealed": 0,
       "fastenerType": 0,
       "style": 0,
       "ledger": 0,
-      "sort": 12,
+      "sort": 0,
       "designInformations": {
-        "downloadDurationType": 100,
+        "downloadDurationType": 125,
         "upliftLoadDurationType": 160
       },
       "filters": {
         "depth": 0,
-        "width": 0,
-        "series": "",
         "model": "",
-        "webStiffeners": 0
+        "series": "",
+        "webStiffeners": 0,
+        "width": 0
       },
       "hangerOptions": null,
       "carryingMember": {
         "width": 1.5,
         "depth": 3.5,
-        "material": 7,
+        "material": 5,
         "ply": 2,
-        "kingHeight": 59.8298,
-        "kingWidth": 1.5,
-        "topChordPly": 2,
+        "kingHeight": 24,
+        "kingWidth": 0,
+        "topChordPly": 0,
         "topChord": 0
       },
       "carriedMembers": [
         {
           "width": 1.5,
           "depth": 6.16,
-          "material": 7,
+          "material": 5,
           "ply": 1,
           "loads": {
             "load": 117,
             "uplift": 104
           },
           "angle": {
-            "skewAngle": 90,
+            "skewAngle": 0,
             "skewType": 0,
             "slopeAngle": 0,
             "slopeType": 0
@@ -1468,7 +1468,7 @@
       "section": "JOB SETTINGS",
       "parameter": "ANSI/TPI 1 Evaluation",
       "column": "truss",
-      "value": "No",
+      "value": "Interior 1/4",
       "apiField": "ansitpi",
       "hsSection": "Job Settings"
     },
@@ -1476,7 +1476,7 @@
       "section": "JOB SETTINGS",
       "parameter": "Download Duration",
       "column": "truss",
-      "value": "Floor / standard (CD=1.0)",
+      "value": "Roof (CD=1.25)",
       "apiField": "designInformations.downloadDurationType",
       "hsSection": "Job Settings"
     },

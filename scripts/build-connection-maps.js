@@ -1,7 +1,12 @@
 import fs from "fs";
 import path from "path";
-import { connectionUiLabel, defaultApiBody } from "./hs-reference.js";
+import { connectionUiLabel } from "./hs-reference.js";
 import { connectionId } from "./truss-connections.js";
+import {
+  sstTrussHangerBody,
+  sstCarryingMember,
+  sstCarriedMember,
+} from "../shared/sst-mapper.js";
 
 export function treTechnicalSummary(ctx) {
   if (!ctx) return null;
@@ -26,66 +31,34 @@ export function treTechnicalSummary(ctx) {
  * Carrying member = girder; carried member = hung truss with seat ASD loads.
  */
 export function buildApiBodyForConnection(link, carryingCtx, carriedCtx, hsRef) {
-  const base = defaultApiBody(hsRef, "truss") ?? {};
-  const material = carriedCtx.trussMaterial;
-
-  return {
-    flushOption: "BOTTOM",
-    ansitpi: base.ansitpi ?? 0,
-    buildingCode: base.buildingCode ?? 20,
-    concealed: base.concealed ?? 0,
-    fastenerType: base.fastenerType ?? 0,
-    style: base.style ?? 0,
-    ledger: base.ledger ?? 0,
-    sort: base.sort ?? 12,
-    designInformations: base.designInformations ?? {
-      downloadDurationType: 100,
-      upliftLoadDurationType: 160,
-    },
-    filters: base.filters ?? {
-      depth: 0,
-      width: 0,
-      series: "",
-      model: "",
-      webStiffeners: 0,
-    },
-    simpsonHsUrl: "https://app.strongtie.com/hs",
-    connectionLabel: connectionUiLabel(hsRef, "truss") ?? "Truss (Flush Bottom)",
-    hangerOptions: null,
-    carryingMember: {
+  // Payload follows the reference contract in shared/sst-mapper.js
+  // (phuongphamsp/truss-analyzer @ DataBridge-Poc1): material = Truss (5),
+  // skew/slope = 0 (level seat, orientation not in data), Roof download +
+  // Wind/quake uplift durations, Interior ANSI/TPI, king height = max(heel,depth,24).
+  const body = sstTrussHangerBody({
+    carrying: sstCarryingMember({
       width: carryingCtx.carryingWidth ?? carryingCtx.width,
       depth: carryingCtx.carryingDepth ?? carryingCtx.depth,
-      material: carryingCtx.trussMaterial,
       ply: carryingCtx.carryingPly ?? carryingCtx.tre.ply,
-      kingHeight: carryingCtx.trussHeight ?? 0,
-      kingWidth: carryingCtx.width,
-      topChordPly: carryingCtx.tre.ply,
-      topChord: 0,
-    },
-    carriedMembers: [
-      {
+      heel: carryingCtx.heelHeight ?? carryingCtx.trussHeight,
+    }),
+    carried: [
+      sstCarriedMember({
         width: carriedCtx.width,
         depth: carriedCtx.heelHeight ?? carriedCtx.depth,
-        material,
         ply: carriedCtx.tre.ply,
-        loads: {
-          load: link.download,
-          uplift: link.uplift,
-        },
-        angle: {
-          skewAngle: link.skewAngle ?? 0,
-          skewType: link.skewType ?? 0,
-          // Flush-bottom truss/jack hangers bear on a LEVEL seat: the carried
-          // member's bottom chord is horizontal at the hanger, so connection
-          // slope is 0. The roof/top-chord pitch does not apply here.
-          // (Per engineering review, 2026-07-01.)
-          slopeAngle: 0,
-          slopeType: 0,
-        },
+        load: link.download,
+        uplift: link.uplift,
         memberId: link.carriedMark,
-      },
+      }),
     ],
-  };
+  });
+
+  // UI-only metadata (stripped before POST by prepareSSTPayload)
+  body.simpsonHsUrl = "https://app.strongtie.com/hs";
+  body.connectionLabel = connectionUiLabel(hsRef, "truss") ?? "Truss (Flush Bottom)";
+  body.hangerOptions = null;
+  return body;
 }
 
 /**
@@ -127,11 +100,14 @@ export function buildConnectionMaps({
         uplift: link.uplift,
       },
       geometry: {
-        skewAngle: link.skewAngle,
-        skewType: link.skewType,
-        // Level bearing seat for a flush-bottom hanger — connection slope is 0.
-        // Roof pitch retained separately for reference only.
+        // Submitted skew + slope are 0 (level seat; plan orientation not in the
+        // TRE/IFC data — same stance as the reference). Raw MiTek values retained
+        // for reference/traceability only.
+        skewAngle: 0,
+        skewType: 0,
         slopeAngle: 0,
+        mitekSkewAngle: link.skewAngle,
+        mitekSkewType: link.skewType,
         roofPitchDeg: carriedCtx.slopeDeg,
       },
       sources: {

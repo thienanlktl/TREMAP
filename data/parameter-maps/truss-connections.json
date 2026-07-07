@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T03:17:04.130Z",
+  "generatedAt": "2026-07-07T07:06:16.198Z",
   "simpsonIfcSource": "McBride-Plan 193-Elev D-Std. 2nd FL plan - IFC.ifc",
   "purpose": "Truss-to-truss relationships from TRE. Each link has one connection map for Simpson Hanger Selector.",
   "connectionMapIndex": "connection-maps/index.json",
