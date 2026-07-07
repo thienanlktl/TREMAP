@@ -1748,7 +1748,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Skew (Degrees)",
       "column": "multi",
-      "value": 270,
+      "value": 0,
       "apiField": "carriedMembers[].angle.skewAngle",
       "hsSection": "Slope & Skew (per carried member)"
     },
@@ -1836,7 +1836,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Skew (Degrees)",
       "column": "multi",
-      "value": 270,
+      "value": 0,
       "apiField": "carriedMembers[].angle.skewAngle",
       "hsSection": "Slope & Skew (per carried member)"
     },

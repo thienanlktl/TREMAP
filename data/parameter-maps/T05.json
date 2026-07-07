@@ -1704,7 +1704,7 @@
       "section": "HANGER OPTIONS",
       "parameter": "Skew",
       "column": "truss",
-      "value": 270,
+      "value": 0,
       "apiField": null,
       "hsSection": null
     },

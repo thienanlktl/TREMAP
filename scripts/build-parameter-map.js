@@ -458,11 +458,10 @@ function computeCellValue(ctx, section, label, column, treCatalog, hsRef) {
       // Carried member sits in a flush-bottom hanger on a level seat -> slope 0.
       return 0;
     case "Skew (Degrees)":
-      if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
-      return ctx.skewAngle ?? 0;
     case "Skew":
-      if (inHip && hipSeatEntry) return hipSeatEntry.skewAngle ?? 0;
-      return ctx.skewAngle ?? 0;
+      // Submitted skew is 0 (square seat; plan orientation not in the TRE/IFC
+      // data) — matches the connection API param. Raw MiTek orientation not used.
+      return 0;
     case "Slope":
       // Hanger seat is level for flush-bottom truss/jack connections -> slope 0.
       return 0;
@@ -785,8 +784,11 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
       role: ctx.role,
       carryingGirderMark: ctx.carryingGirderMark ?? null,
       trussType: ctx.tre.trussType,
-      download: ctx.download,
-      uplift: ctx.uplift,
+      // For a carried member, report the load at its hanger (the connection API
+      // param) so the summary matches the apiBody/Connections tab; fall back to
+      // the truss's own reaction for carrying girders (not hung in a hanger).
+      download: ctx.seatDownload ?? ctx.download,
+      uplift: ctx.seatUplift ?? ctx.uplift,
     };
   }
 
