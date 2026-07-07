@@ -1449,6 +1449,44 @@ body {
   word-break: break-word;
 }
 
+.cn-api-section {
+  margin: 1.25rem 0 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.cn-api-section:first-child {
+  margin-top: 0;
+}
+.cn-api-table {
+  font-size: 0.82rem;
+}
+.cn-api-table .cn-hs-input {
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cn-api-table .cn-hs-value {
+  font-variant-numeric: tabular-nums;
+}
+.cn-decoded {
+  color: var(--accent, #2f6fed);
+  font-weight: 600;
+}
+.cn-api-table .cn-hs-field {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+.cn-raw-details {
+  margin-top: 1rem;
+}
+.cn-raw-details > summary {
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
 .pm-row-count {
   margin: 0.75rem 0 0;
   font-size: 0.82rem;

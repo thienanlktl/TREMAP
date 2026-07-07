@@ -8,10 +8,134 @@ const connectionSelect = document.getElementById("cn-connection-select");
 const summaryEl = document.getElementById("cn-summary");
 const detailEl = document.getElementById("cn-detail");
 const apiJsonEl = document.getElementById("cn-api-json");
+const apiAnnotatedEl = document.getElementById("cn-api-annotated");
 
 let connectionIndex = null;
 let currentConnection = null;
 let sstPanel = null;
+let hsReference = null;
+
+// Fields carried for the viewer/UI only — not part of the submitted payload.
+const META_KEYS = new Set(["simpsonHsUrl", "connectionLabel", "hangerOptions", "memberId"]);
+
+// Duration codes (CD x100) are not all enumerated in the HS reference — supply
+// the full set so downloadDurationType/upliftLoadDurationType always decode.
+const DURATION_LABELS = {
+  90: "Dead (CD=0.9)",
+  100: "Floor / standard (CD=1.0)",
+  115: "Snow (CD=1.15)",
+  125: "Roof (CD=1.25)",
+  160: "Wind / seismic (CD=1.6)",
+};
+
+/** apiField path -> { labels[], section, enumKey } from the HS reference UI model. */
+function buildFieldMeta(hsRef) {
+  const map = new Map();
+  for (const section of hsRef?.uiSections ?? []) {
+    for (const field of section.fields ?? []) {
+      if (!field.apiField) continue;
+      if (!map.has(field.apiField)) {
+        map.set(field.apiField, { labels: [], section: section.uiLabel, enumKey: field.enumKey ?? null });
+      }
+      map.get(field.apiField).labels.push(field.uiLabel);
+    }
+  }
+  return map;
+}
+
+/** Section render order follows the HS input form. */
+function sectionOrder(hsRef) {
+  return (hsRef?.uiSections ?? []).map((section) => section.uiLabel);
+}
+
+/** Flatten the payload into leaf { disp, norm, value } rows (array indices normalized to []). */
+function flattenPayload(obj, disp = "", norm = "", out = []) {
+  for (const [key, value] of Object.entries(obj ?? {})) {
+    if (META_KEYS.has(key)) continue;
+    const dispPath = disp ? `${disp}.${key}` : key;
+    const normPath = norm ? `${norm}.${key}` : key;
+    if (Array.isArray(value)) {
+      value.forEach((item, index) => {
+        if (item && typeof item === "object") {
+          flattenPayload(item, `${dispPath}[${index}]`, `${normPath}[]`, out);
+        } else {
+          out.push({ disp: `${dispPath}[${index}]`, norm: `${normPath}[]`, value: item });
+        }
+      });
+    } else if (value && typeof value === "object") {
+      flattenPayload(value, dispPath, normPath, out);
+    } else {
+      out.push({ disp: dispPath, norm: normPath, value });
+    }
+  }
+  return out;
+}
+
+/** Human label for a coded value, or null if the value is already plain. */
+function decodeValue(leaf, meta, hsRef) {
+  if (meta?.enumKey && hsRef?.enums?.[meta.enumKey]) {
+    const match = hsRef.enums[meta.enumKey].find((entry) => String(entry.value) === String(leaf.value));
+    if (match) return match.label;
+  }
+  if (/DurationType$/.test(leaf.norm)) return DURATION_LABELS[leaf.value] ?? null;
+  return null;
+}
+
+function renderApiAnnotated(apiBody, hsRef) {
+  if (!apiAnnotatedEl) return;
+  if (!apiBody || !hsRef) {
+    apiAnnotatedEl.innerHTML = "";
+    return;
+  }
+
+  const fieldMeta = buildFieldMeta(hsRef);
+  const leaves = flattenPayload(apiBody);
+  const order = sectionOrder(hsRef);
+  const OTHER = "Other (not a Hanger Selector input)";
+
+  const groups = new Map();
+  for (const leaf of leaves) {
+    const meta = fieldMeta.get(leaf.norm);
+    const section = meta?.section ?? OTHER;
+    if (!groups.has(section)) groups.set(section, []);
+    groups.get(section).push({ leaf, meta });
+  }
+
+  const sortedSections = [...groups.keys()].sort((a, b) => {
+    const ia = order.indexOf(a);
+    const ib = order.indexOf(b);
+    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+  });
+
+  apiAnnotatedEl.innerHTML = sortedSections
+    .map((section) => {
+      const rows = groups
+        .get(section)
+        .map(({ leaf, meta }) => {
+          const input = meta ? meta.labels.join(" / ") : "—";
+          const decoded = decodeValue(leaf, meta, hsRef);
+          const valueCell = decoded
+            ? `${escapeHtml(leaf.value)} <span class="cn-decoded">→ ${escapeHtml(decoded)}</span>`
+            : escapeHtml(leaf.value);
+          return `
+            <tr>
+              <td class="cn-hs-input">${escapeHtml(input)}</td>
+              <td class="cn-hs-value">${valueCell}</td>
+              <td class="cn-hs-field muted">${escapeHtml(leaf.disp)}</td>
+            </tr>`;
+        })
+        .join("");
+      return `
+        <h3 class="cn-api-section">${escapeHtml(section)}</h3>
+        <table class="data-table cn-api-table">
+          <thead>
+            <tr><th>Simpson HS input</th><th>Value</th><th>API field</th></tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>`;
+    })
+    .join("");
+}
 
 async function loadBatchConnections() {
   if (!connectionIndex?.connections?.length) {
@@ -99,6 +223,7 @@ async function loadConnection(connectionId) {
   ].join("");
 
   apiJsonEl.textContent = JSON.stringify(currentConnection.apiBody ?? {}, null, 2);
+  renderApiAnnotated(currentConnection.apiBody, hsReference);
 
   const url = new URL(window.location.href);
   url.searchParams.set("id", connectionId);
@@ -108,11 +233,15 @@ async function loadConnection(connectionId) {
 }
 
 async function init() {
-  const response = await fetch("/data/connection-maps/index.json");
+  const [response, hsResponse] = await Promise.all([
+    fetch("/data/connection-maps/index.json"),
+    fetch("/data/hanger-selector-reference.json"),
+  ]);
   if (!response.ok) {
     summaryEl.textContent = "No connection maps found. Run: cd viewer && npm run build-data";
     return;
   }
+  hsReference = hsResponse.ok ? await hsResponse.json() : null;
 
   connectionIndex = await response.json();
 
