@@ -5,20 +5,68 @@
   "girder": false,
   "role": "carried",
   "hangerRole": "carried",
-  "connectionReason": "Hung from J06C — Truss (Flush Bottom)",
+  "connectionReason": "Hung from J06C, J06C, J06C — Truss (Flush Bottom)",
   "carryingGirderMark": "J06C",
   "parentLinks": [
     {
+      "connectionId": "J06C__J02__H0",
       "carriedMark": "J02",
       "carryingMark": "J06C",
+      "hangerIndex": 0,
+      "localX": 19.6875,
       "position": "center",
       "configuration": "Center",
-      "download": 42,
-      "uplift": 39,
-      "skewAngle": 270,
+      "download": 82,
+      "uplift": 21,
+      "bearingLocation": 27.5001,
+      "bearingSide": "right",
+      "downDolFactor": 1.15,
+      "upliftDolFactor": 1.6,
+      "hangerAngle": 270,
+      "reactionSource": "tre-reaction-info",
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "One physical hanger instance → Truss (Flush Bottom)."
+    },
+    {
+      "connectionId": "J06C__J02__H1",
+      "carriedMark": "J02",
+      "carryingMark": "J06C",
+      "hangerIndex": 1,
+      "localX": 25.6875,
+      "position": "center",
+      "configuration": "Center",
+      "download": 82,
+      "uplift": 21,
+      "bearingLocation": 27.5001,
+      "bearingSide": "right",
+      "downDolFactor": 1.15,
+      "upliftDolFactor": 1.6,
+      "hangerAngle": 270,
+      "reactionSource": "tre-reaction-info",
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "One physical hanger instance → Truss (Flush Bottom)."
+    },
+    {
+      "connectionId": "J06C__J02__H2",
+      "carriedMark": "J02",
+      "carryingMark": "J06C",
+      "hangerIndex": 2,
+      "localX": 49.6875,
+      "position": "center",
+      "configuration": "Center",
+      "download": 82,
+      "uplift": 21,
+      "bearingLocation": 27.5001,
+      "bearingSide": "right",
+      "downDolFactor": 1.15,
+      "upliftDolFactor": 1.6,
+      "hangerAngle": 270,
+      "reactionSource": "tre-reaction-info",
+      "skewType": 1,
+      "simpsonHsType": "truss",
+      "note": "One physical hanger instance → Truss (Flush Bottom)."
     }
   ],
   "simpsonIfcBearings": {
@@ -54,7 +102,7 @@
     "ledger": 0,
     "sort": 0,
     "designInformations": {
-      "downloadDurationType": 125,
+      "downloadDurationType": 115,
       "upliftLoadDurationType": 160
     },
     "filters": {
@@ -70,20 +118,20 @@
       "depth": 3.5,
       "material": 5,
       "ply": 1,
-      "kingHeight": 24,
-      "kingWidth": 0,
+      "topChord": 0,
       "topChordPly": 0,
-      "topChord": 0
+      "kingWidth": 0,
+      "kingHeight": 6.16
     },
     "carriedMembers": [
       {
         "width": 1.5,
-        "depth": 4.16,
+        "depth": 18.79,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 42,
-          "uplift": 39
+          "load": 82,
+          "uplift": 21
         },
         "angle": {
           "skewAngle": 0,
@@ -108,7 +156,7 @@
       "ledger": 0,
       "sort": 0,
       "designInformations": {
-        "downloadDurationType": 125,
+        "downloadDurationType": 115,
         "upliftLoadDurationType": 160
       },
       "filters": {
@@ -124,20 +172,20 @@
         "depth": 3.5,
         "material": 5,
         "ply": 1,
-        "kingHeight": 24,
-        "kingWidth": 0,
+        "topChord": 0,
         "topChordPly": 0,
-        "topChord": 0
+        "kingWidth": 0,
+        "kingHeight": 6.16
       },
       "carriedMembers": [
         {
           "width": 1.5,
-          "depth": 4.16,
+          "depth": 18.79,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 42,
-            "uplift": 39
+            "load": 82,
+            "uplift": 21
           },
           "angle": {
             "skewAngle": 0,
@@ -1672,7 +1720,7 @@
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "truss",
-      "value": 42,
+      "value": 82,
       "apiField": "carriedMembers[].loads.load",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1680,7 +1728,7 @@
       "section": "JOIST / TRUSS / JACK (CARRIED MEMBER)",
       "parameter": "Upload (ASD)",
       "column": "truss",
-      "value": 39,
+      "value": 21,
       "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },

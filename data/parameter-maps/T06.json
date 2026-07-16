@@ -9,16 +9,24 @@
   "carryingGirderMark": "T15",
   "parentLinks": [
     {
+      "connectionId": "T15__T06__H0",
       "carriedMark": "T06",
       "carryingMark": "T15",
+      "hangerIndex": 0,
+      "localX": 74.4375,
       "position": "left",
       "configuration": "Left + Center + Right",
-      "download": 1332,
-      "uplift": 1331,
-      "skewAngle": 270,
+      "download": 2528,
+      "uplift": 810,
+      "bearingLocation": 1.75,
+      "bearingSide": "left",
+      "downDolFactor": 1.15,
+      "upliftDolFactor": 1.6,
+      "hangerAngle": 270,
+      "reactionSource": "tre-reaction-info",
       "skewType": 1,
       "simpsonHsType": "truss",
-      "note": "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi"
+      "note": "One physical hanger instance → Truss (Flush Bottom)."
     }
   ],
   "simpsonIfcBearings": {
@@ -50,7 +58,7 @@
     "buildingCode": 20,
     "carryingMember": {
       "width": 1.5,
-      "depth": 3.5,
+      "depth": 5.5,
       "material": 5,
       "ply": 2,
       "topChord": 0,
@@ -61,12 +69,12 @@
     "carriedMembers": [
       {
         "width": 1.5,
-        "depth": 6.16,
+        "depth": 54.79,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 117,
-          "uplift": 131
+          "load": 263,
+          "uplift": 78
         },
         "angle": {
           "skewAngle": 0,
@@ -78,12 +86,12 @@
       },
       {
         "width": 1.5,
-        "depth": 6.19,
+        "depth": 29.1,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 163,
-          "uplift": 103
+          "load": 280,
+          "uplift": 50
         },
         "angle": {
           "skewAngle": 0,
@@ -95,12 +103,12 @@
       },
       {
         "width": 1.5,
-        "depth": 6.16,
+        "depth": 17.1,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 231,
-          "uplift": 154
+          "load": 377,
+          "uplift": 92
         },
         "angle": {
           "skewAngle": 0,
@@ -118,7 +126,7 @@
     "sort": 0,
     "ledger": 0,
     "designInformations": {
-      "downloadDurationType": 125,
+      "downloadDurationType": 115,
       "upliftLoadDurationType": 160
     },
     "filters": {
@@ -138,7 +146,7 @@
       "buildingCode": 20,
       "carryingMember": {
         "width": 1.5,
-        "depth": 3.5,
+        "depth": 5.5,
         "material": 5,
         "ply": 2,
         "topChord": 0,
@@ -149,12 +157,12 @@
       "carriedMembers": [
         {
           "width": 1.5,
-          "depth": 6.16,
+          "depth": 54.79,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 117,
-            "uplift": 131
+            "load": 263,
+            "uplift": 78
           },
           "angle": {
             "skewAngle": 0,
@@ -166,12 +174,12 @@
         },
         {
           "width": 1.5,
-          "depth": 6.19,
+          "depth": 29.1,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 163,
-            "uplift": 103
+            "load": 280,
+            "uplift": 50
           },
           "angle": {
             "skewAngle": 0,
@@ -183,12 +191,12 @@
         },
         {
           "width": 1.5,
-          "depth": 6.16,
+          "depth": 17.1,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 231,
-            "uplift": 154
+            "load": 377,
+            "uplift": 92
           },
           "angle": {
             "skewAngle": 0,
@@ -206,7 +214,7 @@
       "sort": 0,
       "ledger": 0,
       "designInformations": {
-        "downloadDurationType": 125,
+        "downloadDurationType": 115,
         "upliftLoadDurationType": 160
       },
       "filters": {
@@ -1620,7 +1628,7 @@
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Depth",
       "column": "multi",
-      "value": 3.5,
+      "value": 5.5,
       "apiField": "carriedMembers[].depth",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1732,7 +1740,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "multi",
-      "value": 117,
+      "value": 263,
       "apiField": "carriedMembers[].loads.load",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1740,7 +1748,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Uplift (ASD)",
       "column": "multi",
-      "value": 131,
+      "value": 78,
       "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1820,7 +1828,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "multi",
-      "value": 231,
+      "value": 377,
       "apiField": "carriedMembers[].loads.load",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1828,7 +1836,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Uplift (ASD)",
       "column": "multi",
-      "value": 154,
+      "value": 92,
       "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },

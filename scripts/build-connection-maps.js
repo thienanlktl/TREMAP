@@ -1,12 +1,31 @@
 import fs from "fs";
 import path from "path";
 import { connectionUiLabel } from "./hs-reference.js";
-import { connectionId } from "./truss-connections.js";
 import {
   sstTrussHangerBody,
   sstCarryingMember,
   sstCarriedMember,
+  deriveSkew,
 } from "../shared/sst-mapper.js";
+
+/**
+ * Heel height at the carried truss's bearing side (reference getCarriedDepth):
+ * use the heel matching the bearing end, fall back to the other end, then 3.5".
+ */
+function carriedHeelAtBearing(carriedTre, bearingSide) {
+  const left = carriedTre?.leftHeel;
+  const right = carriedTre?.rightHeel;
+  if (bearingSide === "left") return left ?? right ?? 3.5;
+  return right ?? left ?? 3.5;
+}
+
+/** Format a position along the girder (inches) as feet-inches for display. */
+function feetInches(inches) {
+  if (inches == null || Number.isNaN(inches)) return null;
+  const ft = Math.floor(inches / 12);
+  const inch = inches - ft * 12;
+  return `${ft}'-${inch.toFixed(1)}"`;
+}
 
 export function treTechnicalSummary(ctx) {
   if (!ctx) return null;
@@ -31,27 +50,31 @@ export function treTechnicalSummary(ctx) {
  * Carrying member = girder; carried member = hung truss with seat ASD loads.
  */
 export function buildApiBodyForConnection(link, carryingCtx, carriedCtx, hsRef) {
-  // Payload follows the reference contract in shared/sst-mapper.js
-  // (phuongphamsp/truss-analyzer @ DataBridge-Poc1): material = Truss (5),
-  // skew/slope = 0 (level seat, orientation not in data), Roof download +
-  // Wind/quake uplift durations, Interior ANSI/TPI, king height = max(heel,depth,24).
+  // Faithful port of reference buildSSTPayload (sst-mapper.ts): carrying member
+  // from the girder's bottom chord + king-post detection at the hanger position;
+  // carried member from the carried truss's bottom chord + heel at the bearing
+  // side; skew derived from the hanger angle; download/uplift durations from the
+  // governing load cases' DOL factors.
   const body = sstTrussHangerBody({
     carrying: sstCarryingMember({
-      width: carryingCtx.carryingWidth ?? carryingCtx.width,
-      depth: carryingCtx.carryingDepth ?? carryingCtx.depth,
-      ply: carryingCtx.carryingPly ?? carryingCtx.tre.ply,
-      heel: carryingCtx.heelHeight ?? carryingCtx.trussHeight,
+      members: carryingCtx.tre.members,
+      connectionX: link.localX,
+      leftHeel: carryingCtx.tre.leftHeel,
+      ply: carryingCtx.tre.ply,
     }),
     carried: [
       sstCarriedMember({
-        width: carriedCtx.width,
-        depth: carriedCtx.heelHeight ?? carriedCtx.depth,
+        members: carriedCtx.tre.members,
+        heel: carriedHeelAtBearing(carriedCtx.tre, link.bearingSide),
         ply: carriedCtx.tre.ply,
         load: link.download,
         uplift: link.uplift,
+        hangerAngle: link.hangerAngle,
         memberId: link.carriedMark,
       }),
     ],
+    downDolFactor: link.downDolFactor,
+    upliftDolFactor: link.upliftDolFactor,
   });
 
   // UI-only metadata (stripped before POST by prepareSSTPayload)
@@ -74,10 +97,16 @@ export function buildConnectionMaps({
   const dir = path.join(dataOutDir, "connection-maps");
   fs.mkdirSync(dir, { recursive: true });
 
+  // Clear stale connection files (the id scheme is now per-hanger-instance, so
+  // old per-mark-pair files would otherwise linger).
+  for (const name of fs.readdirSync(dir)) {
+    if (name.endsWith(".json")) fs.rmSync(path.join(dir, name));
+  }
+
   const connections = [];
 
   for (const link of connectionGraph) {
-    const id = connectionId(link.carryingMark, link.carriedMark);
+    const id = link.connectionId;
     const carryingCtx = treCatalog[link.carryingMark];
     const carriedCtx = treCatalog[link.carriedMark];
     if (!carryingCtx || !carriedCtx) continue;
@@ -90,6 +119,9 @@ export function buildConnectionMaps({
       connectionId: id,
       carryingMark: link.carryingMark,
       carriedMark: link.carriedMark,
+      hangerIndex: link.hangerIndex,
+      localXInches: link.localX,
+      localX: feetInches(link.localX),
       simpsonHsConnectionType: "truss",
       simpsonHsConnectionLabel:
         connectionUiLabel(hsReference, "truss") ?? "Truss (Flush Bottom)",
@@ -100,13 +132,16 @@ export function buildConnectionMaps({
         uplift: link.uplift,
       },
       geometry: {
-        // Submitted skew + slope are 0 (level seat; plan orientation not in the
-        // TRE/IFC data — same stance as the reference). Raw MiTek values retained
-        // for reference/traceability only.
-        skewAngle: 0,
-        skewType: 0,
+        // Skew is derived from the hanger angle (LG*T field[14]) exactly as the
+        // reference does; slope is 0 (flush-bottom seat is level). For this
+        // project all hangers are perpendicular (angle 90) so skew resolves to 0.
+        ...(() => {
+          const { skewAngle, skewType } = deriveSkew(link.hangerAngle);
+          return { skewAngle, skewType };
+        })(),
         slopeAngle: 0,
-        mitekSkewAngle: link.skewAngle,
+        hangerAngle: link.hangerAngle,
+        bearingSide: link.bearingSide,
         mitekSkewType: link.skewType,
         roofPitchDeg: carriedCtx.slopeDeg,
       },
@@ -126,7 +161,8 @@ export function buildConnectionMaps({
       apiBody,
       selectedHanger: null,
       selectionNote:
-        `One Simpson hanger for ${link.carryingMark} → ${link.carriedMark}. ` +
+        `One Simpson hanger for ${link.carryingMark} → ${link.carriedMark}` +
+        `${feetInches(link.localX) ? ` at ${feetInches(link.localX)} along ${link.carryingMark}` : ""}. ` +
         "Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, " +
         "then choose the recommended model from results.",
       simpsonHsUrl: "https://app.strongtie.com/hs",
@@ -138,10 +174,12 @@ export function buildConnectionMaps({
       connectionId: id,
       carryingMark: link.carryingMark,
       carriedMark: link.carriedMark,
+      hangerIndex: link.hangerIndex,
+      localX: feetInches(link.localX),
       position: link.position,
       download: link.download,
       uplift: link.uplift,
-      skewAngle: link.skewAngle,
+      skewAngle: deriveSkew(link.hangerAngle).skewAngle,
       simpsonHsConnectionType: "truss",
       file: `${id}.json`,
     });

@@ -1,8 +1,14 @@
 import { describeMultiConfiguration } from "./hs-reference.js";
+import { bearingReactionForSeat } from "./parse-tre-analyzer.js";
 
-/** Stable id for one carrying → carried truss connection. */
+/** Stable id for one carrying → carried truss mark pair (mark-level grouping). */
 export function connectionId(carryingMark, carriedMark) {
   return `${carryingMark}__${carriedMark}`;
+}
+
+/** Stable id for one physical hanger instance (carrying → carried at hanger N). */
+export function hangerConnectionId(carryingMark, carriedMark, hangerIndex) {
+  return `${carryingMark}__${carriedMark}__H${hangerIndex}`;
 }
 
 function seatPosition(seats, mark) {
@@ -12,28 +18,11 @@ function seatPosition(seats, mark) {
   return "other";
 }
 
-function mergeSeatLoad(existing, load, seat) {
-  if (!existing) {
-    return {
-      mark: load?.mark ?? seat?.mark,
-      reactionDown: load?.reactionDown ?? 0,
-      uplift: Math.abs(load?.uplift ?? 0),
-      xFeet: load?.xFeet ?? seat?.xFeet ?? null,
-      skewAngle: seat?.skewAngle ?? 0,
-      skewType: seat?.skewType ?? 0,
-    };
-  }
-  return {
-    ...existing,
-    reactionDown: Math.max(existing.reactionDown, load?.reactionDown ?? 0),
-    uplift: Math.max(existing.uplift, Math.abs(load?.uplift ?? 0)),
-    skewAngle: seat?.skewAngle ?? existing.skewAngle,
-    skewType: seat?.skewType ?? existing.skewType,
-  };
-}
-
 /**
- * All truss-to-truss hanger links from TRE girder LoadCase + LG seat data.
+ * All truss-to-truss hanger links from the girder LG*T seat lines. Faithful to
+ * the reference (buildBatchPayloads over group.carriedTrusses): ONE link per
+ * physical hanger instance — each hanger has its own position (localX), bearing
+ * location, governing reaction, and king post — not one per carried mark.
  */
 export function buildTrussConnectionGraph(treCatalog) {
   const links = [];
@@ -41,32 +30,62 @@ export function buildTrussConnectionGraph(treCatalog) {
   for (const [girderMark, ctx] of Object.entries(treCatalog)) {
     if (ctx.role !== "carrying") continue;
 
-    const byCarriedMark = new Map();
-
+    // Fallback girder-side loads by mark (used only when a hanger has no matching
+    // REACTION INFO in the carried truss TRE).
+    const loadByMark = new Map();
     for (const load of ctx.tre.carriedLoads ?? []) {
-      byCarriedMark.set(load.mark, mergeSeatLoad(byCarriedMark.get(load.mark), load, null));
-    }
-    for (const seat of ctx.tre.hangerSeats ?? []) {
-      byCarriedMark.set(
-        seat.mark,
-        mergeSeatLoad(byCarriedMark.get(seat.mark), null, seat),
-      );
+      const existing = loadByMark.get(load.mark);
+      if (!existing || (load.reactionDown ?? 0) > (existing.reactionDown ?? 0)) {
+        loadByMark.set(load.mark, load);
+      }
     }
 
     const configuration = describeMultiConfiguration(ctx.seats);
+    const seats = (ctx.tre.hangerSeats ?? []).filter((s) => /^[TJ]\d/.test(s.mark));
 
-    for (const [carriedMark, data] of byCarriedMark) {
+    for (const seat of seats) {
+      const carriedMark = seat.mark;
+      const carriedCtx = treCatalog[carriedMark];
+
+      // Reference bearing calc (parser.ts parseReactionAtBearing +
+      // enrichCarriedTrusses): governing reaction at the carried truss's bearing
+      // end from ITS OWN REACTION INFO, using this hanger's stub-adjusted
+      // bearingLocation. Yields the bearing side and governing DOL factors.
+      const reaction = bearingReactionForSeat(
+        carriedCtx?.content,
+        carriedCtx?.tre,
+        seat.bearingLocation,
+      );
+      const fallback = loadByMark.get(carriedMark);
+      const download = reaction
+        ? Math.round(reaction.downReaction)
+        : Math.round(fallback?.reactionDown ?? 0);
+      const uplift = reaction
+        ? Math.round(Math.abs(reaction.upliftReaction))
+        : Math.round(Math.abs(fallback?.uplift ?? 0));
+
+      // Reference buildBatchPayloads skips carried trusses with no download.
+      if (!(download > 0)) continue;
+
       links.push({
+        connectionId: hangerConnectionId(girderMark, carriedMark, seat.groupIndex),
         carriedMark,
         carryingMark: girderMark,
+        hangerIndex: seat.groupIndex,
+        localX: seat.xInches ?? null,
         position: seatPosition(ctx.seats, carriedMark),
         configuration,
-        download: data.reactionDown,
-        uplift: data.uplift,
-        skewAngle: data.skewAngle,
-        skewType: data.skewType,
+        download,
+        uplift,
+        bearingLocation: seat.bearingLocation ?? null,
+        bearingSide: reaction?.bearingSide ?? null,
+        downDolFactor: reaction?.downDolFactor ?? null,
+        upliftDolFactor: reaction?.upliftDolFactor ?? null,
+        hangerAngle: seat.angle ?? 90,
+        reactionSource: reaction ? "tre-reaction-info" : "girder-load-fallback",
+        skewType: seat.skewType,
         simpsonHsType: "truss",
-        note: "Carried truss → use Truss (Flush Bottom) on carried map; girder uses Multi",
+        note: "One physical hanger instance → Truss (Flush Bottom).",
       });
     }
   }
@@ -74,7 +93,8 @@ export function buildTrussConnectionGraph(treCatalog) {
   return links.sort(
     (a, b) =>
       a.carryingMark.localeCompare(b.carryingMark) ||
-      a.carriedMark.localeCompare(b.carriedMark),
+      a.carriedMark.localeCompare(b.carriedMark) ||
+      (a.hangerIndex ?? 0) - (b.hangerIndex ?? 0),
   );
 }
 

@@ -18,7 +18,7 @@ Type,,,Truss
 Lumber Species,,,SP
 Width,,,1.5
 Bottom Chord Width,,,1.5
-Depth,,,3.5
+Depth,,,5.5
 Bottom Chord Height,,,52.98
 Number of Plies,,,2
 Vertical Width (King Post),,,1.5
@@ -47,8 +47,8 @@ Bottom Chord Width,,,1.5
 Heel Height,,,6.16
 Number of Plies,,,1
 Member ID,,,J06
-Download (ASD),,,117
-Uplift (ASD),,,131
+Download (ASD),,,263
+Uplift (ASD),,,78
 Skew (Degrees),,,0
 Slope (Degrees),,,0
 ,,,
@@ -59,8 +59,8 @@ Bottom Chord Width,,,1.5
 Heel Height,,,6.16
 Number of Plies,,,1
 Member ID,,,J06C
-Download (ASD),,,231
-Uplift (ASD),,,154
+Download (ASD),,,377
+Uplift (ASD),,,92
 Skew (Degrees),,,0
 Slope (Degrees),,,0
 ,,,

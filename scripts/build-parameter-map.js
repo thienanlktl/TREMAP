@@ -3,6 +3,7 @@ import path from "path";
 import { parseCsv } from "../shared/parse-csv.js";
 import {
   parseTreAnalyzer,
+  bearingReactionForSeat,
 } from "./parse-tre-analyzer.js";
 import { resolveParameterMapTemplate } from "./resolve-project-root.js";
 import { parseSimpsonIfcBearings } from "./parse-simpson-ifc-bearings.js";
@@ -10,7 +11,6 @@ import { buildConnectionMaps } from "./build-connection-maps.js";
 import {
   buildCarriedByIndex,
   buildTrussConnectionGraph,
-  connectionId,
   primaryParentLink,
   resolveConnectionType,
 } from "./truss-connections.js";
@@ -30,8 +30,11 @@ import {
   BUILDING_CODE_IRC2018,
   STYLE_ALL,
   FASTENER_ALL,
-  DL_DURATION_ROOF,
-  UL_DURATION_WIND_QUAKE,
+  findBottomChord,
+  findKingPost,
+  deriveSkew,
+  dolFactorToDownloadDuration,
+  dolFactorToUpliftDuration,
 } from "../shared/sst-mapper.js";
 
 const PLACEHOLDER = "update this value with your caculation data in tre file";
@@ -184,19 +187,21 @@ function groupCarriedBySeat(carriedLoads, hangerSeats = []) {
         xInches: seat.xInches,
         reactionDown: 0,
         uplift: 0,
-        skewAngle: seat.skewAngle,
+        angle: seat.angle,
         skewType: seat.skewType,
         hangerDepth: seat.depth,
         hangerWidth: seat.width,
         hangerPly: seat.ply,
+        bearingLocation: seat.bearingLocation,
       });
       continue;
     }
-    existing.skewAngle = seat.skewAngle ?? existing.skewAngle;
+    existing.angle = seat.angle ?? existing.angle;
     existing.skewType = seat.skewType ?? existing.skewType;
     existing.hangerDepth = seat.depth ?? existing.hangerDepth;
     existing.hangerWidth = seat.width ?? existing.hangerWidth;
     existing.hangerPly = seat.ply ?? existing.hangerPly;
+    existing.bearingLocation = seat.bearingLocation ?? existing.bearingLocation;
     existing.xFeet = Math.min(existing.xFeet ?? seat.xFeet, seat.xFeet);
   }
 
@@ -220,6 +225,7 @@ function enrichContext(ctx, carriedByIndex, treCatalog) {
   }
 
   const girderCtx = treCatalog[primary.carryingMark];
+  const { skewAngle, skewType } = deriveSkew(primary.hangerAngle);
   return {
     ...ctx,
     parentLinks,
@@ -228,8 +234,13 @@ function enrichContext(ctx, carriedByIndex, treCatalog) {
     seatDownload: primary.download,
     seatUplift: primary.uplift,
     seatPosition: primary.position,
-    skewAngle: primary.skewAngle ?? ctx.skewAngle ?? 0,
-    skewType: primary.skewType ?? ctx.skewType ?? 0,
+    seatLocalX: primary.localX ?? null,
+    seatBearingSide: primary.bearingSide ?? null,
+    seatHangerAngle: primary.hangerAngle ?? 90,
+    seatDownDolFactor: primary.downDolFactor ?? null,
+    seatUpliftDolFactor: primary.upliftDolFactor ?? null,
+    skewAngle,
+    skewType: skewType ?? primary.skewType ?? 0,
   };
 }
 
@@ -244,7 +255,6 @@ function buildTreContext(filePath) {
   const content = fs.readFileSync(filePath, "utf8");
   const tre = parseTreAnalyzer(filePath);
   const bcSize = parseLumberSize(tre.bottomChordLumber);
-  const tcSize = parseLumberSize(tre.topChordLumber);
   const species = parseSpecies(tre.bottomChordLumber ?? tre.topChordLumber);
   const heelHeight = Number.parseFloat(readTreField(content, "Left Heel Height") ?? "");
   const trussHeight = Number.parseFloat(readTreField(content, "Truss Height") ?? "");
@@ -259,10 +269,15 @@ function buildTreContext(filePath) {
       ? "carrying"
       : "carried";
 
+  // Member dimensions come from the actual MEMBER INFO bottom chord (reference
+  // findBottomChord), not the lumber string. The carrying member depth is the
+  // girder's BOTTOM-chord depth (the old code wrongly used the top-chord depth).
+  const bc = findBottomChord(tre.members);
   const bcMember = tre.members.find((member) => member.role === "bc");
   const bcFromMember = parseLumberSize(bcMember?.size);
-  const width = bcSize.width ?? bcFromMember.width ?? 1.5;
-  const depth = bcSize.depth ?? bcFromMember.depth ?? (Number.isNaN(heelHeight) ? null : heelHeight);
+  const width = bc?.width ?? bcSize.width ?? bcFromMember.width ?? 1.5;
+  const depth =
+    bc?.depth ?? bcSize.depth ?? bcFromMember.depth ?? (Number.isNaN(heelHeight) ? null : heelHeight);
 
   return {
     tre,
@@ -274,7 +289,7 @@ function buildTreContext(filePath) {
     depth,
     heelHeight: Number.isNaN(heelHeight) ? depth : heelHeight,
     carryingWidth: width,
-    carryingDepth: tcSize.depth ?? depth,
+    carryingDepth: depth,
     carryingPly: tre.ply,
     slopeDeg,
     download: Number.isNaN(download) ? null : download,
@@ -511,34 +526,82 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
   const base = defaultApiBody(hsRef, column) ?? {};
   const connectionLabel = connectionUiLabel(hsRef, column) ?? column;
 
-  const carriedFromCtx = (seat, sourceCtx) => ({
-    width: sourceCtx.width,
-    depth: sourceCtx.heelHeight ?? sourceCtx.depth,
-    material,
-    ply: sourceCtx.tre?.ply ?? sourceCtx.tre.ply,
-    loads: {
-      load: seat
-        ? seat.reactionDown
-        : sourceCtx.seatDownload ?? sourceCtx.download ?? 0,
-      uplift: seat
-        ? Math.abs(seat.uplift ?? 0)
-        : sourceCtx.seatUplift ?? sourceCtx.uplift ?? 0,
-    },
-    angle: {
-      // Skew + slope = 0 per the reference contract: the seat is level and the
-      // carried member's plan orientation is not available from the TRE/IFC data.
-      skewAngle: 0,
-      skewType: 0,
-      slopeAngle: 0,
-      slopeType: 0,
-    },
-    memberId: seat?.mark ?? tre.mark,
+  // Carrying member (truss/multi) — reference sst-mapper: girder bottom-chord
+  // dims + king-post detection at the hanger position; king height falls back to
+  // max(girder heel, girder depth) with NO artificial floor.
+  const carryingTrussMember = (girderCtx, connectionX, mat, ply) => {
+    const bc = findBottomChord(girderCtx?.tre?.members);
+    const width = bc?.width ?? girderCtx?.carryingWidth ?? 1.5;
+    const depth = bc?.depth ?? girderCtx?.carryingDepth ?? 5.5;
+    const kp = findKingPost(girderCtx?.tre?.members ?? [], connectionX ?? 0);
+    const girderHeel = girderCtx?.tre?.leftHeel ?? 0;
+    return {
+      width,
+      depth,
+      material: mat,
+      ply: ply ?? 1,
+      topChord: 0,
+      topChordPly: 0,
+      kingWidth: kp.hasKingPost ? kp.kingWidth : 0,
+      kingHeight: kp.hasKingPost ? kp.kingHeight : Math.max(girderHeel, depth),
+    };
+  };
+
+  // Joist header (our own joist column — not in the reference; top-flange mount).
+  const joistHeaderMember = (girderCtx, mat, ply) => ({
+    width: girderCtx?.carryingWidth ?? 1.5,
+    depth: girderCtx?.carryingDepth ?? 5.5,
+    material: mat,
+    ply: ply ?? 1,
+    kingHeight: 0,
+    kingWidth: 0,
+    topChordPly: 0,
+    topChord: 1,
   });
+
+  // Carried member — reference sst-mapper: carried bottom-chord width, heel at the
+  // bearing side for depth, skew derived from the hanger angle, slope 0. `seat` is
+  // a girder seat entry (reactionDown/uplift/heel/bearingSide/angle) for the multi
+  // seats; null for a single carried member (use ctx's own primary link data).
+  const carriedMember = (seat, sourceCtx) => {
+    const bc = findBottomChord(sourceCtx.tre?.members);
+    const width = bc?.width ?? sourceCtx.width ?? 1.5;
+    const heel = seat
+      ? seat.heel ?? sourceCtx.heelHeight
+      : sourceCtx.seatBearingSide === "right"
+        ? sourceCtx.tre.rightHeel ?? sourceCtx.tre.leftHeel ?? sourceCtx.heelHeight
+        : sourceCtx.tre.leftHeel ?? sourceCtx.tre.rightHeel ?? sourceCtx.heelHeight;
+    const depth = heel > 0 ? heel : 3.5;
+    const { skewAngle, skewType } = deriveSkew(seat ? seat.angle : sourceCtx.seatHangerAngle);
+    return {
+      width,
+      depth,
+      material,
+      ply: sourceCtx.tre?.ply ?? 1,
+      loads: {
+        load: seat ? seat.reactionDown : sourceCtx.seatDownload ?? sourceCtx.download ?? 0,
+        uplift: seat
+          ? Math.abs(seat.uplift ?? 0)
+          : sourceCtx.seatUplift ?? sourceCtx.uplift ?? 0,
+      },
+      angle: { skewAngle, skewType, slopeAngle: 0, slopeType: 0 },
+      memberId: seat?.mark ?? sourceCtx.tre.mark,
+    };
+  };
+
+  // Download/uplift durations from the governing load cases' DOL factors. For a
+  // carried member use its own primary link; for a carrying girder use the
+  // representative (center) seat's factors when available.
+  let downDol = ctx.seatDownDolFactor ?? null;
+  let upliftDol = ctx.seatUpliftDolFactor ?? null;
+  if (ctx.role === "carrying") {
+    const repSeat = ctx.seats.center ?? ctx.seats.left ?? ctx.seats.right;
+    downDol = repSeat?.downDolFactor ?? downDol;
+    upliftDol = repSeat?.upliftDolFactor ?? upliftDol;
+  }
 
   const body = {
     ...base,
-    // Reference contract (shared/sst-mapper.js): Roof download + wind/quake uplift
-    // durations, Interior ANSI/TPI, default sort/style/fastener, IRC 2018.
     style: STYLE_ALL,
     buildingCode: BUILDING_CODE_IRC2018,
     concealed: 0,
@@ -547,8 +610,8 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
     ledger: 0,
     ansitpi: ANSITPI_INTERIOR,
     designInformations: {
-      downloadDurationType: DL_DURATION_ROOF,
-      upliftLoadDurationType: UL_DURATION_WIND_QUAKE,
+      downloadDurationType: dolFactorToDownloadDuration(downDol),
+      upliftLoadDurationType: dolFactorToUpliftDuration(upliftDol),
     },
     filters: { depth: 0, model: "", series: "", webStiffeners: 0, width: 0 },
     simpsonHsUrl: "https://app.strongtie.com/hs",
@@ -557,54 +620,40 @@ function buildApiBodyForColumn(ctx, column, treCatalog, hsRef) {
   };
 
   if (column === "multi" && ctx.role === "carrying") {
-    body.carryingMember = {
-      width: ctx.carryingWidth,
-      depth: ctx.carryingDepth,
-      material: ctx.trussMaterial,
-      ply: ctx.carryingPly,
-      topChord: 0,
-      topChordPly: 0,
-      kingWidth: 0,
-      kingHeight: Math.max(ctx.heelHeight ?? 0, ctx.carryingDepth ?? 0, 24.0),
-    };
+    const repX =
+      ctx.seats.center?.xInches ?? ctx.seats.left?.xInches ?? ctx.seats.right?.xInches;
+    body.carryingMember = carryingTrussMember(ctx, repX, ctx.trussMaterial, ctx.carryingPly);
     body.carriedMembers = [ctx.seats.left, ctx.seats.center, ctx.seats.right].map((seat) =>
-      seat ? carriedFromCtx(seat, treCatalog[seat.mark] ?? ctx) : null,
+      seat ? carriedMember(seat, treCatalog[seat.mark] ?? ctx) : null,
     );
   } else if (column === "multi") {
     body.carryingMember = null;
-    body.carriedMembers = [null, carriedFromCtx(null, ctx), null];
-  } else {
+    body.carriedMembers = [null, carriedMember(null, ctx), null];
+  } else if (column === "joist") {
     body.carryingMember =
       ctx.role === "carrying"
-        ? {
-            width: ctx.carryingWidth,
-            depth: ctx.carryingDepth,
-            material,
-            ply: ctx.carryingPly,
-            kingHeight:
-              column === "truss"
-                ? Math.max(ctx.heelHeight ?? 0, ctx.carryingDepth ?? 0, 24.0)
-                : 0,
-            kingWidth: 0,
-            topChordPly: 0,
-            topChord: column === "joist" ? 1 : 0,
-          }
+        ? joistHeaderMember(ctx, material, ctx.carryingPly)
         : carryCtx
-          ? {
-              width: carryCtx.carryingWidth,
-              depth: carryCtx.carryingDepth,
-              material: column === "joist" ? carryCtx.joistMaterial : carryCtx.trussMaterial,
-              ply: carryCtx.carryingPly,
-              kingHeight:
-                column === "truss"
-                  ? Math.max(carryCtx.heelHeight ?? 0, carryCtx.carryingDepth ?? 0, 24.0)
-                  : 0,
-              kingWidth: 0,
-              topChordPly: 0,
-              topChord: column === "joist" ? 1 : 0,
-            }
+          ? joistHeaderMember(carryCtx, carryCtx.joistMaterial, carryCtx.carryingPly)
           : null;
-    body.carriedMembers = [carriedFromCtx(null, ctx)];
+    body.carriedMembers = [carriedMember(null, ctx)];
+  } else {
+    // truss column
+    if (ctx.role === "carrying") {
+      const repX =
+        ctx.seats.center?.xInches ?? ctx.seats.left?.xInches ?? ctx.seats.right?.xInches;
+      body.carryingMember = carryingTrussMember(ctx, repX, material, ctx.carryingPly);
+    } else if (carryCtx) {
+      body.carryingMember = carryingTrussMember(
+        carryCtx,
+        ctx.seatLocalX,
+        carryCtx.trussMaterial,
+        carryCtx.carryingPly,
+      );
+    } else {
+      body.carryingMember = null;
+    }
+    body.carriedMembers = [carriedMember(null, ctx)];
   }
 
   return body;
@@ -654,6 +703,35 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
   for (const file of treFiles) {
     const ctx = buildTreContext(path.join(projectRoot, file));
     treCatalog[ctx.tre.mark] = ctx;
+  }
+
+  // Enrich each girder's left/center/right seat with the governing reaction from
+  // the carried truss's REACTION INFO (reference bearing calc), plus the bearing
+  // side, heel at that side, and the governing load cases' DOL factors, so the
+  // Multi-Truss column and apiBody match the per-connection API param exactly.
+  for (const ctx of Object.values(treCatalog)) {
+    if (ctx.role !== "carrying" || !ctx.seats) continue;
+    for (const key of ["left", "center", "right"]) {
+      const seat = ctx.seats[key];
+      const carried = seat && treCatalog[seat.mark];
+      if (!seat || !carried?.content) continue;
+      const reaction = bearingReactionForSeat(
+        carried.content,
+        carried.tre,
+        seat.bearingLocation,
+      );
+      if (reaction) {
+        seat.reactionDown = Math.round(reaction.downReaction);
+        seat.uplift = Math.round(Math.abs(reaction.upliftReaction));
+        seat.bearingSide = reaction.bearingSide;
+        seat.downDolFactor = reaction.downDolFactor;
+        seat.upliftDolFactor = reaction.upliftDolFactor;
+        seat.heel =
+          reaction.bearingSide === "left"
+            ? carried.tre.leftHeel ?? carried.tre.rightHeel
+            : carried.tre.rightHeel ?? carried.tre.leftHeel;
+      }
+    }
   }
 
   const connectionGraph = buildTrussConnectionGraph(treCatalog);
@@ -814,8 +892,7 @@ export function buildParameterMaps(projectRoot, dataOutDir, options = {}) {
 
   const enrichedLinks = connectionGraph.map((link) => ({
     ...link,
-    connectionId: connectionId(link.carryingMark, link.carriedMark),
-    connectionMapFile: `connection-maps/${connectionId(link.carryingMark, link.carriedMark)}.json`,
+    connectionMapFile: `connection-maps/${link.connectionId}.json`,
     simpsonHsConnectionType: "truss",
     simpsonHsConnectionLabel: connectionUiLabel(hsReference, "truss"),
   }));

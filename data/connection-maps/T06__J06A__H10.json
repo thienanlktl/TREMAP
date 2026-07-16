@@ -1,0 +1,140 @@
+{
+  "connectionId": "T06__J06A__H10",
+  "carryingMark": "T06",
+  "carriedMark": "J06A",
+  "hangerIndex": 10,
+  "localXInches": 252.5,
+  "localX": "21'-0.5\"",
+  "simpsonHsConnectionType": "truss",
+  "simpsonHsConnectionLabel": "Truss (Flush Bottom)",
+  "position": "other",
+  "seatConfiguration": "Left + Center + Right",
+  "loadsAsd": {
+    "download": 233,
+    "uplift": 51
+  },
+  "geometry": {
+    "skewAngle": 0,
+    "skewType": 0,
+    "slopeAngle": 0,
+    "hangerAngle": 270,
+    "bearingSide": "right",
+    "mitekSkewType": 1,
+    "roofPitchDeg": 33.7
+  },
+  "sources": {
+    "tre": {
+      "carrying": {
+        "mark": "T06",
+        "trussType": "Roof Special Girder",
+        "spanDisplay": "27'-6.50\"",
+        "pitch": "6.00/12",
+        "ply": 2,
+        "girder": true,
+        "width": 1.5,
+        "depth": 5.5,
+        "heelHeight": 52.98,
+        "slopeDeg": 26.6,
+        "trussHeight": 59.788,
+        "species": "SP"
+      },
+      "carried": {
+        "mark": "J06A",
+        "trussType": "Jack-Closed",
+        "spanDisplay": "6'-0.94\"",
+        "pitch": "8.00/12",
+        "ply": 1,
+        "girder": false,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 6.16,
+        "slopeDeg": 33.7,
+        "trussHeight": 47.8314,
+        "species": "SP"
+      }
+    },
+    "ifc": {
+      "carrying": {
+        "bearings": [
+          {
+            "connectionType": "Hanger-To-Truss"
+          },
+          {
+            "connectionType": "Wall"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "carried": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Truss"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "validated": true
+    }
+  },
+  "apiBody": {
+    "style": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "sort": 0,
+    "ledger": 0,
+    "designInformations": {
+      "downloadDurationType": 115,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "model": "",
+      "series": "",
+      "webStiffeners": 0,
+      "width": 0
+    },
+    "carriedMembers": [
+      {
+        "material": 5,
+        "width": 1.5,
+        "depth": 41.1,
+        "ply": 1,
+        "loads": {
+          "load": 233,
+          "uplift": 51
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 0,
+          "slopeType": 0
+        },
+        "memberId": "J06A"
+      }
+    ],
+    "flushOption": "BOTTOM",
+    "carryingMember": {
+      "material": 5,
+      "width": 1.5,
+      "depth": 5.5,
+      "ply": 2,
+      "topChord": 0,
+      "topChordPly": 0,
+      "kingWidth": 0,
+      "kingHeight": 52.98
+    },
+    "ansitpi": 6,
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)",
+    "hangerOptions": null
+  },
+  "selectedHanger": null,
+  "selectionNote": "One Simpson hanger for T06 → J06A at 21'-0.5\" along T06. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs"
+}

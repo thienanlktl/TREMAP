@@ -37,13 +37,13 @@
     "buildingCode": 20,
     "carryingMember": {
       "width": 1.5,
-      "depth": 3.5,
+      "depth": 5.5,
       "material": 5,
       "ply": 2,
       "topChord": 0,
       "topChordPly": 0,
       "kingWidth": 0,
-      "kingHeight": 24
+      "kingHeight": 5.5
     },
     "carriedMembers": [
       {
@@ -52,8 +52,8 @@
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 390,
-          "uplift": 276
+          "load": 780,
+          "uplift": 99
         },
         "angle": {
           "skewAngle": 0,
@@ -65,12 +65,12 @@
       },
       {
         "width": 1.5,
-        "depth": 8.27,
+        "depth": 7.94,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 390,
-          "uplift": 276
+          "load": 780,
+          "uplift": 99
         },
         "angle": {
           "skewAngle": 0,
@@ -82,12 +82,12 @@
       },
       {
         "width": 1.5,
-        "depth": 10.61,
+        "depth": 7.94,
         "material": 5,
         "ply": 1,
         "loads": {
-          "load": 384,
-          "uplift": 272
+          "load": 768,
+          "uplift": 98
         },
         "angle": {
           "skewAngle": 0,
@@ -105,7 +105,7 @@
     "sort": 0,
     "ledger": 0,
     "designInformations": {
-      "downloadDurationType": 125,
+      "downloadDurationType": 115,
       "upliftLoadDurationType": 160
     },
     "filters": {
@@ -125,13 +125,13 @@
       "buildingCode": 20,
       "carryingMember": {
         "width": 1.5,
-        "depth": 3.5,
+        "depth": 5.5,
         "material": 5,
         "ply": 2,
         "topChord": 0,
         "topChordPly": 0,
         "kingWidth": 0,
-        "kingHeight": 24
+        "kingHeight": 5.5
       },
       "carriedMembers": [
         {
@@ -140,8 +140,8 @@
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 390,
-            "uplift": 276
+            "load": 780,
+            "uplift": 99
           },
           "angle": {
             "skewAngle": 0,
@@ -153,12 +153,12 @@
         },
         {
           "width": 1.5,
-          "depth": 8.27,
+          "depth": 7.94,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 390,
-            "uplift": 276
+            "load": 780,
+            "uplift": 99
           },
           "angle": {
             "skewAngle": 0,
@@ -170,12 +170,12 @@
         },
         {
           "width": 1.5,
-          "depth": 10.61,
+          "depth": 7.94,
           "material": 5,
           "ply": 1,
           "loads": {
-            "load": 384,
-            "uplift": 272
+            "load": 768,
+            "uplift": 98
           },
           "angle": {
             "skewAngle": 0,
@@ -193,7 +193,7 @@
       "sort": 0,
       "ledger": 0,
       "designInformations": {
-        "downloadDurationType": 125,
+        "downloadDurationType": 115,
         "upliftLoadDurationType": 160
       },
       "filters": {
@@ -1607,7 +1607,7 @@
       "section": "HEADER / GIRDER (CARRYING MEMBER)",
       "parameter": "Depth",
       "column": "multi",
-      "value": 3.5,
+      "value": 5.5,
       "apiField": "carriedMembers[].depth",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1719,7 +1719,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "multi",
-      "value": 390,
+      "value": 780,
       "apiField": "carriedMembers[].loads.load",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1727,7 +1727,7 @@
       "section": "LEFT HIP (CARRIED MEMBER)",
       "parameter": "Uplift (ASD)",
       "column": "multi",
-      "value": 276,
+      "value": 99,
       "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1807,7 +1807,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Download (ASD)",
       "column": "multi",
-      "value": 384,
+      "value": 768,
       "apiField": "carriedMembers[].loads.load",
       "hsSection": "Joist / Truss (Carried Member)"
     },
@@ -1815,7 +1815,7 @@
       "section": "RIGHT HIP (CARRIED MEMBER)",
       "parameter": "Uplift (ASD)",
       "column": "multi",
-      "value": 272,
+      "value": 98,
       "apiField": "carriedMembers[].loads.uplift",
       "hsSection": "Joist / Truss (Carried Member)"
     },

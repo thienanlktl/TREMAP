@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-07T07:32:46.351Z",
+  "generatedAt": "2026-07-16T03:49:44.917Z",
   "schemaReference": "Parameters Map.csv",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
   "hsReferenceTitle": "Simpson Strong-Tie Hanger Selector — Parameter Reference",
   "purpose": "Each TRE maps to one Simpson Hanger Selector connection type from TRE truss links + Simpson IFC bearings.",
-  "trussConnectionCount": 19,
+  "trussConnectionCount": 53,
   "count": 29,
   "marks": [
     "J02",
@@ -47,8 +47,8 @@
       "role": "carried",
       "carryingGirderMark": "J06C",
       "trussType": "Jack-Closed",
-      "download": 42,
-      "uplift": 39
+      "download": 82,
+      "uplift": 21
     },
     "J03": {
       "file": "J03.csv",
@@ -59,8 +59,8 @@
       "role": "carried",
       "carryingGirderMark": "T13",
       "trussType": "Jack-Closed",
-      "download": 61,
-      "uplift": 71
+      "download": 140,
+      "uplift": 44
     },
     "J03A": {
       "file": "J03A.csv",
@@ -71,8 +71,8 @@
       "role": "carried",
       "carryingGirderMark": "T13",
       "trussType": "Jack-Closed",
-      "download": 61,
-      "uplift": 60
+      "download": 119,
+      "uplift": 33
     },
     "J03B": {
       "file": "J03B.csv",
@@ -83,8 +83,8 @@
       "role": "carrying",
       "carryingGirderMark": "T13",
       "trussType": "Jack-Closed Girder",
-      "download": 120,
-      "uplift": 88
+      "download": 205,
+      "uplift": 51
     },
     "J04": {
       "file": "J04.csv",
@@ -95,8 +95,8 @@
       "role": "carried",
       "carryingGirderMark": "J03B",
       "trussType": "Jack-Closed",
-      "download": 75,
-      "uplift": 68
+      "download": 148,
+      "uplift": 34
     },
     "J06": {
       "file": "J06.csv",
@@ -107,8 +107,8 @@
       "role": "carried",
       "carryingGirderMark": "T04",
       "trussType": "Jack-Closed",
-      "download": 117,
-      "uplift": 131
+      "download": 263,
+      "uplift": 78
     },
     "J06A": {
       "file": "J06A.csv",
@@ -119,8 +119,8 @@
       "role": "carried",
       "carryingGirderMark": "T04",
       "trussType": "Jack-Closed",
-      "download": 117,
-      "uplift": 104
+      "download": 233,
+      "uplift": 51
     },
     "J06B": {
       "file": "J06B.csv",
@@ -131,8 +131,8 @@
       "role": "carried",
       "carryingGirderMark": "T04",
       "trussType": "Jack-Closed",
-      "download": 163,
-      "uplift": 103
+      "download": 280,
+      "uplift": 50
     },
     "J06C": {
       "file": "J06C.csv",
@@ -143,8 +143,8 @@
       "role": "carrying",
       "carryingGirderMark": "T04",
       "trussType": "Jack-Closed Girder",
-      "download": 231,
-      "uplift": 154
+      "download": 377,
+      "uplift": 92
     },
     "T01": {
       "file": "T01.csv",
@@ -167,8 +167,8 @@
       "role": "carried",
       "carryingGirderMark": "T15",
       "trussType": "Common",
-      "download": 551,
-      "uplift": 405
+      "download": 1101,
+      "uplift": 155
     },
     "T03": {
       "file": "T03.csv",
@@ -203,8 +203,8 @@
       "role": "carried",
       "carryingGirderMark": "T15",
       "trussType": "Roof Special",
-      "download": 787,
-      "uplift": 465
+      "download": 1335,
+      "uplift": 217
     },
     "T06": {
       "file": "T06.csv",
@@ -215,8 +215,8 @@
       "role": "carrying",
       "carryingGirderMark": "T15",
       "trussType": "Roof Special Girder",
-      "download": 1332,
-      "uplift": 1331
+      "download": 2528,
+      "uplift": 810
     },
     "T07GE": {
       "file": "T07GE.csv",
@@ -239,8 +239,8 @@
       "role": "carried",
       "carryingGirderMark": "T10",
       "trussType": "Common",
-      "download": 390,
-      "uplift": 276
+      "download": 780,
+      "uplift": 99
     },
     "T09": {
       "file": "T09.csv",
@@ -251,8 +251,8 @@
       "role": "carried",
       "carryingGirderMark": "T10",
       "trussType": "Common",
-      "download": 390,
-      "uplift": 276
+      "download": 780,
+      "uplift": 99
     },
     "T09A": {
       "file": "T09A.csv",
@@ -263,8 +263,8 @@
       "role": "carried",
       "carryingGirderMark": "T10",
       "trussType": "Common",
-      "download": 384,
-      "uplift": 272
+      "download": 768,
+      "uplift": 98
     },
     "T10": {
       "file": "T10.csv",

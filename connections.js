@@ -153,8 +153,9 @@ async function loadBatchConnections() {
     if (!payload) {
       continue;
     }
+    const at = data.localX ? ` @ ${data.localX}` : "";
     items.push({
-      label: `${data.carryingMark} → ${data.carriedMark}`,
+      label: `${data.carryingMark} → ${data.carriedMark}${at}`,
       payload,
     });
   }
@@ -200,6 +201,7 @@ async function loadConnection(connectionId) {
   summaryEl.textContent = [
     currentConnection.connectionId,
     `${currentConnection.carryingMark} → ${currentConnection.carriedMark}`,
+    currentConnection.localX ? `at ${currentConnection.localX} along ${currentConnection.carryingMark}` : null,
     currentConnection.simpsonHsConnectionLabel,
     `${currentConnection.loadsAsd.download} lb down / ${currentConnection.loadsAsd.uplift} lb uplift`,
     currentConnection.position ? `seat: ${currentConnection.position}` : null,
@@ -249,7 +251,8 @@ async function init() {
     ...connectionIndex.connections.map((entry) => {
       const option = document.createElement("option");
       option.value = entry.connectionId;
-      option.textContent = `${entry.carryingMark} → ${entry.carriedMark} (${entry.download} lb)`;
+      const at = entry.localX ? ` @ ${entry.localX}` : "";
+      option.textContent = `${entry.carryingMark} → ${entry.carriedMark}${at} (${entry.download} lb)`;
       return option;
     }),
   );

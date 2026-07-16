@@ -1,0 +1,140 @@
+{
+  "connectionId": "T13__J03__H3",
+  "carryingMark": "T13",
+  "carriedMark": "J03",
+  "hangerIndex": 3,
+  "localXInches": 120.75,
+  "localX": "10'-0.8\"",
+  "simpsonHsConnectionType": "truss",
+  "simpsonHsConnectionLabel": "Truss (Flush Bottom)",
+  "position": "right",
+  "seatConfiguration": "Left + Center + Right",
+  "loadsAsd": {
+    "download": 140,
+    "uplift": 44
+  },
+  "geometry": {
+    "skewAngle": 0,
+    "skewType": 0,
+    "slopeAngle": 0,
+    "hangerAngle": 90,
+    "bearingSide": "right",
+    "mitekSkewType": 0,
+    "roofPitchDeg": 33.7
+  },
+  "sources": {
+    "tre": {
+      "carrying": {
+        "mark": "T13",
+        "trussType": "Half Hip Girder",
+        "spanDisplay": "19'-11.50\"",
+        "pitch": "4.00/12",
+        "ply": 1,
+        "girder": true,
+        "width": 1.5,
+        "depth": 5.5,
+        "heelHeight": 3.94,
+        "slopeDeg": 18.4,
+        "trussHeight": 39.1893,
+        "species": "SP"
+      },
+      "carried": {
+        "mark": "J03",
+        "trussType": "Jack-Closed",
+        "spanDisplay": "3'-6.00\"",
+        "pitch": "8.00/12",
+        "ply": 1,
+        "girder": false,
+        "width": 1.5,
+        "depth": 3.5,
+        "heelHeight": 7.94,
+        "slopeDeg": 33.7,
+        "trussHeight": 39.2064,
+        "species": "SP"
+      }
+    },
+    "ifc": {
+      "carrying": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Wall"
+          }
+        ],
+        "hasHangerToTruss": false,
+        "wallOnly": true
+      },
+      "carried": {
+        "bearings": [
+          {
+            "connectionType": "Wall"
+          },
+          {
+            "connectionType": "Hanger-To-Truss"
+          }
+        ],
+        "hasHangerToTruss": true,
+        "wallOnly": false
+      },
+      "validated": true
+    }
+  },
+  "apiBody": {
+    "style": 0,
+    "buildingCode": 20,
+    "concealed": 0,
+    "fastenerType": 0,
+    "sort": 0,
+    "ledger": 0,
+    "designInformations": {
+      "downloadDurationType": 160,
+      "upliftLoadDurationType": 160
+    },
+    "filters": {
+      "depth": 0,
+      "model": "",
+      "series": "",
+      "webStiffeners": 0,
+      "width": 0
+    },
+    "carriedMembers": [
+      {
+        "material": 5,
+        "width": 1.5,
+        "depth": 35.94,
+        "ply": 1,
+        "loads": {
+          "load": 140,
+          "uplift": 44
+        },
+        "angle": {
+          "skewAngle": 0,
+          "skewType": 0,
+          "slopeAngle": 0,
+          "slopeType": 0
+        },
+        "memberId": "J03"
+      }
+    ],
+    "flushOption": "BOTTOM",
+    "carryingMember": {
+      "material": 5,
+      "width": 1.5,
+      "depth": 5.5,
+      "ply": 1,
+      "topChord": 0,
+      "topChordPly": 0,
+      "kingWidth": 0,
+      "kingHeight": 5.5
+    },
+    "ansitpi": 6,
+    "simpsonHsUrl": "https://app.strongtie.com/hs",
+    "connectionLabel": "Truss (Flush Bottom)",
+    "hangerOptions": null
+  },
+  "selectedHanger": null,
+  "selectionNote": "One Simpson hanger for T13 → J03 at 10'-0.8\" along T13. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
+  "simpsonHsUrl": "https://app.strongtie.com/hs"
+}

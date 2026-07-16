@@ -57,12 +57,17 @@ function parseMembers(content) {
     const label = header[2];
     let size = "";
     let grade = "";
+    let width = 0;
+    let depth = 0;
     let points = [];
 
+    // Spec line: "size,grade,species,width,depth,..." e.g. "2x4,No.2,SP, 1.50, 3.50,..."
     if (lines[i + 2]?.includes(",")) {
       const specParts = lines[i + 2].split(",");
       size = specParts[0]?.trim() ?? "";
       grade = `${specParts[1]?.trim() ?? ""} ${specParts[2]?.trim() ?? ""}`.trim();
+      width = Number.parseFloat(specParts[3]) || 0;
+      depth = Number.parseFloat(specParts[4]) || 0;
     }
 
     if (lines[i + 3]) {
@@ -70,13 +75,24 @@ function parseMembers(content) {
     }
 
     if (points.length >= 2) {
+      // isStructural: real extent (> 0.5") in either axis — excludes zero-length
+      // dummy members. Matches the reference parser's isStructural flag.
+      const xs = points.map((p) => p.x);
+      const ys = points.map((p) => p.y);
+      const isStructural =
+        Math.max(...xs) - Math.min(...xs) > 0.5 ||
+        Math.max(...ys) - Math.min(...ys) > 0.5;
+
       members.push({
         index: Number.parseInt(header[1], 10),
         label,
         role: memberRole(label),
         size,
         grade,
+        width,
+        depth,
         points,
+        isStructural,
       });
     }
 
@@ -160,17 +176,28 @@ function parseHangerLoadingInfo(content) {
       continue;
     }
 
+    // LG*T field layout (0-based after '='):
+    //   [2]=xInches (position along girder, INCHES) [4]=mark [5]=width [6]=heel
+    //   [14]=angle (carried truss angle vs girder; 90 = perpendicular)
+    //   [16]=bearingLocation (carried truss bearing coord, inches) [17]=seat slope
+    const xInches = Number.parseFloat(parts[2]);
     seats.push({
       groupIndex: Number.parseInt(match[1], 10),
       mark,
-      xFeet: Number.parseFloat(parts[2]),
-      xInches: Number.parseFloat(parts[2]) * 12,
+      xInches,
+      xFeet: xInches / 12,
       width: Number.parseFloat(parts[5]),
       depth: Number.parseFloat(parts[6]),
       materialCode: Number.parseInt(parts[7], 10),
       ply: Number.parseInt(parts[8], 10),
-      skewAngle: Number.parseFloat(parts[14]),
+      // Hanger angle (field[14]) — the carried truss's angle relative to the
+      // girder. The Simpson skew is DERIVED from this (see sst-mapper deriveSkew).
+      angle: Number.parseFloat(parts[14]),
       skewType: Number.parseInt(parts[15], 10),
+      // field[16] = coordinate (inches) of the carried truss's bearing end at this
+      // hanger. Used to look up the governing reaction in the carried truss's
+      // REACTION INFO section (see parseReactionAtBearing).
+      bearingLocation: Number.parseFloat(parts[16]),
       slopeAngle: Number.parseFloat(parts[17]),
     });
   }
@@ -210,6 +237,131 @@ function parseBearings(content) {
   }
 
   return bearings;
+}
+
+// Bearing-match tolerance (inches). Covers floating-point drift and coordinate
+// offset between the girder LG bearingLocation and the carried truss REACTION
+// INFO coords (reference notes the T09A case has a ~4.0" diff). Matches the
+// reference parser.ts BEARING_LOCATION_TOLERANCE.
+const BEARING_LOCATION_TOLERANCE = 4.1;
+
+/**
+ * Governing reaction (and its DOL factor) at a carried truss's bearing end.
+ *
+ * Faithful port of `parseReactionAtBearing()` in the reference parser.ts
+ * (phuongphamsp/truss-analyzer @ DataBridge-Poc1). Reads the carried truss's own
+ * REACTION INFO section, matches the target bearing coordinate against each load
+ * case's bearing ends (bearingA = left, bearingB = right), and collects the
+ * governing (col[6] == -1) values at that bearing across all load cases. The DOL
+ * factor is the last field of each load case's header line.
+ *
+ * @param {string} content Raw text of the CARRIED truss's .tre file.
+ * @param {number} targetBearing Bearing coordinate (inches), stub-adjusted (see
+ *   bearingReactionForSeat). 0 is a valid coordinate (the left end).
+ * @returns {{ downReaction, upliftReaction, bearingSide, downDolFactor, upliftDolFactor } | null}
+ */
+export function parseReactionAtBearing(content, targetBearing) {
+  if (!content || !Number.isFinite(targetBearing) || targetBearing < 0) return null;
+
+  const lines = content.split(/\r?\n/);
+  let i = 0;
+  while (i < lines.length && lines[i].trim() !== "REACTION INFO") i += 1;
+  if (i >= lines.length) return null;
+
+  i += 1; // skip 'REACTION INFO'
+  while (i < lines.length && lines[i].trim() === "") i += 1;
+  i += 1; // skip the load-case count line
+
+  const entries = []; // { value, dolFactor }
+  let bearingSide = null;
+
+  while (i < lines.length) {
+    const line = lines[i].trim();
+    if (!line.startsWith("2 -1 -1 -1 -1")) {
+      i += 1;
+      continue;
+    }
+
+    const parts = line.split(/\s+/);
+    if (parts.length < 7) {
+      i += 1;
+      continue;
+    }
+
+    const bearingA = Number.parseFloat(parts[5]); // smaller coord -> LEFT end
+    const bearingB = Number.parseFloat(parts[6]); // larger coord  -> RIGHT end
+    const dolFactor = Number.parseFloat(parts[parts.length - 1]); // last header field
+    const matchA = Math.abs(bearingA - targetBearing) <= BEARING_LOCATION_TOLERANCE;
+    const matchB = Math.abs(bearingB - targetBearing) <= BEARING_LOCATION_TOLERANCE;
+    if (!matchA && !matchB) {
+      i += 1;
+      continue;
+    }
+    if (bearingSide === null) bearingSide = matchA ? "left" : "right";
+    const matchedBearing = matchA ? bearingA : bearingB;
+
+    i += 1;
+    while (i < lines.length) {
+      const dl = lines[i].trim();
+      if (dl.startsWith("2 -1 -1 -1 -1") || dl === "REACTION INFO" || dl.startsWith("[")) {
+        break;
+      }
+      if (!dl.startsWith("0")) {
+        i += 1;
+        continue;
+      }
+      const dp = dl.split(/\s+/);
+      if (dp.length < 7) {
+        i += 1;
+        continue;
+      }
+      const value = Number.parseFloat(dp[1]);
+      const bearingLoc = Number.parseFloat(dp[3]);
+      const loadType = Number.parseFloat(dp[6]);
+      if (
+        loadType === -1 &&
+        Math.abs(bearingLoc - matchedBearing) <= BEARING_LOCATION_TOLERANCE
+      ) {
+        entries.push({ value, dolFactor });
+      }
+      i += 1;
+    }
+  }
+
+  if (entries.length === 0) return null;
+  const downEntry = entries.reduce((a, b) => (b.value > a.value ? b : a));
+  const upliftEntry = entries.reduce((a, b) => (b.value < a.value ? b : a));
+  return {
+    downReaction: downEntry.value,
+    upliftReaction: upliftEntry.value,
+    bearingSide: bearingSide ?? "left",
+    downDolFactor: downEntry.dolFactor,
+    upliftDolFactor: upliftEntry.dolFactor,
+  };
+}
+
+/**
+ * Resolve the governing reaction for a hanger seat, applying the stub offset
+ * exactly as the reference `enrichCarriedTrusses()` does before matching:
+ * the girder's LG bearingLocation is relative to the carried truss's left end,
+ * while REACTION INFO coords are measured from the heel (after the stub offset).
+ * Try the left-stub-adjusted target first; fall back to the right-end target.
+ *
+ * @param {string} content   Raw text of the CARRIED truss .tre.
+ * @param {object} carriedTre Parsed carried truss (needs leftStub/rightStub/spanInches).
+ * @param {number} bearingLocation Girder LG*T field[16] (inches from carried left end).
+ */
+export function bearingReactionForSeat(content, carriedTre, bearingLocation) {
+  if (!content || !Number.isFinite(bearingLocation) || bearingLocation < 0) {
+    return null;
+  }
+  const leftStub = carriedTre?.leftStub ?? 0;
+  const rightStub = carriedTre?.rightStub ?? 0;
+  const span = carriedTre?.spanInches ?? 0;
+  const adjustedLeft = bearingLocation - leftStub;
+  const adjustedRight = span - bearingLocation - rightStub;
+  const targetBearing = adjustedLeft >= 0 ? adjustedLeft : adjustedRight;
+  return parseReactionAtBearing(content, targetBearing);
 }
 
 export function buildGirderIndex(treCatalog) {
@@ -282,6 +434,19 @@ export function parseTreAnalyzer(filePath) {
   const hangerSeats = parseHangerLoadingInfo(content);
   const bearings = parseBearings(content);
 
+  // Heel heights and stub offsets — carried member depth uses the heel at the
+  // bearing side; stubs offset the girder LG bearingLocation into the carried
+  // truss's REACTION INFO coordinate frame (see bearingReactionForSeat).
+  const numField = (name) => {
+    const v = readTreField(content, name);
+    const n = v != null ? Number.parseFloat(v) : NaN;
+    return Number.isNaN(n) ? null : n;
+  };
+  const leftHeel = numField("Left Heel Height");
+  const rightHeel = numField("Right Heel Height");
+  const leftStub = numField("Left Stub") ?? 0;
+  const rightStub = numField("Right Stub") ?? 0;
+
   return {
     mark,
     file: path.basename(filePath),
@@ -293,6 +458,10 @@ export function parseTreAnalyzer(filePath) {
     spacing: readTreField(content, "Spacing"),
     ply: Number.parseInt(readTreField(content, "Ply") ?? "1", 10),
     quantity: Number.parseInt(readTreField(content, "Quantity") ?? "1", 10),
+    leftHeel,
+    rightHeel,
+    leftStub,
+    rightStub,
     topChordLumber: readTreField(content, "Top Chord Lumber"),
     bottomChordLumber: readTreField(content, "Bottom Chord Lumber"),
     engineering: {
