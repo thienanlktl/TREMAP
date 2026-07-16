@@ -1492,3 +1492,38 @@ body {
   font-size: 0.82rem;
   color: var(--muted);
 }
+
+/* --- Data-source project picker (shared/project-picker.js) --- */
+.project-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--border, #3a4454);
+  font-size: 0.82rem;
+}
+.project-picker .pp-label {
+  color: var(--muted, #9aa7b8);
+}
+.project-picker .pp-chip {
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: var(--panel, #232a36);
+  border: 1px solid var(--border, #3a4454);
+  color: var(--muted, #9aa7b8);
+  white-space: nowrap;
+}
+.project-picker .pp-chip-user {
+  color: #6abf69;
+  border-color: #6abf69;
+}
+.project-picker .btn {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+}
+.project-picker .pp-status {
+  color: var(--muted, #9aa7b8);
+  font-style: italic;
+}

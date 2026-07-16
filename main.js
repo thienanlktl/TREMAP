@@ -10,6 +10,7 @@ import {
   syncMarkParam,
 } from "./shared/ifc-mark-filter.js";
 import { splitCompareUrl, trussDetailUrl } from "./shared/truss-links.js";
+import { getProject } from "./shared/project-store.js";
 
 const MODELS = {
   "/models/mitek.ifc": "MiTek — 2214703-08T",
@@ -64,7 +65,23 @@ if (modelSelect) {
   modelSelect.value = initialModel;
 }
 setStatus("Ready — loading project model…");
-await loadModel(initialModel, MODELS[initialModel] ?? "IFC Model");
+
+// If the user loaded their own project with an IFC, show that; otherwise the
+// bundled sample model. The sample model dropdown stays available either way.
+const userProject = await getProject().catch(() => null);
+if (userProject?.ifcBlob) {
+  const objectUrl = URL.createObjectURL(userProject.ifcBlob);
+  if (modelSelect) {
+    const opt = document.createElement("option");
+    opt.value = objectUrl;
+    opt.textContent = `My IFC — ${userProject.ifcName ?? "uploaded"}`;
+    modelSelect.prepend(opt);
+    modelSelect.value = objectUrl;
+  }
+  await loadModel(objectUrl, userProject.ifcName ?? "My IFC");
+} else {
+  await loadModel(initialModel, MODELS[initialModel] ?? "IFC Model");
+}
 if (initialMark) {
   await applyMarkFilter(initialMark);
 }

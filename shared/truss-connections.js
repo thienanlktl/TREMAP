@@ -1,5 +1,5 @@
 import { describeMultiConfiguration } from "./hs-reference.js";
-import { bearingReactionForSeat } from "./parse-tre-analyzer.js";
+import { bearingReactionForSeat } from "./tre-core.js";
 
 /** Stable id for one carrying → carried truss mark pair (mark-level grouping). */
 export function connectionId(carryingMark, carriedMark) {

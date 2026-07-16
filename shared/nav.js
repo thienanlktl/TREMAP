@@ -31,4 +31,10 @@ export function mountNav(active, targetId = "site-nav") {
     return;
   }
   target.replaceChildren(renderNav(active));
+
+  // Mount the data-source picker (sample vs. user IFC/TRE) alongside the nav on
+  // every page. Loaded dynamically so nav.js has no hard dependency on it.
+  import("./project-picker.js")
+    .then((mod) => mod.mountProjectPicker(target))
+    .catch(() => {});
 }

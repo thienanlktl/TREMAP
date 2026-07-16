@@ -1,5 +1,6 @@
 import { mountNav } from "./shared/nav.js";
 import { viewerUrl, splitCompareUrl, trussDetailUrl } from "./shared/truss-links.js";
+import { getTrussAnalysis } from "./shared/dataset.js";
 
 mountNav("analyzer");
 
@@ -29,14 +30,14 @@ let catalog = null;
 let current = null;
 let selectedLoad = null;
 
-const response = await fetch("/data/truss-analysis.json");
-if (!response.ok) {
-  subtitle.textContent = "Run build-data first to generate truss-analysis.json";
+catalog = await getTrussAnalysis();
+if (!catalog || !catalog.trusses || Object.keys(catalog.trusses).length === 0) {
+  subtitle.textContent =
+    "No truss data. Load your TRE files from the toolbar, or run build-data for the sample.";
 } else {
-  catalog = await response.json();
   populateSelect();
   const mark = new URLSearchParams(location.search).get("mark")?.toUpperCase();
-  const defaultMark = mark && catalog.trusses[mark] ? mark : catalog.girders[0] ?? "T01";
+  const defaultMark = mark && catalog.trusses[mark] ? mark : catalog.girders[0] ?? Object.keys(catalog.trusses)[0];
   trussSelect.value = defaultMark;
   loadTruss(defaultMark);
 }

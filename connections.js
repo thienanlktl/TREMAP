@@ -1,6 +1,7 @@
 import { mountNav } from "./shared/nav.js";
 import { mountSSTPanel } from "./shared/sst-panel.js";
 import { prepareSSTPayload } from "./shared/sst-payload.js";
+import { getConnectionIndex, getConnection, getHsReference } from "./shared/dataset.js";
 
 mountNav("connections");
 
@@ -144,11 +145,10 @@ async function loadBatchConnections() {
 
   const items = [];
   for (const entry of connectionIndex.connections) {
-    const response = await fetch(`/data/connection-maps/${entry.connectionId}.json`);
-    if (!response.ok) {
+    const data = await getConnection(entry.connectionId);
+    if (!data) {
       continue;
     }
-    const data = await response.json();
     const payload = prepareSSTPayload(data.apiBody);
     if (!payload) {
       continue;
@@ -190,13 +190,11 @@ function kvRow(label, value) {
 async function loadConnection(connectionId) {
   if (!connectionId) return;
 
-  const response = await fetch(`/data/connection-maps/${connectionId}.json`);
-  if (!response.ok) {
-    summaryEl.textContent = `Missing connection map for ${connectionId}. Run npm run build-data.`;
+  currentConnection = await getConnection(connectionId);
+  if (!currentConnection) {
+    summaryEl.textContent = `Missing connection map for ${connectionId}.`;
     return;
   }
-
-  currentConnection = await response.json();
 
   summaryEl.textContent = [
     currentConnection.connectionId,
@@ -235,17 +233,14 @@ async function loadConnection(connectionId) {
 }
 
 async function init() {
-  const [response, hsResponse] = await Promise.all([
-    fetch("/data/connection-maps/index.json"),
-    fetch("/data/hanger-selector-reference.json"),
-  ]);
-  if (!response.ok) {
-    summaryEl.textContent = "No connection maps found. Run: cd viewer && npm run build-data";
+  const [index, hsRef] = await Promise.all([getConnectionIndex(), getHsReference()]);
+  if (!index || !index.connections?.length) {
+    summaryEl.textContent =
+      "No connections. Load your TRE files from the toolbar, or run build-data for the sample.";
     return;
   }
-  hsReference = hsResponse.ok ? await hsResponse.json() : null;
-
-  connectionIndex = await response.json();
+  hsReference = hsRef;
+  connectionIndex = index;
 
   connectionSelect.replaceChildren(
     ...connectionIndex.connections.map((entry) => {

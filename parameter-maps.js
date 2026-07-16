@@ -1,5 +1,6 @@
 import { mountNav } from "./shared/nav.js";
 import { parseCsv } from "./shared/parse-csv.js";
+import { getParameterIndex, getParameterMap } from "./shared/dataset.js";
 
 mountNav("param-maps");
 
@@ -91,19 +92,16 @@ async function loadMark(mark) {
   if (!mark) return;
 
   currentMark = mark;
-  const [csvResponse, jsonResponse] = await Promise.all([
-    fetch(`/data/parameter-maps/${mark}.csv`),
-    fetch(`/data/parameter-maps/${mark}.json`),
-  ]);
+  const { csvText, json } = await getParameterMap(mark);
 
-  if (!csvResponse.ok) {
-    summaryEl.textContent = `Missing CSV for ${mark}. Run npm run build-data first.`;
+  if (!csvText) {
+    summaryEl.textContent = `Missing parameter map for ${mark}.`;
     tbody.replaceChildren();
     return;
   }
 
-  currentCsvText = await csvResponse.text();
-  currentJson = jsonResponse.ok ? await jsonResponse.json() : null;
+  currentCsvText = csvText;
+  currentJson = json;
 
   const meta = treMapIndex?.maps?.[mark];
   summaryEl.textContent = [
@@ -134,13 +132,12 @@ async function loadMark(mark) {
 }
 
 async function init() {
-  const indexResponse = await fetch("/data/parameter-maps/index.json");
-  if (!indexResponse.ok) {
-    summaryEl.textContent = "No parameter maps found. Run: cd viewer && npm run build-data";
+  treMapIndex = await getParameterIndex();
+  if (!treMapIndex || !treMapIndex.marks?.length) {
+    summaryEl.textContent =
+      "No parameter maps. Load your TRE files from the toolbar, or run build-data for the sample.";
     return;
   }
-
-  treMapIndex = await indexResponse.json();
   markSelect.replaceChildren(
     ...treMapIndex.marks.map((mark) => {
       const option = document.createElement("option");

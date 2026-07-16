@@ -135,6 +135,7 @@
     "hangerOptions": null
   },
   "selectedHanger": null,
+  "reactionSource": "tre-reaction-info",
   "selectionNote": "One Simpson hanger for T10 → T09 at 8'-0.8\" along T10. Open Hanger Selector → Truss (Flush Bottom), paste apiBody values, then choose the recommended model from results.",
   "simpsonHsUrl": "https://app.strongtie.com/hs"
 }

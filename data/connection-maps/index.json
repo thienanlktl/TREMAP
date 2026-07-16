@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T03:49:45.028Z",
+  "generatedAt": "2026-07-16T04:27:13.468Z",
   "purpose": "Each entry is one physical truss-to-truss hanger connection. Technical inputs are merged from MiTek TRE (Truss Analyzer), Simpson IFC bearings, and Simpson Hanger Selector fields — use apiBody to select one hanger per connection.",
   "simpsonHsUrl": "https://app.strongtie.com/hs",
   "count": 53,
